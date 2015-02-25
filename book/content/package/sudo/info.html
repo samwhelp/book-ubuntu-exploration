@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1.1.1" data-basepath="../../.." data-revision="1423918774520">
+    <div class="book" data-level="1.2.1" data-basepath="../../.." data-revision="1424851553728">
     
 
 <div class="book-summary">
@@ -83,15 +83,15 @@
                 
     
         
-        <li class="chapter " data-level="1.1" data-path="content/package/sudo/index.html">
+        <li class="chapter " data-level="1.1" data-path="content/package/man-db/index.html">
             
                 
-                    <a href="../../../content/package/sudo/index.html">
+                    <a href="../../../content/package/man-db/index.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.1.</b>
                         
-                         sudo
+                         man-db
                     </a>
                 
             
@@ -100,10 +100,10 @@
                 
     
         
-        <li class="chapter active" data-level="1.1.1" data-path="content/package/sudo/info.html">
+        <li class="chapter " data-level="1.1.1" data-path="content/package/man-db/info.html">
             
                 
-                    <a href="../../../content/package/sudo/info.html">
+                    <a href="../../../content/package/man-db/info.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.1.1.</b>
@@ -116,15 +116,101 @@
         </li>
     
         
-        <li class="chapter " data-level="1.1.2" data-path="content/package/sudo/note.html">
+        <li class="chapter " data-level="1.1.2" data-path="content/package/man-db/note.html">
             
                 
-                    <a href="../../../content/package/sudo/note.html">
+                    <a href="../../../content/package/man-db/note.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.1.2.</b>
                         
                          note
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.1.3" data-path="content/package/man-db/report.html">
+            
+                
+                    <a href="../../../content/package/man-db/report.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.3.</b>
+                        
+                         report
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2" data-path="content/package/sudo/index.html">
+            
+                
+                    <a href="../../../content/package/sudo/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         sudo
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter active" data-level="1.2.1" data-path="content/package/sudo/info.html">
+            
+                
+                    <a href="../../../content/package/sudo/info.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.1.</b>
+                        
+                         info
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2.2" data-path="content/package/sudo/note.html">
+            
+                
+                    <a href="../../../content/package/sudo/note.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.2.</b>
+                        
+                         note
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2.3" data-path="content/package/sudo/report.html">
+            
+                
+                    <a href="../../../content/package/sudo/report.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.3.</b>
+                        
+                         report
                     </a>
                 
             
@@ -230,9 +316,9 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_5">
+                    <section class="normal" id="section-gitbook_8">
                     
-                        <h1 id="sudo">sudo</h1>
+                        <h1 id="sudo-info">sudo info</h1>
 <h2 id="">套件資訊</h2>
 <p>執行</p>
 <pre><code>$ apt-cache show sudo
@@ -363,6 +449,38 @@ Provides:
 Reverse Provides:
 sudo-ldap 1.8.9p5-1ubuntu1
 </code></pre><p>執行</p>
+<pre><code>apt-cache showsrc sudo
+</code></pre><p>顯示</p>
+<pre><code>Package: sudo
+Binary: sudo, sudo-ldap
+Version: 1.8.9p5-1ubuntu1
+Priority: important
+Section: admin
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Bdale Garbee &lt;bdale@gag.com&gt;
+Build-Depends: debhelper (&gt;= 7), libpam0g-dev, libldap2-dev, libsasl2-dev, libselinux1-dev [linux-any], autoconf, autotools-dev, bison, flex, dh-autoreconf
+Architecture: any
+Standards-Version: 3.9.5
+Format: 3.0 (quilt)
+Directory: pool/main/s/sudo
+Files:
+ 508be1d597e6bc44d9954a33b8e37a21 1679 sudo_1.8.9p5-1ubuntu1.dsc
+ d3f1f1cfca6b2b06b048e1abb7d0227e 2179066 sudo_1.8.9p5.orig.tar.gz
+ aeb1d22e5bc3878b214799102ec321d9 34712 sudo_1.8.9p5-1ubuntu1.debian.tar.gz
+Vcs-Browser: http://git.debian.org/?p=collab-maint/sudo.git
+Vcs-Git: git://git.debian.org/git/collab-maint/sudo.git
+Package-List:
+ sudo deb admin optional
+ sudo-ldap deb admin optional
+Checksums-Sha1:
+ 13077e0a1b7f1802000d5e996ea655f88cece8a6 1679 sudo_1.8.9p5-1ubuntu1.dsc
+ 4e43dc054e4cdff5d34865eb77ec1305b7bb990b 2179066 sudo_1.8.9p5.orig.tar.gz
+ efafe9b6ce55012ad69376af5a134238103fd26e 34712 sudo_1.8.9p5-1ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ fc6402ed8adc8f3ecef0bf30047903012318f655b24dec7d574e694766ce4434 1679 sudo_1.8.9p5-1ubuntu1.dsc
+ bc9d5c96de5f8b4d2b014f87a37870aef60d2891c869202454069150a21a5c21 2179066 sudo_1.8.9p5.orig.tar.gz
+ 2b05b08fac8a9032a8f64f141aa56cc008f182c8787d32398287d6cbd1afa092 34712 sudo_1.8.9p5-1ubuntu1.debian.tar.gz
+</code></pre><p>執行</p>
 <pre><code>$ dpkg -s sudo
 </code></pre><p>顯示</p>
 <pre><code>Package: sudo
@@ -399,7 +517,7 @@ Original-Maintainer: Bdale Garbee &lt;bdale@gag.com&gt;
 +++-===============================-====================-====================-====================================================================
 ii  sudo                            1.8.9p5-1ubuntu1     amd64                Provide limited super user privileges to specific users
 </code></pre><h2 id="">準備工作環境</h2>
-<pre><code>mkdir  ~/Downloads/sudo
+<pre><code>mkdir  ~/Downloads/sudo -p
 cd ~/Downloads/sudo
 mkdir download source
 </code></pre><h2 id="package-sudohttppackagesubuntucomtrustysudo">探索「Package: <a href="http://packages.ubuntu.com/trusty/sudo" target="_blank">sudo</a>」</h2>
@@ -500,18 +618,7 @@ dpkg <span class="hljs-operator">-e</span> <span class="hljs-built_in">sudo</spa
 └── prerm
 
 0 directories, 7 files
-</code></pre><h2 id="manual">Manual</h2>
-<ul>
-<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man5/sudo.conf" target="_blank">sudo.conf</a></li>
-<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man5/sudoers.5.html" target="_blank">sudoers</a></li>
-<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/sudo.8.html" target="_blank">sudo</a></li>
-<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/sudoedit.8.html" target="_blank">sudoedit</a></li>
-<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/sudo_plugin.8.html" target="_blank">sudo_plugin</a></li>
-<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/sudoreplay.8.html" target="_blank">sudoreplay</a></li>
-<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/sudo_root.8.html" target="_blank">sudo_root</a></li>
-<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/visudo.8.html" target="_blank">visudo</a></li>
-</ul>
-<h2 id="source-package-sudohttppackagesubuntucomtrustysudo">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/sudo" target="_blank">sudo</a>」</h2>
+</code></pre><h2 id="source-package-sudohttppackagesubuntucomtrustysudo">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/sudo" target="_blank">sudo</a>」</h2>
 <p>切換到「~/Downloads/sudo/source」</p>
 <pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/<span class="hljs-built_in">sudo</span>/<span class="hljs-built_in">source</span>
 </code></pre>
