@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>report | Ubuntu Exploration (Ubuntu 探索)</title>
+        <title>info | Ubuntu Exploration (Ubuntu 探索)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/bc/index.html" />
+    <link rel="next" href="../../../content/package/bc/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/locate/note.html" />
+    <link rel="prev" href="../../../content/package/bc/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1.4.3" data-basepath="../../.." data-revision="1426152537410">
+    <div class="book" data-level="1.5.1" data-basepath="../../.." data-revision="1426152537410">
     
 
 <div class="book-summary">
@@ -342,7 +342,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.4.3" data-path="content/package/locate/report.html">
+        <li class="chapter " data-level="1.4.3" data-path="content/package/locate/report.html">
             
                 
                     <a href="../../../content/package/locate/report.html">
@@ -380,7 +380,7 @@
                 
     
         
-        <li class="chapter " data-level="1.5.1" data-path="content/package/bc/info.html">
+        <li class="chapter active" data-level="1.5.1" data-path="content/package/bc/info.html">
             
                 
                     <a href="../../../content/package/bc/info.html">
@@ -526,10 +526,372 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_14">
+                    <section class="normal" id="section-gitbook_3">
                     
-                        <h1 id="locate-report">locate report</h1>
+                        <h1 id="bc-info">bc info</h1>
+<h2 id="">套件資訊</h2>
+<p>執行</p>
+<pre><code>$ apt-cache show bc
+</code></pre><p>顯示</p>
+<pre><code>Package: bc
+Priority: optional
+Section: math
+Installed-Size: 240
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Ryan Kavanagh &lt;rak@debian.org&gt;
+Architecture: amd64
+Version: 1.06.95-8ubuntu1
+Depends: libc6 (&gt;= 2.14), libreadline6 (&gt;= 6.0)
+Filename: pool/main/b/bc/bc_1.06.95-8ubuntu1_amd64.deb
+Size: 82176
+MD5sum: b2c5f458583106390b391a0cbddc7d74
+SHA1: c1a0edd2e17848c7c635519724e0582b1fff2275
+SHA256: 0932e129041d5e13a21af90403ebde0cd6fe0f892bbc6bcbc7c16a6f355f1142
+Description-en: GNU bc arbitrary precision calculator language
+ GNU bc is an interactive algebraic language with arbitrary precision which
+ follows the POSIX 1003.2 draft standard, with several extensions including
+ multi-character variable names, an `else&#39; statement and full Boolean
+ expressions.  GNU bc does not require the separate GNU dc program.
+Description-md5: b8da7e3f115e4c703a180cdb05aec611
+Multi-Arch: foreign
+Homepage: http://ftp.gnu.org/gnu/bc/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, ubuntu-usb, print-server, cloud-image, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showpkg bc
+</code></pre><p>顯示</p>
+<pre><code>Package: bc
+Versions:
+1.06.95-8ubuntu1 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages) (/var/lib/dpkg/status)
+ Description Language:
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
+                  MD5: b8da7e3f115e4c703a180cdb05aec611
+ Description Language: en
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
+                  MD5: b8da7e3f115e4c703a180cdb05aec611
 
+
+Reverse Depends:
+  libreoffice-subsequentcheckbase,bc
+  cups-filters-core-drivers,bc
+  cups-filters,bc
+  libreoffice-subsequentcheckbase,bc
+  kubuntu-desktop,bc
+  landscape-common,bc
+  cups-filters-core-drivers,bc
+  cups-filters,bc
+  cups-daemon,bc
+  bc:i386,bc
+  xvidenc,bc
+  fsl-4.1,bc
+  divxenc,bc
+  xubuntu-desktop,bc
+  videogen,bc
+  ubuntustudio-desktop,bc
+  ubuntu-gnome-desktop,bc
+  shorewall-lite,bc
+  shorewall-core,bc
+  shorewall,bc
+  ree,bc
+  pkg-perl-tools,bc
+  minia,bc
+  mapsembler2,bc
+  lubuntu-core,bc
+  libreoffice-subsequentcheckbase,bc
+  kubuntu-desktop,bc
+  junior-math,bc
+  ibid,bc
+  fish,bc
+  discosnp,bc
+  debian-cd,bc
+  calamaris,bc
+  apt-move,bc
+  ubuntu-desktop,bc
+  lsb-core,bc
+  landscape-common,bc
+  jasper,bc
+  cups-filters-core-drivers,bc
+  cups-filters,bc
+  cups-daemon,bc
+Dependencies:
+1.06.95-8ubuntu1 - libc6 (2 2.14) libreadline6 (2 6.0) bc:i386 (0 (null))
+Provides:
+1.06.95-8ubuntu1 - bc:i386
+Reverse Provides:
+bc:i386 1.06.95-8ubuntu1
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showsrc bc
+</code></pre><p>顯示</p>
+<pre><code>Package: bc
+Binary: bc, dc
+Version: 1.06.95-8ubuntu1
+Priority: optional
+Section: math
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Ryan Kavanagh &lt;rak@debian.org&gt;
+Build-Depends: bison, debhelper (&gt;= 9), file, flex, libreadline-dev | libreadline6-dev, texinfo
+Architecture: any
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/b/bc
+Files:
+ 8dc60228b459f5eed9408e2a86b96f5d 1319 bc_1.06.95-8ubuntu1.dsc
+ 24d0831812d8262b6cac8316b0bac483 360521 bc_1.06.95.orig.tar.gz
+ a9fce9017d56a0c0b2c061096cc50598 20159 bc_1.06.95-8ubuntu1.debian.tar.gz
+Homepage: http://ftp.gnu.org/gnu/bc/
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/bc.git
+Vcs-Git: git://anonscm.debian.org/collab-maint/bc.git
+Package-List:
+ bc deb math standard
+ dc deb math standard
+Checksums-Sha1:
+ b240264259de82d1050b7b29da9cd11d9f065f31 1319 bc_1.06.95-8ubuntu1.dsc
+ cdb0be8c7494103b5a70ac93c6845be346256d7c 360521 bc_1.06.95.orig.tar.gz
+ b3bf8f2d13aa8618e9358f1c15b3088c9a70b6dc 20159 bc_1.06.95-8ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ d63f47f7ce605dc1f9828ba73380cee148479d7de4cfe34a34e80b7a42966553 1319 bc_1.06.95-8ubuntu1.dsc
+ 5e1471869dd27ba4120dd3942d2f4ec6646cf917fb056be9ae0d3a8259668d47 360521 bc_1.06.95.orig.tar.gz
+ a9b8a706fe9b1a00051681bb414f6271e97e96ebc2a92624dc1342da6ca9677a 20159 bc_1.06.95-8ubuntu1.debian.tar.gz
+</code></pre><p>執行</p>
+<pre><code>$ dpkg -s bc
+</code></pre><p>顯示</p>
+<pre><code>Package: bc
+Status: install ok installed
+Priority: standard
+Section: math
+Installed-Size: 240
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Architecture: amd64
+Multi-Arch: foreign
+Version: 1.06.95-8ubuntu1
+Depends: libc6 (&gt;= 2.14), libreadline6 (&gt;= 6.0)
+Description: GNU bc arbitrary precision calculator language
+ GNU bc is an interactive algebraic language with arbitrary precision which
+ follows the POSIX 1003.2 draft standard, with several extensions including
+ multi-character variable names, an `else&#39; statement and full Boolean
+ expressions.  GNU bc does not require the separate GNU dc program.
+Homepage: http://ftp.gnu.org/gnu/bc/
+Original-Maintainer: Ryan Kavanagh &lt;rak@debian.org&gt;
+</code></pre><p>執行</p>
+<pre><code>$ dpkg -l bc
+</code></pre><p>顯示</p>
+<pre><code>Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                         Version             Architecture        Description
++++-============================-===================-===================-==============================================================
+ii  bc                           1.06.95-8ubuntu1    amd64               GNU bc arbitrary precision calculator language
+</code></pre><h2 id="">準備工作環境</h2>
+<pre><code>mkdir  ~/Downloads/bc -p
+cd ~/Downloads/bc
+mkdir download source
+</code></pre><h2 id="package-bchttppackagesubuntucomtrustybc">探索「Package: <a href="http://packages.ubuntu.com/trusty/bc" target="_blank">bc</a>」</h2>
+<p>切換到「~/Downloads/bc/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/bc/download
+</code></pre>
+<p>下載「Package: bc」。</p>
+<pre><code class="lang-sh">$ apt-get download bc
+</code></pre>
+<p>解開「package sudo」</p>
+<pre><code class="lang-sh">dpkg -x bc_1.<span class="hljs-number">06.95</span>-<span class="hljs-number">8</span>ubuntu1_amd64.deb bc
+dpkg <span class="hljs-operator">-e</span> bc_1.<span class="hljs-number">06.95</span>-<span class="hljs-number">8</span>ubuntu1_amd64.deb
+<span class="hljs-comment"># ar xv bc_1.06.95-8ubuntu1_amd64.deb</span>
+</code></pre>
+<p>檢視套件檔案</p>
+<pre><code class="lang-sh">tree bc
+</code></pre>
+<p>顯示</p>
+<pre><code>bc
+└── usr
+    ├── bin
+    │   └── bc
+    └── share
+        ├── doc
+        │   └── bc
+        │       ├── AUTHORS
+        │       ├── bc.html
+        │       ├── changelog.Debian.gz
+        │       ├── copyright
+        │       ├── examples
+        │       │   ├── ckbook.b
+        │       │   ├── pi.b
+        │       │   ├── primes.b
+        │       │   └── twins.b
+        │       ├── NEWS.gz
+        │       └── README
+        ├── doc-base
+        │   └── bc
+        ├── info
+        │   └── bc.info.gz
+        ├── man
+        │   └── man1
+        │       └── bc.1.gz
+        └── menu
+            └── bc
+
+11 directories, 15 files
+</code></pre><pre><code>$ tree DEBIAN
+</code></pre><p>顯示</p>
+<pre><code>DEBIAN
+├── control
+├── md5sums
+├── postinst
+└── postrm
+
+0 directories, 4 files
+</code></pre><h2 id="source-package-bchttppackagesubuntucomtrustybc">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/bc" target="_blank">bc</a>」</h2>
+<p>切換到「~/Downloads/bc/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/bc/<span class="hljs-built_in">source</span>
+</code></pre>
+<p>下載「Source Package: bc」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> bc
+</code></pre>
+<p>檢視原始碼套件檔案。</p>
+<pre><code>$ tree bc-1.06.95
+</code></pre><p>顯示</p>
+<pre><code>bc-1.06.95
+├── aclocal.m4
+├── AUTHORS
+├── bc
+│   ├── bc.c
+│   ├── bcdefs.h
+│   ├── bc.h
+│   ├── bc.y
+│   ├── const.h
+│   ├── execute.c
+│   ├── fix-libmath_h
+│   ├── global.c
+│   ├── global.h
+│   ├── libmath.b
+│   ├── libmath.h
+│   ├── load.c
+│   ├── main.c
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── proto.h
+│   ├── sbc.y
+│   ├── scan.c
+│   ├── scan.l
+│   ├── storage.c
+│   ├── util.c
+│   └── warranty.c
+├── ChangeLog
+├── config.h.in
+├── configure
+├── configure.in
+├── COPYING
+├── COPYING.LIB
+├── dc
+│   ├── array.c
+│   ├── dc.c
+│   ├── dc.h
+│   ├── dc-proto.h
+│   ├── dc-regdef.h
+│   ├── eval.c
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── misc.c
+│   ├── numeric.c
+│   ├── stack.c
+│   ├── string.c
+│   └── TODO
+├── debian
+│   ├── bc.doc-base
+│   ├── bc.docs
+│   ├── bc.examples
+│   ├── bc.info
+│   ├── bc.install
+│   ├── bc.manpages
+│   ├── bc.menu
+│   ├── changelog
+│   ├── compat
+│   ├── control
+│   ├── copyright
+│   ├── dc.doc-base
+│   ├── dc.docs
+│   ├── dc.examples
+│   ├── dc_factor
+│   ├── dc.info
+│   ├── dc.install
+│   ├── dc.manpages
+│   ├── dc.menu
+│   ├── gbp.conf
+│   ├── menu.bc
+│   ├── menu.dc
+│   ├── patches
+│   │   ├── 01_typo_in_bc.diff
+│   │   ├── 02_hyphens_as_minus_in_man.diff
+│   │   ├── 03_array_initialize.diff
+│   │   ├── 04_info_dircategory.diff
+│   │   ├── 05_notice_read_write_errors.diff
+│   │   ├── 06_read_dcrc.diff
+│   │   └── series
+│   ├── rules
+│   ├── source
+│   │   └── format
+│   └── watch
+├── depcomp
+├── doc
+│   ├── bc.1
+│   ├── bc.info
+│   ├── bc.texi
+│   ├── dc.1
+│   ├── dc.info
+│   ├── dc.texi
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── texinfo.tex
+│   └── texi-ver.incl.in
+├── Examples
+│   ├── ckbook.b
+│   ├── pi.b
+│   ├── primes.b
+│   └── twins.b
+├── FAQ
+├── h
+│   ├── getopt.h
+│   └── number.h
+├── INSTALL
+├── install-sh
+├── lib
+│   ├── getopt1.c
+│   ├── getopt.c
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── number.c
+│   ├── testmul.c
+│   └── vfprintf.c
+├── Makefile.am
+├── Makefile.in
+├── missing
+├── NEWS
+├── README
+└── Test
+    ├── array.b
+    ├── arrayp.b
+    ├── aryprm.b
+    ├── atan.b
+    ├── BUG.bc
+    ├── checklib.b
+    ├── div.b
+    ├── exp.b
+    ├── fact.b
+    ├── jn.b
+    ├── ln.b
+    ├── mul.b
+    ├── raise.b
+    ├── signum
+    ├── sine.b
+    ├── sqrt1.b
+    ├── sqrt2.b
+    ├── sqrt.b
+    ├── testfn.b
+    └── timetest
+
+10 directories, 127 files
+</code></pre>
                     
                     </section>
                 
@@ -539,10 +901,10 @@
         </div>
 
         
-        <a href="../../../content/package/locate/note.html" class="navigation navigation-prev " aria-label="Previous page: note"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/bc/index.html" class="navigation navigation-prev " aria-label="Previous page: bc"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/bc/index.html" class="navigation navigation-next " aria-label="Next page: bc"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/bc/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
