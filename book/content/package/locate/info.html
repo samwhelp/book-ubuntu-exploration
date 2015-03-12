@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/findutils/note.html" />
+    <link rel="next" href="../../../content/package/locate/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/findutils/index.html" />
+    <link rel="prev" href="../../../content/package/locate/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1.3.1" data-basepath="../../.." data-revision="1426149904995">
+    <div class="book" data-level="1.4.1" data-basepath="../../.." data-revision="1426149904995">
     
 
 <div class="book-summary">
@@ -240,7 +240,7 @@
                 
     
         
-        <li class="chapter active" data-level="1.3.1" data-path="content/package/findutils/info.html">
+        <li class="chapter " data-level="1.3.1" data-path="content/package/findutils/info.html">
             
                 
                     <a href="../../../content/package/findutils/info.html">
@@ -310,7 +310,7 @@
                 
     
         
-        <li class="chapter " data-level="1.4.1" data-path="content/package/locate/info.html">
+        <li class="chapter active" data-level="1.4.1" data-path="content/package/locate/info.html">
             
                 
                     <a href="../../../content/package/locate/info.html">
@@ -456,76 +456,69 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_3">
+                    <section class="normal" id="section-gitbook_8">
                     
-                        <h1 id="findutils-info">findutils info</h1>
+                        <h1 id="locate-info">locate info</h1>
 <h2 id="">套件資訊</h2>
 <p>執行</p>
-<pre><code>$ apt-cache show findutils
+<pre><code>$ apt-cache show locate
 </code></pre><p>顯示</p>
-<pre><code>Package: findutils
-Essential: yes
-Priority: required
-Section: utils
-Installed-Size: 816
+<pre><code>Package: locate
+Priority: optional
+Section: universe/utils
+Installed-Size: 370
 Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
 Original-Maintainer: Andreas Metzler &lt;ametzler@debian.org&gt;
 Architecture: amd64
+Source: findutils
 Version: 4.4.2-7
-Pre-Depends: libc6 (&gt;= 2.17)
-Suggests: mlocate | locate
-Filename: pool/main/f/findutils/findutils_4.4.2-7_amd64.deb
-Size: 272014
-MD5sum: 547d1eef8066a85da44d661fd6a0cc33
-SHA1: 2cf2dbba67030f0a864e0e573526e4310333055a
-SHA256: a560326ea60908d369faa000bb86bc8da80c591f874c0836d3ca14207828a17b
-Description-en: utilities for finding files--find, xargs
- GNU findutils provides utilities to find files meeting specified
- criteria and perform various actions on the files which are found.
- This package contains &#39;find&#39; and &#39;xargs&#39;; however, &#39;locate&#39; has
- been split off into a separate package.
-Description-md5: ad1a783819241ffdf3ff5f37a676af59
+Replaces: findutils (&lt;&lt; 4.2.31-2)
+Depends: libc6 (&gt;= 2.14), findutils (&gt;&gt; 4.2.31-1)
+Conflicts: slocate (&lt;= 3.1-1.1)
+Filename: pool/universe/f/findutils/locate_4.4.2-7_amd64.deb
+Size: 81302
+MD5sum: a75546212c7a33f4b3ed79d5482d8e90
+SHA1: 3d340248b4d0796fcbe882fea31bf927403e53b4
+SHA256: b7acbdb5dce6bf6965bad04beb229c728bdf220ffa47861dd0869e5f19dae248
+Description-en: maintain and query an index of a directory tree
+ updatedb generates an index of files and directories. GNU locate can be used
+ to quickly query this index.
+Description-md5: bff4cb1129be08196a6ed2311b3d1fbc
 Multi-Arch: foreign
 Homepage: http://savannah.gnu.org/projects/findutils/
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Supported: 5y
-Task: minimal
+Supported: 9m
 </code></pre><p>執行</p>
-<pre><code>$ apt-cache showpkg findutils
+<pre><code>$ apt-cache showpkg locate
 </code></pre><p>顯示</p>
-<pre><code>Package: findutils
+<pre><code>Package: locate
 Versions:
-4.4.2-7 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages) (/var/lib/dpkg/status)
+4.4.2-7 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_universe_binary-amd64_Packages)
  Description Language:
-                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
-                  MD5: ad1a783819241ffdf3ff5f37a676af59
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_universe_binary-amd64_Packages
+                  MD5: bff4cb1129be08196a6ed2311b3d1fbc
  Description Language: en
-                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
-                  MD5: ad1a783819241ffdf3ff5f37a676af59
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_universe_i18n_Translation-en
+                  MD5: bff4cb1129be08196a6ed2311b3d1fbc
 
 
 Reverse Depends:
-  initramfs-tools,findutils 4.2.24
-  locate:i386,findutils 4.2.31-2
-  mlocate:i386,findutils 4.2.31-1
-  findutils:i386,findutils
-  texmacs,findutils 4.2.31-2
-  mmake,findutils 4.0
-  locate,findutils 4.2.31-2
-  locate,findutils 4.2.31-1
-  libploop1,findutils
-  fslint,findutils 4.1.1
-  mlocate,findutils 4.2.31-1
-  initramfs-tools,findutils 4.2.24
+  locate:i386,locate
+  xfce4-linelight-plugin,locate
+  texmacs,locate
+  phatch-cli,locate
+  gnome-do-plugins,locate
+  catfish,locate
+  findutils,locate
 Dependencies:
-4.4.2-7 - libc6 (2 2.17) mlocate (16 (null)) locate (0 (null)) findutils:i386 (0 (null))
+4.4.2-7 - libc6 (2 2.14) findutils (4 4.2.31-1) slocate (1 3.1-1.1) slocate:i386 (1 3.1-1.1) findutils (3 4.2.31-2) findutils:i386 (3 4.2.31-2) locate:i386 (0 (null))
 Provides:
-4.4.2-7 - findutils:i386
+4.4.2-7 - locate:i386
 Reverse Provides:
-findutils:i386 4.4.2-7
+locate:i386 4.4.2-7
 </code></pre><p>執行</p>
-<pre><code>$ apt-cache showsrc findutils
+<pre><code>$ apt-cache showsrc locate
 </code></pre><p>顯示</p>
 <pre><code>Package: findutils
 Binary: findutils, locate
@@ -558,102 +551,93 @@ Checksums-Sha256:
  434f32d171cbc0a5e72cfc5372c6fc4cb0e681f8dce566a0de5b6fccd702b62a 2149838 findutils_4.4.2.orig.tar.gz
  251b00023cab27e8d85b3844f1c69f009319d34d33aa4a996b183056c3cfe48a 25449 findutils_4.4.2-7.debian.tar.gz
 </code></pre><p>執行</p>
-<pre><code>$ dpkg -s findutils
+<pre><code>$ dpkg -s locate
 </code></pre><p>顯示</p>
-<pre><code>Package: findutils
-Essential: yes
-Status: install ok installed
-Priority: required
-Section: utils
-Installed-Size: 816
-Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Architecture: amd64
-Multi-Arch: foreign
-Version: 4.4.2-7
-Pre-Depends: libc6 (&gt;= 2.17)
-Suggests: mlocate | locate
-Description: utilities for finding files--find, xargs
- GNU findutils provides utilities to find files meeting specified
- criteria and perform various actions on the files which are found.
- This package contains &#39;find&#39; and &#39;xargs&#39;; however, &#39;locate&#39; has
- been split off into a separate package.
-Original-Maintainer: Andreas Metzler &lt;ametzler@debian.org&gt;
-Homepage: http://savannah.gnu.org/projects/findutils/
+<pre><code>dpkg-query: package &#39;locate&#39; is not installed and no information is available
+Use dpkg --info (= dpkg-deb --info) to examine archive files,
+and dpkg --contents (= dpkg-deb --contents) to list their contents.
 </code></pre><p>執行</p>
-<pre><code>$ dpkg -l findutils
+<pre><code>$ dpkg -l locate
 </code></pre><p>顯示</p>
 <pre><code>Desired=Unknown/Install/Remove/Purge/Hold
 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
 |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
 ||/ Name                         Version             Architecture        Description
 +++-============================-===================-===================-==============================================================
-ii  findutils                    4.4.2-7             amd64               utilities for finding files--find, xargs
+un  locate                       &lt;none&gt;              &lt;none&gt;              (no description available)
 </code></pre><h2 id="">準備工作環境</h2>
-<pre><code>mkdir  ~/Downloads/findutils -p
-cd ~/Downloads/findutils
+<pre><code>mkdir  ~/Downloads/locate -p
+cd ~/Downloads/locate
 mkdir download source
-</code></pre><h2 id="package-findutilshttppackagesubuntucomtrustyfindutils">探索「Package: <a href="http://packages.ubuntu.com/trusty/findutils" target="_blank">findutils</a>」</h2>
-<p>切換到「~/Downloads/findutils/download」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/findutils/download
+</code></pre><h2 id="package-locatehttppackagesubuntucomtrustylocate">探索「Package: <a href="http://packages.ubuntu.com/trusty/locate" target="_blank">locate</a>」</h2>
+<p>切換到「~/Downloads/locate/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/locate/download
 </code></pre>
-<p>下載「Package: findutils」。</p>
-<pre><code class="lang-sh">$ apt-get download findutils
+<p>下載「Package: locate」。</p>
+<pre><code class="lang-sh">$ apt-get download locate
 </code></pre>
 <p>解開「package sudo」</p>
-<pre><code class="lang-sh">dpkg -x findutils_4.<span class="hljs-number">4.2</span>-<span class="hljs-number">7</span>_amd64.deb findutils
-dpkg <span class="hljs-operator">-e</span> findutils_4.<span class="hljs-number">4.2</span>-<span class="hljs-number">7</span>_amd64.deb
-<span class="hljs-comment"># ar xv findutils_4.4.2-7_amd64.deb</span>
+<pre><code class="lang-sh">dpkg -x locate_4.<span class="hljs-number">4.2</span>-<span class="hljs-number">7</span>_amd64.deb locate
+dpkg <span class="hljs-operator">-e</span> locate_4.<span class="hljs-number">4.2</span>-<span class="hljs-number">7</span>_amd64.deb
+<span class="hljs-comment"># ar xv locate_4.4.2-7_amd64.deb</span>
 </code></pre>
 <p>檢視套件檔案</p>
-<pre><code class="lang-sh">tree findutils
+<pre><code class="lang-sh">tree locate
 </code></pre>
 <p>顯示</p>
-<pre><code>findutils
-└── usr
-    ├── bin
-    │   ├── find
-    │   ├── oldfind
-    │   └── xargs
-    └── share
-        ├── doc
-        │   └── findutils
-        │       ├── changelog.Debian.gz
-        │       ├── copyright
-        │       ├── NEWS.Debian.gz
-        │       ├── NEWS.gz
-        │       ├── README
-        │       └── TODO
-        ├── doc-base
-        │   └── findutils
-        ├── info
-        │   └── find.info.gz
-        └── man
-            └── man1
-                ├── find.1.gz
-                ├── oldfind.1.gz -&gt; find.1.gz
-                └── xargs.1.gz
+<pre><code>locate
+├── etc
+│   └── cron.daily
+│       └── locate
+├── usr
+│   ├── bin
+│   │   ├── locate.findutils
+│   │   └── updatedb.findutils
+│   ├── lib
+│   │   └── locate
+│   │       ├── bigram
+│   │       ├── code
+│   │       └── frcode
+│   └── share
+│       ├── doc
+│       │   └── locate
+│       │       ├── changelog.Debian.gz -&gt; ../findutils/changelog.Debian.gz
+│       │       ├── copyright
+│       │       └── README.Debian
+│       └── man
+│           ├── man1
+│           │   ├── locate.findutils.1.gz
+│           │   └── updatedb.findutils.1.gz
+│           └── man5
+│               └── locatedb.5.gz
+└── var
+    └── cache
+        └── locate
 
-9 directories, 14 files
+15 directories, 12 files
 </code></pre><pre><code>tree DEBIAN
 </code></pre><p>顯示</p>
 <pre><code>DEBIAN
+├── conffiles
 ├── control
 ├── md5sums
 ├── postinst
-└── preinst
+├── postrm
+├── preinst
+└── prerm
 
-0 directories, 4 files
-</code></pre><h2 id="source-package-findutilshttppackagesubuntucomtrustyfindutils">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/findutils" target="_blank">findutils</a>」</h2>
-<p>切換到「~/Downloads/findutils/source」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/findutils/<span class="hljs-built_in">source</span>
+0 directories, 7 files
+</code></pre><h2 id="source-package-locatehttppackagesubuntucomtrustylocate">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/locate" target="_blank">locate</a>」</h2>
+<p>切換到「~/Downloads/locate/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/locate/<span class="hljs-built_in">source</span>
 </code></pre>
-<p>下載「Source Package: findutils」。</p>
-<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> findutils
+<p>下載「Source Package: locate」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> locate
 </code></pre>
 <p>檢視原始碼套件檔案。</p>
 <pre><code>$ tree findutils-4.4.2
 </code></pre><p>顯示</p>
-<pre><code>findutils-4.4.2
+<pre><code>locate-4.4.2
 ├── ABOUT-NLS
 ├── aclocal.m4
 ├── AUTHORS
@@ -685,15 +669,15 @@ dpkg <span class="hljs-operator">-e</span> findutils_4.<span class="hljs-number"
 │   ├── compat
 │   ├── control
 │   ├── copyright
-│   ├── findutils.doc-base
-│   ├── findutils.docs
-│   ├── findutils.info
-│   ├── findutils.install
-│   ├── findutils.links
-│   ├── findutils.manpages
-│   ├── findutils.NEWS
-│   ├── findutils.postinst
-│   ├── findutils.preinst
+│   ├── locate.doc-base
+│   ├── locate.docs
+│   ├── locate.info
+│   ├── locate.install
+│   ├── locate.links
+│   ├── locate.manpages
+│   ├── locate.NEWS
+│   ├── locate.postinst
+│   ├── locate.preinst
 │   ├── locate.cron.daily
 │   ├── locate.dirs
 │   ├── locate.install
@@ -1340,8 +1324,8 @@ dpkg <span class="hljs-operator">-e</span> findutils_4.<span class="hljs-number"
 │   ├── dircallback.h
 │   ├── extendbuf.c
 │   ├── extendbuf.h
-│   ├── findutils-version.c
-│   ├── findutils-version.h
+│   ├── locate-version.c
+│   ├── locate-version.h
 │   ├── forcefindlib.c
 │   ├── gnulib-version.c
 │   ├── gnulib-version.h
@@ -1450,7 +1434,7 @@ dpkg <span class="hljs-operator">-e</span> findutils_4.<span class="hljs-number"
 │   ├── et.gmo
 │   ├── et.po
 │   ├── fi.gmo
-│   ├── findutils.pot
+│   ├── locate.pot
 │   ├── fi.po
 │   ├── fr.gmo
 │   ├── fr.po
@@ -1844,10 +1828,10 @@ dpkg <span class="hljs-operator">-e</span> findutils_4.<span class="hljs-number"
         </div>
 
         
-        <a href="../../../content/package/findutils/index.html" class="navigation navigation-prev " aria-label="Previous page: findutils"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/locate/index.html" class="navigation navigation-prev " aria-label="Previous page: locate"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/findutils/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/locate/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
