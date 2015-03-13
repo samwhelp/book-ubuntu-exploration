@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>report | Ubuntu Exploration (Ubuntu 探索)</title>
+        <title>note | Ubuntu Exploration (Ubuntu 探索)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/coreutils/index.html" />
+    <link rel="next" href="../../../content/package/base-files/report.html" />
     
     
-    <link rel="prev" href="../../../content/package/util-linux/note.html" />
+    <link rel="prev" href="../../../content/package/base-files/info.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1.6.3" data-basepath="../../.." data-revision="1426235625717">
+    <div class="book" data-level="1.5.2" data-basepath="../../.." data-revision="1426235625717">
     
 
 <div class="book-summary">
@@ -396,7 +396,7 @@
         </li>
     
         
-        <li class="chapter " data-level="1.5.2" data-path="content/package/base-files/note.html">
+        <li class="chapter active" data-level="1.5.2" data-path="content/package/base-files/note.html">
             
                 
                     <a href="../../../content/package/base-files/note.html">
@@ -482,7 +482,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.6.3" data-path="content/package/util-linux/report.html">
+        <li class="chapter " data-level="1.6.3" data-path="content/package/util-linux/report.html">
             
                 
                     <a href="../../../content/package/util-linux/report.html">
@@ -806,10 +806,19 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_38">
+                    <section class="normal" id="section-gitbook_4">
                     
-                        <h1 id="util-linux-report">util-linux report</h1>
-
+                        <h1 id="base-files-note">base-files note</h1>
+<h2 id="">探索指令</h2>
+<p>查看「/usr/share/base-files」有哪些檔案。</p>
+<pre><code>$ ls /usr/share/base-files -1
+</code></pre><p>查詢「/etc/issue」屬於哪個套件。</p>
+<pre><code>$ dpkg -S /etc/issue
+</code></pre><p>查看「base-files」套件，在安裝時，會額外做什麼動作。</p>
+<pre><code>$ less /var/lib/dpkg/info/base-files.postinst
+</code></pre><p>查看「base-files」套件，安裝哪些檔案在系統上。</p>
+<pre><code>$ less /var/lib/dpkg/info/base-files.list
+</code></pre>
                     
                     </section>
                 
@@ -819,10 +828,10 @@
         </div>
 
         
-        <a href="../../../content/package/util-linux/note.html" class="navigation navigation-prev " aria-label="Previous page: note"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/base-files/info.html" class="navigation navigation-prev " aria-label="Previous page: info"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/coreutils/index.html" class="navigation navigation-next " aria-label="Next page: coreutils"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/base-files/report.html" class="navigation navigation-next " aria-label="Next page: report"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

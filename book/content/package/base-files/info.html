@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>report | Ubuntu Exploration (Ubuntu 探索)</title>
+        <title>info | Ubuntu Exploration (Ubuntu 探索)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/coreutils/index.html" />
+    <link rel="next" href="../../../content/package/base-files/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/util-linux/note.html" />
+    <link rel="prev" href="../../../content/package/base-files/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1.6.3" data-basepath="../../.." data-revision="1426235625717">
+    <div class="book" data-level="1.5.1" data-basepath="../../.." data-revision="1426235625717">
     
 
 <div class="book-summary">
@@ -380,7 +380,7 @@
                 
     
         
-        <li class="chapter " data-level="1.5.1" data-path="content/package/base-files/info.html">
+        <li class="chapter active" data-level="1.5.1" data-path="content/package/base-files/info.html">
             
                 
                     <a href="../../../content/package/base-files/info.html">
@@ -482,7 +482,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.6.3" data-path="content/package/util-linux/report.html">
+        <li class="chapter " data-level="1.6.3" data-path="content/package/util-linux/report.html">
             
                 
                     <a href="../../../content/package/util-linux/report.html">
@@ -806,10 +806,413 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_38">
+                    <section class="normal" id="section-gitbook_3">
                     
-                        <h1 id="util-linux-report">util-linux report</h1>
+                        <h1 id="base-files-info">base-files info</h1>
+<h2 id="">套件資訊</h2>
+<p>執行</p>
+<pre><code>$ apt-cache show base-files
+</code></pre><p>顯示</p>
+<pre><code>Package: base-files
+Essential: yes
+Priority: required
+Section: admin
+Installed-Size: 433
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Santiago Vila &lt;sanvila@debian.org&gt;
+Architecture: amd64
+Version: 7.2ubuntu5.2
+Replaces: base, dpkg (&lt;= 1.15.0), miscutils
+Provides: base
+Pre-Depends: awk
+Breaks: initscripts (&lt;&lt; 2.88dsf-13.3), sendfile (&lt;&lt; 2.1b.20080616-5.2~)
+Filename: pool/main/b/base-files/base-files_7.2ubuntu5.2_amd64.deb
+Size: 69854
+MD5sum: 7a1f0028667afbf01c1c10e8eace4137
+SHA1: 0df8ee5cad3905b2522fe7b19c2dfd6439e55135
+SHA256: 5c77a7a3b67c67230a098aa350b5b6c1781f3ba0421b0ca1b5931f0191a65b95
+Description-en: Debian base system miscellaneous files
+ This package contains the basic filesystem hierarchy of a Debian system, and
+ several important miscellaneous files, such as /etc/debian_version,
+ /etc/host.conf, /etc/issue, /etc/motd, /etc/profile, and others,
+ and the text of several common licenses in use on Debian systems.
+Description-md5: 6d16337f57b84c4747f56438355b2395
+Multi-Arch: foreign
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
 
+Package: base-files
+Essential: yes
+Priority: required
+Section: admin
+Installed-Size: 433
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Santiago Vila &lt;sanvila@debian.org&gt;
+Architecture: amd64
+Version: 7.2ubuntu5
+Replaces: base, dpkg (&lt;= 1.15.0), miscutils
+Provides: base
+Pre-Depends: awk
+Breaks: initscripts (&lt;&lt; 2.88dsf-13.3), sendfile (&lt;&lt; 2.1b.20080616-5.2~)
+Filename: pool/main/b/base-files/base-files_7.2ubuntu5_amd64.deb
+Size: 67212
+MD5sum: 10aa13b02a1d48c4515edfeb9f2baf8f
+SHA1: 6dbaaf3840ca94ce3b2e0fc92bb50ddd78479585
+SHA256: 19b6c3bc0738b5c8cc4a33f7bc43053b3353d9a809ced536efad4ef80a31998c
+Description-en: Debian base system miscellaneous files
+ This package contains the basic filesystem hierarchy of a Debian system, and
+ several important miscellaneous files, such as /etc/debian_version,
+ /etc/host.conf, /etc/issue, /etc/motd, /etc/profile, and others,
+ and the text of several common licenses in use on Debian systems.
+Description-md5: 6d16337f57b84c4747f56438355b2395
+Multi-Arch: foreign
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showpkg base-files
+</code></pre><p>顯示</p>
+<pre><code>Package: base-files
+Versions:
+7.2ubuntu5.2 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty-updates_main_binary-amd64_Packages) (/var/lib/dpkg/status)
+ Description Language:
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
+                  MD5: 6d16337f57b84c4747f56438355b2395
+ Description Language: en
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
+                  MD5: 6d16337f57b84c4747f56438355b2395
+
+7.2ubuntu5 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages)
+ Description Language:
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
+                  MD5: 6d16337f57b84c4747f56438355b2395
+ Description Language: en
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
+                  MD5: 6d16337f57b84c4747f56438355b2395
+
+
+Reverse Depends:
+  base-files:i386,base-files
+  rsync,base-files 4.0.1
+  dpkg-dev,base-files 5.0.0
+  bsd-mailx,base-files 2.2.0
+  bash,base-files 2.1.12
+  base-files:i386,base-files
+  trn4,base-files 2.2.0
+  weechat-scripts,base-files 4.0.1
+  speechd-el-doc-cs,base-files 4.0.1
+  speechd-el,base-files 4.0.1
+  libpod-constants-perl,base-files 4.0.1
+  liblog4cxx10-doc,base-files 4.0.4
+  libgtk2-imageview-perl,base-files 4.0.1
+  kup-server,base-files 6.4
+  heirloom-mailx,base-files 2.2.0
+  rsync,base-files 4.0.1
+  python-parsedatetime,base-files 4.0.4
+  libpam-mount,base-files 6.4
+  libnss-mdns,base-files 3.1.10
+  dpkg-dev,base-files 5.0.0
+  dict-foldoc,base-files 4
+  bsd-mailx,base-files 2.2.0
+  bash,base-files 2.1.12
+Dependencies:
+7.2ubuntu5.2 - awk (0 (null)) initscripts (3 2.88dsf-13.3) initscripts:i386 (3 2.88dsf-13.3) sendfile (3 2.1b.20080616-5.2~) sendfile:i386 (3 2.1b.20080616-5.2~) base (0 (null)) base:i386 (0 (null)) dpkg (1 1.15.0) dpkg:i386 (1 1.15.0) miscutils (0 (null)) miscutils:i386 (0 (null)) base-files:i386 (0 (null))
+7.2ubuntu5 - awk (0 (null)) initscripts (3 2.88dsf-13.3) initscripts:i386 (3 2.88dsf-13.3) sendfile (3 2.1b.20080616-5.2~) sendfile:i386 (3 2.1b.20080616-5.2~) base (0 (null)) base:i386 (0 (null)) dpkg (1 1.15.0) dpkg:i386 (1 1.15.0) miscutils (0 (null)) miscutils:i386 (0 (null)) base-files:i386 (0 (null))
+Provides:
+7.2ubuntu5.2 - base-files:i386 base:i386 base
+7.2ubuntu5 - base-files:i386 base:i386 base
+Reverse Provides:
+base-files:i386 7.2ubuntu5.2
+base-files:i386 7.2ubuntu5
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showsrc base-files
+</code></pre><p>顯示</p>
+<pre><code>Package: base-files
+Binary: base-files, lsb-release-udeb
+Version: 7.2ubuntu5
+Priority: required
+Section: admin
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Santiago Vila &lt;sanvila@debian.org&gt;
+Architecture: any all
+Standards-Version: 3.9.1
+Format: 3.0 (native)
+Directory: pool/main/b/base-files
+Files:
+ c64667a885d74bf83758c24b7c36b37e 881 base-files_7.2ubuntu5.dsc
+ 90c3d878cf7e8e8ec5f25f40f3e1191f 87841 base-files_7.2ubuntu5.tar.gz
+Package-List:
+ base-files deb admin required
+ lsb-release-udeb deb debian-installer extra
+Checksums-Sha1:
+ a261573b36522ffc9dfbce0dab1435b4b8674cff 881 base-files_7.2ubuntu5.dsc
+ 67e0e59ecba8c364d954182af8b7fc80abd419da 87841 base-files_7.2ubuntu5.tar.gz
+Checksums-Sha256:
+ 7536fe40aa8c7a5066d1560e29f889d21263b6e7a9b5c182b30a8200a0846db4 881 base-files_7.2ubuntu5.dsc
+ 897769ab0984d9c87c6969036cc52e984ac47d81e664670dd8b1f0fb2ebbfb51 87841 base-files_7.2ubuntu5.tar.gz
+
+Package: base-files
+Binary: base-files, lsb-release-udeb
+Version: 7.2ubuntu5.2
+Priority: required
+Section: admin
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Santiago Vila &lt;sanvila@debian.org&gt;
+Architecture: any all
+Standards-Version: 3.9.1
+Format: 3.0 (native)
+Directory: pool/main/b/base-files
+Files:
+ d72d8c2e5c892dcab8002bc34f09c288 1543 base-files_7.2ubuntu5.2.dsc
+ b0bb83e04f22167c7db694cf52c6680f 60440 base-files_7.2ubuntu5.2.tar.xz
+Package-List:
+ base-files deb admin required arch=any
+ lsb-release-udeb deb debian-installer extra arch=all
+Checksums-Sha1:
+ 8987c836256995620c6081f36958699e2ef57034 1543 base-files_7.2ubuntu5.2.dsc
+ 1d0b152df188015502055064d45ad22d84d3673f 60440 base-files_7.2ubuntu5.2.tar.xz
+Checksums-Sha256:
+ 1e9b73c526d5cdf77bd8eb51ccdf288a77d0e414ac10a3dbc35268fff82c7527 1543 base-files_7.2ubuntu5.2.dsc
+ 9b78bde84d5f369c697edae99d857f4e9ff95d6494bd93a157aad04df5b536b1 60440 base-files_7.2ubuntu5.2.tar.xz
+</code></pre><p>執行</p>
+<pre><code>$ dpkg -s base-files
+</code></pre><p>顯示</p>
+<pre><code>Package: base-files
+Essential: yes
+Status: install ok installed
+Priority: required
+Section: admin
+Installed-Size: 433
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Architecture: amd64
+Multi-Arch: foreign
+Version: 7.2ubuntu5.2
+Replaces: base, dpkg (&lt;= 1.15.0), miscutils
+Provides: base
+Pre-Depends: awk
+Breaks: initscripts (&lt;&lt; 2.88dsf-13.3), sendfile (&lt;&lt; 2.1b.20080616-5.2~)
+Conffiles:
+ /etc/debian_version 142012ca081ab0981cdcc1ac6db77c34
+ /etc/dpkg/origins/debian 731423fa8ba067262f8ef37882d1e742
+ /etc/dpkg/origins/ubuntu ea35901c45553c3451f60476be94d2d8
+ /etc/host.conf 89408008f2585c957c031716600d5a80
+ /etc/issue 08129e4079641693ad6632e1e04cc15c
+ /etc/issue.net 63b1369ea16c1b6dcff7d352d77389b7
+ /etc/legal 0110925f6e068836ef2e09356e3651d9
+ /etc/lsb-release f39f99f780a0926c71e8c145d49534fa
+ /etc/os-release 4246d0048349808c9a5096182baaa482
+ /etc/update-motd.d/00-header 4a1e6eed7a59f200b4267085721750a3
+ /etc/update-motd.d/10-help-text 5064fb57493325202dded183ab0c4ebd
+Description: Debian base system miscellaneous files
+ This package contains the basic filesystem hierarchy of a Debian system, and
+ several important miscellaneous files, such as /etc/debian_version,
+ /etc/host.conf, /etc/issue, /etc/motd, /etc/profile, and others,
+ and the text of several common licenses in use on Debian systems.
+Original-Maintainer: Santiago Vila &lt;sanvila@debian.org&gt;
+</code></pre><p>執行</p>
+<pre><code>$ dpkg -l base-files
+</code></pre><p>顯示</p>
+<pre><code>Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                         Version             Architecture        Description
++++-============================-===================-===================-==============================================================
+ii  base-files                   7.2ubuntu5.2        amd64               Debian base system miscellaneous files
+</code></pre><h2 id="">準備工作環境</h2>
+<pre><code>mkdir  ~/Downloads/base-files -p
+cd ~/Downloads/base-files
+mkdir download source
+</code></pre><h2 id="package-base-fileshttppackagesubuntucomtrustybase-files">探索「Package: <a href="http://packages.ubuntu.com/trusty/base-files" target="_blank">base-files</a>」</h2>
+<p>切換到「~/Downloads/base-files/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/base-files/download
+</code></pre>
+<p>下載「Package: base-files」。</p>
+<pre><code class="lang-sh">$ apt-get download base-files
+</code></pre>
+<p>解開「package base-files」</p>
+<pre><code class="lang-sh">dpkg -x base-files_7.<span class="hljs-number">2</span>ubuntu5.<span class="hljs-number">2</span>_amd64.deb base-files
+dpkg <span class="hljs-operator">-e</span> base-files_7.<span class="hljs-number">2</span>ubuntu5.<span class="hljs-number">2</span>_amd64.deb
+<span class="hljs-comment"># ar xv base-files_7.2ubuntu5.2_amd64.deb</span>
+</code></pre>
+<p>檢視套件檔案</p>
+<pre><code class="lang-sh">$ tree base-files
+</code></pre>
+<p>顯示</p>
+<pre><code>base-files
+├── bin
+├── boot
+├── dev
+├── etc
+│   ├── debian_version
+│   ├── default
+│   ├── dpkg
+│   │   └── origins
+│   │       ├── debian
+│   │       └── ubuntu
+│   ├── host.conf
+│   ├── issue
+│   ├── issue.net
+│   ├── legal
+│   ├── lsb-release
+│   ├── os-release
+│   ├── profile.d
+│   ├── skel
+│   └── update-motd.d
+│       ├── 00-header
+│       └── 10-help-text
+├── home
+├── lib
+├── mnt
+├── proc
+├── root
+├── run
+├── sbin
+├── sys
+├── tmp
+├── usr
+│   ├── bin
+│   ├── games
+│   ├── include
+│   ├── lib
+│   ├── sbin
+│   ├── share
+│   │   ├── base-files
+│   │   │   ├── dot.bashrc
+│   │   │   ├── dot.profile
+│   │   │   ├── info.dir
+│   │   │   ├── motd
+│   │   │   ├── networks
+│   │   │   ├── nsswitch.conf
+│   │   │   ├── profile
+│   │   │   ├── profile.md5sums
+│   │   │   └── staff-group-for-usr-local
+│   │   ├── common-licenses
+│   │   │   ├── Apache-2.0
+│   │   │   ├── Artistic
+│   │   │   ├── BSD
+│   │   │   ├── GFDL -&gt; GFDL-1.3
+│   │   │   ├── GFDL-1.2
+│   │   │   ├── GFDL-1.3
+│   │   │   ├── GPL -&gt; GPL-3
+│   │   │   ├── GPL-1
+│   │   │   ├── GPL-2
+│   │   │   ├── GPL-3
+│   │   │   ├── LGPL -&gt; LGPL-3
+│   │   │   ├── LGPL-2
+│   │   │   ├── LGPL-2.1
+│   │   │   └── LGPL-3
+│   │   ├── dict
+│   │   ├── doc
+│   │   │   └── base-files
+│   │   │       ├── changelog.gz
+│   │   │       ├── copyright
+│   │   │       ├── FAQ -&gt; README
+│   │   │       ├── README
+│   │   │       └── README.FHS
+│   │   ├── info
+│   │   ├── lintian
+│   │   │   └── overrides
+│   │   │       └── base-files
+│   │   ├── man
+│   │   └── misc
+│   └── src
+└── var
+    ├── backups
+    ├── cache
+    ├── lib
+    │   ├── dpkg
+    │   └── misc
+    ├── local
+    ├── lock
+    ├── log
+    ├── run
+    ├── spool
+    └── tmp
+
+49 directories, 40 files
+</code></pre><pre><code>$ tree DEBIAN
+</code></pre><p>顯示</p>
+<pre><code>DEBIAN
+├── conffiles
+├── control
+├── md5sums
+├── postinst
+├── postrm
+└── preinst
+
+0 directories, 6 files
+</code></pre><h2 id="source-package-base-fileshttppackagesubuntucomtrustybase-files">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/base-files" target="_blank">base-files</a>」</h2>
+<p>切換到「~/Downloads/base-files/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/base-files/<span class="hljs-built_in">source</span>
+</code></pre>
+<p>下載「Source Package: base-files」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> base-files
+</code></pre>
+<p>檢視原始碼套件檔案。</p>
+<pre><code>$ tree base-files-4.4.2
+</code></pre><p>顯示</p>
+<pre><code>base-files-7.2ubuntu5.2
+├── debian
+│   ├── 1777-dirs
+│   ├── 2775-dirs
+│   ├── changelog
+│   ├── check-etc-profile-md5sum
+│   ├── conffiles
+│   ├── control
+│   ├── copyright.in
+│   ├── current-md5sums-obsolete
+│   ├── directory-list
+│   ├── lintian
+│   ├── postinst.in
+│   ├── postrm
+│   ├── preinst
+│   ├── README
+│   ├── README.FHS
+│   ├── rules
+│   ├── source
+│   │   └── format
+│   └── update-motd.d
+│       ├── 00-header
+│       └── 10-help-text
+├── etc
+│   ├── debian_version
+│   ├── host.conf
+│   ├── issue
+│   ├── issue.net
+│   ├── legal
+│   ├── lsb-release
+│   └── os-release
+├── licenses
+│   ├── Apache-2.0
+│   ├── Artistic
+│   ├── BSD
+│   ├── GFDL-1.2
+│   ├── GFDL-1.3
+│   ├── GPL-1
+│   ├── GPL-2
+│   ├── GPL-3
+│   ├── LGPL-2
+│   ├── LGPL-2.1
+│   └── LGPL-3
+├── origins
+│   ├── debian
+│   └── ubuntu
+└── share
+    ├── dot.bashrc
+    ├── dot.profile
+    ├── info.dir
+    ├── motd
+    ├── networks
+    ├── nsswitch.conf
+    ├── profile
+    ├── profile.md5sums
+    └── staff-group-for-usr-local
+
+7 directories, 48 files
+</code></pre>
                     
                     </section>
                 
@@ -819,10 +1222,10 @@
         </div>
 
         
-        <a href="../../../content/package/util-linux/note.html" class="navigation navigation-prev " aria-label="Previous page: note"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/base-files/index.html" class="navigation navigation-prev " aria-label="Previous page: base-files"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/coreutils/index.html" class="navigation navigation-next " aria-label="Next page: coreutils"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/base-files/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
