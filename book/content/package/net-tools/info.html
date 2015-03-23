@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>note | Ubuntu Exploration (Ubuntu 探索)</title>
+        <title>info | Ubuntu Exploration (Ubuntu 探索)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/coreutils/report.html" />
+    <link rel="next" href="../../../content/package/net-tools/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/coreutils/info.html" />
+    <link rel="prev" href="../../../content/package/net-tools/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1.8.2" data-basepath="../../.." data-revision="1427075450527">
+    <div class="book" data-level="2.1.1" data-basepath="../../.." data-revision="1427075450527">
     
 
 <div class="book-summary">
@@ -606,7 +606,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.8.2" data-path="content/package/coreutils/note.html">
+        <li class="chapter " data-level="1.8.2" data-path="content/package/coreutils/note.html">
             
                 
                     <a href="../../../content/package/coreutils/note.html">
@@ -962,7 +962,7 @@
                 
     
         
-        <li class="chapter " data-level="2.1.1" data-path="content/package/net-tools/info.html">
+        <li class="chapter active" data-level="2.1.1" data-path="content/package/net-tools/info.html">
             
                 
                     <a href="../../../content/package/net-tools/info.html">
@@ -1178,10 +1178,586 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_16">
+                    <section class="normal" id="section-gitbook_41">
                     
-                        <h1 id="coreutils-note">coreutils note</h1>
+                        <h1 id="net-tools-info">net-tools info</h1>
+<h2 id="">套件資訊</h2>
+<p>執行</p>
+<pre><code>$ apt-cache show net-tools
+</code></pre><p>顯示</p>
+<pre><code>Package: net-tools
+Priority: important
+Section: net
+Installed-Size: 708
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: net-tools Team &lt;pkg-net-tools-maintainers@lists.alioth.debian.org&gt;
+Architecture: amd64
+Version: 1.60-25ubuntu2.1
+Replaces: ja-trans (&lt;= 0.8-2), netbase (&lt;&lt; 4.00)
+Depends: libc6 (&gt;= 2.14)
+Conflicts: ja-trans (&lt;= 0.8-2)
+Filename: pool/main/n/net-tools/net-tools_1.60-25ubuntu2.1_amd64.deb
+Size: 175108
+MD5sum: 80423a1744df19afbfeeb5f76e70b95e
+SHA1: b9ae36e56bc09853fc5ea24c5d3eb1353dbb8174
+SHA256: 9551f9f6e0aedf75072b306978474e5b34ad61160f6abb0b3ef9a758db01b566
+Description-en: The NET-3 networking toolkit
+ This package includes the important tools for controlling the network
+ subsystem of the Linux kernel.  This includes arp, ifconfig, netstat,
+ rarp, nameif and route.  Additionally, this package contains utilities
+ relating to particular network hardware types (plipconfig, slattach,
+ mii-tool) and advanced aspects of IP configuration (iptunnel, ipmaddr).
+ .
+ In the upstream package &#39;hostname&#39; and friends are included. Those are
+ not installed by this package, since there is a special &quot;hostname*.deb&quot;.
+Description-md5: 003fb6a11fdb767fff574478588a3ca8
+Multi-Arch: foreign
+Homepage: http://net-tools.berlios.de/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
 
+Package: net-tools
+Priority: important
+Section: net
+Installed-Size: 708
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: net-tools Team &lt;pkg-net-tools-maintainers@lists.alioth.debian.org&gt;
+Architecture: amd64
+Version: 1.60-25ubuntu2
+Replaces: ja-trans (&lt;= 0.8-2), netbase (&lt;&lt; 4.00)
+Depends: libc6 (&gt;= 2.14)
+Conflicts: ja-trans (&lt;= 0.8-2)
+Filename: pool/main/n/net-tools/net-tools_1.60-25ubuntu2_amd64.deb
+Size: 174516
+MD5sum: 80d953d0950d32c66e7284ca68ed89ee
+SHA1: 62ef3b9eb5114a87b1aa29062e57c544ef6df1fb
+SHA256: ef921d19b77685cec007c146616056ee679d80ee4ef834b9e2da8c01fa139eef
+Description-en: The NET-3 networking toolkit
+ This package includes the important tools for controlling the network
+ subsystem of the Linux kernel.  This includes arp, ifconfig, netstat,
+ rarp, nameif and route.  Additionally, this package contains utilities
+ relating to particular network hardware types (plipconfig, slattach,
+ mii-tool) and advanced aspects of IP configuration (iptunnel, ipmaddr).
+ .
+ In the upstream package &#39;hostname&#39; and friends are included. Those are
+ not installed by this package, since there is a special &quot;hostname*.deb&quot;.
+Description-md5: 003fb6a11fdb767fff574478588a3ca8
+Multi-Arch: foreign
+Homepage: http://net-tools.berlios.de/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showpkg net-tools
+</code></pre><p>顯示</p>
+<pre><code>Package: net-tools
+Versions:
+1.60-25ubuntu2.1 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty-updates_main_binary-amd64_Packages) (/var/lib/dpkg/status)
+ Description Language:
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
+                  MD5: 003fb6a11fdb767fff574478588a3ca8
+ Description Language: en
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
+                  MD5: 003fb6a11fdb767fff574478588a3ca8
+
+1.60-25ubuntu2 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages)
+ Description Language:
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
+                  MD5: 003fb6a11fdb767fff574478588a3ca8
+ Description Language: en
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
+                  MD5: 003fb6a11fdb767fff574478588a3ca8
+
+
+Reverse Depends:
+  net-tools:i386,net-tools
+  ifupdown,net-tools
+  chkrootkit,net-tools
+  bind9,net-tools
+  net-tools:i386,net-tools
+  zentyal-network,net-tools
+  xrsh,net-tools
+  wicd-daemon,net-tools
+  wicd-daemon,net-tools
+  whereami,net-tools
+  waagent,net-tools
+  vpnc-scripts,net-tools
+  vblade-persist,net-tools
+  util-vserver,net-tools
+  tunneldigger-utils,net-tools
+  tntnet,net-tools
+  tiger,net-tools
+  tahoe-lafs,net-tools
+  systraq,net-tools
+  systemtap-server,net-tools
+  sugar-presence-service-0.90,net-tools
+  sugar-presence-service-0.88,net-tools
+  snort,net-tools
+  sitesummary,net-tools
+  servefile,net-tools
+  salome-kernel,net-tools
+  rkhunter,net-tools
+  qtemu,net-tools
+  portsentry,net-tools
+  pmacct,net-tools
+  openstack-resource-agents,net-tools
+  opendrim-lmp-ip,net-tools
+  opendrim-lmp-ethernetport,net-tools
+  oidentd,net-tools
+  ntop-dbg,net-tools
+  ntop,net-tools
+  miniupnpd,net-tools
+  libopendrim0,net-tools
+  libnet-ifconfig-wrapper-perl,net-tools
+  libguestfs0,net-tools
+  laptop-mode-tools,net-tools
+  kvpnc,net-tools
+  irssi-scripts,net-tools
+  inxi,net-tools
+  ifupdown-extra,net-tools
+  guestfsd,net-tools
+  grml-shlib,net-tools
+  gogoc,net-tools
+  gnome-nettool,net-tools
+  fiaif,net-tools
+  facter-customfacts-plugin,net-tools
+  dyndns,net-tools
+  dtc-xen,net-tools
+  dhcp-probe,net-tools
+  chrony,net-tools
+  bitlbee-common,net-tools
+  argus-server,net-tools
+  ubuntu-minimal,net-tools
+  munin-node,net-tools
+  libpython3.4-testsuite,net-tools
+  ifupdown,net-tools
+  ifenslave,net-tools
+  facter,net-tools
+  chkrootkit,net-tools
+  bridge-utils,net-tools
+  bind9,net-tools
+Dependencies:
+1.60-25ubuntu2.1 - libc6 (2 2.14) ja-trans (1 0.8-2) ja-trans:i386 (1 0.8-2) ja-trans (1 0.8-2) ja-trans:i386 (1 0.8-2) netbase (3 4.00) netbase:i386 (3 4.00) net-tools:i386 (0 (null))
+1.60-25ubuntu2 - libc6 (2 2.14) ja-trans (1 0.8-2) ja-trans:i386 (1 0.8-2) ja-trans (1 0.8-2) ja-trans:i386 (1 0.8-2) netbase (3 4.00) netbase:i386 (3 4.00) net-tools:i386 (0 (null))
+Provides:
+1.60-25ubuntu2.1 - net-tools:i386
+1.60-25ubuntu2 - net-tools:i386
+Reverse Provides:
+net-tools:i386 1.60-25ubuntu2.1
+net-tools:i386 1.60-25ubuntu2
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showsrc net-tools
+</code></pre><p>顯示</p>
+<pre><code>Package: net-tools
+Binary: net-tools
+Version: 1.60-25ubuntu2
+Priority: important
+Section: net
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: net-tools Team &lt;pkg-net-tools-maintainers@lists.alioth.debian.org&gt;
+Build-Depends: debhelper (&gt;&gt; 5), gettext, quilt
+Architecture: any
+Standards-Version: 3.8.1
+Format: 1.0
+Directory: pool/main/n/net-tools
+Files:
+ 4b5df812f6a7b4cd04771d2b1e98303f 1275 net-tools_1.60-25ubuntu2.dsc
+ ecaf37acb5b5daff4bdda77785fd916d 265441 net-tools_1.60.orig.tar.gz
+ ae1b768be9eee434346f0425904bdae7 220830 net-tools_1.60-25ubuntu2.diff.gz
+Uploaders: Luk Claes &lt;luk@debian.org&gt;, Martín Ferrari &lt;tincho@debian.org&gt;
+Homepage: http://net-tools.berlios.de/
+Package-List:
+ net-tools deb net important
+Checksums-Sha1:
+ bbeaf61dfd82ab23aefef8ac5114290a6177a8a8 1275 net-tools_1.60-25ubuntu2.dsc
+ d815b87bf8b30d0bcc3c729cdfb3ada3a3f945d0 265441 net-tools_1.60.orig.tar.gz
+ c987e041750a688786e38c22cdc92f2a05ba0eaa 220830 net-tools_1.60-25ubuntu2.diff.gz
+Checksums-Sha256:
+ 8d541ee415864b6551da38ad003388afbc9c0441069b553d9c5e82c9bacbca8b 1275 net-tools_1.60-25ubuntu2.dsc
+ ec67967cf7b1a3a3828a84762fbc013ac50ee5dc9aa3095d5c591f302c2de0f5 265441 net-tools_1.60.orig.tar.gz
+ f6e4e1b53d5ae68534ce60c8b4cc81f87b813d0527b5a7e4ebce578fc8aecb4c 220830 net-tools_1.60-25ubuntu2.diff.gz
+
+Package: net-tools
+Binary: net-tools
+Version: 1.60-25ubuntu2.1
+Priority: important
+Section: net
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: net-tools Team &lt;pkg-net-tools-maintainers@lists.alioth.debian.org&gt;
+Build-Depends: debhelper (&gt;&gt; 5), gettext, quilt
+Architecture: any
+Standards-Version: 3.8.1
+Format: 1.0
+Directory: pool/main/n/net-tools
+Files:
+ be95a05e318c2f41a822a30ddd9065b1 1558 net-tools_1.60-25ubuntu2.1.dsc
+ ecaf37acb5b5daff4bdda77785fd916d 265441 net-tools_1.60.orig.tar.gz
+ 1b06a68023b34f5f1bf8776026e55e15 221494 net-tools_1.60-25ubuntu2.1.diff.gz
+Uploaders: Luk Claes &lt;luk@debian.org&gt;, Martín Ferrari &lt;tincho@debian.org&gt;
+Homepage: http://net-tools.berlios.de/
+Package-List:
+ net-tools deb net important
+Checksums-Sha1:
+ 299c2d8e24b02f5e282cf6d33c5c9550f536fde8 1558 net-tools_1.60-25ubuntu2.1.dsc
+ d815b87bf8b30d0bcc3c729cdfb3ada3a3f945d0 265441 net-tools_1.60.orig.tar.gz
+ 69412cb4dc04a8990737aaae8dee1896bc51ab4f 221494 net-tools_1.60-25ubuntu2.1.diff.gz
+Checksums-Sha256:
+ 26db4dd870461e268aa18b5f7f52ad8692d968074b7c720eea8eb9ecdba5e260 1558 net-tools_1.60-25ubuntu2.1.dsc
+ ec67967cf7b1a3a3828a84762fbc013ac50ee5dc9aa3095d5c591f302c2de0f5 265441 net-tools_1.60.orig.tar.gz
+ a141b46f62072cd6f70695c6d7de0e41a50a3135383a27cd90fe6b8c127cb64a 221494 net-tools_1.60-25ubuntu2.1.diff.gz
+</code></pre><p>執行</p>
+<pre><code>$ dpkg -s net-tools
+</code></pre><p>顯示</p>
+<pre><code>Package: net-tools
+Status: install ok installed
+Priority: important
+Section: net
+Installed-Size: 708
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Architecture: amd64
+Multi-Arch: foreign
+Version: 1.60-25ubuntu2.1
+Replaces: ja-trans (&lt;= 0.8-2), netbase (&lt;&lt; 4.00)
+Depends: libc6 (&gt;= 2.14)
+Conflicts: ja-trans (&lt;= 0.8-2)
+Description: The NET-3 networking toolkit
+ This package includes the important tools for controlling the network
+ subsystem of the Linux kernel.  This includes arp, ifconfig, netstat,
+ rarp, nameif and route.  Additionally, this package contains utilities
+ relating to particular network hardware types (plipconfig, slattach,
+ mii-tool) and advanced aspects of IP configuration (iptunnel, ipmaddr).
+ .
+ In the upstream package &#39;hostname&#39; and friends are included. Those are
+ not installed by this package, since there is a special &quot;hostname*.deb&quot;.
+Homepage: http://net-tools.berlios.de/
+Original-Maintainer: net-tools Team &lt;pkg-net-tools-maintainers@lists.alioth.debian.org&gt;
+</code></pre><p>執行</p>
+<pre><code>$ dpkg -l net-tools
+</code></pre><p>顯示</p>
+<pre><code>Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                         Version             Architecture        Description
++++-============================-===================-===================-==============================================================
+ii  net-tools                    1.60-25ubuntu2.1    amd64               The NET-3 networking toolkit
+</code></pre><h2 id="">準備工作環境</h2>
+<pre><code>mkdir  ~/Downloads/net-tools -p
+cd ~/Downloads/net-tools
+mkdir download source
+</code></pre><h2 id="package-net-toolshttppackagesubuntucomtrustynet-tools">探索「Package: <a href="http://packages.ubuntu.com/trusty/net-tools" target="_blank">net-tools</a>」</h2>
+<p>切換到「~/Downloads/net-tools/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/net-tools/download
+</code></pre>
+<p>下載「Package: net-tools」。</p>
+<pre><code class="lang-sh">$ apt-get download net-tools
+</code></pre>
+<p>解開「package net-tools」</p>
+<pre><code class="lang-sh">dpkg -x net-tools_1.<span class="hljs-number">60</span>-<span class="hljs-number">25</span>ubuntu2.<span class="hljs-number">1</span>_amd64.deb net-tools
+dpkg <span class="hljs-operator">-e</span> net-tools_1.<span class="hljs-number">60</span>-<span class="hljs-number">25</span>ubuntu2.<span class="hljs-number">1</span>_amd64.deb
+<span class="hljs-comment"># ar xv net-tools_1.60-25ubuntu2.1_amd64.deb</span>
+</code></pre>
+<p>檢視套件檔案</p>
+<pre><code class="lang-sh">$ tree net-tools
+</code></pre>
+<p>顯示</p>
+<pre><code>net-tools
+├── bin
+│   └── netstat
+├── sbin
+│   ├── ifconfig
+│   ├── ipmaddr
+│   ├── iptunnel
+│   ├── mii-tool
+│   ├── nameif
+│   ├── plipconfig
+│   ├── rarp
+│   ├── route
+│   └── slattach
+└── usr
+    ├── sbin
+    │   └── arp
+    └── share
+        ├── doc
+        │   └── net-tools
+        │       ├── changelog.Debian.gz
+        │       ├── copyright
+        │       ├── README
+        │       ├── README.ipv6
+        │       └── TODO
+        └── man
+            ├── de
+            │   ├── man5
+            │   │   └── ethers.5.gz
+            │   └── man8
+            │       ├── arp.8.gz
+            │       ├── ifconfig.8.gz
+            │       ├── netstat.8.gz
+            │       ├── plipconfig.8.gz
+            │       ├── rarp.8.gz
+            │       ├── route.8.gz
+            │       └── slattach.8.gz
+            ├── fr
+            │   ├── man5
+            │   │   └── ethers.5.gz
+            │   └── man8
+            │       ├── arp.8.gz
+            │       ├── ifconfig.8.gz
+            │       ├── netstat.8.gz
+            │       ├── plipconfig.8.gz
+            │       ├── rarp.8.gz
+            │       ├── route.8.gz
+            │       └── slattach.8.gz
+            ├── man5
+            │   └── ethers.5.gz
+            ├── man8
+            │   ├── arp.8.gz
+            │   ├── ifconfig.8.gz
+            │   ├── mii-tool.8.gz
+            │   ├── nameif.8.gz
+            │   ├── netstat.8.gz
+            │   ├── plipconfig.8.gz
+            │   ├── rarp.8.gz
+            │   ├── route.8.gz
+            │   └── slattach.8.gz
+            └── pt_BR
+                └── man8
+                    ├── arp.8.gz
+                    ├── ifconfig.8.gz
+                    ├── netstat.8.gz
+                    ├── rarp.8.gz
+                    └── route.8.gz
+
+18 directories, 47 files
+</code></pre><pre><code>$ tree DEBIAN
+</code></pre><p>顯示</p>
+<pre><code>DEBIAN
+├── control
+└── md5sums
+
+0 directories, 2 files
+</code></pre><h2 id="source-package-net-toolshttppackagesubuntucomtrustynet-tools">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/net-tools" target="_blank">net-tools</a>」</h2>
+<p>切換到「~/Downloads/net-tools/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/net-tools/<span class="hljs-built_in">source</span>
+</code></pre>
+<p>下載「Source Package: net-tools」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> net-tools
+</code></pre>
+<p>檢視原始碼套件檔案。</p>
+<pre><code>$ tree net-tools-1.60
+</code></pre><p>顯示</p>
+<pre><code>net-tools-1.60
+├── ABOUT-NLS
+├── arp.c
+├── config.in
+├── configure.sh
+├── COPYING
+├── debian
+│   ├── changelog
+│   ├── compat
+│   ├── config.h
+│   ├── config.make
+│   ├── control
+│   ├── copyright
+│   ├── install
+│   ├── patches
+│   │   ├── Add_missing_headers.patch
+│   │   ├── Bug#254243-netstat.c-wide-opt.patch
+│   │   ├── Bug#345331-socket_overflow.patch
+│   │   ├── Bug#541172-netstat.c-hardcoded-non-zero-exit-value.patch
+│   │   ├── Bug#569509-iface_overflow.patch
+│   │   ├── CVS-20020730-route.c_opts_64.patch
+│   │   ├── CVS-20030911-nameif.c_sync.patch
+│   │   ├── CVS-20031011-hostname.c_sync.patch
+│   │   ├── CVS-20051204-arp.c_sync.patch
+│   │   ├── CVS-20051204-slttach.c_sync.patch
+│   │   ├── CVS-20060927-mii-tool.c_sync.patch
+│   │   ├── CVS-20061011-includes_sync.patch
+│   │   ├── CVS-20061011-ipmaddr.c_buffer_overflow.patch
+│   │   ├── CVS-20070316-netstat.c_sync.patch
+│   │   ├── CVS-20071202-rarp.c_sync.patch
+│   │   ├── CVS-20081002-ifconfig.c_sync.patch
+│   │   ├── CVS-20081002-manpages_sync.patch
+│   │   ├── CVS-20081003-config.in_sync.patch
+│   │   ├── CVS-20081003-statistics.c_sync.patch
+│   │   ├── CVS-lib_sync.patch
+│   │   ├── fix-fprintf.patch
+│   │   ├── lib_local_changes.patch
+│   │   ├── local-manpages.patch
+│   │   ├── netstat.c-assorted_changes.patch
+│   │   ├── netstat.c-local_changes.patch
+│   │   ├── proper-uts-check.patch
+│   │   ├── series
+│   │   ├── translations.patch
+│   │   └── Ubuntu_unit_conversion.patch
+│   ├── README.source
+│   ├── rules
+│   └── watch
+├── hostname.c
+├── ifconfig.c
+├── include
+│   ├── interface.h
+│   ├── ipx.h
+│   ├── mii.h
+│   ├── sockets.h
+│   └── util-ank.h
+├── INSTALLING
+├── intl.h
+├── ipmaddr.c
+├── iptunnel.c
+├── lib
+│   ├── activate.c
+│   ├── af.c
+│   ├── arcnet.c
+│   ├── ash.c
+│   ├── ax25.c
+│   ├── ax25_gr.c
+│   ├── ddp.c
+│   ├── ddp_gr.c
+│   ├── ec_hw.c
+│   ├── econet.c
+│   ├── ether.c
+│   ├── fddi.c
+│   ├── frame.c
+│   ├── getargs.c
+│   ├── getroute.c
+│   ├── hdlclapb.c
+│   ├── hippi.c
+│   ├── hw.c
+│   ├── inet6.c
+│   ├── inet6_gr.c
+│   ├── inet6_sr.c
+│   ├── inet.c
+│   ├── inet_gr.c
+│   ├── inet_sr.c
+│   ├── interface.c
+│   ├── ipx.c
+│   ├── ipx_gr.c
+│   ├── ipx_sr.c
+│   ├── irda.c
+│   ├── loopback.c
+│   ├── Makefile
+│   ├── masq_info.c
+│   ├── net-features.h
+│   ├── netrom.c
+│   ├── netrom_gr.c
+│   ├── netrom_sr.c
+│   ├── net-support.h
+│   ├── nstrcmp.c
+│   ├── pathnames.h
+│   ├── ppp_ac.c
+│   ├── ppp.c
+│   ├── proc.c
+│   ├── proc.h
+│   ├── rose.c
+│   ├── rose_gr.c
+│   ├── setroute.c
+│   ├── sit.c
+│   ├── slip_ac.c
+│   ├── slip.c
+│   ├── sockets.c
+│   ├── strip.c
+│   ├── tr.c
+│   ├── tunnel.c
+│   ├── unix.c
+│   ├── util-ank.c
+│   ├── util.c
+│   ├── util.h
+│   ├── x25.c
+│   ├── x25_gr.c
+│   └── x25_sr.c
+├── Makefile
+├── man
+│   ├── de_DE
+│   │   ├── arp.8
+│   │   ├── dnsdomainname.1
+│   │   ├── domainname.1
+│   │   ├── ethers.5
+│   │   ├── hostname.1
+│   │   ├── ifconfig.8
+│   │   ├── netstat.8
+│   │   ├── nisdomainname.1
+│   │   ├── plipconfig.8
+│   │   ├── rarp.8
+│   │   ├── route.8
+│   │   ├── slattach.8
+│   │   └── ypdomainname.1
+│   ├── en_US
+│   │   ├── arp.8
+│   │   ├── dnsdomainname.1
+│   │   ├── domainname.1
+│   │   ├── ethers.5
+│   │   ├── hostname.1
+│   │   ├── ifconfig.8
+│   │   ├── mii-tool.8
+│   │   ├── nameif.8
+│   │   ├── netstat.8
+│   │   ├── nisdomainname.1
+│   │   ├── plipconfig.8
+│   │   ├── rarp.8
+│   │   ├── route.8
+│   │   ├── slattach.8
+│   │   └── ypdomainname.1
+│   ├── en_US.88591
+│   ├── fr_FR
+│   │   ├── arp.8
+│   │   ├── dnsdomainname.1
+│   │   ├── domainname.1
+│   │   ├── ethers.5
+│   │   ├── hostname.1
+│   │   ├── ifconfig.8
+│   │   ├── netstat.8
+│   │   ├── nisdomainname.1
+│   │   ├── plipconfig.8
+│   │   ├── rarp.8
+│   │   ├── route.8
+│   │   ├── slattach.8
+│   │   └── ypdomainname.1
+│   ├── fr_FR.88591
+│   ├── Makefile
+│   └── pt_BR
+│       ├── arp.8
+│       ├── dnsdomainname.1
+│       ├── domainname.1
+│       ├── hostname.1
+│       ├── ifconfig.8
+│       ├── netstat.8
+│       ├── nisdomainname.1
+│       ├── rarp.8
+│       ├── route.8
+│       └── ypdomainname.1
+├── mii-tool.c
+├── nameif.c
+├── netstat.c
+├── nls
+│   ├── de_DE.88591
+│   ├── en_US.88591
+│   └── fr_FR.88591
+├── plipconfig.c
+├── po
+│   ├── cs.po
+│   ├── de.po
+│   ├── et_EE.po
+│   ├── fr.po
+│   ├── Makefile
+│   ├── net-tools.pot
+│   └── pt_BR.po
+├── rarp.c
+├── README
+├── README.ipv6
+├── route.c
+├── RPM
+│   ├── net-tools-1.45-config.patch
+│   ├── net-tools.spec
+│   └── README
+├── slattach.c
+├── statistics.c
+└── TODO
+
+17 directories, 189 files
+</code></pre>
                     
                     </section>
                 
@@ -1191,10 +1767,10 @@
         </div>
 
         
-        <a href="../../../content/package/coreutils/info.html" class="navigation navigation-prev " aria-label="Previous page: info"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/net-tools/index.html" class="navigation navigation-prev " aria-label="Previous page: net-tools"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/coreutils/report.html" class="navigation navigation-next " aria-label="Next page: report"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/net-tools/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
