@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/dpkg/note.html" />
+    <link rel="next" href="../../../content/package/dpkg-dev/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/dpkg/index.html" />
+    <link rel="prev" href="../../../content/package/dpkg-dev/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1.1.1" data-basepath="../../.." data-revision="1427816545517">
+    <div class="book" data-level="1.2.1" data-basepath="../../.." data-revision="1427816545517">
     
 
 <div class="book-summary">
@@ -100,7 +100,7 @@
                 
     
         
-        <li class="chapter active" data-level="1.1.1" data-path="content/package/dpkg/info.html">
+        <li class="chapter " data-level="1.1.1" data-path="content/package/dpkg/info.html">
             
                 
                     <a href="../../../content/package/dpkg/info.html">
@@ -170,7 +170,7 @@
                 
     
         
-        <li class="chapter " data-level="1.2.1" data-path="content/package/dpkg-dev/info.html">
+        <li class="chapter active" data-level="1.2.1" data-path="content/package/dpkg-dev/info.html">
             
                 
                     <a href="../../../content/package/dpkg-dev/info.html">
@@ -1760,2174 +1760,228 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_21">
+                    <section class="normal" id="section-gitbook_25">
                     
-                        <h1 id="dpkg-info">dpkg info</h1>
+                        <h1 id="dpkg-dev-info">dpkg-dev info</h1>
 <h2 id="">套件資訊</h2>
 <p>執行</p>
-<pre><code>$ apt-cache show dpkg
+<pre><code>$ apt-cache show dpkg-dev
 </code></pre><p>顯示</p>
-<pre><code>Package: dpkg
-Essential: yes
-Priority: required
-Section: admin
-Installed-Size: 6239
+<pre><code>Package: dpkg-dev
+Priority: optional
+Section: utils
+Installed-Size: 1634
 Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
 Original-Maintainer: Dpkg Developers &lt;debian-dpkg@lists.debian.org&gt;
-Architecture: amd64
+Architecture: all
+Source: dpkg
 Version: 1.17.5ubuntu5.3
 Replaces: manpages-it (&lt;&lt; 2.80-4)
-Pre-Depends: libbz2-1.0, libc6 (&gt;= 2.14), liblzma5 (&gt;= 5.1.1alpha+20120614), libselinux1 (&gt;= 2.1.0), zlib1g (&gt;= 1:1.1.4), tar (&gt;= 1.23)
-Suggests: apt
-Breaks: apt (&lt;&lt; 0.7.7), aptitude (&lt;&lt; 0.4.7-1), dpkg-dev (&lt;&lt; 1.15.8), libdpkg-perl (&lt;&lt; 1.15.8)
-Filename: pool/main/d/dpkg/dpkg_1.17.5ubuntu5.3_amd64.deb
-Size: 1954416
-MD5sum: f60bf053215aeaa652511aafba1c2a15
-SHA1: 190c03adc7995d7b110105322c2c308ee33d9af4
-SHA256: ffbf7f0013b3c4b3723d95666db81616cf01d7864c7a4f20964d2de4690a453d
-Description-en: Debian package management system
- This package provides the low-level infrastructure for handling the
- installation and removal of Debian software packages.
+Depends: libdpkg-perl (= 1.17.5ubuntu5.3), bzip2, xz-utils, patch, make, binutils, base-files (&gt;= 5.0.0)
+Recommends: gcc | c-compiler, build-essential, fakeroot, gnupg | gnupg2, gpgv | gpgv2, libalgorithm-merge-perl
+Suggests: debian-keyring
+Breaks: devscripts (&lt;&lt; 2.10.26), dpkg-cross (&lt;&lt; 2.0.0)
+Filename: pool/main/d/dpkg/dpkg-dev_1.17.5ubuntu5.3_all.deb
+Size: 725956
+MD5sum: 84577946555ef68f3aa5ffdf27787fe9
+SHA1: bf0c8671334b28788854e58c7d4ca5f2531734be
+SHA256: e4cda51a2a3b8d37dd37d3bc6db592b3e2f7fc3329729cc2ceddf9fbad9512ec
+Description-en: Debian package development tools
+ This package provides the development tools (including dpkg-source)
+ required to unpack, build and upload Debian source packages.
  .
- For Debian package development tools, install dpkg-dev.
-Description-md5: 2f156c6a30cc39895ad3487111e8c190
+ Most Debian source packages will require additional tools to build;
+ for example, most packages need make and the C compiler gcc.
+Description-md5: 2eaf4b4a1cef9584869950f3a52106fc
 Origin: Ubuntu
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Multi-Arch: foreign
 Homepage: https://wiki.debian.org/Teams/Dpkg
+Build-Essential: yes
 Supported: 5y
-Task: minimal
 
-Package: dpkg
-Essential: yes
-Priority: required
-Section: admin
-Installed-Size: 6239
+Package: dpkg-dev
+Priority: optional
+Section: utils
+Installed-Size: 1634
 Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
 Original-Maintainer: Dpkg Developers &lt;debian-dpkg@lists.debian.org&gt;
-Architecture: amd64
+Architecture: all
+Source: dpkg
 Version: 1.17.5ubuntu5
 Replaces: manpages-it (&lt;&lt; 2.80-4)
-Pre-Depends: libbz2-1.0, libc6 (&gt;= 2.14), liblzma5 (&gt;= 5.1.1alpha+20120614), libselinux1 (&gt;= 2.1.0), zlib1g (&gt;= 1:1.1.4), tar (&gt;= 1.23)
-Suggests: apt
-Breaks: apt (&lt;&lt; 0.7.7), aptitude (&lt;&lt; 0.4.7-1), dpkg-dev (&lt;&lt; 1.15.8), libdpkg-perl (&lt;&lt; 1.15.8)
-Filename: pool/main/d/dpkg/dpkg_1.17.5ubuntu5_amd64.deb
-Size: 1956240
-MD5sum: ed27e7e9c0fa6f2440f81700af419251
-SHA1: 2fd8c704c6aee2c28ba59e9f5e2651239a160172
-SHA256: 5f2980165aae60567d1947ec330a9e75e2eaaf974095cea5a5b20af709b49586
-Description-en: Debian package management system
- This package provides the low-level infrastructure for handling the
- installation and removal of Debian software packages.
+Depends: libdpkg-perl (= 1.17.5ubuntu5), bzip2, xz-utils, patch, make, binutils, base-files (&gt;= 5.0.0)
+Recommends: gcc | c-compiler, build-essential, fakeroot, gnupg | gnupg2, gpgv | gpgv2, libalgorithm-merge-perl
+Suggests: debian-keyring
+Breaks: devscripts (&lt;&lt; 2.10.26), dpkg-cross (&lt;&lt; 2.0.0)
+Filename: pool/main/d/dpkg/dpkg-dev_1.17.5ubuntu5_all.deb
+Size: 726082
+MD5sum: 8b00e60c75ce7dace3368967066721a6
+SHA1: 10354d2d26d8e3b50b3d0c917bd74149fd30b93d
+SHA256: bd565a70d6b10ca68dc79c922414a3789fa44c6cafb99d646a8d9c0b244dffd9
+Description-en: Debian package development tools
+ This package provides the development tools (including dpkg-source)
+ required to unpack, build and upload Debian source packages.
  .
- For Debian package development tools, install dpkg-dev.
-Description-md5: 2f156c6a30cc39895ad3487111e8c190
+ Most Debian source packages will require additional tools to build;
+ for example, most packages need make and the C compiler gcc.
+Description-md5: 2eaf4b4a1cef9584869950f3a52106fc
 Origin: Ubuntu
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Multi-Arch: foreign
 Homepage: https://wiki.debian.org/Teams/Dpkg
+Build-Essential: yes
 Supported: 5y
-Task: minimal
 </code></pre><p>執行</p>
-<pre><code>$ apt-cache showpkg dpkg
+<pre><code>$ apt-cache showpkg dpkg-dev
 </code></pre><p>顯示</p>
-<pre><code>Package: dpkg
+<pre><code>Package: dpkg-dev
 Versions:
 1.17.5ubuntu5.3 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty-updates_main_binary-amd64_Packages) (/var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_trusty-security_main_binary-amd64_Packages) (/var/lib/dpkg/status)
  Description Language:
                  File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
-                  MD5: 2f156c6a30cc39895ad3487111e8c190
+                  MD5: 2eaf4b4a1cef9584869950f3a52106fc
  Description Language: en
                  File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
-                  MD5: 2f156c6a30cc39895ad3487111e8c190
+                  MD5: 2eaf4b4a1cef9584869950f3a52106fc
 
 1.17.5ubuntu5 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages)
  Description Language:
                  File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
-                  MD5: 2f156c6a30cc39895ad3487111e8c190
+                  MD5: 2eaf4b4a1cef9584869950f3a52106fc
  Description Language: en
                  File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
-                  MD5: 2f156c6a30cc39895ad3487111e8c190
+                  MD5: 2eaf4b4a1cef9584869950f3a52106fc
 
 
 Reverse Depends:
-  brackets,dpkg 1.14.0
-  google-webdesigner,dpkg 1.14.0
-  virtualbox-qt,dpkg 1.15.6~
-  virtualbox-guest-x11,dpkg 1.15.6~
-  virtualbox-guest-utils,dpkg 1.15.6~
-  virtualbox-guest-dkms,dpkg 1.15.6~
-  virtualbox-dkms,dpkg 1.15.6~
-  virtualbox-dbg,dpkg 1.15.6~
-  virtualbox,dpkg 1.15.6~
-  openstack-dashboard,dpkg 1.15.7.2
-  libreoffice-dbg,dpkg 1.15.6
-  libreoffice-common,dpkg 1.15.7.2~
-  python3-pyeclib,dpkg 1.15.6~
-  python-pyeclib,dpkg 1.15.6~
-  icinga-common,dpkg 1.16.1
-  0ad-dbg,dpkg 1.15.6~
-  0ad-data-common,dpkg 1.15.6~
-  0ad-data,dpkg 1.15.6~
-  0ad,dpkg 1.15.6~
-  flex,dpkg 1.15.4
-  dpkg:i386,dpkg
-  base-files:i386,dpkg 1.15.0
-  virtualbox-qt,dpkg 1.15.6~
-  virtualbox-guest-x11,dpkg 1.15.6~
-  virtualbox-guest-utils,dpkg 1.15.6~
-  virtualbox-guest-dkms,dpkg 1.15.6~
-  virtualbox-dkms,dpkg 1.15.6~
-  virtualbox-dbg,dpkg 1.15.6~
-  virtualbox,dpkg 1.15.6~
-  websockify,dpkg 1.15.6~
-  vlc-plugin-zvbi,dpkg 1.15.6~
-  vlc-plugin-svg,dpkg 1.15.6~
-  vlc-plugin-sdl,dpkg 1.15.6~
-  vlc-plugin-pulse,dpkg 1.15.6~
-  vlc-plugin-notify,dpkg 1.15.6~
-  vlc-plugin-jack,dpkg 1.15.6~
-  vlc-plugin-fluidsynth,dpkg 1.15.6~
-  vlc-nox,dpkg 1.15.6~
-  vlc-dbg,dpkg 1.15.6~
-  vlc-data,dpkg 1.15.6~
-  vlc,dpkg 1.15.6~
-  qtconnectivity5-examples,dpkg 1.15.6~
-  python3-libtorrent-dbg,dpkg 1.15.6~
-  python3-libtorrent,dpkg 1.15.6~
-  python-pypy.sandbox,dpkg 1.15.6~
-  python-libtorrent-dbg,dpkg 1.15.6~
-  python-libtorrent,dpkg 1.15.6~
-  pypy-tk,dpkg 1.15.6~
-  pypy-lib-testsuite,dpkg 1.15.6~
-  pypy-lib,dpkg 1.15.6~
-  pypy-doc,dpkg 1.15.6~
-  pypy-dev,dpkg 1.15.6~
-  pypy,dpkg 1.15.6~
-  php5-sybase,dpkg 1.15.7.2~
-  php5-mysqlnd,dpkg 1.15.7.2~
-  php5-intl,dpkg 1.15.7.2~
-  php5-fpm,dpkg 1.15.7.2~
-  php5-enchant,dpkg 1.15.7.2~
-  libvlccore7,dpkg 1.15.6~
-  libvlccore-dev,dpkg 1.15.6~
-  libvlc5,dpkg 1.15.6~
-  libvlc-dev,dpkg 1.15.6~
-  libtorrent-rasterbar7,dpkg 1.15.6~
-  libtorrent-rasterbar-doc,dpkg 1.15.6~
-  libtorrent-rasterbar-dev,dpkg 1.15.6~
-  libtorrent-rasterbar-dbg,dpkg 1.15.6~
-  libqt5sql5-tds,dpkg 1.15.6~
-  libqt5sql5-psql,dpkg 1.15.6~
-  libqt5sql5-odbc,dpkg 1.15.6~
-  libqt5sql5-mysql,dpkg 1.15.6~
-  libpam-winbind,dpkg 1.15.6~
-  libnss-winbind,dpkg 1.15.6~
-  libav-tools,dpkg 1.15.7.2~
-  freeipmi-ipmidetect,dpkg 1.15.7.2~
-  freeipmi-bmc-watchdog,dpkg 1.15.7.2~
-  fonts-roboto,dpkg 1.15.6~
-  chromium-codecs-ffmpeg-extra-dbg,dpkg 1.15.6
-  chromium-codecs-ffmpeg-extra,dpkg 1.15.6
-  chromium-codecs-ffmpeg-dbg,dpkg 1.15.6
-  chromium-codecs-ffmpeg,dpkg 1.15.6
-  chromium-chromedriver-dbg,dpkg 1.15.6
-  chromium-chromedriver,dpkg 1.15.6
-  chromium-browser-l10n,dpkg 1.15.6
-  chromium-browser-dbg,dpkg 1.15.6
-  chromium-browser,dpkg 1.15.6
-  util-linux,dpkg 1.15.4
-  update-notifier-common,dpkg 1.15.7.2
-  unity-gtk3-module,dpkg 1.15.7.2
-  unity-gtk2-module,dpkg 1.15.7.2
-  ubuntu-drivers-common,dpkg 1.15.7.2
-  smbclient,dpkg 1.15.6~
-  samba-doc,dpkg 1.15.6~
-  samba-dbg,dpkg 1.15.6~
-  samba-common,dpkg 1.15.6~
-  samba,dpkg 1.15.6~
-  qtbase5-private-dev,dpkg 1.15.6~
-  qtbase5-examples,dpkg 1.15.6~
-  qtbase5-dev-tools,dpkg 1.15.6~
-  qtbase5-dev,dpkg 1.15.6~
-  qt5-qmake,dpkg 1.15.6~
-  python-seamicroclient,dpkg 1.15.6~
-  python-pycadf,dpkg 1.15.6~
-  python-happybase,dpkg 1.15.6~
-  postfix,dpkg 1.8.3
-  php5-xsl,dpkg 1.15.7.2~
-  php5-xmlrpc,dpkg 1.15.7.2~
-  php5-tidy,dpkg 1.15.7.2~
-  php5-sqlite,dpkg 1.15.7.2~
-  php5-snmp,dpkg 1.15.7.2~
-  php5-recode,dpkg 1.15.7.2~
-  php5-readline,dpkg 1.15.7.2~
-  php5-pspell,dpkg 1.15.7.2~
-  php5-pgsql,dpkg 1.15.7.2~
-  php5-odbc,dpkg 1.15.7.2~
-  php5-mysql,dpkg 1.15.7.2~
-  php5-ldap,dpkg 1.15.7.2~
-  php5-gmp,dpkg 1.15.7.2~
-  php5-gd,dpkg 1.15.7.2~
-  php5-curl,dpkg 1.15.7.2~
-  openstack-dashboard,dpkg 1.15.7.2
-  openssh-server,dpkg 1.9.0
-  openssh-client,dpkg 1.7.0
-  ntpdate,dpkg 1.15.7.2
-  ntp,dpkg 1.15.7.2
-  man-db,dpkg 1.16.1~
-  linux-image-3.16.0-33-lowlatency,dpkg 1.10.24
-  linux-image-3.16.0-33-generic,dpkg 1.10.24
-  linux-image-3.16.0-31-lowlatency,dpkg 1.10.24
-  linux-image-3.16.0-31-generic,dpkg 1.10.24
-  linux-image-3.16.0-30-lowlatency,dpkg 1.10.24
-  linux-image-3.16.0-30-generic,dpkg 1.10.24
-  linux-image-3.16.0-29-lowlatency,dpkg 1.10.24
-  linux-image-3.16.0-29-generic,dpkg 1.10.24
-  linux-image-3.16.0-28-lowlatency,dpkg 1.10.24
-  linux-image-3.16.0-28-generic,dpkg 1.10.24
-  linux-image-3.16.0-26-lowlatency,dpkg 1.10.24
-  linux-image-3.16.0-26-generic,dpkg 1.10.24
-  linux-image-3.16.0-25-lowlatency,dpkg 1.10.24
-  linux-image-3.16.0-25-generic,dpkg 1.10.24
-  linux-image-3.13.0-48-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-48-generic,dpkg 1.10.24
-  linux-image-3.13.0-46-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-46-generic,dpkg 1.10.24
-  linux-image-3.13.0-45-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-45-generic,dpkg 1.10.24
-  linux-image-3.13.0-44-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-44-generic,dpkg 1.10.24
-  linux-image-3.13.0-43-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-43-generic,dpkg 1.10.24
-  linux-image-3.13.0-41-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-41-generic,dpkg 1.10.24
-  linux-image-3.13.0-40-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-40-generic,dpkg 1.10.24
-  linux-image-3.13.0-39-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-39-generic,dpkg 1.10.24
-  linux-image-3.13.0-37-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-37-generic,dpkg 1.10.24
-  linux-image-3.13.0-36-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-36-generic,dpkg 1.10.24
-  linux-image-3.13.0-35-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-35-generic,dpkg 1.10.24
-  linux-image-3.13.0-34-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-34-generic,dpkg 1.10.24
-  linux-image-3.13.0-33-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-33-generic,dpkg 1.10.24
-  linux-image-3.13.0-32-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-32-generic,dpkg 1.10.24
-  linux-image-3.13.0-30-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-30-generic,dpkg 1.10.24
-  linux-image-3.13.0-29-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-29-generic,dpkg 1.10.24
-  linux-image-3.13.0-27-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-27-generic,dpkg 1.10.24
-  linux-image-3.13.0-24-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-24-generic,dpkg 1.10.24
-  lightdm,dpkg 1.15.7.2
-  libwbclient0,dpkg 1.15.6~
-  libwbclient-dev,dpkg 1.15.6~
-  libunity-gtk3-parser0,dpkg 1.15.7.2
-  libunity-gtk2-parser0,dpkg 1.15.7.2
-  libsmbsharemodes0,dpkg 1.15.6~
-  libsmbsharemodes-dev,dpkg 1.15.6~
-  libsmbclient-dev,dpkg 1.15.6~
-  libsmbclient,dpkg 1.15.6~
-  libreoffice-dbg,dpkg 1.15.6
-  libreoffice-common,dpkg 1.15.7.2~
-  libqt5xml5,dpkg 1.15.6~
-  libqt5widgets5,dpkg 1.15.6~
-  libqt5test5,dpkg 1.15.6~
-  libqt5sql5-sqlite,dpkg 1.15.6~
-  libqt5sql5,dpkg 1.15.6~
-  libqt5printsupport5,dpkg 1.15.6~
-  libqt5opengl5-dev,dpkg 1.15.6~
-  libqt5opengl5,dpkg 1.15.6~
-  libqt5network5,dpkg 1.15.6~
-  libqt5gui5,dpkg 1.15.6~
-  libqt5dbus5,dpkg 1.15.6~
-  libqt5core5a,dpkg 1.15.6~
-  libqt5concurrent5,dpkg 1.15.6~
-  libpam-smbpass,dpkg 1.15.6~
-  libdpkg-perl,dpkg 1.15.8
-  libdpkg-perl,dpkg 1.15.8
-  language-selector-common,dpkg 1.15.7.2
-  language-pack-zh-hant-base,dpkg 1.16.1
-  language-pack-zh-hant,dpkg 1.16.1
-  language-pack-zh-hans-base,dpkg 1.16.1
-  language-pack-zh-hans,dpkg 1.16.1
-  language-pack-uz-base,dpkg 1.16.1
-  language-pack-uz,dpkg 1.16.1
-  language-pack-uk-base,dpkg 1.16.1
-  language-pack-uk,dpkg 1.16.1
-  language-pack-sv-base,dpkg 1.16.1
-  language-pack-sv,dpkg 1.16.1
-  language-pack-sa-base,dpkg 1.16.1
-  language-pack-sa,dpkg 1.16.1
-  language-pack-pl-base,dpkg 1.16.1
-  language-pack-pl,dpkg 1.16.1
-  language-pack-nl-base,dpkg 1.16.1
-  language-pack-nl,dpkg 1.16.1
-  language-pack-nb-base,dpkg 1.16.1
-  language-pack-nb,dpkg 1.16.1
-  language-pack-lv-base,dpkg 1.16.1
-  language-pack-lv,dpkg 1.16.1
-  language-pack-it-base,dpkg 1.16.1
-  language-pack-it,dpkg 1.16.1
-  language-pack-hu-base,dpkg 1.16.1
-  language-pack-hu,dpkg 1.16.1
-  language-pack-gnome-zh-hant-base,dpkg 1.16.1
-  language-pack-gnome-zh-hant,dpkg 1.16.1
-  language-pack-gnome-zh-hans-base,dpkg 1.16.1
-  language-pack-gnome-zh-hans,dpkg 1.16.1
-  language-pack-gnome-uz-base,dpkg 1.16.1
-  language-pack-gnome-uz,dpkg 1.16.1
-  language-pack-gnome-uk-base,dpkg 1.16.1
-  language-pack-gnome-uk,dpkg 1.16.1
-  language-pack-gnome-sv-base,dpkg 1.16.1
-  language-pack-gnome-sv,dpkg 1.16.1
-  language-pack-gnome-sa-base,dpkg 1.16.1
-  language-pack-gnome-sa,dpkg 1.16.1
-  language-pack-gnome-pl-base,dpkg 1.16.1
-  language-pack-gnome-pl,dpkg 1.16.1
-  language-pack-gnome-nl-base,dpkg 1.16.1
-  language-pack-gnome-nl,dpkg 1.16.1
-  language-pack-gnome-nb-base,dpkg 1.16.1
-  language-pack-gnome-nb,dpkg 1.16.1
-  language-pack-gnome-lv-base,dpkg 1.16.1
-  language-pack-gnome-lv,dpkg 1.16.1
-  language-pack-gnome-it-base,dpkg 1.16.1
-  language-pack-gnome-it,dpkg 1.16.1
-  language-pack-gnome-hu-base,dpkg 1.16.1
-  language-pack-gnome-hu,dpkg 1.16.1
-  language-pack-gnome-gl-base,dpkg 1.16.1
-  language-pack-gnome-gl,dpkg 1.16.1
-  language-pack-gnome-gd-base,dpkg 1.16.1
-  language-pack-gnome-gd,dpkg 1.16.1
-  language-pack-gnome-ga,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fr-base,dpkg 1.16.1
-  language-pack-gnome-fr,dpkg 1.16.1
-  language-pack-gnome-fi-base,dpkg 1.16.1
-  language-pack-gnome-fi,dpkg 1.16.1
-  language-pack-gnome-es-base,dpkg 1.16.1
-  language-pack-gnome-es,dpkg 1.16.1
-  language-pack-gnome-en-base,dpkg 1.16.1
-  language-pack-gnome-en,dpkg 1.16.1
-  language-pack-gnome-el-base,dpkg 1.16.1
-  language-pack-gnome-el,dpkg 1.16.1
-  language-pack-gnome-de-base,dpkg 1.16.1
-  language-pack-gnome-de,dpkg 1.16.1
-  language-pack-gnome-ca-base,dpkg 1.16.1
-  language-pack-gnome-ca,dpkg 1.16.1
-  language-pack-gnome-ast-base,dpkg 1.16.1
-  language-pack-gnome-ast,dpkg 1.16.1
-  language-pack-gl-base,dpkg 1.16.1
-  language-pack-gl,dpkg 1.16.1
-  language-pack-gd-base,dpkg 1.16.1
-  language-pack-gd,dpkg 1.16.1
-  language-pack-ga,dpkg 1.10.27ubuntu1
-  language-pack-fr-base,dpkg 1.16.1
-  language-pack-fr,dpkg 1.16.1
-  language-pack-fi-base,dpkg 1.16.1
-  language-pack-fi,dpkg 1.16.1
-  language-pack-es-base,dpkg 1.16.1
-  language-pack-es,dpkg 1.16.1
-  language-pack-en-base,dpkg 1.16.1
-  language-pack-en,dpkg 1.16.1
-  language-pack-el-base,dpkg 1.16.1
-  language-pack-el,dpkg 1.16.1
-  language-pack-de-base,dpkg 1.16.1
-  language-pack-de,dpkg 1.16.1
-  language-pack-ca-base,dpkg 1.16.1
-  language-pack-ca,dpkg 1.16.1
-  language-pack-ast-base,dpkg 1.16.1
-  language-pack-ast,dpkg 1.16.1
-  heimdal-docs,dpkg 1.15.4
-  grub2-common,dpkg 1.15.4
-  gnupg2,dpkg 1.15.4
-  gettext,dpkg 1.15.4
-  gccgo-4.9-doc,dpkg 1.15.4
-  freeipmi-common,dpkg 1.15.7.2~
-  fonts-droid,dpkg 1.15.7.2
-  dselect,dpkg 1.13.1
-  cups-daemon,dpkg 1.15.7.2
-  binutils-doc,dpkg 1.15.4
-  bash-doc,dpkg 1.15.4
-  base-files,dpkg 1.15.0
-  dpkg:i386,dpkg
-  cron:i386,dpkg 1.15.4
-  base-files:i386,dpkg 1.15.0
-  wine-mono0.0.8,dpkg 1.14.12ubuntu3
-  wine-gecko2.21,dpkg 1.14.12ubuntu3
-  virtualbox-qt,dpkg 1.15.6~
-  virtualbox-guest-x11,dpkg 1.15.6~
-  virtualbox-guest-utils,dpkg 1.15.6~
-  virtualbox-guest-dkms,dpkg 1.15.6~
-  virtualbox-dkms,dpkg 1.15.6~
-  virtualbox-dbg,dpkg 1.15.6~
-  virtualbox,dpkg 1.15.6~
-  vice,dpkg 1.15.4
-  ttf-xfree86-nonfree-syriac,dpkg 1.15.7.2
-  ttf-xfree86-nonfree,dpkg 1.15.7.2
-  ttf-mscorefonts-installer,dpkg 1.15.7.2
-  ttf-mikachan,dpkg 1.15.6~
-  t1-xfree86-nonfree,dpkg 1.15.7.2
-  sdic,dpkg 1.15.4
-  ngspice,dpkg 1.15.4
-  microcode.ctl,dpkg 1.15.7.2
-  maple-latex,dpkg 1.14.18
-  libcuneiform0,dpkg 1.15.6
-  libcuneiform-dev,dpkg 1.15.6
-  gsl-doc-info,dpkg 1.15.4
-  gmp-doc,dpkg 1.15.4
-  geoip-database-contrib,dpkg 1.15.6~
-  fonts-mikachan,dpkg 1.15.6~
-  fonts-ipafont-nonfree-uigothic,dpkg 1.15.6~
-  fonts-ipafont-nonfree-jisx0208,dpkg 1.15.6~
-  fonts-cns11643-sung,dpkg 1.15.6~
-  fonts-cns11643-kai,dpkg 1.15.6~
-  foiltex,dpkg 1.14.18
-  cuneiform-common,dpkg 1.15.6
-  cuneiform,dpkg 1.15.6
-  cufflinks,dpkg 1.15.6
-  context-doc-nonfree,dpkg 1.14.18
-  xnee-doc,dpkg 1.15.4
-  xmorph,dpkg 1.15.4
-  xmltex,dpkg 1.14.18
-  xmacro,dpkg 1.15.6
-  xfonts-wqy,dpkg 1.15.7.2
-  xfonts-tipa,dpkg 1.15.7.2
-  xfonts-efont-unicode-ib,dpkg 1.15.6~
-  xfonts-efont-unicode,dpkg 1.15.6~
-  xfonts-baekmuk,dpkg 1.15.6~
-  xaos,dpkg 1.15.4
-  writer2latex,dpkg 1.14.18
-  wl-beta,dpkg 1.15.4
-  wl,dpkg 1.15.4
-  wise-doc,dpkg 1.15.6~
-  wise-data,dpkg 1.15.6~
-  wise,dpkg 1.15.6~
-  wine1.6-dev,dpkg 1.14.12ubuntu3
-  wine1.6-amd64,dpkg 1.14.12ubuntu3
-  wine1.6,dpkg 1.15.7.2~
-  whizzytex,dpkg 1.14.18
-  websockify,dpkg 1.15.6~
-  webmagick,dpkg 1.15.4
-  wajig,dpkg 1.16.2
-  w3m-el-snapshot,dpkg 1.15.4
-  w3m-el,dpkg 1.15.4
-  vprerex,dpkg 1.14.18
-  vpnc,dpkg 1.15.7.2
-  vm,dpkg 1.15.4
-  vlc-plugin-zvbi,dpkg 1.15.6~
-  vlc-plugin-svg,dpkg 1.15.6~
-  vlc-plugin-sdl,dpkg 1.15.6~
-  vlc-plugin-pulse,dpkg 1.15.6~
-  vlc-plugin-notify,dpkg 1.15.6~
-  vlc-plugin-jack,dpkg 1.15.6~
-  vlc-plugin-fluidsynth,dpkg 1.15.6~
-  vlc-nox,dpkg 1.15.6~
-  vlc-dbg,dpkg 1.15.6~
-  vlc-data,dpkg 1.15.6~
-  vlc,dpkg 1.15.6~
-  viruskiller,dpkg 1.15.6
-  virtuoso-opensource-6.1,dpkg 1.15.7.2~
-  videocut,dpkg 1.15.6~
-  vclt-tools,dpkg 1.15.6~
-  vcdimager,dpkg 1.15.4
-  upgrade-system,dpkg 1.15.7.2
-  unknown-horizons,dpkg 1.15.6~
-  unburden-home-dir,dpkg 1.15.7.2
-  unar,dpkg 1.15.6~
-  ulatencyd,dpkg 1.15.7.2
-  udunits-bin,dpkg 1.15.4
-  ubuntustudio-default-settings,dpkg 1.15.7.2~
-  ttf-unfonts-core,dpkg 1.15.6~
-  ttf-tiresias,dpkg 1.15.7.2
-  ttf-staypuft,dpkg 1.15.7.2
-  ttf-sjfonts,dpkg 1.15.7.2
-  ttf-radisnoir,dpkg 1.15.7.2
-  ttf-kochi-mincho,dpkg 1.15.6~
-  ttf-kochi-gothic,dpkg 1.15.6~
-  ttf-kacst-one,dpkg 1.15.6~
-  ttf-kacst,dpkg 1.15.6~
-  ttf-goudybookletter,dpkg 1.15.7.2
-  ttf-georgewilliams,dpkg 1.15.7.2
-  ttf-baekmuk,dpkg 1.15.6~
-  ttf-atarismall,dpkg 1.15.7.2
-  trove-taskmanager,dpkg 1.15.6~
-  trove-guestagent,dpkg 1.15.6~
-  trigger-rally-data,dpkg 1.15.6
-  torrus-common,dpkg 1.15.7.2
-  tophat,dpkg 1.15.6~
-  tmw,dpkg 1.15.6~
-  thailatex,dpkg 1.14.18
-  texpower,dpkg 1.14.18
-  texlive-xetex,dpkg 1.14.18
-  texlive-science,dpkg 1.14.18
-  texlive-publishers,dpkg 1.14.18
-  texlive-plain-extra,dpkg 1.14.18
-  texlive-omega,dpkg 1.14.18
-  texlive-music,dpkg 1.14.18
-  texlive-metapost,dpkg 1.14.18
-  texlive-latex3,dpkg 1.14.18
-  texlive-lang-vietnamese,dpkg 1.14.18
-  texlive-lang-tibetan,dpkg 1.14.18
-  texlive-lang-swedish,dpkg 1.14.18
-  texlive-lang-spanish,dpkg 1.14.18
-  texlive-lang-portuguese,dpkg 1.14.18
-  texlive-lang-polish,dpkg 1.14.18
-  texlive-lang-other,dpkg 1.14.18
-  texlive-lang-norwegian,dpkg 1.14.18
-  texlive-lang-mongolian,dpkg 1.14.18
-  texlive-lang-lithuanian,dpkg 1.14.18
-  texlive-lang-latvian,dpkg 1.14.18
-  texlive-lang-latin,dpkg 1.14.18
-  texlive-lang-italian,dpkg 1.14.18
-  texlive-lang-indic,dpkg 1.14.18
-  texlive-lang-hungarian,dpkg 1.14.18
-  texlive-lang-hebrew,dpkg 1.14.18
-  texlive-lang-greek,dpkg 1.14.18
-  texlive-lang-french,dpkg 1.14.18
-  texlive-lang-finnish,dpkg 1.14.18
-  texlive-lang-european,dpkg 1.14.18
-  texlive-lang-english,dpkg 1.14.18
-  texlive-lang-dutch,dpkg 1.14.18
-  texlive-lang-danish,dpkg 1.14.18
-  texlive-lang-czechslovak,dpkg 1.14.18
-  texlive-lang-cyrillic,dpkg 1.14.18
-  texlive-lang-croatian,dpkg 1.14.18
-  texlive-lang-cjk,dpkg 1.14.18
-  texlive-lang-armenian,dpkg 1.14.18
-  texlive-lang-arabic,dpkg 1.14.18
-  texlive-lang-all,dpkg 1.14.18
-  texlive-lang-african,dpkg 1.14.18
-  texlive-humanities,dpkg 1.14.18
-  texlive-generic-extra,dpkg 1.14.18
-  texlive-games,dpkg 1.14.18
-  texlive-formats-extra,dpkg 1.14.18
-  texlive-fonts-extra,dpkg 1.14.18
-  texlive-doc-zh,dpkg 1.14.18
-  texlive-doc-vi,dpkg 1.14.18
-  texlive-doc-uk,dpkg 1.14.18
-  texlive-doc-tr,dpkg 1.14.18
-  texlive-doc-th,dpkg 1.14.18
-  texlive-doc-si,dpkg 1.14.18
-  texlive-doc-ru,dpkg 1.14.18
-  texlive-doc-rs,dpkg 1.14.18
-  texlive-doc-pt,dpkg 1.14.18
-  texlive-doc-pl,dpkg 1.14.18
-  texlive-doc-nl,dpkg 1.14.18
-  texlive-doc-mn,dpkg 1.14.18
-  texlive-doc-ko,dpkg 1.14.18
-  texlive-doc-ja,dpkg 1.14.18
-  texlive-doc-it,dpkg 1.14.18
-  texlive-doc-fr,dpkg 1.14.18
-  texlive-doc-fi,dpkg 1.14.18
-  texlive-doc-es,dpkg 1.14.18
-  texlive-doc-en,dpkg 1.14.18
-  texlive-doc-de,dpkg 1.14.18
-  texlive-doc-cs+sk,dpkg 1.14.18
-  texlive-doc-bg,dpkg 1.14.18
-  texlive-doc-ar,dpkg 1.14.18
-  tetex-brev,dpkg 1.14.18
-  telephony-service,dpkg 1.15.6~
-  tecnoballz-data,dpkg 1.15.6
-  tecnoballz,dpkg 1.15.6
-  tcc,dpkg 1.15.4
-  system-tools-backends,dpkg 1.15.7.2
-  swift-plugin-s3,dpkg 1.15.6~
-  stow,dpkg 1.15.4
-  stl-manual,dpkg 1.10.24
-  sshm,dpkg 1.15.6~
-  ssed,dpkg 1.15.4
-  spice-html5,dpkg 1.15.6~
-  spass,dpkg 1.15.4
-  spampd,dpkg 1.10.23
-  source-highlight,dpkg 1.15.4
-  sml-mode,dpkg 1.15.4
-  slib,dpkg 1.15.4
-  slbackup,dpkg 1.15.7.2
-  sketch,dpkg 1.15.4
-  simutrans-pak64,dpkg 1.15.6
-  simutrans-pak128.britain,dpkg 1.15.6
-  simutrans-makeobj,dpkg 1.15.6
-  simutrans-data,dpkg 1.15.6
-  simutrans,dpkg 1.15.6
-  simulavr,dpkg 1.15.4
-  sheepdog,dpkg 1.15.6~
-  sgf2dg,dpkg 1.14.18
-  sftpcloudfs,dpkg 1.15.6~
-  sepia,dpkg 1.15.4
-  semi,dpkg 1.15.4
-  scute,dpkg 1.15.4
-  scrotwm,dpkg 1.15.7.2~
-  scorched3d-dbg,dpkg 1.15.6~
-  scorched3d-data,dpkg 1.15.6~
-  scorched3d,dpkg 1.15.6~
-  scalable-cyrfonts-tex,dpkg 1.14.18
-  sblim-wbemcli-dbg,dpkg 1.15.6~
-  sblim-wbemcli,dpkg 1.15.6~
-  rumor,dpkg 1.15.4
-  rrep,dpkg 1.15.4
-  rplay-client,dpkg 1.15.4
-  rootstrap,dpkg 1.9.19
-  robotfindskitten,dpkg 1.15.4
-  rlinetd,dpkg 1.9
-  rheolef-doc,dpkg 1.15.4
-  recutils,dpkg 1.15.4
-  ratpoison,dpkg 1.15.4
-  r5rs-doc,dpkg 1.15.4
-  r-doc-info,dpkg 1.15.4
-  r-cran-vegan,dpkg 1.15.6
-  quvi,dpkg 1.15.6
-  quelcom,dpkg 1.15.4
-  qtwebkit5-examples-dbg,dpkg 1.15.6~
-  qtwebkit5-examples,dpkg 1.15.6~
-  qtsystems5-tools,dpkg 1.15.6~
-  qtsystems5-private-dev,dpkg 1.15.6~
-  qtsystems5-examples,dpkg 1.15.6~
-  qtsystems5-dev,dpkg 1.15.6~
-  qtdeclarative5-ubuntu-telephony0.1,dpkg 1.15.6~
-  qtdeclarative5-ubuntu-settings-components,dpkg 1.15.6~
-  qtdeclarative5-ubuntu-history0.1,dpkg 1.15.6~
-  qtdeclarative5-ubuntu-click0.1,dpkg 1.15.6~
-  qtdeclarative5-u1db1.0,dpkg 1.15.6~
-  qtdeclarative5-qtmultimedia-touch-plugin,dpkg 1.15.6~
-  qtdeclarative5-qtaudioengine-touch-plugin,dpkg 1.15.6~
-  qtdeclarative5-qt3d-plugin,dpkg 1.15.6~
-  qtdeclarative5-controls-plugin,dpkg 1.15.6~
-  qtconnectivity5-examples,dpkg 1.15.6~
-  qt5-image-formats-plugins,dpkg 1.15.6~
-  qingy,dpkg 1.15.4
-  python3-xlib,dpkg 1.15.4
-  python3-wsme,dpkg 1.15.6~
-  python3-warlock,dpkg 1.15.6~
-  python3-termcolor,dpkg 1.15.6~
-  python3-sockjs-tornado,dpkg 1.15.6~
-  python3-pudb,dpkg 1.15.6~
-  python3-proboscis,dpkg 1.15.6~
-  python3-oslotest,dpkg 1.15.6~
-  python3-openstack.nose-plugin,dpkg 1.15.6~
-  python3-mockito,dpkg 1.15.6~
-  python3-misaka,dpkg 1.15.6~
-  python3-logutils,dpkg 1.15.6~
-  python3-libtorrent-dbg,dpkg 1.15.6~
-  python3-libtorrent,dpkg 1.15.6~
-  python3-lesscpy,dpkg 1.15.6~
-  python3-jsonpath-rw,dpkg 1.15.6~
-  python3-hplefthandclient,dpkg 1.15.6~
-  python3-falcon,dpkg 1.15.6~
-  python3-crcmod,dpkg 1.15.6~
-  python3-colander,dpkg 1.15.6~
-  python-xlib,dpkg 1.15.4
-  python-wsgi-intercept,dpkg 1.15.6~
-  python-whoosh,dpkg 1.17.5
-  python-uritemplate,dpkg 1.15.6~
-  python-termcolor,dpkg 1.15.6~
-  python-support,dpkg 1.14.19
-  python-steadymark,dpkg 1.15.6~
-  python-squaremap,dpkg 1.15.6~
-  python-sphinxcontrib-programoutput,dpkg 1.15.6~
-  python-sphinxcontrib-pecanwsme,dpkg 1.15.6~
-  python-sphinxcontrib-httpdomain,dpkg 1.15.6~
-  python-sphinxcontrib-docbookrestapi,dpkg 1.15.6~
-  python-sockjs-tornado,dpkg 1.15.6~
-  python-rpy-doc,dpkg 1.15.4
-  python-pyxenstore,dpkg 1.15.6~
-  python-pyramid-beaker,dpkg 1.15.6
-  python-pypy.sandbox,dpkg 1.15.6~
-  python-pudb,dpkg 1.15.6~
-  python-proboscis,dpkg 1.15.6~
-  python-openstack.nose-plugin,dpkg 1.15.6~
-  python-oauth2client,dpkg 1.15.6~
-  python-novnc,dpkg 1.15.6~
-  python-nosehtmloutput,dpkg 1.15.6~
-  python-nose-exclude,dpkg 1.15.6~
-  python-nmap,dpkg 1.15.6~
-  python-nevow,dpkg 1.14.17~
-  python-mockito,dpkg 1.15.6~
-  python-misaka,dpkg 1.15.6~
-  python-logutils-doc,dpkg 1.15.6~
-  python-logutils,dpkg 1.15.6~
-  python-libtorrent-dbg,dpkg 1.15.6~
-  python-libtorrent,dpkg 1.15.6~
-  python-lesscpy,dpkg 1.15.6~
-  python-hacking,dpkg 1.15.6~
-  python-gamera-dev,dpkg 1.15.6
-  python-gamera-dbg,dpkg 1.15.6
-  python-gamera,dpkg 1.15.6
-  python-ftp-cloudfs,dpkg 1.15.6~
-  python-falcon,dpkg 1.15.6~
-  python-factory-boy,dpkg 1.15.6~
-  python-django-discover-runner,dpkg 1.15.6~
-  python-ddt,dpkg 1.15.6~
-  python-crcmod,dpkg 1.15.6~
-  python-couleur,dpkg 1.15.6~
-  python-colander,dpkg 1.15.6~
-  python-bootstrapform-doc,dpkg 1.15.6~
-  python-bootstrapform,dpkg 1.15.6~
-  pysolfc-cardsets,dpkg 1.15.6~
-  pypy-tk,dpkg 1.15.6~
-  pypy-lib-testsuite,dpkg 1.15.6~
-  pypy-lib,dpkg 1.15.6~
-  pypy-doc,dpkg 1.15.6~
-  pypy-dev,dpkg 1.15.6~
-  pypy,dpkg 1.15.6~
-  ptex2tex,dpkg 1.14.18
-  ptex-bin,dpkg 1.14.18
-  ptex-base,dpkg 1.14.18
-  pspp,dpkg 1.15.4
-  psgml,dpkg 1.15.4
-  proxsmtp,dpkg 1.10.11
-  prerex,dpkg 1.14.18
-  ppa-purge,dpkg 1.16.1
-  pmx,dpkg 1.14.18
-  plplot-doc,dpkg 1.15.4
-  plotutils,dpkg 1.15.4
-  pleiades,dpkg 1.15.6~
-  planner-el,dpkg 1.15.4
-  piuparts,dpkg 1.15.7.2~
-  pinyin-database,dpkg 1.13.25
-  pigz,dpkg 1.15.6
-  picolisp,dpkg 1.17.5
-  php5-xcache,dpkg 1.15.7.2
-  php5-sybase,dpkg 1.15.7.2~
-  php5-mysqlnd,dpkg 1.15.7.2~
-  php5-intl,dpkg 1.15.7.2~
-  php5-fpm,dpkg 1.15.7.2~
-  php5-enchant,dpkg 1.15.7.2~
-  php-horde,dpkg 1.15.7.2
-  php-geshi,dpkg 1.15.6~
-  php-aws-sdk,dpkg 1.17.5
-  pexec,dpkg 1.15.4
-  performous-tools,dpkg 1.15.6
-  performous-dbg,dpkg 1.15.6
-  performous,dpkg 1.15.6
-  pdfjam,dpkg 1.14.18
-  otf-symbols-circos,dpkg 1.15.6
-  openstack-debian-images,dpkg 1.15.6~
-  openssl-blacklist-extra,dpkg 1.10.24
-  openssl-blacklist,dpkg 1.10.24
-  opendnssec-enforcer-mysql,dpkg 1.15.7.2~
-  opencubicplayer-doc,dpkg 1.15.4
-  opencubicplayer,dpkg 1.15.4
-  openct,dpkg 1.7.0
-  oneliner-el,dpkg 1.15.4
-  ocamlweb,dpkg 1.14.18
-  numdiff,dpkg 1.15.4
-  novnc,dpkg 1.15.6~
-  nfoview,dpkg 1.15.6~
-  netmask,dpkg 1.15.4
-  netcdf-doc,dpkg 1.15.4
-  ne-doc,dpkg 1.15.4
-  ncbi-rrna-data,dpkg 1.15.6
-  navi2ch,dpkg 1.15.4
-  naist-jdic-utf8,dpkg 1.15.6~
-  naist-jdic,dpkg 1.15.6~
-  nagvis,dpkg 1.15.7.2
-  musixtex,dpkg 1.14.18
-  muroard-dev,dpkg 1.15.6~
-  muroard-dbg,dpkg 1.15.6~
-  muroard,dpkg 1.15.6~
-  multiboot,dpkg 1.15.4
-  mu4e,dpkg 1.15.4
-  msmtp,dpkg 1.15.4
-  mpop,dpkg 1.15.4
-  mpdris2,dpkg 1.15.7.2
-  mozplugger,dpkg 1.15.7.2
-  moon-buggy-esd,dpkg 1.15.4
-  moon-buggy,dpkg 1.15.4
-  mmm-mode,dpkg 1.15.4
-  mjpegtools,dpkg 1.15.4
-  mh-e,dpkg 1.15.4
-  mgetty,dpkg 1.15.4
-  mew-beta,dpkg 1.15.4
-  mew,dpkg 1.15.4
-  metastudent-data-2,dpkg 1.15.6~
-  metastudent-data,dpkg 1.15.6~
-  menu,dpkg 1.15.4
-  megaglest-data,dpkg 1.15.6~
-  mecab-naist-jdic-eucjp,dpkg 1.15.6~
-  mecab-naist-jdic,dpkg 1.15.6~
-  mcron,dpkg 1.15.4
-  maxima-test,dpkg 1.14.18
-  maxima-src,dpkg 1.14.18
-  maxima-share,dpkg 1.14.18
-  maxima-emacs,dpkg 1.14.18
-  maxima-doc,dpkg 1.14.18
-  mathpartir,dpkg 1.14.18
-  mathgl-doc-en,dpkg 1.15.4
-  mate-common,dpkg 1.15.6~
-  masqmail,dpkg 1.15.7.2
-  maria-doc,dpkg 1.15.4
-  manpages-tr,dpkg 1.13.2
-  mana-dbg,dpkg 1.15.6~
-  mana-data,dpkg 1.15.6~
-  mana,dpkg 1.15.6~
-  maildir-utils,dpkg 1.15.4
-  mailcrypt,dpkg 1.15.4
-  magit,dpkg 1.15.4
-  macchanger,dpkg 1.15.4
-  m-tx,dpkg 1.14.18
-  lyx-common,dpkg 1.14.18
-  lyskom-server,dpkg 1.15.4
-  luckybackup-data,dpkg 1.15.6~
-  luckybackup,dpkg 1.15.6~
-  luasseq,dpkg 1.14.18
-  lsh-doc,dpkg 1.15.4
-  lookup-el,dpkg 1.15.4
-  logreq,dpkg 1.14.18
-  lilypond-doc-pdf-nl,dpkg 1.15.4
-  lilypond-doc-pdf-it,dpkg 1.15.4
-  lilypond-doc-pdf-hu,dpkg 1.15.4
-  lilypond-doc-pdf-fr,dpkg 1.15.4
-  lilypond-doc-pdf-es,dpkg 1.15.4
-  lilypond-doc-pdf-de,dpkg 1.15.4
-  lilypond-doc-pdf,dpkg 1.15.4
-  lilypond-doc-html-zh,dpkg 1.15.4
-  lilypond-doc-html-nl,dpkg 1.15.4
-  lilypond-doc-html-ja,dpkg 1.15.4
-  lilypond-doc-html-it,dpkg 1.15.4
-  lilypond-doc-html-hu,dpkg 1.15.4
-  lilypond-doc-html-fr,dpkg 1.15.4
-  lilypond-doc-html-es,dpkg 1.15.4
-  lilypond-doc-html-de,dpkg 1.15.4
-  lilypond-doc-html-cs,dpkg 1.15.4
-  lilypond-doc-html,dpkg 1.15.4
-  lilypond-doc,dpkg 1.15.4
-  lightdm-webkit-greeter,dpkg 1.15.6
-  lierolibre-dbg,dpkg 1.15.6~
-  lierolibre-data,dpkg 1.15.6~
-  lierolibre,dpkg 1.15.6~
-  libyaml-syck-perl,dpkg 1.15.6~
-  libyaml-snake-java,dpkg 1.15.6~
-  libwfmath-doc,dpkg 1.15.6~
-  libwfmath-0.3-dev,dpkg 1.15.6~
-  libwfmath-0.3-6-dbg,dpkg 1.15.6~
-  libwfmath-0.3-6,dpkg 1.15.6~
-  libvlccore7,dpkg 1.15.6~
-  libvlccore-dev,dpkg 1.15.6~
-  libvlc5,dpkg 1.15.6~
-  libvlc-dev,dpkg 1.15.6~
-  libvarconf-dev,dpkg 1.15.6~
-  libvarconf-1.0-8-dbg,dpkg 1.15.6~
-  libvarconf-1.0-8,dpkg 1.15.6~
-  libunicode-collate-perl,dpkg 1.15.6~
-  libuim-data,dpkg 1.15.7.2
-  libudunits2-0,dpkg 1.15.4
-  libu1db-qt5-3,dpkg 1.15.6~
-  libtorrent-rasterbar7,dpkg 1.15.6~
-  libtorrent-rasterbar-doc,dpkg 1.15.6~
-  libtorrent-rasterbar-dev,dpkg 1.15.6~
-  libtorrent-rasterbar-dbg,dpkg 1.15.6~
-  libtest-www-mechanize-perl,dpkg 1.15.6~
-  libtest-www-mechanize-catalyst-perl,dpkg 1.15.6~
-  libtamuanova-dev,dpkg 1.15.4
-  libsystemsettings1,dpkg 1.15.6~
-  libsystemsettings-dev,dpkg 1.15.6~
-  libsource-highlight-dev,dpkg 1.15.4
-  libsnmpkit-dev,dpkg 1.15.4
-  libskstream-0.3-dev,dpkg 1.15.6~
-  libskstream-0.3-7-dbg,dpkg 1.15.6~
-  libskstream-0.3-7,dpkg 1.15.6~
-  librplay3-dev,dpkg 1.15.4
-  librplay3,dpkg 1.15.4
-  libquvi7,dpkg 1.15.6
-  libquvi-doc,dpkg 1.15.6
-  libquvi-dev,dpkg 1.15.6
-  libqt5sql5-tds,dpkg 1.15.6~
-  libqt5sql5-psql,dpkg 1.15.6~
-  libqt5sql5-odbc,dpkg 1.15.6~
-  libqt5sql5-mysql,dpkg 1.15.6~
-  libqt5multimediaquick-p5-touch,dpkg 1.15.6~
-  libqt5multimedia5-touch-plugins,dpkg 1.15.6~
-  libqt5multimedia5-touch,dpkg 1.15.6~
-  libqgsttools-p1-touch,dpkg 1.15.6~
-  libpuzzle-php,dpkg 1.15.7.2~
-  libpod-weaver-perl,dpkg 1.15.6
-  libphysfs1-dbg,dpkg 1.15.6~
-  libphysfs1,dpkg 1.15.6~
-  libphysfs-dev,dpkg 1.15.6~
-  libperl-apireference-perl,dpkg 1.15.6~
-  libpam-winbind,dpkg 1.15.6~
-  libpam-shield,dpkg 1.15.7.2
-  libpam-geoip,dpkg 1.15.6~
-  libopenni0,dpkg 1.15.7.2
-  libonline-accounts-client1,dpkg 1.15.6~
-  libonline-accounts-client-dev,dpkg 1.15.6~
-  libogre-1.8.0,dpkg 1.15.7.2~
-  libnss-winbind,dpkg 1.15.6~
-  libnjb5,dpkg 1.15.7.2
-  libnet-amazon-perl,dpkg 1.15.6~
-  libmusic-hub0,dpkg 1.15.6~
-  libmusic-hub-dev,dpkg 1.15.6~
-  libmuroard3,dpkg 1.15.6~
-  libmuroar0-dbg,dpkg 1.15.6~
-  libmuroar0,dpkg 1.15.6~
-  libmuroar-dev,dpkg 1.15.6~
-  libmoosex-strictconstructor-perl,dpkg 1.15.6
-  libmoosex-methodattributes-perl,dpkg 1.15.6
-  libmercator-0.3-dev,dpkg 1.15.6~
-  libmercator-0.3-1-dbg,dpkg 1.15.6~
-  libmercator-0.3-1,dpkg 1.15.6~
-  libjs-mathjax,dpkg 1.15.6~
-  libjackson-json-java-doc,dpkg 1.17.5
-  libitalccore,dpkg 1.15.6~
-  libio-socket-socks-perl,dpkg 1.15.6
-  libinfinity-0.5-doc,dpkg 1.15.6
-  libinfinity-0.5-dev,dpkg 1.15.6
-  libinfinity-0.5-dbg,dpkg 1.15.6
-  libinfinity-0.5-0,dpkg 1.15.6
-  libinfgtk3-0.5-0,dpkg 1.15.6
-  libimvirt-perl,dpkg 1.15.6~
-  libhkl-dev,dpkg 1.15.4
-  libhistoryservice0,dpkg 1.15.6~
-  libhistoryservice-dev,dpkg 1.15.6~
-  libgtk2-spell-perl,dpkg 1.15.6
-  libginac-dev,dpkg 1.15.4
-  liberis-doc,dpkg 1.15.6~
-  liberis-1.3-dev,dpkg 1.15.6~
-  liberis-1.3-19-dbg,dpkg 1.15.6~
-  liberis-1.3-19,dpkg 1.15.6~
-  libdune-localfunctions-doc,dpkg 1.15.6
-  libdune-localfunctions-dev,dpkg 1.15.6
-  libdune-istl-doc,dpkg 1.15.6
-  libdune-istl-dev,dpkg 1.15.6
-  libdune-grid-doc,dpkg 1.15.6
-  libdune-grid-dev,dpkg 1.15.6
-  libdune-grid-dbg,dpkg 1.15.6
-  libdune-grid-2.2.1,dpkg 1.15.6
-  libdune-geometry-doc,dpkg 1.15.6
-  libdune-geometry-dev,dpkg 1.15.6
-  libdune-geometry-dbg,dpkg 1.15.6
-  libdune-geometry-2.2.1,dpkg 1.15.6
-  libdune-common-doc,dpkg 1.15.6
-  libdune-common-dev,dpkg 1.15.6
-  libdune-common-dbg,dpkg 1.15.6
-  libdune-common-2.2.1,dpkg 1.15.6
-  libdmalloc-dev,dpkg 1.15.4
-  libdatetime-format-flexible-perl,dpkg 1.15.6
-  libcolor-palette-perl,dpkg 1.15.6~
-  libchipcard-tools,dpkg 1.15.7.2
-  libcatalyst-perl,dpkg 1.15.6~
-  libcatalyst-action-rest-perl,dpkg 1.15.6~
-  libaws-doc,dpkg 1.15.4
-  libav-tools,dpkg 1.15.7.2~
-  libatlas-cpp-doc,dpkg 1.15.6~
-  libatlas-cpp-0.6-dev,dpkg 1.15.6~
-  libatlas-cpp-0.6-1-dbg,dpkg 1.15.6~
-  libatlas-cpp-0.6-1,dpkg 1.15.6~
-  libadasockets4-dev,dpkg 1.15.4
-  lhs2tex,dpkg 1.14.18
-  ledger,dpkg 1.15.4
-  latex209-bin,dpkg 1.14.18
-  latex209-base,dpkg 1.14.18
-  latex-sanskrit,dpkg 1.15.7.2~
-  latex-mk,dpkg 1.15.4
-  latex-make,dpkg 1.14.18
-  latex-fonts-sipa-arundina,dpkg 1.14.18
-  latex-cjk-thai,dpkg 1.14.18
-  latex-cjk-korean,dpkg 1.14.18
-  latex-cjk-japanese-wadalab,dpkg 1.14.18
-  latex-cjk-japanese,dpkg 1.14.18
-  latex-cjk-common,dpkg 1.14.18
-  latex-cjk-chinese-arphic-gkai00mp,dpkg 1.14.18
-  latex-cjk-chinese-arphic-gbsn00lp,dpkg 1.14.18
-  latex-cjk-chinese-arphic-bsmi00lp,dpkg 1.14.18
-  latex-cjk-chinese-arphic-bkai00mp,dpkg 1.14.18
-  latex-cjk-chinese,dpkg 1.14.18
-  language-pack-kde-zh-hant,dpkg 1.10.27ubuntu1
-  language-pack-kde-zh-hans,dpkg 1.10.27ubuntu1
-  language-pack-kde-wa,dpkg 1.10.27ubuntu1
-  language-pack-kde-vi,dpkg 1.10.27ubuntu1
-  language-pack-kde-uk,dpkg 1.10.27ubuntu1
-  language-pack-kde-ug,dpkg 1.10.27ubuntu1
-  language-pack-kde-tr,dpkg 1.10.27ubuntu1
-  language-pack-kde-th,dpkg 1.10.27ubuntu1
-  language-pack-kde-tg,dpkg 1.10.27ubuntu1
-  language-pack-kde-sv,dpkg 1.10.27ubuntu1
-  language-pack-kde-sr,dpkg 1.10.27ubuntu1
-  language-pack-kde-sl,dpkg 1.10.27ubuntu1
-  language-pack-kde-sk,dpkg 1.10.27ubuntu1
-  language-pack-kde-si,dpkg 1.10.27ubuntu1
-  language-pack-kde-ru,dpkg 1.10.27ubuntu1
-  language-pack-kde-ro,dpkg 1.10.27ubuntu1
-  language-pack-kde-pt,dpkg 1.10.27ubuntu1
-  language-pack-kde-pl,dpkg 1.10.27ubuntu1
-  language-pack-kde-pa,dpkg 1.10.27ubuntu1
-  language-pack-kde-nn,dpkg 1.10.27ubuntu1
-  language-pack-kde-nl,dpkg 1.10.27ubuntu1
-  language-pack-kde-nds,dpkg 1.10.27ubuntu1
-  language-pack-kde-nb,dpkg 1.10.27ubuntu1
-  language-pack-kde-mr,dpkg 1.10.27ubuntu1
-  language-pack-kde-lv,dpkg 1.10.27ubuntu1
-  language-pack-kde-lt,dpkg 1.10.27ubuntu1
-  language-pack-kde-ko,dpkg 1.10.27ubuntu1
-  language-pack-kde-km,dpkg 1.10.27ubuntu1
-  language-pack-kde-kk,dpkg 1.10.27ubuntu1
-  language-pack-kde-ja,dpkg 1.10.27ubuntu1
-  language-pack-kde-it,dpkg 1.10.27ubuntu1
-  language-pack-kde-is,dpkg 1.10.27ubuntu1
-  language-pack-kde-ia,dpkg 1.10.27ubuntu1
-  language-pack-kde-hu,dpkg 1.10.27ubuntu1
-  language-pack-kde-hr,dpkg 1.10.27ubuntu1
-  language-pack-kde-hi,dpkg 1.10.27ubuntu1
-  language-pack-kde-he,dpkg 1.10.27ubuntu1
-  language-pack-kde-gl,dpkg 1.10.27ubuntu1
-  language-pack-kde-ga,dpkg 1.10.27ubuntu1
-  language-pack-kde-fr,dpkg 1.10.27ubuntu1
-  language-pack-kde-fi,dpkg 1.10.27ubuntu1
-  language-pack-kde-fa,dpkg 1.10.27ubuntu1
-  language-pack-kde-eu,dpkg 1.10.27ubuntu1
-  language-pack-kde-et,dpkg 1.10.27ubuntu1
-  language-pack-kde-es,dpkg 1.10.27ubuntu1
-  language-pack-kde-en,dpkg 1.10.27ubuntu1
-  language-pack-kde-el,dpkg 1.10.27ubuntu1
-  language-pack-kde-de,dpkg 1.10.27ubuntu1
-  language-pack-kde-da,dpkg 1.10.27ubuntu1
-  language-pack-kde-cs,dpkg 1.10.27ubuntu1
-  language-pack-kde-ca,dpkg 1.10.27ubuntu1
-  language-pack-kde-bs,dpkg 1.10.27ubuntu1
-  language-pack-kde-bg,dpkg 1.10.27ubuntu1
-  language-pack-kde-ar,dpkg 1.10.27ubuntu1
-  kfritz,dpkg 1.15.6~
-  kaptain,dpkg 1.15.4
-  jwhois,dpkg 1.9.0
-  jedit,dpkg 1.15.6~
-  jed-common,dpkg 1.15.4
-  jbibtex-base,dpkg 1.14.18
-  jacal,dpkg 1.15.4
-  italc-master,dpkg 1.15.6~
-  italc-management-console,dpkg 1.15.6~
-  italc-client,dpkg 1.15.6~
-  ircd-irc2,dpkg 1.15.4
-  ipgrab,dpkg 1.15.4
-  intercal,dpkg 1.15.4
-  infinoted-0.5,dpkg 1.15.6
-  infinoted,dpkg 1.15.6
-  imvirt-helper,dpkg 1.15.6~
-  imvirt,dpkg 1.15.6~
-  ifupdown-extra,dpkg 1.15.7.2
-  id-utils,dpkg 1.15.4
-  icinga-common,dpkg 1.16.1
-  ibulgarian,dpkg 1.15.7.2~
-  hp48cc,dpkg 1.15.6~
-  hp2xx,dpkg 1.15.4
-  hobbit-plugins,dpkg 1.15.7.2
-  history-service-tools,dpkg 1.15.6~
-  history-service,dpkg 1.15.6~
-  hibernate,dpkg 1.15.7.2
-  heat-cfntools,dpkg 1.15.6~
-  handbrake-cli,dpkg 1.15.6~
-  handbrake,dpkg 1.15.6~
-  gxmessage,dpkg 1.15.4
-  gwtp,dpkg 1.15.6~
-  gwsetup,dpkg 1.15.6~
-  guile-pg,dpkg 1.15.4
-  guile-library,dpkg 1.15.4
-  guile-cairo-dev,dpkg 1.15.4
-  guile-1.8-doc-non-dfsg,dpkg 1.15.4
-  guile-1.8-doc,dpkg 1.15.4
-  gsasl,dpkg 1.15.4
-  gri,dpkg 1.15.4
-  gregoriotex,dpkg 1.14.18
-  gprbuild-doc,dpkg 1.15.4
-  gorm.app,dpkg 1.15.4
-  googlefontdirectory-tools,dpkg 1.15.6~
-  gobby-infinote,dpkg 1.15.6
-  gobby-0.5-dbg,dpkg 1.15.6
-  gobby-0.5,dpkg 1.15.6
-  gnustep-make-doc,dpkg 1.15.4
-  gnustep-dl2,dpkg 1.15.4
-  gnustep-base-doc,dpkg 1.15.4
-  gnus,dpkg 1.15.4
-  gnupod-tools,dpkg 1.15.4
-  gnuit,dpkg 1.15.4
-  gnugo,dpkg 1.15.4
-  gnubik,dpkg 1.15.4
-  gnubiff,dpkg 1.15.4
-  gnu-smalltalk-doc,dpkg 1.15.4
-  gnu-fdisk,dpkg 1.15.4
-  gnats,dpkg 1.15.4
-  gnat-4.8-doc,dpkg 1.15.4
-  gnat-4.6-doc,dpkg 1.15.4
-  gmediaserver,dpkg 1.15.4
-  global,dpkg 1.15.4
-  glabels-dev,dpkg 1.15.6~
-  glabels-data,dpkg 1.15.6~
-  glabels,dpkg 1.15.6~
-  gfortran-4.6-doc,dpkg 1.15.4
-  gfortran-4.4-doc,dpkg 1.15.4
-  gforth,dpkg 1.15.4
-  getdp,dpkg 1.15.4
-  geomview,dpkg 1.15.4
-  genparse,dpkg 1.15.4
-  geneweb,dpkg 1.15.6~
-  gcl-doc,dpkg 1.15.4
-  gcj-4.8-powerpc64le-linux-gnu,dpkg 1.15.4
-  gcj-4.8-powerpc-linux-gnu,dpkg 1.15.4
-  gcj-4.8-arm-linux-gnueabihf,dpkg 1.15.4
-  gcj-4.8-aarch64-linux-gnu,dpkg 1.15.4
-  gccintro,dpkg 1.15.4
-  gcc-4.6-doc,dpkg 1.15.4
-  gcc-4.4-doc,dpkg 1.15.4
-  gawk-doc,dpkg 1.15.4
-  gauche-gl,dpkg 1.15.4
-  gauche-c-wrapper,dpkg 1.15.4
-  gamera-gui,dpkg 1.15.6
-  gamera-doc,dpkg 1.15.6
-  g-wrap,dpkg 1.15.4
-  fweb,dpkg 1.15.4
-  funguloids-data,dpkg 1.15.6~
-  funguloids,dpkg 1.15.6~
-  ftp-cloudfs,dpkg 1.15.6~
-  freeipmi-ipmidetect,dpkg 1.15.7.2~
-  freeipmi-bmc-watchdog,dpkg 1.15.7.2~
-  freedoom,dpkg 1.15.6~
-  freedm,dpkg 1.15.6~
-  fotowall,dpkg 1.15.6~
-  fonts-yozvox-yozfont-standard-kana,dpkg 1.15.6~
-  fonts-yozvox-yozfont-new-kana,dpkg 1.15.6~
-  fonts-yozvox-yozfont-edu,dpkg 1.15.6~
-  fonts-yozvox-yozfont-cute,dpkg 1.15.6~
-  fonts-yozvox-yozfont-antique,dpkg 1.15.6~
-  fonts-yozvox-yozfont,dpkg 1.15.6~
-  fonts-woowa-hanna,dpkg 1.15.7.2
-  fonts-umeplus,dpkg 1.15.6~
-  fonts-takao,dpkg 1.15.6~
-  fonts-smc,dpkg 1.15.6~
-  fonts-sil-andika,dpkg 1.15.6~
-  fonts-sawarabi-mincho,dpkg 1.15.6~
-  fonts-sawarabi-gothic,dpkg 1.15.6~
-  fonts-rufscript,dpkg 1.15.6~
-  fonts-roboto,dpkg 1.15.6~
-  fonts-play,dpkg 1.15.6~
-  fonts-nanum-eco,dpkg 1.15.6~
-  fonts-motoya-l-maruberi,dpkg 1.15.6~
-  fonts-motoya-l-cedar,dpkg 1.15.6~
-  fonts-monapo,dpkg 1.15.6~
-  fonts-misaki,dpkg 1.15.6~
-  fonts-mathjax-extras,dpkg 1.15.6~
-  fonts-mathjax,dpkg 1.15.6~
-  fonts-lato,dpkg 1.15.6~
-  fonts-kouzan-mouhitsu,dpkg 1.15.6~
-  fonts-konatu,dpkg 1.15.6~
-  fonts-komatuna,dpkg 1.15.6~
-  fonts-kiloji,dpkg 1.15.6~
-  fonts-kanjistrokeorders,dpkg 1.15.6~
-  fonts-kalapi,dpkg 1.15.6~
-  fonts-junction,dpkg 1.15.6~
-  fonts-johnsmith-induni,dpkg 1.15.6~
-  fonts-ipafont,dpkg 1.15.6~
-  fonts-ipaexfont-mincho,dpkg 1.15.6~
-  fonts-ipaexfont-gothic,dpkg 1.15.6~
-  fonts-ipaexfont,dpkg 1.15.6~
-  fonts-horai-umefont,dpkg 1.15.6~
-  fonts-deva-extra,dpkg 1.15.6~
-  fonts-dejima-mincho,dpkg 1.15.6~
-  fonts-circos-symbols,dpkg 1.15.6
-  fonts-beteckna,dpkg 1.15.7.2
-  fonts-baekmuk,dpkg 1.15.6~
-  fonts-aoyagi-soseki,dpkg 1.15.6~
-  fonts-aoyagi-kouzan-t,dpkg 1.15.6~
-  flim,dpkg 1.15.4
-  flex-old,dpkg 1.15.4
-  feynmf,dpkg 1.14.18
-  festvox-te-nsk,dpkg 1.15.6~
-  festvox-mr-nsk,dpkg 1.15.6~
-  festvox-hi-nsk,dpkg 1.15.6~
-  festival-te,dpkg 1.15.6~
-  festival-mr,dpkg 1.15.6~
-  festival-hi,dpkg 1.15.6~
-  festival-freebsoft-utils,dpkg 1.15.4
-  fdutils,dpkg 1.15.4
-  fbpanel,dpkg 1.15.7.2~
-  etoolbox,dpkg 1.14.18
-  ess,dpkg 1.15.4
-  enscript,dpkg 1.15.4
-  ember-media,dpkg 1.15.6~
-  emacs23-common-non-dfsg,dpkg 1.15.4
-  emacs23-common,dpkg 1.15.4
-  emacs-jabber,dpkg 1.15.4
-  emacs-chess,dpkg 1.15.4
-  elementary-icon-theme,dpkg 1.15.6
-  ekiga-dbg,dpkg 1.17.5
-  edb,dpkg 1.15.4
-  ecb,dpkg 1.15.4
-  eblook,dpkg 1.15.4
-  easystroke,dpkg 1.14.12ubuntu3
-  dvipsk-ja,dpkg 1.14.18
-  dvipost,dpkg 1.14.18
-  dlocate,dpkg 1.8.0
-  dh-golang,dpkg 1.16.2
-  devrplay3,dpkg 1.15.4
-  desktop-base,dpkg 1.15.7.2~
-  debsums,dpkg 1.16.3
-  debian-el,dpkg 1.15.4
-  ddskk,dpkg 1.15.4
-  cronolog,dpkg 1.15.4
-  cpp-4.6-doc,dpkg 1.15.4
-  cpp-4.4-doc,dpkg 1.15.4
-  convmv,dpkg 1.15.6~
-  context-modules,dpkg 1.14.18
-  context,dpkg 1.14.18
-  cm-super-minimal,dpkg 1.14.18
-  cm-super,dpkg 1.14.18
-  clamsmtp,dpkg 1.10.11
-  cl-clx-sbcl,dpkg 1.15.4
-  ckport-database,dpkg 1.15.6~
-  ckport,dpkg 1.15.6~
-  circos-tools,dpkg 1.15.6
-  circos,dpkg 1.15.6
-  chromium-codecs-ffmpeg-extra-dbg,dpkg 1.15.6
-  chromium-codecs-ffmpeg-extra,dpkg 1.15.6
-  chromium-codecs-ffmpeg-dbg,dpkg 1.15.6
-  chromium-codecs-ffmpeg,dpkg 1.15.6
-  chromium-chromedriver-dbg,dpkg 1.15.6
-  chromium-chromedriver,dpkg 1.15.6
-  chromium-browser-l10n,dpkg 1.15.6
-  chromium-browser-dbg,dpkg 1.15.6
-  chromium-browser,dpkg 1.15.6
-  check-mk-config-nagios3,dpkg 1.15.7.2~
-  check-mk-config-icinga,dpkg 1.15.7.2~
-  chaksem,dpkg 1.14.18
-  cgdb,dpkg 1.15.4
-  cdcd,dpkg 1.15.4
-  cclive,dpkg 1.15.6
-  ccal,dpkg 1.15.7.2
-  cadabra,dpkg 1.14.18
-  bve-route-cross-city-south,dpkg 1.14.12ubuntu3
-  buildbot,dpkg 1.15.4
-  bibtool,dpkg 1.14.18
-  biber,dpkg 1.14.18
-  bhl,dpkg 1.15.4
-  bdii,dpkg 1.15.7.2~
-  bashdb,dpkg 1.15.4
-  axiom-tex,dpkg 1.14.18
-  axiom-test,dpkg 1.14.18
-  axiom-source,dpkg 1.14.18
-  axiom-hypertex-data,dpkg 1.14.18
-  axiom-graphics-data,dpkg 1.14.18
-  axiom-doc,dpkg 1.14.18
-  axiom-databases,dpkg 1.14.18
-  autoconf-archive,dpkg 1.17.5
-  auto-multiple-choice-common,dpkg 1.14.18
-  asymptote,dpkg 1.15.4
-  asymptote,dpkg 1.14.18
-  aspell-bg,dpkg 1.15.7.2~
-  aroarfw-doc,dpkg 1.15.6~
-  aroarfw-dev,dpkg 1.15.6~
-  apticron,dpkg 1.15.7.2
-  apt-cacher-ng,dpkg 1.15.6
-  apt-build,dpkg 1.15.7.2~
-  antennavis,dpkg 1.15.6~
-  ampache,dpkg 1.15.7.2
-  am-utils-doc,dpkg 1.15.4
-  alqalam,dpkg 1.14.18
-  allegro4-doc,dpkg 1.15.4
-  advi-examples,dpkg 1.14.18
-  advi,dpkg 1.14.18
-  adacontrol,dpkg 1.15.4
-  ada-reference-manual-2012,dpkg 1.15.4
-  ada-reference-manual-2005,dpkg 1.15.4
-  acl2-source,dpkg 1.14.18
-  acl2-infix-source,dpkg 1.14.18
-  acl2-emacs,dpkg 1.14.18
-  acl2-doc,dpkg 1.15.4
-  acl2-doc,dpkg 1.14.18
-  acl2-books-source,dpkg 1.14.18
-  acl2-books-certs,dpkg 1.14.18
-  abntex,dpkg 1.14.18
-  0ad-dbg,dpkg 1.15.6~
-  0ad-data-common,dpkg 1.15.6~
-  0ad-data,dpkg 1.15.6~
-  0ad,dpkg 1.15.6~
-  zsh-doc,dpkg 1.15.6~
-  zsh-dbg,dpkg 1.15.6~
-  zsh-common,dpkg 1.15.6~
-  zsh,dpkg 1.15.6~
-  util-linux,dpkg 1.15.4
-  update-notifier-common,dpkg 1.15.7.2
-  unity-gtk3-module,dpkg 1.15.7.2
-  unity-gtk2-module,dpkg 1.15.7.2
-  ubuntu-ui-toolkit-theme,dpkg 1.15.6~
-  ubuntu-ui-toolkit-doc,dpkg 1.15.6~
-  ubuntu-sso-client,dpkg 1.15.7.2
-  ubuntu-drivers-common,dpkg 1.15.7.2
-  tipa,dpkg 1.14.18
-  time,dpkg 1.15.4
-  texlive-science-doc,dpkg 1.14.18
-  texlive-publishers-doc,dpkg 1.14.18
-  texlive-pstricks-doc,dpkg 1.14.18
-  texlive-pstricks,dpkg 1.14.18
-  texlive-pictures-doc,dpkg 1.14.18
-  texlive-pictures,dpkg 1.14.18
-  texlive-metapost-doc,dpkg 1.14.18
-  texlive-math-extra,dpkg 1.14.18
-  texlive-luatex,dpkg 1.14.18
-  texlive-latex-recommended-doc,dpkg 1.14.18
-  texlive-latex-recommended,dpkg 1.14.18
-  texlive-latex-extra-doc,dpkg 1.14.18
-  texlive-latex-extra,dpkg 1.14.18
-  texlive-latex-base-doc,dpkg 1.14.18
-  texlive-latex-base,dpkg 1.14.18
-  texlive-lang-german,dpkg 1.14.18
-  texlive-humanities-doc,dpkg 1.14.18
-  texlive-generic-recommended,dpkg 1.14.18
-  texlive-fonts-recommended-doc,dpkg 1.14.18
-  texlive-fonts-recommended,dpkg 1.14.18
-  texlive-fonts-extra-doc,dpkg 1.14.18
-  texlive-font-utils,dpkg 1.14.18
-  texlive-extra-utils,dpkg 1.14.18
-  texlive-binaries,dpkg 1.15.4
-  texlive-bibtex-extra,dpkg 1.14.18
-  texlive-base,dpkg 1.14.18
-  texi2html,dpkg 1.15.4
-  tex-gyre,dpkg 1.15.7.2
-  tex-common,dpkg 1.14.18
-  tar-doc,dpkg 1.15.4
-  smbclient,dpkg 1.15.6~
-  sgml-base,dpkg 1.16.4
-  sed,dpkg 1.15.4
-  samba-doc,dpkg 1.15.6~
-  samba-dbg,dpkg 1.15.6~
-  samba-common,dpkg 1.15.6~
-  samba,dpkg 1.15.6~
-  readline-common,dpkg 1.15.4
-  qtsvg5-examples,dpkg 1.15.6~
-  qtsensors5-examples,dpkg 1.15.6~
-  qtscript5-private-dev,dpkg 1.15.6~
-  qtscript5-examples,dpkg 1.15.6~
-  qtscript5-dev,dpkg 1.15.6~
-  qtmultimedia5-examples,dpkg 1.15.6~
-  qtmultimedia5-dev,dpkg 1.15.6~
-  qtdeclarative5-ubuntu-ui-toolkit-plugin,dpkg 1.15.6~
-  qtdeclarative5-qtmultimedia-plugin,dpkg 1.15.6~
-  qtbase5-private-dev,dpkg 1.15.6~
-  qtbase5-examples,dpkg 1.15.6~
-  qtbase5-dev-tools,dpkg 1.15.6~
-  qtbase5-dev,dpkg 1.15.6~
-  qt5-qmake,dpkg 1.15.6~
-  qt3d5-examples,dpkg 1.15.6~
-  python3-stevedore,dpkg 1.15.6~
-  python3-pbr,dpkg 1.15.6~
-  python3-mox3,dpkg 1.15.6~
-  python3-minimal,dpkg 1.13.20
-  python3-jsonschema,dpkg 1.15.6~
-  python3-jsonpatch,dpkg 1.15.6~
-  python3-json-pointer,dpkg 1.15.6~
-  python3-json-patch,dpkg 1.15.6~
-  python3-extras,dpkg 1.15.6~
-  python3-cmd2,dpkg 1.15.6~
-  python-wsme,dpkg 1.15.6~
-  python-warlock,dpkg 1.15.6~
-  python-tablib,dpkg 1.15.6~
-  python-sure,dpkg 1.15.6~
-  python-stevedore-doc,dpkg 1.15.6~
-  python-stevedore,dpkg 1.15.6~
-  python-seamicroclient,dpkg 1.15.6~
-  python-requestbuilder,dpkg 1.15.6~
-  python-pycadf,dpkg 1.15.6~
-  python-pecan,dpkg 1.15.6~
-  python-pbr,dpkg 1.15.6~
-  python-oslotest-doc,dpkg 1.15.6~
-  python-oslotest,dpkg 1.15.6~
-  python-oslo.config,dpkg 1.15.6~
-  python-nose-testconfig,dpkg 1.15.6~
-  python-mox3,dpkg 1.15.6~
-  python-minimal,dpkg 1.13.20
-  python-migrate,dpkg 1.15.6~
-  python-m2crypto,dpkg 1.15.6
-  python-jsonschema,dpkg 1.15.6~
-  python-jsonrpclib,dpkg 1.15.6~
-  python-jsonpath-rw,dpkg 1.15.6~
-  python-jsonpatch,dpkg 1.15.6~
-  python-json-pointer,dpkg 1.15.6~
-  python-json-patch,dpkg 1.15.6~
-  python-httpretty,dpkg 1.15.6~
-  python-hplefthandclient-doc,dpkg 1.15.6~
-  python-hplefthandclient,dpkg 1.15.6~
-  python-hp3parclient,dpkg 1.15.6~
-  python-heatclient,dpkg 1.15.6~
-  python-happybase,dpkg 1.15.6~
-  python-extras,dpkg 1.15.6~
-  python-compressor,dpkg 1.15.6~
-  python-cmd2,dpkg 1.15.6~
-  python-cloudfiles,dpkg 1.15.6~
-  python-appconf,dpkg 1.15.6~
-  preview-latex-style,dpkg 1.14.18
-  postfix,dpkg 1.8.3
-  popularity-contest,dpkg 1.10
-  poppler-data,dpkg 1.15.6~
-  plainbox-provider-resource-generic,dpkg 1.13
-  php5-xsl,dpkg 1.15.7.2~
-  php5-xmlrpc,dpkg 1.15.7.2~
-  php5-tidy,dpkg 1.15.7.2~
-  php5-sqlite,dpkg 1.15.7.2~
-  php5-snmp,dpkg 1.15.7.2~
-  php5-recode,dpkg 1.15.7.2~
-  php5-readline,dpkg 1.15.7.2~
-  php5-pspell,dpkg 1.15.7.2~
-  php5-pgsql,dpkg 1.15.7.2~
-  php5-odbc,dpkg 1.15.7.2~
-  php5-mysql,dpkg 1.15.7.2~
-  php5-ldap,dpkg 1.15.7.2~
-  php5-gmp,dpkg 1.15.7.2~
-  php5-gd,dpkg 1.15.7.2~
-  php5-curl,dpkg 1.15.7.2~
-  pgf,dpkg 1.14.18
-  perl-base,dpkg 1.14.20
-  pcmciautils,dpkg 1.15.7.2
-  openstack-dashboard,dpkg 1.15.7.2
-  openssh-server,dpkg 1.9.0
-  openssh-client,dpkg 1.7.0
-  openssh-blacklist-extra,dpkg 1.10.24
-  openssh-blacklist,dpkg 1.10.24
-  ntpdate,dpkg 1.15.7.2
-  ntp,dpkg 1.15.7.2
-  nettle-dev,dpkg 1.15.4
-  nasm,dpkg 1.15.4
-  nano,dpkg 1.15.4
-  mountall,dpkg 1.15.7.2
-  module-init-tools,dpkg 1.15.7.2
-  man-db,dpkg 1.16.1~
-  make-doc,dpkg 1.15.4
-  lmodern,dpkg 1.15.7.2
-  linuxdoc-tools,dpkg 1.15.4
-  linux-image-3.13.0-24-lowlatency,dpkg 1.10.24
-  linux-image-3.13.0-24-generic,dpkg 1.10.24
-  lilo,dpkg 1.15.7.2
-  lightdm,dpkg 1.15.7.2
-  libwbclient0,dpkg 1.15.6~
-  libwbclient-dev,dpkg 1.15.6~
-  libvformat-dev,dpkg 1.15.4
-  libunity-gtk3-parser0,dpkg 1.15.7.2
-  libunity-gtk2-parser0,dpkg 1.15.7.2
-  libtext-csv-xs-perl,dpkg 1.15.6~
-  libsmbsharemodes0,dpkg 1.15.6~
-  libsmbsharemodes-dev,dpkg 1.15.6~
-  libsmbclient-dev,dpkg 1.15.6~
-  libsmbclient,dpkg 1.15.6~
-  libreoffice-dbg,dpkg 1.15.6
-  libreoffice-common,dpkg 1.15.7.2~
-  libreadline6-dev,dpkg 1.15.4
-  libreadline-gplv2-dev,dpkg 1.15.4
-  libqt5xml5,dpkg 1.15.6~
-  libqt5widgets5,dpkg 1.15.6~
-  libqt5webkit5-qmlwebkitplugin,dpkg 1.15.6~
-  libqt5webkit5-dev,dpkg 1.15.6~
-  libqt5webkit5,dpkg 1.15.6~
-  libqt5test5,dpkg 1.15.6~
-  libqt5svg5-private-dev,dpkg 1.15.6~
-  libqt5svg5-dev,dpkg 1.15.6~
-  libqt5svg5,dpkg 1.15.6~
-  libqt5sql5-sqlite,dpkg 1.15.6~
-  libqt5sql5,dpkg 1.15.6~
-  libqt5scripttools5,dpkg 1.15.6~
-  libqt5script5,dpkg 1.15.6~
-  libqt5qml-graphicaleffects,dpkg 1.15.6~
-  libqt5printsupport5,dpkg 1.15.6~
-  libqt5opengl5-dev,dpkg 1.15.6~
-  libqt5opengl5,dpkg 1.15.6~
-  libqt5network5,dpkg 1.15.6~
-  libqt5multimediawidgets5,dpkg 1.15.6~
-  libqt5multimediaquick-p5,dpkg 1.15.6~
-  libqt5multimedia5-plugins,dpkg 1.15.6~
-  libqt5multimedia5,dpkg 1.15.6~
-  libqt5gui5,dpkg 1.15.6~
-  libqt5dbus5,dpkg 1.15.6~
-  libqt5core5a,dpkg 1.15.6~
-  libqt5concurrent5,dpkg 1.15.6~
-  libqgsttools-p1,dpkg 1.15.6~
-  libpam-smbpass,dpkg 1.15.6~
-  libmtp9,dpkg 1.15.7.2
-  libmpfr-doc,dpkg 1.15.4
-  libjs-jquery-hotkeys,dpkg 1.15.6~
-  libgsettings-qt-dev,dpkg 1.15.6~
-  libgdbm3,dpkg 1.15.4
-  libffi-dev,dpkg 1.15.4
-  libdpkg-perl,dpkg 1.15.8
-  libdpkg-perl,dpkg 1.15.8
-  libcloog-ppl-dev,dpkg 1.15.4
-  libcloog-isl-dev,dpkg 1.15.4
-  libcdio-dev,dpkg 1.15.4
-  libassuan-dev,dpkg 1.15.4
-  latex2html,dpkg 1.14.18
-  latex-xcolor,dpkg 1.14.18
-  latex-beamer,dpkg 1.14.18
-  language-selector-common,dpkg 1.15.7.2
-  language-pack-zu-base,dpkg 1.10.27ubuntu1
-  language-pack-zu,dpkg 1.10.27ubuntu1
-  language-pack-zh-hant-base,dpkg 1.10.27ubuntu1
-  language-pack-zh-hant,dpkg 1.10.27ubuntu1
-  language-pack-zh-hans-base,dpkg 1.10.27ubuntu1
-  language-pack-zh-hans,dpkg 1.10.27ubuntu1
-  language-pack-yo-base,dpkg 1.10.27ubuntu1
-  language-pack-yo,dpkg 1.10.27ubuntu1
-  language-pack-yi-base,dpkg 1.10.27ubuntu1
-  language-pack-yi,dpkg 1.10.27ubuntu1
-  language-pack-xh-base,dpkg 1.10.27ubuntu1
-  language-pack-xh,dpkg 1.10.27ubuntu1
-  language-pack-wo-base,dpkg 1.10.27ubuntu1
-  language-pack-wo,dpkg 1.10.27ubuntu1
-  language-pack-wae-base,dpkg 1.10.27ubuntu1
-  language-pack-wae,dpkg 1.10.27ubuntu1
-  language-pack-wa-base,dpkg 1.10.27ubuntu1
-  language-pack-wa,dpkg 1.10.27ubuntu1
-  language-pack-vi-base,dpkg 1.10.27ubuntu1
-  language-pack-vi,dpkg 1.10.27ubuntu1
-  language-pack-ve-base,dpkg 1.10.27ubuntu1
-  language-pack-ve,dpkg 1.10.27ubuntu1
-  language-pack-uz-base,dpkg 1.10.27ubuntu1
-  language-pack-uz,dpkg 1.10.27ubuntu1
-  language-pack-ur-base,dpkg 1.10.27ubuntu1
-  language-pack-ur,dpkg 1.10.27ubuntu1
-  language-pack-uk-base,dpkg 1.10.27ubuntu1
-  language-pack-uk,dpkg 1.10.27ubuntu1
-  language-pack-ug-base,dpkg 1.10.27ubuntu1
-  language-pack-ug,dpkg 1.10.27ubuntu1
-  language-pack-tt-base,dpkg 1.10.27ubuntu1
-  language-pack-tt,dpkg 1.10.27ubuntu1
-  language-pack-ts-base,dpkg 1.10.27ubuntu1
-  language-pack-ts,dpkg 1.10.27ubuntu1
-  language-pack-tr-base,dpkg 1.10.27ubuntu1
-  language-pack-tr,dpkg 1.10.27ubuntu1
-  language-pack-tl-base,dpkg 1.10.27ubuntu1
-  language-pack-tl,dpkg 1.10.27ubuntu1
-  language-pack-tk-base,dpkg 1.10.27ubuntu1
-  language-pack-tk,dpkg 1.10.27ubuntu1
-  language-pack-ti-base,dpkg 1.10.27ubuntu1
-  language-pack-ti,dpkg 1.10.27ubuntu1
-  language-pack-th-base,dpkg 1.10.27ubuntu1
-  language-pack-th,dpkg 1.10.27ubuntu1
-  language-pack-tg-base,dpkg 1.10.27ubuntu1
-  language-pack-tg,dpkg 1.10.27ubuntu1
-  language-pack-te-base,dpkg 1.10.27ubuntu1
-  language-pack-te,dpkg 1.10.27ubuntu1
-  language-pack-ta-base,dpkg 1.10.27ubuntu1
-  language-pack-ta,dpkg 1.10.27ubuntu1
-  language-pack-sw-base,dpkg 1.10.27ubuntu1
-  language-pack-sw,dpkg 1.10.27ubuntu1
-  language-pack-sv-base,dpkg 1.10.27ubuntu1
-  language-pack-sv,dpkg 1.10.27ubuntu1
-  language-pack-st-base,dpkg 1.10.27ubuntu1
-  language-pack-st,dpkg 1.10.27ubuntu1
-  language-pack-ss-base,dpkg 1.10.27ubuntu1
-  language-pack-ss,dpkg 1.10.27ubuntu1
-  language-pack-sr-base,dpkg 1.10.27ubuntu1
-  language-pack-sr,dpkg 1.10.27ubuntu1
-  language-pack-sq-base,dpkg 1.10.27ubuntu1
-  language-pack-sq,dpkg 1.10.27ubuntu1
-  language-pack-so-base,dpkg 1.10.27ubuntu1
-  language-pack-so,dpkg 1.10.27ubuntu1
-  language-pack-sl-base,dpkg 1.10.27ubuntu1
-  language-pack-sl,dpkg 1.10.27ubuntu1
-  language-pack-sk-base,dpkg 1.10.27ubuntu1
-  language-pack-sk,dpkg 1.10.27ubuntu1
-  language-pack-si-base,dpkg 1.10.27ubuntu1
-  language-pack-si,dpkg 1.10.27ubuntu1
-  language-pack-shs-base,dpkg 1.10.27ubuntu1
-  language-pack-shs,dpkg 1.10.27ubuntu1
-  language-pack-se-base,dpkg 1.10.27ubuntu1
-  language-pack-se,dpkg 1.10.27ubuntu1
-  language-pack-sd-base,dpkg 1.10.27ubuntu1
-  language-pack-sd,dpkg 1.10.27ubuntu1
-  language-pack-sc-base,dpkg 1.10.27ubuntu1
-  language-pack-sc,dpkg 1.10.27ubuntu1
-  language-pack-sa-base,dpkg 1.10.27ubuntu1
-  language-pack-sa,dpkg 1.10.27ubuntu1
-  language-pack-rw-base,dpkg 1.10.27ubuntu1
-  language-pack-rw,dpkg 1.10.27ubuntu1
-  language-pack-ru-base,dpkg 1.10.27ubuntu1
-  language-pack-ru,dpkg 1.10.27ubuntu1
-  language-pack-ro-base,dpkg 1.10.27ubuntu1
-  language-pack-ro,dpkg 1.10.27ubuntu1
-  language-pack-pt-base,dpkg 1.10.27ubuntu1
-  language-pack-pt,dpkg 1.10.27ubuntu1
-  language-pack-ps-base,dpkg 1.10.27ubuntu1
-  language-pack-ps,dpkg 1.10.27ubuntu1
-  language-pack-pl-base,dpkg 1.10.27ubuntu1
-  language-pack-pl,dpkg 1.10.27ubuntu1
-  language-pack-pap-base,dpkg 1.10.27ubuntu1
-  language-pack-pap,dpkg 1.10.27ubuntu1
-  language-pack-pa-base,dpkg 1.10.27ubuntu1
-  language-pack-pa,dpkg 1.10.27ubuntu1
-  language-pack-os-base,dpkg 1.10.27ubuntu1
-  language-pack-os,dpkg 1.10.27ubuntu1
-  language-pack-or-base,dpkg 1.10.27ubuntu1
-  language-pack-or,dpkg 1.10.27ubuntu1
-  language-pack-om-base,dpkg 1.10.27ubuntu1
-  language-pack-om,dpkg 1.10.27ubuntu1
-  language-pack-oc-base,dpkg 1.10.27ubuntu1
-  language-pack-oc,dpkg 1.10.27ubuntu1
-  language-pack-nso-base,dpkg 1.10.27ubuntu1
-  language-pack-nso,dpkg 1.10.27ubuntu1
-  language-pack-nn-base,dpkg 1.10.27ubuntu1
-  language-pack-nn,dpkg 1.10.27ubuntu1
-  language-pack-nl-base,dpkg 1.10.27ubuntu1
-  language-pack-nl,dpkg 1.10.27ubuntu1
-  language-pack-ne-base,dpkg 1.10.27ubuntu1
-  language-pack-ne,dpkg 1.10.27ubuntu1
-  language-pack-nds-base,dpkg 1.10.27ubuntu1
-  language-pack-nds,dpkg 1.10.27ubuntu1
-  language-pack-nb-base,dpkg 1.10.27ubuntu1
-  language-pack-nb,dpkg 1.10.27ubuntu1
-  language-pack-nan-base,dpkg 1.10.27ubuntu1
-  language-pack-nan,dpkg 1.10.27ubuntu1
-  language-pack-my-base,dpkg 1.10.27ubuntu1
-  language-pack-my,dpkg 1.10.27ubuntu1
-  language-pack-mt-base,dpkg 1.10.27ubuntu1
-  language-pack-mt,dpkg 1.10.27ubuntu1
-  language-pack-ms-base,dpkg 1.10.27ubuntu1
-  language-pack-ms,dpkg 1.10.27ubuntu1
-  language-pack-mr-base,dpkg 1.10.27ubuntu1
-  language-pack-mr,dpkg 1.10.27ubuntu1
-  language-pack-mn-base,dpkg 1.10.27ubuntu1
-  language-pack-mn,dpkg 1.10.27ubuntu1
-  language-pack-ml-base,dpkg 1.10.27ubuntu1
-  language-pack-ml,dpkg 1.10.27ubuntu1
-  language-pack-mk-base,dpkg 1.10.27ubuntu1
-  language-pack-mk,dpkg 1.10.27ubuntu1
-  language-pack-mi-base,dpkg 1.10.27ubuntu1
-  language-pack-mi,dpkg 1.10.27ubuntu1
-  language-pack-mhr-base,dpkg 1.10.27ubuntu1
-  language-pack-mhr,dpkg 1.10.27ubuntu1
-  language-pack-mg-base,dpkg 1.10.27ubuntu1
-  language-pack-mg,dpkg 1.10.27ubuntu1
-  language-pack-mai-base,dpkg 1.10.27ubuntu1
-  language-pack-mai,dpkg 1.10.27ubuntu1
-  language-pack-lv-base,dpkg 1.10.27ubuntu1
-  language-pack-lv,dpkg 1.10.27ubuntu1
-  language-pack-lt-base,dpkg 1.10.27ubuntu1
-  language-pack-lt,dpkg 1.10.27ubuntu1
-  language-pack-lo-base,dpkg 1.10.27ubuntu1
-  language-pack-lo,dpkg 1.10.27ubuntu1
-  language-pack-li-base,dpkg 1.10.27ubuntu1
-  language-pack-li,dpkg 1.10.27ubuntu1
-  language-pack-lg-base,dpkg 1.10.27ubuntu1
-  language-pack-lg,dpkg 1.10.27ubuntu1
-  language-pack-lb-base,dpkg 1.10.27ubuntu1
-  language-pack-lb,dpkg 1.10.27ubuntu1
-  language-pack-ky-base,dpkg 1.10.27ubuntu1
-  language-pack-ky,dpkg 1.10.27ubuntu1
-  language-pack-kw-base,dpkg 1.10.27ubuntu1
-  language-pack-kw,dpkg 1.10.27ubuntu1
-  language-pack-ku-base,dpkg 1.10.27ubuntu1
-  language-pack-ku,dpkg 1.10.27ubuntu1
-  language-pack-ks-base,dpkg 1.10.27ubuntu1
-  language-pack-ks,dpkg 1.10.27ubuntu1
-  language-pack-ko-base,dpkg 1.10.27ubuntu1
-  language-pack-ko,dpkg 1.10.27ubuntu1
-  language-pack-kn-base,dpkg 1.10.27ubuntu1
-  language-pack-kn,dpkg 1.10.27ubuntu1
-  language-pack-km-base,dpkg 1.10.27ubuntu1
-  language-pack-km,dpkg 1.10.27ubuntu1
-  language-pack-kl-base,dpkg 1.10.27ubuntu1
-  language-pack-kl,dpkg 1.10.27ubuntu1
-  language-pack-kk-base,dpkg 1.10.27ubuntu1
-  language-pack-kk,dpkg 1.10.27ubuntu1
-  language-pack-ka-base,dpkg 1.10.27ubuntu1
-  language-pack-ka,dpkg 1.10.27ubuntu1
-  language-pack-ja-base,dpkg 1.10.27ubuntu1
-  language-pack-ja,dpkg 1.10.27ubuntu1
-  language-pack-it-base,dpkg 1.10.27ubuntu1
-  language-pack-it,dpkg 1.10.27ubuntu1
-  language-pack-is-base,dpkg 1.10.27ubuntu1
-  language-pack-is,dpkg 1.10.27ubuntu1
-  language-pack-ig-base,dpkg 1.10.27ubuntu1
-  language-pack-ig,dpkg 1.10.27ubuntu1
-  language-pack-id-base,dpkg 1.10.27ubuntu1
-  language-pack-id,dpkg 1.10.27ubuntu1
-  language-pack-ia-base,dpkg 1.10.27ubuntu1
-  language-pack-ia,dpkg 1.10.27ubuntu1
-  language-pack-hy-base,dpkg 1.10.27ubuntu1
-  language-pack-hy,dpkg 1.10.27ubuntu1
-  language-pack-hu-base,dpkg 1.10.27ubuntu1
-  language-pack-hu,dpkg 1.10.27ubuntu1
-  language-pack-ht-base,dpkg 1.10.27ubuntu1
-  language-pack-ht,dpkg 1.10.27ubuntu1
-  language-pack-hsb-base,dpkg 1.10.27ubuntu1
-  language-pack-hsb,dpkg 1.10.27ubuntu1
-  language-pack-hr-base,dpkg 1.10.27ubuntu1
-  language-pack-hr,dpkg 1.10.27ubuntu1
-  language-pack-hne-base,dpkg 1.10.27ubuntu1
-  language-pack-hne,dpkg 1.10.27ubuntu1
-  language-pack-hi-base,dpkg 1.10.27ubuntu1
-  language-pack-hi,dpkg 1.10.27ubuntu1
-  language-pack-he-base,dpkg 1.10.27ubuntu1
-  language-pack-he,dpkg 1.10.27ubuntu1
-  language-pack-ha-base,dpkg 1.10.27ubuntu1
-  language-pack-ha,dpkg 1.10.27ubuntu1
-  language-pack-gv-base,dpkg 1.10.27ubuntu1
-  language-pack-gv,dpkg 1.10.27ubuntu1
-  language-pack-gu-base,dpkg 1.10.27ubuntu1
-  language-pack-gu,dpkg 1.10.27ubuntu1
-  language-pack-gnome-zu-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-zu,dpkg 1.10.27ubuntu1
-  language-pack-gnome-zh-hant-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-zh-hant,dpkg 1.10.27ubuntu1
-  language-pack-gnome-zh-hans-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-zh-hans,dpkg 1.10.27ubuntu1
-  language-pack-gnome-yo-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-yo,dpkg 1.10.27ubuntu1
-  language-pack-gnome-yi-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-yi,dpkg 1.10.27ubuntu1
-  language-pack-gnome-xh-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-xh,dpkg 1.10.27ubuntu1
-  language-pack-gnome-wo-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-wo,dpkg 1.10.27ubuntu1
-  language-pack-gnome-wae-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-wae,dpkg 1.10.27ubuntu1
-  language-pack-gnome-wa-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-wa,dpkg 1.10.27ubuntu1
-  language-pack-gnome-vi-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-vi,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ve-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ve,dpkg 1.10.27ubuntu1
-  language-pack-gnome-uz-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-uz,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ur-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ur,dpkg 1.10.27ubuntu1
-  language-pack-gnome-uk-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-uk,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ug-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ug,dpkg 1.10.27ubuntu1
-  language-pack-gnome-tt-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-tt,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ts-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ts,dpkg 1.10.27ubuntu1
-  language-pack-gnome-tr-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-tr,dpkg 1.10.27ubuntu1
-  language-pack-gnome-tl-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-tl,dpkg 1.10.27ubuntu1
-  language-pack-gnome-tk-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-tk,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ti-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ti,dpkg 1.10.27ubuntu1
-  language-pack-gnome-th-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-th,dpkg 1.10.27ubuntu1
-  language-pack-gnome-tg-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-tg,dpkg 1.10.27ubuntu1
-  language-pack-gnome-te-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-te,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ta-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ta,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sw-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sw,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sv-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sv,dpkg 1.10.27ubuntu1
-  language-pack-gnome-st-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-st,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sr-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sr,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sq-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sq,dpkg 1.10.27ubuntu1
-  language-pack-gnome-so-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-so,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sl-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sl,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sk-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sk,dpkg 1.10.27ubuntu1
-  language-pack-gnome-si-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-si,dpkg 1.10.27ubuntu1
-  language-pack-gnome-shs-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-shs,dpkg 1.10.27ubuntu1
-  language-pack-gnome-se-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-se,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sd-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sd,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sc-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sc,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sa-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-sa,dpkg 1.10.27ubuntu1
-  language-pack-gnome-rw-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-rw,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ru-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ru,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ro-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ro,dpkg 1.10.27ubuntu1
-  language-pack-gnome-pt-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-pt,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ps-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ps,dpkg 1.10.27ubuntu1
-  language-pack-gnome-pl-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-pl,dpkg 1.10.27ubuntu1
-  language-pack-gnome-pap-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-pap,dpkg 1.10.27ubuntu1
-  language-pack-gnome-pa-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-pa,dpkg 1.10.27ubuntu1
-  language-pack-gnome-os-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-os,dpkg 1.10.27ubuntu1
-  language-pack-gnome-or-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-or,dpkg 1.10.27ubuntu1
-  language-pack-gnome-om-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-om,dpkg 1.10.27ubuntu1
-  language-pack-gnome-oc-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-oc,dpkg 1.10.27ubuntu1
-  language-pack-gnome-nso-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-nso,dpkg 1.10.27ubuntu1
-  language-pack-gnome-nn-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-nn,dpkg 1.10.27ubuntu1
-  language-pack-gnome-nl-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-nl,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ne-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ne,dpkg 1.10.27ubuntu1
-  language-pack-gnome-nds-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-nds,dpkg 1.10.27ubuntu1
-  language-pack-gnome-nb-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-nb,dpkg 1.10.27ubuntu1
-  language-pack-gnome-nan-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-nan,dpkg 1.10.27ubuntu1
-  language-pack-gnome-my-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-my,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mt-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mt,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ms-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ms,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mr-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mr,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mn-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mn,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ml-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ml,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mk-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mk,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mi-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mi,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mhr-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mhr,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mg-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mg,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mai-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-mai,dpkg 1.10.27ubuntu1
-  language-pack-gnome-lv-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-lv,dpkg 1.10.27ubuntu1
-  language-pack-gnome-lt-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-lt,dpkg 1.10.27ubuntu1
-  language-pack-gnome-lo-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-lo,dpkg 1.10.27ubuntu1
-  language-pack-gnome-li-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-li,dpkg 1.10.27ubuntu1
-  language-pack-gnome-lg-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-lg,dpkg 1.10.27ubuntu1
-  language-pack-gnome-lb-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-lb,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ky-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ky,dpkg 1.10.27ubuntu1
-  language-pack-gnome-kw-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-kw,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ku-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ku,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ks-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ks,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ko-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ko,dpkg 1.10.27ubuntu1
-  language-pack-gnome-kn-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-kn,dpkg 1.10.27ubuntu1
-  language-pack-gnome-km-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-km,dpkg 1.10.27ubuntu1
-  language-pack-gnome-kl-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-kl,dpkg 1.10.27ubuntu1
-  language-pack-gnome-kk-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-kk,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ka-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ka,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ja-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ja,dpkg 1.10.27ubuntu1
-  language-pack-gnome-it-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-it,dpkg 1.10.27ubuntu1
-  language-pack-gnome-is-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-is,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ig-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ig,dpkg 1.10.27ubuntu1
-  language-pack-gnome-id-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-id,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ia-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ia,dpkg 1.10.27ubuntu1
-  language-pack-gnome-hy-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-hy,dpkg 1.10.27ubuntu1
-  language-pack-gnome-hu-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-hu,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ht-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ht,dpkg 1.10.27ubuntu1
-  language-pack-gnome-hr-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-hr,dpkg 1.10.27ubuntu1
-  language-pack-gnome-hi-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-hi,dpkg 1.10.27ubuntu1
-  language-pack-gnome-he-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-he,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ha-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ha,dpkg 1.10.27ubuntu1
-  language-pack-gnome-gv-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-gv,dpkg 1.10.27ubuntu1
-  language-pack-gnome-gu-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-gu,dpkg 1.10.27ubuntu1
-  language-pack-gnome-gl-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-gl,dpkg 1.10.27ubuntu1
-  language-pack-gnome-gd-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-gd,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ga-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ga,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fy-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fy,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fur-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fur,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fr-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fr,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fo-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fo,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fil-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fil,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fi-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fi,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ff-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ff,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fa-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-fa,dpkg 1.10.27ubuntu1
-  language-pack-gnome-eu-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-eu,dpkg 1.10.27ubuntu1
-  language-pack-gnome-et-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-et,dpkg 1.10.27ubuntu1
-  language-pack-gnome-es-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-es,dpkg 1.10.27ubuntu1
-  language-pack-gnome-eo-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-eo,dpkg 1.10.27ubuntu1
-  language-pack-gnome-en-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-en,dpkg 1.10.27ubuntu1
-  language-pack-gnome-el-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-el,dpkg 1.10.27ubuntu1
-  language-pack-gnome-dz-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-dz,dpkg 1.10.27ubuntu1
-  language-pack-gnome-dv-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-dv,dpkg 1.10.27ubuntu1
-  language-pack-gnome-de-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-de,dpkg 1.10.27ubuntu1
-  language-pack-gnome-da-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-da,dpkg 1.10.27ubuntu1
-  language-pack-gnome-cy-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-cy,dpkg 1.10.27ubuntu1
-  language-pack-gnome-cv-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-cv,dpkg 1.10.27ubuntu1
-  language-pack-gnome-csb-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-csb,dpkg 1.10.27ubuntu1
-  language-pack-gnome-cs-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-cs,dpkg 1.10.27ubuntu1
-  language-pack-gnome-crh-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-crh,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ca-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ca,dpkg 1.10.27ubuntu1
-  language-pack-gnome-bs-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-bs,dpkg 1.10.27ubuntu1
-  language-pack-gnome-br-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-br,dpkg 1.10.27ubuntu1
-  language-pack-gnome-bo-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-bo,dpkg 1.10.27ubuntu1
-  language-pack-gnome-bn-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-bn,dpkg 1.10.27ubuntu1
-  language-pack-gnome-bho-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-bho,dpkg 1.10.27ubuntu1
-  language-pack-gnome-bg-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-bg,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ber-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ber,dpkg 1.10.27ubuntu1
-  language-pack-gnome-bem-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-bem,dpkg 1.10.27ubuntu1
-  language-pack-gnome-be-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-be,dpkg 1.10.27ubuntu1
-  language-pack-gnome-az-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-az,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ast-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ast,dpkg 1.10.27ubuntu1
-  language-pack-gnome-as-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-as,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ar-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-ar,dpkg 1.10.27ubuntu1
-  language-pack-gnome-an-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-an,dpkg 1.10.27ubuntu1
-  language-pack-gnome-am-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-am,dpkg 1.10.27ubuntu1
-  language-pack-gnome-af-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-af,dpkg 1.10.27ubuntu1
-  language-pack-gnome-aa-base,dpkg 1.10.27ubuntu1
-  language-pack-gnome-aa,dpkg 1.10.27ubuntu1
-  language-pack-gl-base,dpkg 1.10.27ubuntu1
-  language-pack-gl,dpkg 1.10.27ubuntu1
-  language-pack-gd-base,dpkg 1.10.27ubuntu1
-  language-pack-gd,dpkg 1.10.27ubuntu1
-  language-pack-ga-base,dpkg 1.10.27ubuntu1
-  language-pack-ga,dpkg 1.10.27ubuntu1
-  language-pack-fy-base,dpkg 1.10.27ubuntu1
-  language-pack-fy,dpkg 1.10.27ubuntu1
-  language-pack-fur-base,dpkg 1.10.27ubuntu1
-  language-pack-fur,dpkg 1.10.27ubuntu1
-  language-pack-fr-base,dpkg 1.10.27ubuntu1
-  language-pack-fr,dpkg 1.10.27ubuntu1
-  language-pack-fo-base,dpkg 1.10.27ubuntu1
-  language-pack-fo,dpkg 1.10.27ubuntu1
-  language-pack-fil-base,dpkg 1.10.27ubuntu1
-  language-pack-fil,dpkg 1.10.27ubuntu1
-  language-pack-fi-base,dpkg 1.10.27ubuntu1
-  language-pack-fi,dpkg 1.10.27ubuntu1
-  language-pack-ff-base,dpkg 1.10.27ubuntu1
-  language-pack-ff,dpkg 1.10.27ubuntu1
-  language-pack-fa-base,dpkg 1.10.27ubuntu1
-  language-pack-fa,dpkg 1.10.27ubuntu1
-  language-pack-eu-base,dpkg 1.10.27ubuntu1
-  language-pack-eu,dpkg 1.10.27ubuntu1
-  language-pack-et-base,dpkg 1.10.27ubuntu1
-  language-pack-et,dpkg 1.10.27ubuntu1
-  language-pack-es-base,dpkg 1.10.27ubuntu1
-  language-pack-es,dpkg 1.10.27ubuntu1
-  language-pack-eo-base,dpkg 1.10.27ubuntu1
-  language-pack-eo,dpkg 1.10.27ubuntu1
-  language-pack-en-base,dpkg 1.10.27ubuntu1
-  language-pack-en,dpkg 1.10.27ubuntu1
-  language-pack-el-base,dpkg 1.10.27ubuntu1
-  language-pack-el,dpkg 1.10.27ubuntu1
-  language-pack-dz-base,dpkg 1.10.27ubuntu1
-  language-pack-dz,dpkg 1.10.27ubuntu1
-  language-pack-dv-base,dpkg 1.10.27ubuntu1
-  language-pack-dv,dpkg 1.10.27ubuntu1
-  language-pack-de-base,dpkg 1.10.27ubuntu1
-  language-pack-de,dpkg 1.10.27ubuntu1
-  language-pack-da-base,dpkg 1.10.27ubuntu1
-  language-pack-da,dpkg 1.10.27ubuntu1
-  language-pack-cy-base,dpkg 1.10.27ubuntu1
-  language-pack-cy,dpkg 1.10.27ubuntu1
-  language-pack-cv-base,dpkg 1.10.27ubuntu1
-  language-pack-cv,dpkg 1.10.27ubuntu1
-  language-pack-csb-base,dpkg 1.10.27ubuntu1
-  language-pack-csb,dpkg 1.10.27ubuntu1
-  language-pack-cs-base,dpkg 1.10.27ubuntu1
-  language-pack-cs,dpkg 1.10.27ubuntu1
-  language-pack-crh-base,dpkg 1.10.27ubuntu1
-  language-pack-crh,dpkg 1.10.27ubuntu1
-  language-pack-ca-base,dpkg 1.10.27ubuntu1
-  language-pack-ca,dpkg 1.10.27ubuntu1
-  language-pack-bs-base,dpkg 1.10.27ubuntu1
-  language-pack-bs,dpkg 1.10.27ubuntu1
-  language-pack-br-base,dpkg 1.10.27ubuntu1
-  language-pack-br,dpkg 1.10.27ubuntu1
-  language-pack-bo-base,dpkg 1.10.27ubuntu1
-  language-pack-bo,dpkg 1.10.27ubuntu1
-  language-pack-bn-base,dpkg 1.10.27ubuntu1
-  language-pack-bn,dpkg 1.10.27ubuntu1
-  language-pack-bho-base,dpkg 1.10.27ubuntu1
-  language-pack-bho,dpkg 1.10.27ubuntu1
-  language-pack-bg-base,dpkg 1.10.27ubuntu1
-  language-pack-bg,dpkg 1.10.27ubuntu1
-  language-pack-ber-base,dpkg 1.10.27ubuntu1
-  language-pack-ber,dpkg 1.10.27ubuntu1
-  language-pack-bem-base,dpkg 1.10.27ubuntu1
-  language-pack-bem,dpkg 1.10.27ubuntu1
-  language-pack-be-base,dpkg 1.10.27ubuntu1
-  language-pack-be,dpkg 1.10.27ubuntu1
-  language-pack-az-base,dpkg 1.10.27ubuntu1
-  language-pack-az,dpkg 1.10.27ubuntu1
-  language-pack-ast-base,dpkg 1.10.27ubuntu1
-  language-pack-ast,dpkg 1.10.27ubuntu1
-  language-pack-as-base,dpkg 1.10.27ubuntu1
-  language-pack-as,dpkg 1.10.27ubuntu1
-  language-pack-ar-base,dpkg 1.10.27ubuntu1
-  language-pack-ar,dpkg 1.10.27ubuntu1
-  language-pack-an-base,dpkg 1.10.27ubuntu1
-  language-pack-an,dpkg 1.10.27ubuntu1
-  language-pack-am-base,dpkg 1.10.27ubuntu1
-  language-pack-am,dpkg 1.10.27ubuntu1
-  language-pack-af-base,dpkg 1.10.27ubuntu1
-  language-pack-af,dpkg 1.10.27ubuntu1
-  language-pack-aa-base,dpkg 1.10.27ubuntu1
-  language-pack-aa,dpkg 1.10.27ubuntu1
-  kbd,dpkg 1.15.7.2
-  jadetex,dpkg 1.14.18
-  install-info,dpkg 1.16.1
-  imagemagick-common,dpkg 1.15.7.2
-  hevea,dpkg 1.14.18
-  help2man,dpkg 1.15.4
-  hello-debhelper,dpkg 1.15.4
-  hello,dpkg 1.15.4
-  heimdal-docs,dpkg 1.15.4
-  gzip,dpkg 1.15.4
-  guile-2.0-doc,dpkg 1.15.4
-  grub2-common,dpkg 1.15.4
-  grep,dpkg 1.15.4
-  gnupg2,dpkg 1.15.4
-  gnu-standards,dpkg 1.15.4
-  gfortran-4.8-doc,dpkg 1.15.4
-  gfortran-4.7-doc,dpkg 1.15.4
-  gettext,dpkg 1.15.4
-  gcj-4.8-jdk,dpkg 1.15.4
-  gcj-4.8,dpkg 1.15.4
-  gccgo-4.9-doc,dpkg 1.15.4
-  gccgo-4.8-doc,dpkg 1.15.4
-  gccgo-4.7-doc,dpkg 1.15.4
-  gcc-4.8-doc,dpkg 1.15.4
-  gcc-4.7-doc,dpkg 1.15.4
-  freeipmi-common,dpkg 1.15.7.2~
-  fonts-vlgothic,dpkg 1.15.6~
-  fonts-unfonts-core,dpkg 1.15.7.2
-  fonts-texgyre,dpkg 1.14.18
-  fonts-takao-pgothic,dpkg 1.15.6~
-  fonts-takao-mincho,dpkg 1.15.6~
-  fonts-takao-gothic,dpkg 1.15.6~
-  fonts-sil-abyssinica,dpkg 1.15.6~
-  fonts-nanum-extra,dpkg 1.15.7.2
-  fonts-nanum,dpkg 1.15.7.2
-  fonts-lmodern,dpkg 1.14.18
-  fonts-kacst-one,dpkg 1.15.6~
-  fonts-kacst,dpkg 1.15.6~
-  fonts-ipafont-mincho,dpkg 1.15.6~
-  fonts-ipafont-gothic,dpkg 1.15.6~
-  fonts-droid,dpkg 1.15.7.2
-  fonts-arphic-uming,dpkg 1.15.6~
-  fonts-arphic-gkai00mp,dpkg 1.15.6~
-  fonts-arphic-gbsn00lp,dpkg 1.15.6~
-  fonts-arphic-bsmi00lp,dpkg 1.15.6~
-  fonts-arphic-bkai00mp,dpkg 1.15.6~
-  flex,dpkg 1.15.4
-  fastjar,dpkg 1.15.4
-  emacs24-common-non-dfsg,dpkg 1.15.4
-  emacs24-common,dpkg 1.15.4
-  emacs-goodies-el,dpkg 1.15.4
-  dselect,dpkg 1.13.1
-  diveintopython,dpkg 1.10.24
-  dejagnu,dpkg 1.15.4
-  debhelper,dpkg 1.16.2
-  dash,dpkg 1.15.0
-  cvs,dpkg 1.15.4
-  cups-daemon,dpkg 1.15.7.2
-  cron,dpkg 1.15.4
-  cron,dpkg 1.15.7.2
-  cpp-4.8-doc,dpkg 1.15.4
-  cpp-4.7-doc,dpkg 1.15.4
-  cloop-utils,dpkg 1.15.6~
-  cliff-tablib,dpkg 1.15.6~
-  check,dpkg 1.15.4
-  cdebconf,dpkg 1.15.4
-  bzip2-doc,dpkg 1.15.4
-  binutils-doc,dpkg 1.15.4
-  bash-doc,dpkg 1.15.4
-  bash-completion,dpkg 1.15.7.2~
-  base-files,dpkg 1.15.0
-  backuppc,dpkg 1.8.3
-  autoconf2.13,dpkg 1.15.4
-  auctex,dpkg 1.15.4
-  anthy-common,dpkg 1.15.6~
-  acct,dpkg 1.15.4
+  libreoffice-subsequentcheckbase,dpkg-dev 1.16.1
+  apt,dpkg-dev 1.17.2
+  dpkg:i386,dpkg-dev 1.15.8
+  python-stdeb,dpkg-dev
+  libreoffice-subsequentcheckbase,dpkg-dev 1.16.1
+  auto-apt,dpkg-dev
+  apport-valgrind,dpkg-dev
+  pbuilder,dpkg-dev
+  libdpkg-perl,dpkg-dev 1.15.6
+  libdpkg-perl,dpkg-dev 1.15.6
+  dpkg,dpkg-dev 1.15.8
+  dkms,dpkg-dev
+  dkms,dpkg-dev
+  apt,dpkg-dev 1.17.2
+  apport-retrace,dpkg-dev
+  tar:i386,dpkg-dev 1.14.26
+  dpkg:i386,dpkg-dev 1.15.8
+  sapgui-package,dpkg-dev
+  primesense-nite-nonfree,dpkg-dev
+  java-package,dpkg-dev
+  googleearth-package,dpkg-dev
+  freespace2,dpkg-dev
+  zbuildtools,dpkg-dev
+  xdeb,dpkg-dev 1.15
+  xapt,dpkg-dev
+  wajig,dpkg-dev
+  unity-webapps-qml-autopilot,dpkg-dev
+  unity-webapps-dev,dpkg-dev
+  uck,dpkg-dev
+  ubuntu-ui-toolkit-autopilot,dpkg-dev
+  ubuntu-system-settings-autopilot,dpkg-dev
+  ubuntu-policy,dpkg-dev 1.4.0.9
+  ubuntu-html5-ui-toolkit-autopilot,dpkg-dev
+  ubuntu-html5-container,dpkg-dev
+  ubuntu-dev-tools,dpkg-dev
+  tk8.4-dev,dpkg-dev 1.16.1~
+  tcl8.4-dev,dpkg-dev 1.16.1~
+  svn-autoreleasedeb,dpkg-dev
+  stalin,dpkg-dev
+  quickly-ubuntu-template,dpkg-dev
+  python-stdeb,dpkg-dev
+  python-autopilot-tests,dpkg-dev
+  pybit-client,dpkg-dev
+  pkg-components,dpkg-dev
+  phablet-tools,dpkg-dev
+  oss4-source,dpkg-dev
+  oss4-dkms,dpkg-dev
+  ngrok-server,dpkg-dev
+  mini-buildd,dpkg-dev
+  libsbuild-perl,dpkg-dev
+  libreoffice-subsequentcheckbase,dpkg-dev 1.16.1
+  libeb16-dev,dpkg-dev 1.16
+  libcupt3-0,dpkg-dev
+  jablicator,dpkg-dev
+  golang-websocket-dev,dpkg-dev
+  golang-vhost-dev,dpkg-dev
+  golang-termbox-dev,dpkg-dev
+  golang-metrics-dev,dpkg-dev
+  golang-log4go-dev,dpkg-dev
+  golang-goyaml-dev,dpkg-dev
+  golang-bindata-dev,dpkg-dev
+  go-bindata,dpkg-dev
+  gitpkg,dpkg-dev
+  equivs,dpkg-dev
+  emdebian-grip,dpkg-dev 1.15.2
+  emdebian-crush,dpkg-dev
+  dpsyco-devel,dpkg-dev
+  dpkg-dev-el,dpkg-dev 1.7.2
+  dpkg-dev-el,dpkg-dev
+  dh-make-perl,dpkg-dev
+  dh-ada-library,dpkg-dev
+  dgit,dpkg-dev
+  dell-recovery-bootloader,dpkg-dev
+  debian-cd,dpkg-dev
+  debian-builder,dpkg-dev
+  debaux,dpkg-dev
+  debarchiver,dpkg-dev
+  cvs-buildpackage,dpkg-dev 1.4.0.9
+  cvs-autoreleasedeb,dpkg-dev
+  crosshurd,dpkg-dev
+  cordova-ubuntu-autopilot,dpkg-dev
+  checkinstall,dpkg-dev
+  cernlib-base-dev,dpkg-dev
+  bzr-builddeb,dpkg-dev
+  bogosec,dpkg-dev
+  auto-apt,dpkg-dev
+  apt-src,dpkg-dev
+  apt-build,dpkg-dev 1.9
+  apport-valgrind,dpkg-dev
+  alsa-source,dpkg-dev
+  ubuntu-defaults-builder,dpkg-dev
+  tk8.6-dev,dpkg-dev 1.16.1~
+  tk8.5-dev,dpkg-dev 1.16.1~
+  tcl8.6-dev,dpkg-dev 1.16.1~
+  tcl8.5-dev,dpkg-dev 1.16.1~
+  tar,dpkg-dev 1.14.26
+  pkg-kde-tools,dpkg-dev 1.15.6~
+  pkg-kde-tools,dpkg-dev 1.15.6~
+  pbuilder,dpkg-dev
+  mklibs-copy,dpkg-dev
+  mklibs,dpkg-dev
+  lintian,dpkg-dev
+  libdpkg-perl,dpkg-dev 1.15.6
+  libdpkg-perl,dpkg-dev 1.15.6
+  libdebian-dpkgcross-perl,dpkg-dev 1.14.6
+  javahelper,dpkg-dev
+  dpkg-cross,dpkg-dev 1.14.7
+  dpkg,dpkg-dev 1.15.8
+  dpatch,dpkg-dev
+  dkms,dpkg-dev
+  dkms,dpkg-dev
+  dh-make,dpkg-dev
+  devscripts,dpkg-dev 1.16.4
+  debhelper,dpkg-dev 1.17.0
+  build-essential,dpkg-dev 1.13.5
+  apt,dpkg-dev 1.17.2
+  apport-retrace,dpkg-dev
+  alien,dpkg-dev
 Dependencies:
-1.17.5ubuntu5.3 - libbz2-1.0 (0 (null)) libc6 (2 2.14) liblzma5 (2 5.1.1alpha+20120614) libselinux1 (2 2.1.0) zlib1g (2 1:1.1.4) tar (2 1.23) apt (0 (null)) apt (3 0.7.7) apt:i386 (3 0.7.7) aptitude (3 0.4.7-1) aptitude:i386 (3 0.4.7-1) dpkg-dev (3 1.15.8) dpkg-dev:i386 (3 1.15.8) libdpkg-perl (3 1.15.8) libdpkg-perl:i386 (3 1.15.8) manpages-it (3 2.80-4) manpages-it:i386 (3 2.80-4) dpkg:i386 (0 (null))
-1.17.5ubuntu5 - libbz2-1.0 (0 (null)) libc6 (2 2.14) liblzma5 (2 5.1.1alpha+20120614) libselinux1 (2 2.1.0) zlib1g (2 1:1.1.4) tar (2 1.23) apt (0 (null)) apt (3 0.7.7) apt:i386 (3 0.7.7) aptitude (3 0.4.7-1) aptitude:i386 (3 0.4.7-1) dpkg-dev (3 1.15.8) dpkg-dev:i386 (3 1.15.8) libdpkg-perl (3 1.15.8) libdpkg-perl:i386 (3 1.15.8) manpages-it (3 2.80-4) manpages-it:i386 (3 2.80-4) dpkg:i386 (0 (null))
+1.17.5ubuntu5.3 - libdpkg-perl (5 1.17.5ubuntu5.3) bzip2 (0 (null)) xz-utils (0 (null)) patch (0 (null)) make (0 (null)) binutils (0 (null)) base-files (2 5.0.0) debian-keyring (0 (null)) gcc (16 (null)) c-compiler (0 (null)) build-essential (0 (null)) fakeroot (0 (null)) gnupg (16 (null)) gnupg2 (0 (null)) gpgv (16 (null)) gpgv2 (0 (null)) libalgorithm-merge-perl (0 (null)) devscripts (3 2.10.26) devscripts:i386 (3 2.10.26) dpkg-cross (3 2.0.0) dpkg-cross:i386 (3 2.0.0) manpages-it (3 2.80-4) manpages-it:i386 (3 2.80-4)
+1.17.5ubuntu5 - libdpkg-perl (5 1.17.5ubuntu5) bzip2 (0 (null)) xz-utils (0 (null)) patch (0 (null)) make (0 (null)) binutils (0 (null)) base-files (2 5.0.0) debian-keyring (0 (null)) gcc (16 (null)) c-compiler (0 (null)) build-essential (0 (null)) fakeroot (0 (null)) gnupg (16 (null)) gnupg2 (0 (null)) gpgv (16 (null)) gpgv2 (0 (null)) libalgorithm-merge-perl (0 (null)) devscripts (3 2.10.26) devscripts:i386 (3 2.10.26) dpkg-cross (3 2.0.0) dpkg-cross:i386 (3 2.0.0) manpages-it (3 2.80-4) manpages-it:i386 (3 2.80-4)
 Provides:
-1.17.5ubuntu5.3 - dpkg:i386
-1.17.5ubuntu5 - dpkg:i386
+1.17.5ubuntu5.3 - dpkg-dev:i386
+1.17.5ubuntu5 - dpkg-dev:i386
 Reverse Provides:
-dpkg:i386 1.17.5ubuntu5.3
-dpkg:i386 1.17.5ubuntu5
 </code></pre><p>執行</p>
-<pre><code>$ apt-cache showsrc dpkg
+<pre><code>$ apt-cache showsrc dpkg-dev
 </code></pre><p>顯示</p>
 <pre><code>Package: dpkg
 Binary: libdpkg-dev, dpkg, dpkg-dev, libdpkg-perl, dselect
@@ -4028,363 +2082,355 @@ Checksums-Sha256:
  5778932e42c30887e8a13806753e43459b87b16840695ecd2a4ecb1f4628ee76 2104 dpkg_1.17.5ubuntu5.3.dsc
  37c1eb322aa7a28e21fdca50d336b276250518793f2ac166a48c356aac29b185 3849428 dpkg_1.17.5ubuntu5.3.tar.xz
 </code></pre><p>執行</p>
-<pre><code>$ dpkg -s dpkg
+<pre><code>$ dpkg -s dpkg-dev
 </code></pre><p>顯示</p>
-<pre><code>Package: dpkg
-Essential: yes
+<pre><code>Package: dpkg-dev
 Status: install ok installed
-Priority: required
-Section: admin
-Installed-Size: 6239
+Priority: optional
+Section: utils
+Installed-Size: 1634
 Origin: debian
 Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
 Bugs: debbugs://bugs.debian.org
-Architecture: amd64
+Architecture: all
 Multi-Arch: foreign
+Source: dpkg
 Version: 1.17.5ubuntu5.3
 Replaces: manpages-it (&lt;&lt; 2.80-4)
-Pre-Depends: libbz2-1.0, libc6 (&gt;= 2.14), liblzma5 (&gt;= 5.1.1alpha+20120614), libselinux1 (&gt;= 2.1.0), zlib1g (&gt;= 1:1.1.4), tar (&gt;= 1.23)
-Suggests: apt
-Breaks: apt (&lt;&lt; 0.7.7), aptitude (&lt;&lt; 0.4.7-1), dpkg-dev (&lt;&lt; 1.15.8), libdpkg-perl (&lt;&lt; 1.15.8)
+Depends: libdpkg-perl (= 1.17.5ubuntu5.3), bzip2, xz-utils, patch, make, binutils, base-files (&gt;= 5.0.0)
+Recommends: gcc | c-compiler, build-essential, fakeroot, gnupg | gnupg2, gpgv | gpgv2, libalgorithm-merge-perl
+Suggests: debian-keyring
+Breaks: devscripts (&lt;&lt; 2.10.26), dpkg-cross (&lt;&lt; 2.0.0)
 Conffiles:
- /etc/cron.daily/dpkg b6b8dc21210ea50db7cc4636f521758f
- /etc/dpkg/dpkg.cfg f4413ffb515f8f753624ae3bb365b81b
- /etc/logrotate.d/dpkg 782ea5ae536f67ff51dc8c3e2eeb4cf9
- /etc/alternatives/README 69c4ba7f08363e998e0f2e244a04f881
-Description: Debian package management system
- This package provides the low-level infrastructure for handling the
- installation and removal of Debian software packages.
+ /etc/dpkg/shlibs.default 1a2b9d0a869e2aa885ae3621c557fb95
+ /etc/dpkg/shlibs.override 84b1e69080569cc5c613a50887af5200
+Description: Debian package development tools
+ This package provides the development tools (including dpkg-source)
+ required to unpack, build and upload Debian source packages.
  .
- For Debian package development tools, install dpkg-dev.
+ Most Debian source packages will require additional tools to build;
+ for example, most packages need make and the C compiler gcc.
 Homepage: https://wiki.debian.org/Teams/Dpkg
 Original-Maintainer: Dpkg Developers &lt;debian-dpkg@lists.debian.org&gt;
 </code></pre><p>執行</p>
-<pre><code>$ dpkg -l dpkg
+<pre><code>$ dpkg -l dpkg-dev
 </code></pre><p>顯示</p>
 <pre><code>Desired=Unknown/Install/Remove/Purge/Hold
 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
 |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
 ||/ Name                         Version             Architecture        Description
 +++-============================-===================-===================-==============================================================
-ii  dpkg                         1.17.5ubuntu5.3     amd64               Debian package management system
+ii  dpkg-dev                     1.17.5ubuntu5.3     all                 Debian package development tools
 </code></pre><h2 id="">準備工作環境</h2>
-<pre><code>mkdir  ~/Downloads/dpkg -p
-cd ~/Downloads/dpkg
+<pre><code>mkdir  ~/Downloads/dpkg-dev -p
+cd ~/Downloads/dpkg-dev
 mkdir download source
-</code></pre><h2 id="package-dpkghttppackagesubuntucomtrustydpkg">探索「Package: <a href="http://packages.ubuntu.com/trusty/dpkg" target="_blank">dpkg</a>」</h2>
-<p>切換到「~/Downloads/dpkg/download」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/dpkg/download
+</code></pre><h2 id="package-dpkg-devhttppackagesubuntucomtrustydpkg-dev">探索「Package: <a href="http://packages.ubuntu.com/trusty/dpkg-dev" target="_blank">dpkg-dev</a>」</h2>
+<p>切換到「~/Downloads/dpkg-dev/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/dpkg-dev/download
 </code></pre>
-<p>下載「Package: dpkg」。</p>
-<pre><code class="lang-sh">$ apt-get download dpkg
+<p>下載「Package: dpkg-dev」。</p>
+<pre><code class="lang-sh">$ apt-get download dpkg-dev
 </code></pre>
-<p>解開「package dpkg」</p>
-<pre><code class="lang-sh">dpkg -x dpkg_1.<span class="hljs-number">17.5</span>ubuntu5.<span class="hljs-number">3</span>_amd64.deb dpkg
-dpkg <span class="hljs-operator">-e</span> dpkg_1.<span class="hljs-number">17.5</span>ubuntu5.<span class="hljs-number">3</span>_amd64.deb
-<span class="hljs-comment"># ar xv dpkg_1.17.5ubuntu5.3_amd64.deb</span>
+<p>解開「package dpkg-dev」</p>
+<pre><code class="lang-sh">dpkg -x dpkg-dev_1.<span class="hljs-number">17.5</span>ubuntu5.<span class="hljs-number">3</span>_all.deb dpkg-dev
+dpkg <span class="hljs-operator">-e</span> dpkg-dev_1.<span class="hljs-number">17.5</span>ubuntu5.<span class="hljs-number">3</span>_all.deb
+<span class="hljs-comment"># ar xv dpkg-dev_1.17.5ubuntu5.3_all.deb</span>
 </code></pre>
 <p>檢視套件檔案</p>
-<pre><code class="lang-sh">$ tree dpkg
+<pre><code class="lang-sh">$ tree dpkg-dev
 </code></pre>
 <p>顯示</p>
-<pre><code>dpkg
+<pre><code>dpkg-dev
 ├── etc
-│   ├── alternatives
-│   │   └── README
-│   ├── cron.daily
-│   │   └── dpkg
-│   ├── dpkg
-│   │   ├── dpkg.cfg
-│   │   └── dpkg.cfg.d
-│   └── logrotate.d
-│       └── dpkg
-├── sbin
-│   └── start-stop-daemon
-├── usr
-│   ├── bin
-│   │   ├── dpkg
-│   │   ├── dpkg-deb
-│   │   ├── dpkg-divert
-│   │   ├── dpkg-maintscript-helper
-│   │   ├── dpkg-query
-│   │   ├── dpkg-split
-│   │   ├── dpkg-statoverride
-│   │   ├── dpkg-trigger
-│   │   └── update-alternatives
-│   └── share
-│       ├── doc
-│       │   └── dpkg
-│       │       ├── AUTHORS
-│       │       ├── changelog.Debian.gz
-│       │       ├── copyright
-│       │       ├── README.feature-removal-schedule.gz
-│       │       ├── THANKS.gz
-│       │       └── usertags.gz
-│       ├── dpkg
-│       │   ├── abitable
-│       │   ├── cputable
-│       │   ├── ostable
-│       │   └── triplettable
-│       ├── lintian
-│       │   └── overrides
-│       │       └── dpkg
-│       ├── locale
-│       │   ├── ast
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── bs
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── ca
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── cs
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── da
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── de
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── dz
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── el
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── eo
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── es
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── et
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── eu
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── fr
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── gl
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── hu
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── id
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── it
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── ja
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── km
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── ko
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── ku
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── lt
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── mr
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── nb
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── ne
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── nl
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── nn
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── pa
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── pl
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── pt
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── pt_BR
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── ro
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── ru
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── sk
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── sv
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── th
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── tl
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── vi
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   ├── zh_CN
-│       │   │   └── LC_MESSAGES
-│       │   │       └── dpkg.mo
-│       │   └── zh_TW
-│       │       └── LC_MESSAGES
-│       │           └── dpkg.mo
-│       └── man
-│           ├── de
-│           │   ├── man1
-│           │   │   ├── dpkg.1.gz
-│           │   │   ├── dpkg-deb.1.gz
-│           │   │   ├── dpkg-maintscript-helper.1.gz
-│           │   │   ├── dpkg-query.1.gz
-│           │   │   ├── dpkg-split.1.gz
-│           │   │   └── dpkg-trigger.1.gz
-│           │   ├── man5
-│           │   │   └── dpkg.cfg.5.gz
-│           │   └── man8
-│           │       ├── dpkg-divert.8.gz
-│           │       ├── dpkg-statoverride.8.gz
-│           │       ├── start-stop-daemon.8.gz
-│           │       └── update-alternatives.8.gz
-│           ├── es
-│           │   ├── man1
-│           │   │   ├── dpkg.1.gz
-│           │   │   ├── dpkg-deb.1.gz
-│           │   │   ├── dpkg-query.1.gz
-│           │   │   ├── dpkg-split.1.gz
-│           │   │   └── dpkg-trigger.1.gz
-│           │   ├── man5
-│           │   │   └── dpkg.cfg.5.gz
-│           │   └── man8
-│           │       ├── dpkg-divert.8.gz
-│           │       ├── start-stop-daemon.8.gz
-│           │       └── update-alternatives.8.gz
-│           ├── fr
-│           │   ├── man1
-│           │   │   ├── dpkg.1.gz
-│           │   │   ├── dpkg-deb.1.gz
-│           │   │   ├── dpkg-query.1.gz
-│           │   │   ├── dpkg-split.1.gz
-│           │   │   └── dpkg-trigger.1.gz
-│           │   ├── man5
-│           │   │   └── dpkg.cfg.5.gz
-│           │   └── man8
-│           │       ├── dpkg-divert.8.gz
-│           │       ├── start-stop-daemon.8.gz
-│           │       └── update-alternatives.8.gz
-│           ├── hu
-│           │   └── man5
-│           │       └── dpkg.cfg.5.gz
-│           ├── it
-│           │   ├── man1
-│           │   │   ├── dpkg.1.gz
-│           │   │   ├── dpkg-deb.1.gz
-│           │   │   ├── dpkg-query.1.gz
-│           │   │   └── dpkg-split.1.gz
-│           │   ├── man5
-│           │   │   └── dpkg.cfg.5.gz
-│           │   └── man8
-│           │       ├── start-stop-daemon.8.gz
-│           │       └── update-alternatives.8.gz
-│           ├── ja
-│           │   ├── man1
-│           │   │   ├── dpkg.1.gz
-│           │   │   ├── dpkg-deb.1.gz
-│           │   │   ├── dpkg-query.1.gz
-│           │   │   ├── dpkg-split.1.gz
-│           │   │   └── dpkg-trigger.1.gz
-│           │   ├── man5
-│           │   │   └── dpkg.cfg.5.gz
-│           │   └── man8
-│           │       ├── dpkg-divert.8.gz
-│           │       ├── start-stop-daemon.8.gz
-│           │       └── update-alternatives.8.gz
-│           ├── man1
-│           │   ├── dpkg.1.gz
-│           │   ├── dpkg-deb.1.gz
-│           │   ├── dpkg-maintscript-helper.1.gz
-│           │   ├── dpkg-query.1.gz
-│           │   ├── dpkg-split.1.gz
-│           │   └── dpkg-trigger.1.gz
-│           ├── man5
-│           │   └── dpkg.cfg.5.gz
-│           ├── man8
-│           │   ├── dpkg-divert.8.gz
-│           │   ├── dpkg-statoverride.8.gz
-│           │   ├── start-stop-daemon.8.gz
-│           │   └── update-alternatives.8.gz
-│           ├── pl
-│           │   ├── man1
-│           │   │   ├── dpkg.1.gz
-│           │   │   ├── dpkg-deb.1.gz
-│           │   │   ├── dpkg-query.1.gz
-│           │   │   ├── dpkg-split.1.gz
-│           │   │   └── dpkg-trigger.1.gz
-│           │   ├── man5
-│           │   │   └── dpkg.cfg.5.gz
-│           │   └── man8
-│           │       ├── dpkg-divert.8.gz
-│           │       ├── start-stop-daemon.8.gz
-│           │       └── update-alternatives.8.gz
-│           └── sv
-│               ├── man1
-│               │   ├── dpkg.1.gz
-│               │   ├── dpkg-deb.1.gz
-│               │   ├── dpkg-query.1.gz
-│               │   ├── dpkg-split.1.gz
-│               │   └── dpkg-trigger.1.gz
-│               ├── man5
-│               │   └── dpkg.cfg.5.gz
-│               └── man8
-│                   ├── dpkg-divert.8.gz
-│                   ├── start-stop-daemon.8.gz
-│                   └── update-alternatives.8.gz
-└── var
-    └── lib
-        └── dpkg
-            ├── alternatives
-            ├── info
-            ├── parts
-            └── updates
+│   └── dpkg
+│       ├── shlibs.default
+│       └── shlibs.override
+└── usr
+    ├── bin
+    │   ├── dpkg-architecture
+    │   ├── dpkg-buildflags
+    │   ├── dpkg-buildpackage
+    │   ├── dpkg-checkbuilddeps
+    │   ├── dpkg-distaddfile
+    │   ├── dpkg-genchanges
+    │   ├── dpkg-gencontrol
+    │   ├── dpkg-gensymbols
+    │   ├── dpkg-mergechangelogs
+    │   ├── dpkg-name
+    │   ├── dpkg-parsechangelog
+    │   ├── dpkg-scanpackages
+    │   ├── dpkg-scansources
+    │   ├── dpkg-shlibdeps
+    │   ├── dpkg-source
+    │   └── dpkg-vendor
+    └── share
+        ├── doc
+        │   └── dpkg-dev
+        │       ├── AUTHORS -&gt; ../libdpkg-perl/AUTHORS
+        │       ├── changelog.Debian.gz -&gt; ../libdpkg-perl/changelog.Debian.gz
+        │       ├── copyright
+        │       ├── frontend.txt
+        │       ├── README.api -&gt; ../libdpkg-perl/README.api
+        │       ├── README.feature-removal-schedule.gz -&gt; ../libdpkg-perl/README.feature-removal-schedule.gz
+        │       ├── THANKS.gz -&gt; ../libdpkg-perl/THANKS.gz
+        │       ├── triggers.txt.gz
+        │       └── usertags.gz
+        ├── dpkg
+        │   ├── architecture.mk
+        │   ├── buildflags.mk
+        │   ├── default.mk
+        │   ├── pkg-info.mk
+        │   └── vendor.mk
+        ├── lintian
+        │   └── overrides
+        │       └── dpkg-dev
+        └── man
+            ├── de
+            │   ├── man1
+            │   │   ├── dpkg-architecture.1.gz
+            │   │   ├── dpkg-buildflags.1.gz
+            │   │   ├── dpkg-buildpackage.1.gz
+            │   │   ├── dpkg-checkbuilddeps.1.gz
+            │   │   ├── dpkg-distaddfile.1.gz
+            │   │   ├── dpkg-genchanges.1.gz
+            │   │   ├── dpkg-gencontrol.1.gz
+            │   │   ├── dpkg-gensymbols.1.gz
+            │   │   ├── dpkg-mergechangelogs.1.gz
+            │   │   ├── dpkg-name.1.gz
+            │   │   ├── dpkg-parsechangelog.1.gz
+            │   │   ├── dpkg-scanpackages.1.gz
+            │   │   ├── dpkg-scansources.1.gz
+            │   │   ├── dpkg-shlibdeps.1.gz
+            │   │   ├── dpkg-source.1.gz
+            │   │   └── dpkg-vendor.1.gz
+            │   └── man5
+            │       ├── deb.5.gz
+            │       ├── deb-control.5.gz
+            │       ├── deb-extra-override.5.gz
+            │       ├── deb-old.5.gz
+            │       ├── deb-origin.5.gz
+            │       ├── deb-override.5.gz
+            │       ├── deb-shlibs.5.gz
+            │       ├── deb-split.5.gz
+            │       ├── deb-src-control.5.gz
+            │       ├── deb-substvars.5.gz
+            │       ├── deb-symbols.5.gz
+            │       ├── deb-triggers.5.gz
+            │       └── deb-version.5.gz
+            ├── es
+            │   ├── man1
+            │   │   ├── dpkg-buildpackage.1.gz
+            │   │   ├── dpkg-distaddfile.1.gz
+            │   │   ├── dpkg-genchanges.1.gz
+            │   │   ├── dpkg-gencontrol.1.gz
+            │   │   ├── dpkg-gensymbols.1.gz
+            │   │   ├── dpkg-mergechangelogs.1.gz
+            │   │   ├── dpkg-name.1.gz
+            │   │   ├── dpkg-parsechangelog.1.gz
+            │   │   ├── dpkg-scanpackages.1.gz
+            │   │   ├── dpkg-scansources.1.gz
+            │   │   ├── dpkg-shlibdeps.1.gz
+            │   │   ├── dpkg-source.1.gz
+            │   │   └── dpkg-vendor.1.gz
+            │   └── man5
+            │       ├── deb.5.gz
+            │       ├── deb-control.5.gz
+            │       ├── deb-extra-override.5.gz
+            │       ├── deb-old.5.gz
+            │       ├── deb-origin.5.gz
+            │       ├── deb-override.5.gz
+            │       ├── deb-shlibs.5.gz
+            │       ├── deb-split.5.gz
+            │       ├── deb-src-control.5.gz
+            │       ├── deb-substvars.5.gz
+            │       ├── deb-symbols.5.gz
+            │       ├── deb-triggers.5.gz
+            │       └── deb-version.5.gz
+            ├── fr
+            │   ├── man1
+            │   │   ├── dpkg-buildpackage.1.gz
+            │   │   ├── dpkg-distaddfile.1.gz
+            │   │   ├── dpkg-genchanges.1.gz
+            │   │   ├── dpkg-gencontrol.1.gz
+            │   │   ├── dpkg-gensymbols.1.gz
+            │   │   ├── dpkg-mergechangelogs.1.gz
+            │   │   ├── dpkg-name.1.gz
+            │   │   ├── dpkg-parsechangelog.1.gz
+            │   │   ├── dpkg-scanpackages.1.gz
+            │   │   ├── dpkg-scansources.1.gz
+            │   │   ├── dpkg-shlibdeps.1.gz
+            │   │   ├── dpkg-source.1.gz
+            │   │   └── dpkg-vendor.1.gz
+            │   └── man5
+            │       ├── deb.5.gz
+            │       ├── deb-control.5.gz
+            │       ├── deb-extra-override.5.gz
+            │       ├── deb-old.5.gz
+            │       ├── deb-origin.5.gz
+            │       ├── deb-override.5.gz
+            │       ├── deb-shlibs.5.gz
+            │       ├── deb-split.5.gz
+            │       ├── deb-src-control.5.gz
+            │       ├── deb-substvars.5.gz
+            │       ├── deb-symbols.5.gz
+            │       ├── deb-triggers.5.gz
+            │       └── deb-version.5.gz
+            ├── it
+            │   ├── man1
+            │   │   ├── dpkg-buildpackage.1.gz
+            │   │   ├── dpkg-name.1.gz
+            │   │   ├── dpkg-parsechangelog.1.gz
+            │   │   ├── dpkg-scanpackages.1.gz
+            │   │   ├── dpkg-scansources.1.gz
+            │   │   └── dpkg-vendor.1.gz
+            │   └── man5
+            │       ├── deb.5.gz
+            │       ├── deb-control.5.gz
+            │       ├── deb-extra-override.5.gz
+            │       ├── deb-old.5.gz
+            │       ├── deb-origin.5.gz
+            │       ├── deb-override.5.gz
+            │       ├── deb-shlibs.5.gz
+            │       ├── deb-split.5.gz
+            │       ├── deb-src-control.5.gz
+            │       ├── deb-substvars.5.gz
+            │       └── deb-version.5.gz
+            ├── ja
+            │   ├── man1
+            │   │   ├── dpkg-buildpackage.1.gz
+            │   │   ├── dpkg-distaddfile.1.gz
+            │   │   ├── dpkg-genchanges.1.gz
+            │   │   ├── dpkg-gencontrol.1.gz
+            │   │   ├── dpkg-gensymbols.1.gz
+            │   │   ├── dpkg-mergechangelogs.1.gz
+            │   │   ├── dpkg-name.1.gz
+            │   │   ├── dpkg-parsechangelog.1.gz
+            │   │   ├── dpkg-scanpackages.1.gz
+            │   │   ├── dpkg-scansources.1.gz
+            │   │   ├── dpkg-shlibdeps.1.gz
+            │   │   ├── dpkg-source.1.gz
+            │   │   └── dpkg-vendor.1.gz
+            │   └── man5
+            │       ├── deb.5.gz
+            │       ├── deb-control.5.gz
+            │       ├── deb-extra-override.5.gz
+            │       ├── deb-old.5.gz
+            │       ├── deb-origin.5.gz
+            │       ├── deb-override.5.gz
+            │       ├── deb-shlibs.5.gz
+            │       ├── deb-split.5.gz
+            │       ├── deb-src-control.5.gz
+            │       ├── deb-substvars.5.gz
+            │       ├── deb-symbols.5.gz
+            │       ├── deb-triggers.5.gz
+            │       └── deb-version.5.gz
+            ├── man1
+            │   ├── dpkg-architecture.1.gz
+            │   ├── dpkg-buildflags.1.gz
+            │   ├── dpkg-buildpackage.1.gz
+            │   ├── dpkg-checkbuilddeps.1.gz
+            │   ├── dpkg-distaddfile.1.gz
+            │   ├── dpkg-genchanges.1.gz
+            │   ├── dpkg-gencontrol.1.gz
+            │   ├── dpkg-gensymbols.1.gz
+            │   ├── dpkg-mergechangelogs.1.gz
+            │   ├── dpkg-name.1.gz
+            │   ├── dpkg-parsechangelog.1.gz
+            │   ├── dpkg-scanpackages.1.gz
+            │   ├── dpkg-scansources.1.gz
+            │   ├── dpkg-shlibdeps.1.gz
+            │   ├── dpkg-source.1.gz
+            │   └── dpkg-vendor.1.gz
+            ├── man5
+            │   ├── deb.5.gz
+            │   ├── deb-control.5.gz
+            │   ├── deb-extra-override.5.gz
+            │   ├── deb-old.5.gz
+            │   ├── deb-origin.5.gz
+            │   ├── deb-override.5.gz
+            │   ├── deb-shlibs.5.gz
+            │   ├── deb-split.5.gz
+            │   ├── deb-src-control.5.gz
+            │   ├── deb-substvars.5.gz
+            │   ├── deb-symbols.5.gz
+            │   ├── deb-triggers.5.gz
+            │   └── deb-version.5.gz
+            ├── pl
+            │   ├── man1
+            │   │   ├── dpkg-buildpackage.1.gz
+            │   │   ├── dpkg-distaddfile.1.gz
+            │   │   ├── dpkg-genchanges.1.gz
+            │   │   ├── dpkg-gencontrol.1.gz
+            │   │   ├── dpkg-gensymbols.1.gz
+            │   │   ├── dpkg-mergechangelogs.1.gz
+            │   │   ├── dpkg-name.1.gz
+            │   │   ├── dpkg-parsechangelog.1.gz
+            │   │   ├── dpkg-scanpackages.1.gz
+            │   │   ├── dpkg-scansources.1.gz
+            │   │   ├── dpkg-shlibdeps.1.gz
+            │   │   ├── dpkg-source.1.gz
+            │   │   └── dpkg-vendor.1.gz
+            │   └── man5
+            │       ├── deb.5.gz
+            │       ├── deb-control.5.gz
+            │       ├── deb-extra-override.5.gz
+            │       ├── deb-old.5.gz
+            │       ├── deb-origin.5.gz
+            │       ├── deb-override.5.gz
+            │       ├── deb-shlibs.5.gz
+            │       ├── deb-split.5.gz
+            │       ├── deb-src-control.5.gz
+            │       ├── deb-substvars.5.gz
+            │       ├── deb-symbols.5.gz
+            │       ├── deb-triggers.5.gz
+            │       └── deb-version.5.gz
+            └── sv
+                ├── man1
+                │   ├── dpkg-buildpackage.1.gz
+                │   ├── dpkg-distaddfile.1.gz
+                │   ├── dpkg-genchanges.1.gz
+                │   ├── dpkg-gencontrol.1.gz
+                │   ├── dpkg-gensymbols.1.gz
+                │   ├── dpkg-mergechangelogs.1.gz
+                │   ├── dpkg-name.1.gz
+                │   ├── dpkg-parsechangelog.1.gz
+                │   ├── dpkg-scanpackages.1.gz
+                │   ├── dpkg-scansources.1.gz
+                │   ├── dpkg-shlibdeps.1.gz
+                │   ├── dpkg-source.1.gz
+                │   └── dpkg-vendor.1.gz
+                └── man5
+                    ├── deb.5.gz
+                    ├── deb-control.5.gz
+                    ├── deb-extra-override.5.gz
+                    ├── deb-old.5.gz
+                    ├── deb-origin.5.gz
+                    ├── deb-override.5.gz
+                    ├── deb-shlibs.5.gz
+                    ├── deb-split.5.gz
+                    ├── deb-src-control.5.gz
+                    ├── deb-substvars.5.gz
+                    ├── deb-symbols.5.gz
+                    ├── deb-triggers.5.gz
+                    └── deb-version.5.gz
 
-137 directories, 140 files
+34 directories, 238 files
 </code></pre><pre><code>$ tree DEBIAN
 </code></pre><p>顯示</p>
 <pre><code>DEBIAN
 ├── conffiles
 ├── control
 ├── md5sums
-├── postinst
-├── postrm
-├── preinst
-└── prerm
+└── preinst
 
-0 directories, 7 files
-</code></pre><h2 id="source-package-dpkghttppackagesubuntucomtrustydpkg">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/dpkg" target="_blank">dpkg</a>」</h2>
-<p>切換到「~/Downloads/dpkg/source」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/dpkg/<span class="hljs-built_in">source</span>
+0 directories, 4 files
+</code></pre><h2 id="source-package-dpkg-devhttppackagesubuntucomtrustydpkg-dev">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/dpkg-dev" target="_blank">dpkg-dev</a>」</h2>
+<p>切換到「~/Downloads/dpkg-dev/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/dpkg-dev/<span class="hljs-built_in">source</span>
 </code></pre>
-<p>下載「Source Package: dpkg」。</p>
-<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> dpkg
+<p>下載「Source Package: dpkg-dev」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> dpkg-dev
 </code></pre>
 <p>檢視原始碼套件檔案。</p>
 <pre><code>$ tree dpkg-1.17.5ubuntu5.3
@@ -5501,10 +3547,10 @@ dpkg <span class="hljs-operator">-e</span> dpkg_1.<span class="hljs-number">17.5
         </div>
 
         
-        <a href="../../../content/package/dpkg/index.html" class="navigation navigation-prev " aria-label="Previous page: dpkg"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/dpkg-dev/index.html" class="navigation navigation-prev " aria-label="Previous page: dpkg-dev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/dpkg/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/dpkg-dev/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
