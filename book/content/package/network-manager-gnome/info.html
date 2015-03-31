@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/kmod/note.html" />
+    <link rel="next" href="../../../content/package/network-manager-gnome/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/kmod/index.html" />
+    <link rel="prev" href="../../../content/package/network-manager-gnome/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1.7.1" data-basepath="../../.." data-revision="1427808429693">
+    <div class="book" data-level="2.8.1" data-basepath="../../.." data-revision="1427808429693">
     
 
 <div class="book-summary">
@@ -520,7 +520,7 @@
                 
     
         
-        <li class="chapter active" data-level="1.7.1" data-path="content/package/kmod/info.html">
+        <li class="chapter " data-level="1.7.1" data-path="content/package/kmod/info.html">
             
                 
                     <a href="../../../content/package/kmod/info.html">
@@ -1452,7 +1452,7 @@
                 
     
         
-        <li class="chapter " data-level="2.8.1" data-path="content/package/network-manager-gnome/info.html">
+        <li class="chapter active" data-level="2.8.1" data-path="content/package/network-manager-gnome/info.html">
             
                 
                     <a href="../../../content/package/network-manager-gnome/info.html">
@@ -1598,237 +1598,446 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_4">
+                    <section class="normal" id="section-gitbook_65">
                     
-                        <h1 id="kmod-info">kmod info</h1>
+                        <h1 id="network-manager-gnome-info">network-manager-gnome info</h1>
 <h2 id="">套件資訊</h2>
 <p>執行</p>
-<pre><code>$ apt-cache show kmod
+<pre><code>$ apt-cache show network-manager-gnome
 </code></pre><p>顯示</p>
-<pre><code>Package: kmod
-Priority: required
-Section: admin
-Installed-Size: 282
+<pre><code>Package: network-manager-gnome
+Priority: optional
+Section: net
+Installed-Size: 1980
 Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Original-Maintainer: Marco d&#39;Itri &lt;md@linux.it&gt;
+Original-Maintainer: Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;
 Architecture: amd64
-Version: 15-0ubuntu6
-Replaces: module-init-tools (&lt;&lt; 4)
-Depends: libc6 (&gt;= 2.17), libkmod2, sysv-rc (&gt;= 2.88dsf-24) | file-rc (&gt;= 0.8.16), lsb-base (&gt;= 3.0-6)
-Breaks: module-init-tools (&lt;&lt; 4)
-Filename: pool/main/k/kmod/kmod_15-0ubuntu6_amd64.deb
-Size: 84908
-MD5sum: cd9d6022b4c6b8aef1cfffacb3f1c437
-SHA1: 39f280059d4bf9c6b1edb6bbb2c49911cd0c27b5
-SHA256: 42782082d765af2c3fa36cebf012bb7802b5a8681cc064b105dd75e8f8208b6b
-Description-en: tools for managing Linux kernel modules
- This package contains a set of programs for loading, inserting, and
- removing kernel modules for Linux.
- It replaces module-init-tools.
-Description-md5: 0cd8f9566ff621a593309a12fd64999f
-Multi-Arch: foreign
+Source: network-manager-applet
+Version: 0.9.8.8-0ubuntu4.3
+Depends: gconf-service, libappindicator3-1 (&gt;= 0.4.90), libatk1.0-0 (&gt;= 1.12.4), libc6 (&gt;= 2.14), libdbus-1-3 (&gt;= 1.0.2), libdbus-glib-1-2 (&gt;= 0.88), libgconf-2-4 (&gt;= 2.31.1), libgdk-pixbuf2.0-0 (&gt;= 2.22.0), libglib2.0-0 (&gt;= 2.37.3), libgnome-bluetooth11 (&gt;= 2.91.2), libgnome-keyring0 (&gt;= 3.2.2-2~), libgtk-3-0 (&gt;= 3.0.0), libmm-glib0 (&gt;= 0.7.991), libnm-glib-vpn1 (&gt;= 0.7.999), libnm-glib4 (&gt;= 0.9.1.90+git.20111206t233146.dff0d2a), libnm-gtk0 (= 0.9.8.8-0ubuntu4.3), libnm-util2 (&gt;= 0.9.6.0+git201212071413.8a9759a), libnotify4 (&gt;= 0.7.0), libsecret-1-0 (&gt;= 0.7), dconf-gsettings-backend | gsettings-backend, network-manager (&gt;= 0.9.8), policykit-1-gnome, gnome-icon-theme, dbus-x11
+Recommends: notification-daemon, gnome-keyring, mobile-broadband-provider-info, iso-codes
+Suggests: gnome-bluetooth, network-manager-openconnect-gnome, network-manager-openvpn-gnome, network-manager-vpnc-gnome, network-manager-pptp-gnome
+Breaks: gnome-bluetooth (&lt;&lt; 3.0)
+Filename: pool/main/n/network-manager-applet/network-manager-gnome_0.9.8.8-0ubuntu4.3_amd64.deb
+Size: 311550
+MD5sum: 8d8a3a99fd179e0131e4a515787f109b
+SHA1: fe11ab242b8ec9cf5a98cc61ce19c0dbe96b4149
+SHA256: b37206bdfe7f78e6f00568b0ff9601e238171d706187c3ff47cc4ce51e6ab364
+Description-en: network management framework (GNOME frontend)
+ NetworkManager is a system network service that manages your network devices
+ and connections, attempting to keep active network connectivity when
+ available. It manages ethernet, WiFi, mobile broadband (WWAN), and PPPoE
+ devices, and provides VPN integration with a variety of different VPN
+ services.
+ .
+ This package contains a systray applet for GNOME&#39;s notification area but it
+ also works for other desktop environments which provide a systray like KDE
+ or Xfce.
+ It displays the available networks and allows users to easily switch between
+ them. For encrypted networks it will prompt the user for the key/passphrase
+ and it can optionally store them in the gnome-keyring.
+Description-md5: bdee3234d21720f04895a1051744f5d1
+Homepage: http://www.gnome.org/projects/NetworkManager/
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
-Task: minimal
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: network-manager-gnome
+Priority: optional
+Section: net
+Installed-Size: 1980
+Maintainer: Ubuntu Core Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;
+Architecture: amd64
+Source: network-manager-applet
+Version: 0.9.8.8-0ubuntu4
+Depends: gconf-service, libappindicator3-1 (&gt;= 0.4.90), libatk1.0-0 (&gt;= 1.12.4), libc6 (&gt;= 2.14), libdbus-1-3 (&gt;= 1.0.2), libdbus-glib-1-2 (&gt;= 0.88), libgconf-2-4 (&gt;= 2.31.1), libgdk-pixbuf2.0-0 (&gt;= 2.22.0), libglib2.0-0 (&gt;= 2.37.3), libgnome-bluetooth11 (&gt;= 2.91.2), libgnome-keyring0 (&gt;= 3.2.2-2~), libgtk-3-0 (&gt;= 3.0.0), libmm-glib0 (&gt;= 0.7.991), libnm-glib-vpn1 (&gt;= 0.7.999), libnm-glib4 (&gt;= 0.9.1.90+git.20111206t233146.dff0d2a), libnm-gtk0 (= 0.9.8.8-0ubuntu4), libnm-util2 (&gt;= 0.9.6.0+git201212071413.8a9759a), libnotify4 (&gt;= 0.7.0), libsecret-1-0 (&gt;= 0.7), dconf-gsettings-backend | gsettings-backend, network-manager (&gt;= 0.9.8), policykit-1-gnome, gnome-icon-theme, dbus-x11
+Recommends: notification-daemon, gnome-keyring, mobile-broadband-provider-info, iso-codes
+Suggests: gnome-bluetooth, network-manager-openconnect-gnome, network-manager-openvpn-gnome, network-manager-vpnc-gnome, network-manager-pptp-gnome
+Breaks: gnome-bluetooth (&lt;&lt; 3.0)
+Filename: pool/main/n/network-manager-applet/network-manager-gnome_0.9.8.8-0ubuntu4_amd64.deb
+Size: 312076
+MD5sum: 83ddb2b15bf178d45cb6f1719298177b
+SHA1: 75ae1141018bb2fae980c6669d113f2832654a87
+SHA256: 045c8232afeb7f45f181a949908f1bec5cb27f63b9b643bb79c3187faf4653f0
+Description-en: network management framework (GNOME frontend)
+ NetworkManager is a system network service that manages your network devices
+ and connections, attempting to keep active network connectivity when
+ available. It manages ethernet, WiFi, mobile broadband (WWAN), and PPPoE
+ devices, and provides VPN integration with a variety of different VPN
+ services.
+ .
+ This package contains a systray applet for GNOME&#39;s notification area but it
+ also works for other desktop environments which provide a systray like KDE
+ or Xfce.
+ It displays the available networks and allows users to easily switch between
+ them. For encrypted networks it will prompt the user for the key/passphrase
+ and it can optionally store them in the gnome-keyring.
+Description-md5: bdee3234d21720f04895a1051744f5d1
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 </code></pre><p>執行</p>
-<pre><code>$ apt-cache showpkg kmod
+<pre><code>$ apt-cache showpkg network-manager-gnome
 </code></pre><p>顯示</p>
-<pre><code>Package: kmod
+<pre><code>Package: network-manager-gnome
 Versions:
-15-0ubuntu6 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages) (/var/lib/dpkg/status)
+0.9.8.8-0ubuntu4.3 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty-updates_main_binary-amd64_Packages) (/var/lib/dpkg/status)
  Description Language:
                  File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
-                  MD5: 0cd8f9566ff621a593309a12fd64999f
+                  MD5: bdee3234d21720f04895a1051744f5d1
  Description Language: en
                  File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
-                  MD5: 0cd8f9566ff621a593309a12fd64999f
+                  MD5: bdee3234d21720f04895a1051744f5d1
+
+0.9.8.8-0ubuntu4 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages)
+ Description Language:
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
+                  MD5: bdee3234d21720f04895a1051744f5d1
+ Description Language: en
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
+                  MD5: bdee3234d21720f04895a1051744f5d1
 
 
 Reverse Depends:
-  qemu-system-x86,kmod
-  ubuntu-drivers-common,kmod
-  qemu-system-x86,kmod
-  autofs,kmod
-  kmod:i386,kmod
-  autodir,kmod
-  sanewall,kmod
-  oss-compat,kmod
-  neard,kmod
-  libguestfs0,kmod
-  guestfsd,kmod
-  firehol,kmod
-  dnet-common,kmod
-  ubuntu-minimal,kmod
-  ubuntu-drivers-common,kmod
-  qemu-system-x86,kmod
-  module-init-tools,kmod
-  irda-utils,kmod
-  ebtables,kmod
-  autofs,kmod
-  alsa-utils,kmod
-  acpid,kmod
+  network-manager-gnome:i386,network-manager-gnome
+  gnome-bluetooth:i386,network-manager-gnome 0.9.0-3
+  unity-greeter,network-manager-gnome
+  gnome-bluetooth,network-manager-gnome 0.9.0-3
+  network-manager-gnome:i386,network-manager-gnome
+  network-manager:i386,network-manager-gnome 0.9
+  gnome-bluetooth:i386,network-manager-gnome 0.9.0-3
+  mythbuntu-desktop,network-manager-gnome
+  xubuntu-desktop,network-manager-gnome
+  ubuntustudio-desktop,network-manager-gnome
+  lubuntu-desktop,network-manager-gnome
+  gnome-core,network-manager-gnome
+  gnome,network-manager-gnome 0.9.4
+  unity-greeter,network-manager-gnome
+  ubuntu-desktop,network-manager-gnome
+  network-manager,network-manager-gnome 0.9
+  network-manager,network-manager-gnome
+  gnome-bluetooth,network-manager-gnome 0.9.0-3
 Dependencies:
-15-0ubuntu6 - libc6 (2 2.17) libkmod2 (0 (null)) sysv-rc (18 2.88dsf-24) file-rc (2 0.8.16) lsb-base (2 3.0-6) module-init-tools (3 4) module-init-tools:i386 (3 4) module-init-tools (3 4) module-init-tools:i386 (3 4) kmod:i386 (0 (null))
+0.9.8.8-0ubuntu4.3 - gconf-service (0 (null)) libappindicator3-1 (2 0.4.90) libatk1.0-0 (2 1.12.4) libc6 (2 2.14) libdbus-1-3 (2 1.0.2) libdbus-glib-1-2 (2 0.88) libgconf-2-4 (2 2.31.1) libgdk-pixbuf2.0-0 (2 2.22.0) libglib2.0-0 (2 2.37.3) libgnome-bluetooth11 (2 2.91.2) libgnome-keyring0 (2 3.2.2-2~) libgtk-3-0 (2 3.0.0) libmm-glib0 (2 0.7.991) libnm-glib-vpn1 (2 0.7.999) libnm-glib4 (2 0.9.1.90+git.20111206t233146.dff0d2a) libnm-gtk0 (5 0.9.8.8-0ubuntu4.3) libnm-util2 (2 0.9.6.0+git201212071413.8a9759a) libnotify4 (2 0.7.0) libsecret-1-0 (2 0.7) dconf-gsettings-backend (16 (null)) gsettings-backend (0 (null)) network-manager (2 0.9.8) policykit-1-gnome (0 (null)) gnome-icon-theme (0 (null)) dbus-x11 (0 (null)) gnome-bluetooth (0 (null)) network-manager-openconnect-gnome (0 (null)) network-manager-openvpn-gnome (0 (null)) network-manager-vpnc-gnome (0 (null)) network-manager-pptp-gnome (0 (null)) notification-daemon (0 (null)) gnome-keyring (0 (null)) mobile-broadband-provider-info (0 (null)) iso-codes (0 (null)) gnome-bluetooth (3 3.0) gnome-bluetooth:i386 (3 3.0) network-manager-gnome:i386 (0 (null))
+0.9.8.8-0ubuntu4 - gconf-service (0 (null)) libappindicator3-1 (2 0.4.90) libatk1.0-0 (2 1.12.4) libc6 (2 2.14) libdbus-1-3 (2 1.0.2) libdbus-glib-1-2 (2 0.88) libgconf-2-4 (2 2.31.1) libgdk-pixbuf2.0-0 (2 2.22.0) libglib2.0-0 (2 2.37.3) libgnome-bluetooth11 (2 2.91.2) libgnome-keyring0 (2 3.2.2-2~) libgtk-3-0 (2 3.0.0) libmm-glib0 (2 0.7.991) libnm-glib-vpn1 (2 0.7.999) libnm-glib4 (2 0.9.1.90+git.20111206t233146.dff0d2a) libnm-gtk0 (5 0.9.8.8-0ubuntu4) libnm-util2 (2 0.9.6.0+git201212071413.8a9759a) libnotify4 (2 0.7.0) libsecret-1-0 (2 0.7) dconf-gsettings-backend (16 (null)) gsettings-backend (0 (null)) network-manager (2 0.9.8) policykit-1-gnome (0 (null)) gnome-icon-theme (0 (null)) dbus-x11 (0 (null)) gnome-bluetooth (0 (null)) network-manager-openconnect-gnome (0 (null)) network-manager-openvpn-gnome (0 (null)) network-manager-vpnc-gnome (0 (null)) network-manager-pptp-gnome (0 (null)) notification-daemon (0 (null)) gnome-keyring (0 (null)) mobile-broadband-provider-info (0 (null)) iso-codes (0 (null)) gnome-bluetooth (3 3.0) gnome-bluetooth:i386 (3 3.0) network-manager-gnome:i386 (0 (null))
 Provides:
-15-0ubuntu6 - kmod:i386
+0.9.8.8-0ubuntu4.3 -
+0.9.8.8-0ubuntu4 -
 Reverse Provides:
-kmod:i386 15-0ubuntu6
 </code></pre><p>執行</p>
-<pre><code>$ apt-cache showsrc kmod
+<pre><code>$ apt-cache showsrc network-manager-gnome
 </code></pre><p>顯示</p>
-<pre><code>Package: kmod
-Binary: kmod, module-init-tools, libkmod2, libkmod-dev, libkmod2-udeb
-Version: 15-0ubuntu6
-Priority: required
-Section: admin
-Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Original-Maintainer: Marco d&#39;Itri &lt;md@linux.it&gt;
-Build-Depends: debhelper (&gt;&gt; 8.1.3), xsltproc, automake, autoconf, gtk-doc-tools, libtool
+<pre><code>Package: network-manager-applet
+Binary: network-manager-gnome, libnm-gtk0, libnm-gtk-common, libnm-gtk-dev, gir1.2-nmgtk-1.0
+Version: 0.9.8.8-0ubuntu4
+Priority: optional
+Section: gnome
+Maintainer: Ubuntu Core Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;
+Build-Depends: debhelper (&gt;= 8.1.0~), dpkg-dev (&gt;= 1.16.1), autotools-dev, dh-autoreconf, gnome-common, intltool, docbook-to-man, libdbus-glib-1-dev (&gt;= 0.74), libgnome-keyring-dev, libsecret-1-dev, libgtk-3-dev (&gt;= 3.0), libglib2.0-dev (&gt;= 2.26), libgconf2-dev, libnotify-dev (&gt;= 0.7), libnm-util-dev (&gt;= 0.9.8), libnm-glib-dev (&gt;= 0.9.8), libnm-glib-vpn-dev (&gt;= 0.9.8), network-manager-dev (&gt;= 0.9.8), libmm-glib-dev, libgudev-1.0-dev (&gt;= 147), libgnome-bluetooth-dev (&gt;= 3.0.0), iso-codes, libgirepository1.0-dev, dh-translations, libappindicator3-dev, gobject-introspection
 Architecture: linux-any all
-Standards-Version: 3.9.3.1
+Standards-Version: 3.9.4
 Format: 3.0 (quilt)
-Directory: pool/main/k/kmod
+Directory: pool/main/n/network-manager-applet
 Files:
- bbacead1c0573b3ff63d5a4b7cd377e4 1326 kmod_15-0ubuntu6.dsc
- d03372179ed2cfa0c52b6672cf438901 1453996 kmod_15.orig.tar.xz
- 6e2795bd905e1f1909ae3089d398c088 14348 kmod_15-0ubuntu6.debian.tar.gz
+ 17743707c0d8b32b7a7b5447577fb557 2886 network-manager-applet_0.9.8.8-0ubuntu4.dsc
+ cceb4530e438926b66dfa5e9db17f20a 1223116 network-manager-applet_0.9.8.8.orig.tar.xz
+ 3bdef1063a8e9f99246de9ad854b18c4 77829 network-manager-applet_0.9.8.8-0ubuntu4.debian.tar.gz
+Uploaders: Michael Biebl &lt;biebl@debian.org&gt;
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Vcs-Bzr: https://code.launchpad.net/~network-manager/network-manager-applet/ubuntu
 Package-List:
- kmod deb admin important
- libkmod-dev deb libdevel optional
- libkmod2 deb libs important
- libkmod2-udeb udeb debian-installer important
- module-init-tools deb admin extra
+ gir1.2-nmgtk-1.0 deb introspection optional
+ libnm-gtk-common deb libs optional
+ libnm-gtk-dev deb libdevel optional
+ libnm-gtk0 deb libs optional
+ network-manager-gnome deb gnome optional
 Checksums-Sha1:
- 00e6ba769cbb5d7b72aba78da54ef9a2a9f19b42 1326 kmod_15-0ubuntu6.dsc
- 0c191c02803eb2a935197211c6c546d2c7c374dc 1453996 kmod_15.orig.tar.xz
- afbc29a40a2ab6b42ffc063633aa7b99a67f70a5 14348 kmod_15-0ubuntu6.debian.tar.gz
+ a950fbfbbfb15cccfc19ca5c4b2bad3a8de1054a 2886 network-manager-applet_0.9.8.8-0ubuntu4.dsc
+ 8a537c219d11452206d8906359c08317a8863a77 1223116 network-manager-applet_0.9.8.8.orig.tar.xz
+ 72e212812620e63af440ae75554d944cbaa1876c 77829 network-manager-applet_0.9.8.8-0ubuntu4.debian.tar.gz
 Checksums-Sha256:
- 91ee7326bf6916dd3a5f915c0e2f8e9175a6072ae0700cc77079617087361e65 1326 kmod_15-0ubuntu6.dsc
- e8ef0ea7e1929b46aa681fe6ce58c5e62d0026289026ebfc63abae3b8fd5ca9e 1453996 kmod_15.orig.tar.xz
- 5cbd3db804ae4b6ef3868ff344c23cad67d51938d8cefa42114d8d3a0bb78159 14348 kmod_15-0ubuntu6.debian.tar.gz
+ aa38d2e277ea46dd3ae93c44d1b2ac993175a12a1c2221e3da1a48a532dc11b7 2886 network-manager-applet_0.9.8.8-0ubuntu4.dsc
+ 581ebf9ead919e33d7e910322c2f64919f98716d8636f1a640b72c9b2e3ba9eb 1223116 network-manager-applet_0.9.8.8.orig.tar.xz
+ 11440644af46e3c24173600176a5283f2f4b2a95eb80f9823e964c4e54e5f9a3 77829 network-manager-applet_0.9.8.8-0ubuntu4.debian.tar.gz
+
+Package: network-manager-applet
+Binary: network-manager-gnome, libnm-gtk0, libnm-gtk-common, libnm-gtk-dev, gir1.2-nmgtk-1.0
+Version: 0.9.8.8-0ubuntu4.3
+Priority: optional
+Section: gnome
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;
+Build-Depends: debhelper (&gt;= 8.1.0~), dpkg-dev (&gt;= 1.16.1), autotools-dev, dh-autoreconf, gnome-common, intltool, docbook-to-man, libdbus-glib-1-dev (&gt;= 0.74), libgnome-keyring-dev, libsecret-1-dev, libgtk-3-dev (&gt;= 3.0), libglib2.0-dev (&gt;= 2.26), libgconf2-dev, libnotify-dev (&gt;= 0.7), libnm-util-dev (&gt;= 0.9.8), libnm-glib-dev (&gt;= 0.9.8), libnm-glib-vpn-dev (&gt;= 0.9.8), network-manager-dev (&gt;= 0.9.8), libmm-glib-dev, libgudev-1.0-dev (&gt;= 147), libgnome-bluetooth-dev (&gt;= 3.0.0), iso-codes, libgirepository1.0-dev, dh-translations, libappindicator3-dev, gobject-introspection
+Architecture: linux-any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/n/network-manager-applet
+Files:
+ fbc0abdda80051f3707776e010f48625 2954 network-manager-applet_0.9.8.8-0ubuntu4.3.dsc
+ cceb4530e438926b66dfa5e9db17f20a 1223116 network-manager-applet_0.9.8.8.orig.tar.xz
+ f45ec817200a515c1e2d54fd5a353426 65412 network-manager-applet_0.9.8.8-0ubuntu4.3.debian.tar.xz
+Uploaders: Michael Biebl &lt;biebl@debian.org&gt;
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Vcs-Bzr: https://code.launchpad.net/~network-manager/network-manager-applet/ubuntu
+Package-List:
+ gir1.2-nmgtk-1.0 deb introspection optional arch=linux-any
+ libnm-gtk-common deb libs optional arch=all
+ libnm-gtk-dev deb libdevel optional arch=linux-any
+ libnm-gtk0 deb libs optional arch=linux-any
+ network-manager-gnome deb gnome optional arch=linux-any
+Checksums-Sha1:
+ 0270f60d4989937b93a13f58712a11ffbb56e50b 2954 network-manager-applet_0.9.8.8-0ubuntu4.3.dsc
+ 8a537c219d11452206d8906359c08317a8863a77 1223116 network-manager-applet_0.9.8.8.orig.tar.xz
+ eef00bc1faf319b8caac1910ca1f6ad54273e09d 65412 network-manager-applet_0.9.8.8-0ubuntu4.3.debian.tar.xz
+Checksums-Sha256:
+ 197d66941f9bf3900e3ad44664650d711e2fc73a71f04105c6daa36d55de1355 2954 network-manager-applet_0.9.8.8-0ubuntu4.3.dsc
+ 581ebf9ead919e33d7e910322c2f64919f98716d8636f1a640b72c9b2e3ba9eb 1223116 network-manager-applet_0.9.8.8.orig.tar.xz
+ 8aad2ee129ac1625908d00016a60c130bdbd847b9aab42d1d99610ab669c4f38 65412 network-manager-applet_0.9.8.8-0ubuntu4.3.debian.tar.xz
 </code></pre><p>執行</p>
-<pre><code>$ dpkg -s kmod
+<pre><code>$ dpkg -s network-manager-gnome
 </code></pre><p>顯示</p>
-<pre><code>Package: kmod
+<pre><code>Package: network-manager-gnome
 Status: install ok installed
-Priority: required
-Section: admin
-Installed-Size: 282
+Priority: optional
+Section: gnome
+Installed-Size: 1980
 Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
 Architecture: amd64
-Multi-Arch: foreign
-Version: 15-0ubuntu6
-Replaces: module-init-tools (&lt;&lt; 4)
-Depends: libc6 (&gt;= 2.17), libkmod2, sysv-rc (&gt;= 2.88dsf-24) | file-rc (&gt;= 0.8.16), lsb-base (&gt;= 3.0-6)
-Breaks: module-init-tools (&lt;&lt; 4)
+Source: network-manager-applet
+Version: 0.9.8.8-0ubuntu4.3
+Depends: gconf-service, libappindicator3-1 (&gt;= 0.4.90), libatk1.0-0 (&gt;= 1.12.4), libc6 (&gt;= 2.14), libdbus-1-3 (&gt;= 1.0.2), libdbus-glib-1-2 (&gt;= 0.88), libgconf-2-4 (&gt;= 2.31.1), libgdk-pixbuf2.0-0 (&gt;= 2.22.0), libglib2.0-0 (&gt;= 2.37.3), libgnome-bluetooth11 (&gt;= 2.91.2), libgnome-keyring0 (&gt;= 3.2.2-2~), libgtk-3-0 (&gt;= 3.0.0), libmm-glib0 (&gt;= 0.7.991), libnm-glib-vpn1 (&gt;= 0.7.999), libnm-glib4 (&gt;= 0.9.1.90+git.20111206t233146.dff0d2a), libnm-gtk0 (= 0.9.8.8-0ubuntu4.3), libnm-util2 (&gt;= 0.9.6.0+git201212071413.8a9759a), libnotify4 (&gt;= 0.7.0), libsecret-1-0 (&gt;= 0.7), dconf-gsettings-backend | gsettings-backend, network-manager (&gt;= 0.9.8), policykit-1-gnome, gnome-icon-theme, dbus-x11
+Recommends: notification-daemon, gnome-keyring, mobile-broadband-provider-info, iso-codes
+Suggests: gnome-bluetooth, network-manager-openconnect-gnome, network-manager-openvpn-gnome, network-manager-vpnc-gnome, network-manager-pptp-gnome
+Breaks: gnome-bluetooth (&lt;&lt; 3.0)
 Conffiles:
- /etc/depmod.d/ubuntu.conf 7c8439ef36b12e5f226b5dbfa20b8c2d
- /etc/init.d/kmod 96948a484687c865b98806684649cee8
- /etc/modprobe.d/iwlwifi.conf f27bc645e93e20c8e532325d190ac8ee
- /etc/modprobe.d/blacklist-framebuffer.conf 097e2142ae3e4dd2911eda7844ce0c18
- /etc/modprobe.d/blacklist.conf bc6754fa320733c6d239a4bb0148ffd7
- /etc/modprobe.d/blacklist-firewire.conf 9cc07a17e8e64f9cd35ff59c29debe69
- /etc/modprobe.d/mlx4.conf b2a0bedb7461daeb0138270639581bbf
- /etc/modprobe.d/blacklist-ath_pci.conf d1da9bb08c2b0f56f3be93fd0e37946b
- /etc/modprobe.d/blacklist-watchdog.conf 55327f9270c8a6257a833c4d127a39e1
- /etc/modprobe.d/blacklist-rare-network.conf 8fb4b96124e461f53adceba9ca91f09a
- /etc/init/kmod.conf 2686532745c8b71d6d3df91c3a53aef3
-Description: tools for managing Linux kernel modules
- This package contains a set of programs for loading, inserting, and
- removing kernel modules for Linux.
- It replaces module-init-tools.
-Original-Maintainer: Marco d&#39;Itri &lt;md@linux.it&gt;
+ /etc/xdg/autostart/nm-applet.desktop cd6cf9ea5bed28305353baf036600c1e
+Description: network management framework (GNOME frontend)
+ NetworkManager is a system network service that manages your network devices
+ and connections, attempting to keep active network connectivity when
+ available. It manages ethernet, WiFi, mobile broadband (WWAN), and PPPoE
+ devices, and provides VPN integration with a variety of different VPN
+ services.
+ .
+ This package contains a systray applet for GNOME&#39;s notification area but it
+ also works for other desktop environments which provide a systray like KDE
+ or Xfce.
+ It displays the available networks and allows users to easily switch between
+ them. For encrypted networks it will prompt the user for the key/passphrase
+ and it can optionally store them in the gnome-keyring.
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Original-Maintainer: Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;
 </code></pre><p>執行</p>
-<pre><code>$ dpkg -l kmod
+<pre><code>$ dpkg -l network-manager-gnome
 </code></pre><p>顯示</p>
 <pre><code>Desired=Unknown/Install/Remove/Purge/Hold
 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
 |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
-||/ Name                            Version              Architecture         Description
-+++-===============================-====================-====================-====================================================================
-ii  kmod                            15-0ubuntu6          amd64                tools for managing Linux kernel modules
+||/ Name                         Version             Architecture        Description
++++-============================-===================-===================-==============================================================
+ii  network-manager-gnome        0.9.8.8-0ubuntu4.3  amd64               network management framework (GNOME frontend)
 </code></pre><h2 id="">準備工作環境</h2>
-<pre><code>mkdir  ~/Downloads/kmod -p
-cd ~/Downloads/kmod
+<pre><code>mkdir  ~/Downloads/network-manager-gnome -p
+cd ~/Downloads/network-manager-gnome
 mkdir download source
-</code></pre><h2 id="package-kmodhttppackagesubuntucomtrustykmod">探索「Package: <a href="http://packages.ubuntu.com/trusty/kmod" target="_blank">kmod</a>」</h2>
-<p>切換到「~/Downloads/kmod/download」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/kmod/download
+</code></pre><h2 id="package-network-manager-gnomehttppackagesubuntucomtrustynetwork-manager-gnome">探索「Package: <a href="http://packages.ubuntu.com/trusty/network-manager-gnome" target="_blank">network-manager-gnome</a>」</h2>
+<p>切換到「~/Downloads/network-manager-gnome/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/network-manager-gnome/download
 </code></pre>
-<p>下載「Package: kmod」。</p>
-<pre><code class="lang-sh">$ apt-get download kmod
+<p>下載「Package: network-manager-gnome」。</p>
+<pre><code class="lang-sh">$ apt-get download network-manager-gnome
 </code></pre>
-<p>解開「package kmod」</p>
-<pre><code class="lang-sh">dpkg -x kmod_15-<span class="hljs-number">0</span>ubuntu6_amd64.deb kmod
-dpkg <span class="hljs-operator">-e</span> kmod_15-<span class="hljs-number">0</span>ubuntu6_amd64.deb
-<span class="hljs-comment"># ar xv kmod_15-0ubuntu6_amd64.deb</span>
+<p>解開「package network-manager-gnome」</p>
+<pre><code class="lang-sh">dpkg -x network-manager-gnome_0.<span class="hljs-number">9.8</span>.<span class="hljs-number">8</span>-<span class="hljs-number">0</span>ubuntu4.<span class="hljs-number">3</span>_amd64.deb network-manager-gnome
+dpkg <span class="hljs-operator">-e</span> network-manager-gnome_0.<span class="hljs-number">9.8</span>.<span class="hljs-number">8</span>-<span class="hljs-number">0</span>ubuntu4.<span class="hljs-number">3</span>_amd64.deb
+<span class="hljs-comment"># ar xv network-manager-gnome_0.9.8.8-0ubuntu4.3_amd64.deb</span>
 </code></pre>
 <p>檢視套件檔案</p>
-<pre><code class="lang-sh">$ tree kmod
+<pre><code class="lang-sh">$ tree network-manager-gnome
 </code></pre>
 <p>顯示</p>
-<pre><code>kmod
-├── bin
-│   ├── kmod
-│   └── lsmod -&gt; kmod
+<pre><code>network-manager-gnome
 ├── etc
-│   ├── depmod.d
-│   │   └── ubuntu.conf
-│   ├── init
-│   │   └── kmod.conf
-│   ├── init.d
-│   │   └── kmod
-│   └── modprobe.d
-│       ├── blacklist-ath_pci.conf
-│       ├── blacklist.conf
-│       ├── blacklist-firewire.conf
-│       ├── blacklist-framebuffer.conf
-│       ├── blacklist-rare-network.conf
-│       ├── blacklist-watchdog.conf
-│       ├── iwlwifi.conf
-│       └── mlx4.conf
-├── lib
-│   └── modprobe.d
-├── sbin
-│   ├── depmod -&gt; /bin/kmod
-│   ├── insmod -&gt; /bin/kmod
-│   ├── lsmod -&gt; /bin/kmod
-│   ├── modinfo -&gt; /bin/kmod
-│   ├── modprobe -&gt; /bin/kmod
-│   └── rmmod -&gt; /bin/kmod
+│   └── xdg
+│       └── autostart
+│           └── nm-applet.desktop
 └── usr
+    ├── bin
+    │   ├── nm-applet
+    │   └── nm-connection-editor
+    ├── lib
+    │   ├── gnome-bluetooth
+    │   │   └── plugins
+    │   │       └── libnma.so
+    │   └── NetworkManager
+    │       └── nm-applet-migration-tool
     └── share
-        ├── bash-completion
-        │   └── completions
-        │       └── kmod
+        ├── applications
+        │   ├── nm-applet.desktop
+        │   └── nm-connection-editor.desktop
         ├── doc
-        │   ├── kmod -&gt; libkmod2
-        │   └── libkmod2
-        │       ├── README
-        │       └── TODO
-        ├── initramfs-tools
-        │   └── hooks
-        │       └── kmod
-        └── man
-            ├── fr
-            │   └── man5
-            │       └── modules.5.gz
-            ├── man5
-            │   ├── depmod.d.5.gz
-            │   ├── modprobe.d.5.gz
-            │   ├── modules.5.gz
-            │   ├── modules.dep.5.gz
-            │   └── modules.dep.bin.5.gz -&gt; modules.dep.5.gz
-            └── man8
-                ├── depmod.8.gz
-                ├── insmod.8.gz
-                ├── lsmod.8.gz
-                ├── modinfo.8.gz
-                ├── modprobe.8.gz
-                └── rmmod.8.gz
+        │   └── network-manager-gnome
+        │       ├── changelog.Debian.gz -&gt; ../libnm-gtk0/changelog.Debian.gz
+        │       ├── copyright
+        │       ├── NEWS.gz
+        │       └── README.Debian
+        ├── GConf
+        │   └── gsettings
+        │       └── nm-applet.convert
+        ├── glib-2.0
+        │   └── schemas
+        │       └── org.gnome.nm-applet.gschema.xml
+        ├── icons
+        │   └── hicolor
+        │       ├── 16x16
+        │       │   └── apps
+        │       │       ├── nm-device-wired.png
+        │       │       ├── nm-no-connection.png
+        │       │       └── nm-vpn-standalone-lock.png
+        │       ├── 22x22
+        │       │   └── apps
+        │       │       ├── gsm-3g-full.png -&gt; nm-signal-100.png
+        │       │       ├── gsm-3g-full-secure.png -&gt; nm-signal-100-secure.png
+        │       │       ├── gsm-3g-high.png -&gt; nm-signal-75.png
+        │       │       ├── gsm-3g-high-secure.png -&gt; nm-signal-75-secure.png
+        │       │       ├── gsm-3g-low.png -&gt; nm-signal-25.png
+        │       │       ├── gsm-3g-low-secure.png -&gt; nm-signal-25-secure.png
+        │       │       ├── gsm-3g-medium.png -&gt; nm-signal-50.png
+        │       │       ├── gsm-3g-medium-secure.png -&gt; nm-signal-50-secure.png
+        │       │       ├── gsm-3g-none.png -&gt; nm-signal-00.png
+        │       │       ├── gsm-3g-none-secure.png -&gt; nm-signal-00-secure.png
+        │       │       ├── nm-adhoc.png
+        │       │       ├── nm-device-wired.png
+        │       │       ├── nm-device-wired-secure.png
+        │       │       ├── nm-device-wwan.png
+        │       │       ├── nm-mb-roam.png
+        │       │       ├── nm-no-connection.png
+        │       │       ├── nm-secure-lock.png
+        │       │       ├── nm-signal-00.png
+        │       │       ├── nm-signal-00-secure.png
+        │       │       ├── nm-signal-100.png
+        │       │       ├── nm-signal-100-secure.png
+        │       │       ├── nm-signal-25.png
+        │       │       ├── nm-signal-25-secure.png
+        │       │       ├── nm-signal-50.png
+        │       │       ├── nm-signal-50-secure.png
+        │       │       ├── nm-signal-75.png
+        │       │       ├── nm-signal-75-secure.png
+        │       │       ├── nm-stage01-connecting01.png
+        │       │       ├── nm-stage01-connecting02.png
+        │       │       ├── nm-stage01-connecting03.png
+        │       │       ├── nm-stage01-connecting04.png
+        │       │       ├── nm-stage01-connecting05.png
+        │       │       ├── nm-stage01-connecting06.png
+        │       │       ├── nm-stage01-connecting07.png
+        │       │       ├── nm-stage01-connecting08.png
+        │       │       ├── nm-stage01-connecting09.png
+        │       │       ├── nm-stage01-connecting10.png
+        │       │       ├── nm-stage01-connecting11.png
+        │       │       ├── nm-stage02-connecting01.png
+        │       │       ├── nm-stage02-connecting02.png
+        │       │       ├── nm-stage02-connecting03.png
+        │       │       ├── nm-stage02-connecting04.png
+        │       │       ├── nm-stage02-connecting05.png
+        │       │       ├── nm-stage02-connecting06.png
+        │       │       ├── nm-stage02-connecting07.png
+        │       │       ├── nm-stage02-connecting08.png
+        │       │       ├── nm-stage02-connecting09.png
+        │       │       ├── nm-stage02-connecting10.png
+        │       │       ├── nm-stage02-connecting11.png
+        │       │       ├── nm-stage03-connecting01.png
+        │       │       ├── nm-stage03-connecting02.png
+        │       │       ├── nm-stage03-connecting03.png
+        │       │       ├── nm-stage03-connecting04.png
+        │       │       ├── nm-stage03-connecting05.png
+        │       │       ├── nm-stage03-connecting06.png
+        │       │       ├── nm-stage03-connecting07.png
+        │       │       ├── nm-stage03-connecting08.png
+        │       │       ├── nm-stage03-connecting09.png
+        │       │       ├── nm-stage03-connecting10.png
+        │       │       ├── nm-stage03-connecting11.png
+        │       │       ├── nm-tech-3g.png
+        │       │       ├── nm-tech-cdma-1x.png
+        │       │       ├── nm-tech-edge.png
+        │       │       ├── nm-tech-evdo.png
+        │       │       ├── nm-tech-gprs.png
+        │       │       ├── nm-tech-hspa.png
+        │       │       ├── nm-tech-lte.png
+        │       │       ├── nm-tech-umts.png
+        │       │       ├── nm-vpn-active-lock.png
+        │       │       ├── nm-vpn-connecting01.png
+        │       │       ├── nm-vpn-connecting02.png
+        │       │       ├── nm-vpn-connecting03.png
+        │       │       ├── nm-vpn-connecting04.png
+        │       │       ├── nm-vpn-connecting05.png
+        │       │       ├── nm-vpn-connecting06.png
+        │       │       ├── nm-vpn-connecting07.png
+        │       │       ├── nm-vpn-connecting08.png
+        │       │       ├── nm-vpn-connecting09.png
+        │       │       ├── nm-vpn-connecting10.png
+        │       │       ├── nm-vpn-connecting11.png
+        │       │       ├── nm-vpn-connecting12.png
+        │       │       ├── nm-vpn-connecting13.png
+        │       │       ├── nm-vpn-connecting14.png
+        │       │       └── nm-wwan-tower.png
+        │       ├── 32x32
+        │       │   └── apps
+        │       │       ├── nm-device-wired.png
+        │       │       └── nm-no-connection.png
+        │       ├── 48x48
+        │       │   └── apps
+        │       │       └── nm-device-wireless.png
+        │       └── scalable
+        │           └── apps
+        │               ├── nm-device-wired.svg
+        │               └── nm-no-connection.svg
+        ├── man
+        │   └── man1
+        │       ├── nm-applet.1.gz
+        │       └── nm-connection-editor.1.gz
+        └── nm-applet
+            ├── 8021x.ui
+            ├── ce-ip4-routes.ui
+            ├── ce-ip6-routes.ui
+            ├── ce-new-connection.ui
+            ├── ce-page-bond.ui
+            ├── ce-page-bridge-port.ui
+            ├── ce-page-bridge.ui
+            ├── ce-page-dsl.ui
+            ├── ce-page-ethernet.ui
+            ├── ce-page-general.ui
+            ├── ce-page-infiniband.ui
+            ├── ce-page-ip4.ui
+            ├── ce-page-ip6.ui
+            ├── ce-page-mobile.ui
+            ├── ce-page-ppp.ui
+            ├── ce-page-vlan.ui
+            ├── ce-page-wifi-security.ui
+            ├── ce-page-wifi.ui
+            ├── ce-page-wimax.ui
+            ├── ce-ppp-auth-methods.ui
+            ├── eap-method-fast.ui
+            ├── eap-method-leap.ui
+            ├── eap-method-peap.ui
+            ├── eap-method-simple.ui
+            ├── eap-method-tls.ui
+            ├── eap-method-ttls.ui
+            ├── gsm-unlock.ui
+            ├── info.ui
+            ├── keyring.png
+            ├── nag-user-dialog.ui
+            ├── nm-connection-editor.ui
+            ├── ws-dynamic-wep.ui
+            ├── ws-leap.ui
+            ├── ws-wep-key.ui
+            ├── ws-wpa-eap.ui
+            └── ws-wpa-psk.ui
 
-23 directories, 35 files
+32 directories, 143 files
 </code></pre><pre><code>$ tree DEBIAN
 </code></pre><p>顯示</p>
 <pre><code>DEBIAN
@@ -1837,501 +2046,533 @@ dpkg <span class="hljs-operator">-e</span> kmod_15-<span class="hljs-number">0</
 ├── md5sums
 ├── postinst
 ├── postrm
-└── preinst
+├── preinst
+└── prerm
 
-0 directories, 6 files
-</code></pre><h2 id="source-package-kmodhttppackagesubuntucomtrustykmod">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/kmod" target="_blank">kmod</a>」</h2>
-<p>切換到「~/Downloads/kmod/source」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/kmod/<span class="hljs-built_in">source</span>
+0 directories, 7 files
+</code></pre><h2 id="source-package-network-manager-gnomehttppackagesubuntucomtrustynetwork-manager-gnome">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/network-manager-gnome" target="_blank">network-manager-gnome</a>」</h2>
+<p>切換到「~/Downloads/network-manager-gnome/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/network-manager-gnome/<span class="hljs-built_in">source</span>
 </code></pre>
-<p>下載「Source Package: kmod」。</p>
-<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> kmod
+<p>下載「Source Package: network-manager-gnome」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> network-manager-gnome
 </code></pre>
 <p>檢視原始碼套件檔案。</p>
-<pre><code>$ tree kmod-15
+<pre><code>$ tree network-manager-applet-0.9.8.8
 </code></pre><p>顯示</p>
-<pre><code>kmod-15
+<pre><code>network-manager-applet-0.9.8.8
 ├── aclocal.m4
-├── build-aux
-│   ├── compile
-│   ├── config.guess
-│   ├── config.sub
-│   ├── depcomp
-│   ├── install-sh
-│   ├── ltmain.sh
-│   ├── missing
-│   └── test-driver
+├── AUTHORS
+├── autogen.sh
+├── ChangeLog
+├── compile
+├── config.guess
 ├── config.h.in
+├── config.sub
 ├── configure
 ├── configure.ac
+├── CONTRIBUTING
 ├── COPYING
 ├── debian
 │   ├── changelog
 │   ├── compat
 │   ├── control
 │   ├── copyright
-│   ├── depmod.d
-│   │   └── ubuntu.conf
-│   ├── kmod.dirs
-│   ├── kmod.init
-│   ├── kmod.initramfs-hook
-│   ├── kmod.links
-│   ├── kmod.postinst
-│   ├── kmod.postrm
-│   ├── kmod.upstart
-│   ├── libkmod2.files
-│   ├── libkmod2.symbols
-│   ├── libkmod2-udeb.dirs
-│   ├── libkmod2-udeb.links
-│   ├── libkmod-dev.dirs
-│   ├── libkmod-dev.files
-│   ├── modprobe.d
-│   │   ├── blacklist-ath_pci.conf
-│   │   ├── blacklist.conf
-│   │   ├── blacklist-firewire.conf
-│   │   ├── blacklist-framebuffer.conf
-│   │   ├── blacklist-rare-network.conf
-│   │   ├── blacklist-watchdog.conf
-│   │   ├── iwlwifi.conf
-│   │   └── mlx4.conf
-│   ├── module-init-tools.dirs
-│   ├── module-init-tools.postinst
-│   ├── module-init-tools.postrm
-│   ├── module-init-tools.preinst
+│   ├── gbp.conf
+│   ├── gir1.2-nmgtk-1.0.install
+│   ├── icons
+│   │   └── 22
+│   │       ├── nm-active-device.png
+│   │       ├── nm-device-wired-secure.png
+│   │       ├── nm-secure-lock.png
+│   │       ├── nm-signal-00-secure.png
+│   │       ├── nm-signal-100-secure.png
+│   │       ├── nm-signal-25-secure.png
+│   │       ├── nm-signal-50-secure.png
+│   │       └── nm-signal-75-secure.png
+│   ├── libnm-gtk0.install
+│   ├── libnm-gtk0.symbols
+│   ├── libnm-gtk-common.install
+│   ├── libnm-gtk-dev.install
+│   ├── network-manager-gnome.docs
+│   ├── network-manager-gnome.install
+│   ├── network-manager-gnome.maintscript
+│   ├── network-manager-gnome.manpages
+│   ├── network-manager-gnome.README.Debian
+│   ├── nm-applet.sgml
 │   ├── patches
-│   │   ├── aliases_conf
-│   │   ├── check_builtin_kver
-│   │   ├── debian_manpages
-│   │   ├── libtool-update.diff
+│   │   ├── 0001_Move_on_with_enter_in_the_country_page_of_the_new_mobile_wizard.patch
+│   │   ├── 11-user-connections.patch
+│   │   ├── 14_lp123808_dont_start_applet_on_ltsp_client.patch
+│   │   ├── applet_adhoc_use_wpa_rsn_part1.patch
+│   │   ├── applet-wifi-menu-before-vpn.patch
+│   │   ├── clear-notification-actions.patch
+│   │   ├── git_revert_system_ca_cert.patch
+│   │   ├── hide_policy_items_env_var.patch
+│   │   ├── key-certificate-extensions.patch
+│   │   ├── lp1048516_dont_req_keyring_in_greeter.patch
+│   │   ├── lp1048520_delay_pin_dialog_in_greeter.patch
+│   │   ├── lp289466_always_show_tray_icon.patch
+│   │   ├── lp328572-dxteam-connect-text.patch
+│   │   ├── lp330571_dxteam_wired_connect_text.patch
+│   │   ├── lp330608_dxteam_gsm_connect_text.patch
+│   │   ├── lp341684_device_sensitive_disconnect_notify.patch
+│   │   ├── lp460144_correctly_update_notification.patch
+│   │   ├── lp829673_gconf_hide_applet.patch
+│   │   ├── lp830178_adhoc_ip6_ignore.patch
+│   │   ├── make_menu_items_insensitive_based_on_permissions.patch
+│   │   ├── nm-applet-use-indicator.patch
+│   │   ├── position_dialogs_to_center_of_the_screen.patch
+│   │   ├── rebuild_menu_after_init.patch
 │   │   ├── series
-│   │   └── verbose_missing_bin
+│   │   ├── set_atk_relations.patch
+│   │   └── ubuntu_dont_autostart_under_GNOME.patch
 │   ├── rules
 │   ├── source
-│   │   └── format
+│   │   ├── format
+│   │   └── include-binaries
 │   └── watch
-├── extra
-│   ├── aliases.conf
-│   ├── modules.5
-│   └── modules.fr.5
-├── libkmod
-│   ├── COPYING
-│   ├── docs
-│   │   ├── gtk-doc.make
-│   │   ├── html
-│   │   │   ├── api-index-full.html
-│   │   │   ├── ch01.html
-│   │   │   ├── home.png
-│   │   │   ├── index.html
-│   │   │   ├── index.sgml
-│   │   │   ├── left.png
-│   │   │   ├── libkmod.devhelp2
-│   │   │   ├── libkmod-libkmod-config.html
-│   │   │   ├── libkmod-libkmod.html
-│   │   │   ├── libkmod-libkmod-list.html
-│   │   │   ├── libkmod-libkmod-loaded.html
-│   │   │   ├── libkmod-libkmod-module.html
-│   │   │   ├── right.png
-│   │   │   ├── style.css
-│   │   │   └── up.png
-│   │   ├── libkmod-docs.xml
-│   │   ├── libkmod-overrides.txt
-│   │   ├── libkmod-sections.txt
+├── depcomp
+├── icons
+│   ├── 16
 │   │   ├── Makefile.am
 │   │   ├── Makefile.in
-│   │   ├── version.xml
-│   │   └── version.xml.in
-│   ├── libkmod-array.c
-│   ├── libkmod-array.h
-│   ├── libkmod.c
-│   ├── libkmod-config.c
-│   ├── libkmod-elf.c
-│   ├── libkmod-file.c
-│   ├── libkmod.h
-│   ├── libkmod-hash.c
-│   ├── libkmod-hash.h
-│   ├── libkmod-index.c
-│   ├── libkmod-index.h
-│   ├── libkmod-internal.h
-│   ├── libkmod-list.c
-│   ├── libkmod-module.c
-│   ├── libkmod.pc.in
-│   ├── libkmod-signature.c
-│   ├── libkmod.sym
-│   ├── libkmod-util.c
-│   ├── libkmod-util.h
-│   ├── macro.h
-│   ├── missing.h
-│   └── README
+│   │   ├── nm-device-wired.png
+│   │   ├── nm-no-connection.png
+│   │   └── nm-vpn-standalone-lock.png
+│   ├── 22
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── nm-adhoc.png
+│   │   ├── nm-device-wired.png
+│   │   ├── nm-device-wwan.png
+│   │   ├── nm-mb-roam.png
+│   │   ├── nm-no-connection.png
+│   │   ├── nm-secure-lock.png
+│   │   ├── nm-signal-00.png
+│   │   ├── nm-signal-100.png
+│   │   ├── nm-signal-25.png
+│   │   ├── nm-signal-50.png
+│   │   ├── nm-signal-75.png
+│   │   ├── nm-stage01-connecting01.png
+│   │   ├── nm-stage01-connecting02.png
+│   │   ├── nm-stage01-connecting03.png
+│   │   ├── nm-stage01-connecting04.png
+│   │   ├── nm-stage01-connecting05.png
+│   │   ├── nm-stage01-connecting06.png
+│   │   ├── nm-stage01-connecting07.png
+│   │   ├── nm-stage01-connecting08.png
+│   │   ├── nm-stage01-connecting09.png
+│   │   ├── nm-stage01-connecting10.png
+│   │   ├── nm-stage01-connecting11.png
+│   │   ├── nm-stage02-connecting01.png
+│   │   ├── nm-stage02-connecting02.png
+│   │   ├── nm-stage02-connecting03.png
+│   │   ├── nm-stage02-connecting04.png
+│   │   ├── nm-stage02-connecting05.png
+│   │   ├── nm-stage02-connecting06.png
+│   │   ├── nm-stage02-connecting07.png
+│   │   ├── nm-stage02-connecting08.png
+│   │   ├── nm-stage02-connecting09.png
+│   │   ├── nm-stage02-connecting10.png
+│   │   ├── nm-stage02-connecting11.png
+│   │   ├── nm-stage03-connecting01.png
+│   │   ├── nm-stage03-connecting02.png
+│   │   ├── nm-stage03-connecting03.png
+│   │   ├── nm-stage03-connecting04.png
+│   │   ├── nm-stage03-connecting05.png
+│   │   ├── nm-stage03-connecting06.png
+│   │   ├── nm-stage03-connecting07.png
+│   │   ├── nm-stage03-connecting08.png
+│   │   ├── nm-stage03-connecting09.png
+│   │   ├── nm-stage03-connecting10.png
+│   │   ├── nm-stage03-connecting11.png
+│   │   ├── nm-tech-3g.png
+│   │   ├── nm-tech-cdma-1x.png
+│   │   ├── nm-tech-edge.png
+│   │   ├── nm-tech-evdo.png
+│   │   ├── nm-tech-gprs.png
+│   │   ├── nm-tech-hspa.png
+│   │   ├── nm-tech-lte.png
+│   │   ├── nm-tech-umts.png
+│   │   ├── nm-vpn-active-lock.png
+│   │   ├── nm-vpn-connecting01.png
+│   │   ├── nm-vpn-connecting02.png
+│   │   ├── nm-vpn-connecting03.png
+│   │   ├── nm-vpn-connecting04.png
+│   │   ├── nm-vpn-connecting05.png
+│   │   ├── nm-vpn-connecting06.png
+│   │   ├── nm-vpn-connecting07.png
+│   │   ├── nm-vpn-connecting08.png
+│   │   ├── nm-vpn-connecting09.png
+│   │   ├── nm-vpn-connecting10.png
+│   │   ├── nm-vpn-connecting11.png
+│   │   ├── nm-vpn-connecting12.png
+│   │   ├── nm-vpn-connecting13.png
+│   │   ├── nm-vpn-connecting14.png
+│   │   └── nm-wwan-tower.png
+│   ├── 32
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   ├── nm-device-wired.png
+│   │   └── nm-no-connection.png
+│   ├── 48
+│   │   ├── Makefile.am
+│   │   ├── Makefile.in
+│   │   └── nm-device-wireless.png
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   └── scalable
+│       ├── Makefile.am
+│       ├── Makefile.in
+│       ├── nm-device-wired.svg
+│       └── nm-no-connection.svg
+├── INSTALL
+├── install-sh
+├── intltool-extract.in
+├── intltool-merge.in
+├── intltool-update.in
+├── ltmain.sh
 ├── m4
-│   ├── attributes.m4
-│   ├── gtk-doc.m4
+│   ├── compiler_warnings.m4
+│   ├── glib-makefile.m4
+│   ├── intltool.m4
 │   ├── libtool.m4
 │   ├── lt~obsolete.m4
 │   ├── ltoptions.m4
 │   ├── ltsugar.m4
 │   └── ltversion.m4
 ├── Makefile.am
+├── Makefile.glib
 ├── Makefile.in
 ├── man
-│   ├── depmod.8
-│   ├── depmod.d.5
-│   ├── depmod.d.xml
-│   ├── depmod.xml
-│   ├── insmod.8
-│   ├── insmod.xml
-│   ├── lsmod.8
-│   ├── lsmod.xml
 │   ├── Makefile.am
 │   ├── Makefile.in
-│   ├── modinfo.8
-│   ├── modinfo.xml
-│   ├── modprobe.8
-│   ├── modprobe.d.5
-│   ├── modprobe.d.xml
-│   ├── modprobe.xml
-│   ├── modules.dep.5
-│   ├── modules.dep.bin.5
-│   ├── modules.dep.xml
-│   ├── rmmod.8
-│   └── rmmod.xml
+│   ├── nm-applet.1.in
+│   └── nm-connection-editor.1.in
+├── missing
 ├── NEWS
+├── nm-applet.convert
+├── nm-applet.desktop.in
+├── nm-connection-editor.desktop.in
+├── org.gnome.nm-applet.gschema.xml.in
+├── po
+│   ├── af.po
+│   ├── an.po
+│   ├── ar.po
+│   ├── as.po
+│   ├── ast.po
+│   ├── be@latin.po
+│   ├── be.po
+│   ├── bg.po
+│   ├── bn_IN.po
+│   ├── bs.po
+│   ├── ca.po
+│   ├── ca@valencia.po
+│   ├── ChangeLog
+│   ├── crh.po
+│   ├── cs.po
+│   ├── da.po
+│   ├── de.po
+│   ├── dz.po
+│   ├── el.po
+│   ├── en_CA.po
+│   ├── en_GB.po
+│   ├── eo.po
+│   ├── es.po
+│   ├── et.po
+│   ├── eu.po
+│   ├── fa.po
+│   ├── fi.po
+│   ├── fr.po
+│   ├── gl.po
+│   ├── gu.po
+│   ├── he.po
+│   ├── hi.po
+│   ├── hr.po
+│   ├── hu.po
+│   ├── id.po
+│   ├── it.po
+│   ├── ja.po
+│   ├── kk.po
+│   ├── km.po
+│   ├── kn.po
+│   ├── ko.po
+│   ├── ku.po
+│   ├── LINGUAS
+│   ├── lt.po
+│   ├── lv.po
+│   ├── Makefile.in.in
+│   ├── mk.po
+│   ├── ml.po
+│   ├── mr.po
+│   ├── ms.po
+│   ├── nb.po
+│   ├── ne.po
+│   ├── nl.po
+│   ├── nn.po
+│   ├── oc.po
+│   ├── or.po
+│   ├── pa.po
+│   ├── pl.po
+│   ├── POTFILES.in
+│   ├── pt_BR.po
+│   ├── pt.po
+│   ├── ro.po
+│   ├── ru.po
+│   ├── rw.po
+│   ├── sk.po
+│   ├── sl.po
+│   ├── sq.po
+│   ├── sr@latin.po
+│   ├── sr.po
+│   ├── sv.po
+│   ├── ta.po
+│   ├── te.po
+│   ├── tg.po
+│   ├── th.po
+│   ├── tr.po
+│   ├── ug.po
+│   ├── uk.po
+│   ├── ur.po
+│   ├── vi.po
+│   ├── wa.po
+│   ├── zh_CN.po
+│   ├── zh_HK.po
+│   └── zh_TW.po
 ├── README
-├── shell-completion
-│   └── bash
-│       └── kmod
-├── testsuite
-│   ├── COPYING
-│   ├── delete_module.c
-│   ├── init_module.c
-│   ├── path.c
-│   ├── rootfs-pristine
-│   │   ├── test-alias
-│   │   │   └── correct.txt
-│   │   ├── test-blacklist
-│   │   │   └── etc
-│   │   │       └── modprobe.d
-│   │   │           └── modprobe.conf
-│   │   ├── test-dependencies
-│   │   │   └── lib
-│   │   │       └── modules
-│   │   │           └── 4.0.20-kmod
-│   │   │               ├── kernel
-│   │   │               │   ├── fs
-│   │   │               │   │   ├── jbd2
-│   │   │               │   │   │   └── jbd2.ko
-│   │   │               │   │   └── mbcache.ko
-│   │   │               │   └── lib
-│   │   │               │       └── crc16.ko
-│   │   │               ├── modules.alias
-│   │   │               ├── modules.alias.bin
-│   │   │               ├── modules.builtin
-│   │   │               ├── modules.builtin.bin
-│   │   │               ├── modules.dep
-│   │   │               ├── modules.dep.bin
-│   │   │               ├── modules.devname
-│   │   │               ├── modules.order
-│   │   │               ├── modules.softdep
-│   │   │               ├── modules.symbols
-│   │   │               └── modules.symbols.bin
-│   │   ├── test-depmod
-│   │   │   └── modules-order-compressed
-│   │   │       └── lib
-│   │   │           └── modules
-│   │   │               └── 3.5.4-1-ARCH
-│   │   │                   ├── correct-modules.alias
-│   │   │                   ├── kernel
-│   │   │                   │   └── drivers
-│   │   │                   │       ├── block
-│   │   │                   │       │   └── cciss.ko.gz
-│   │   │                   │       └── scsi
-│   │   │                   │           ├── hpsa.ko.gz
-│   │   │                   │           └── scsi_mod.ko.gz
-│   │   │                   ├── modules.builtin
-│   │   │                   └── modules.order
-│   │   ├── test-init
-│   │   │   ├── correct.txt
-│   │   │   ├── ext4-i686.ko
-│   │   │   ├── ext4-ppc64.ko
-│   │   │   ├── ext4-s390x.ko
-│   │   │   └── ext4-x86_64.ko
-│   │   ├── test-loaded
-│   │   │   ├── correct.txt
-│   │   │   ├── proc
-│   │   │   │   └── modules
-│   │   │   └── sys
-│   │   │       └── module
-│   │   │           └── btusb
-│   │   │               ├── drivers
-│   │   │               ├── holders
-│   │   │               ├── initstate
-│   │   │               ├── notes
-│   │   │               ├── parameters
-│   │   │               │   ├── disable_scofix
-│   │   │               │   ├── force_scofix
-│   │   │               │   ├── ignore_csr
-│   │   │               │   ├── ignore_dga
-│   │   │               │   ├── ignore_sniffer
-│   │   │               │   └── reset
-│   │   │               ├── refcnt
-│   │   │               ├── sections
-│   │   │               │   └── __param
-│   │   │               ├── srcversion
-│   │   │               └── version
-│   │   ├── test-modinfo
-│   │   │   ├── correct.txt
-│   │   │   ├── ext4-i686.ko
-│   │   │   ├── ext4-ppc64.ko
-│   │   │   ├── ext4-s390x.ko
-│   │   │   ├── ext4-x86_64.ko
-│   │   │   ├── ext4-x86_64-sha1.ko
-│   │   │   └── ext4-x86_64-sha256.ko
-│   │   ├── test-modprobe
-│   │   │   ├── alias-to-none
-│   │   │   │   ├── correct-psmouse.txt
-│   │   │   │   ├── etc
-│   │   │   │   │   └── modprobe.d
-│   │   │   │   │       └── bogus.conf
-│   │   │   │   ├── lib
-│   │   │   │   │   └── modules
-│   │   │   │   │       └── 4.4.4
-│   │   │   │   │           ├── kernel
-│   │   │   │   │           │   └── drivers
-│   │   │   │   │           │       └── input
-│   │   │   │   │           │           └── mouse
-│   │   │   │   │           │               └── psmouse.ko
-│   │   │   │   │           ├── modules.alias
-│   │   │   │   │           ├── modules.alias.bin
-│   │   │   │   │           ├── modules.builtin.bin
-│   │   │   │   │           ├── modules.dep
-│   │   │   │   │           ├── modules.dep.bin
-│   │   │   │   │           ├── modules.devname
-│   │   │   │   │           ├── modules.softdep
-│   │   │   │   │           ├── modules.symbols
-│   │   │   │   │           └── modules.symbols.bin
-│   │   │   │   └── proc
-│   │   │   │       └── modules
-│   │   │   ├── builtin
-│   │   │   │   └── lib
-│   │   │   │       └── modules
-│   │   │   │           └── 4.4.4
-│   │   │   │               ├── modules.alias
-│   │   │   │               ├── modules.alias.bin
-│   │   │   │               ├── modules.builtin
-│   │   │   │               ├── modules.builtin.bin
-│   │   │   │               ├── modules.dep
-│   │   │   │               ├── modules.dep.bin
-│   │   │   │               ├── modules.devname
-│   │   │   │               ├── modules.softdep
-│   │   │   │               ├── modules.symbols
-│   │   │   │               └── modules.symbols.bin
-│   │   │   ├── install-cmd-loop
-│   │   │   │   ├── etc
-│   │   │   │   │   └── modprobe.d
-│   │   │   │   │       └── dumb-instal-loop.conf
-│   │   │   │   └── lib
-│   │   │   │       └── modules
-│   │   │   │           └── 4.4.4
-│   │   │   │               ├── kernel
-│   │   │   │               │   └── sound
-│   │   │   │               │       └── core
-│   │   │   │               │           ├── snd.ko.gz
-│   │   │   │               │           └── snd-pcm.ko.gz
-│   │   │   │               ├── modules.alias
-│   │   │   │               ├── modules.alias.bin
-│   │   │   │               ├── modules.dep
-│   │   │   │               ├── modules.dep.bin
-│   │   │   │               ├── modules.devname
-│   │   │   │               ├── modules.softdep
-│   │   │   │               ├── modules.symbols
-│   │   │   │               └── modules.symbols.bin
-│   │   │   ├── module-param-kcmdline
-│   │   │   │   ├── correct.txt
-│   │   │   │   ├── lib
-│   │   │   │   │   └── modules
-│   │   │   │   │       └── 4.4.4
-│   │   │   │   │           ├── kernel
-│   │   │   │   │           │   └── drivers
-│   │   │   │   │           │       └── input
-│   │   │   │   │           │           └── mouse
-│   │   │   │   │           │               └── psmouse.ko
-│   │   │   │   │           ├── modules.alias
-│   │   │   │   │           ├── modules.alias.bin
-│   │   │   │   │           ├── modules.builtin.bin
-│   │   │   │   │           ├── modules.dep
-│   │   │   │   │           ├── modules.dep.bin
-│   │   │   │   │           ├── modules.devname
-│   │   │   │   │           ├── modules.softdep
-│   │   │   │   │           ├── modules.symbols
-│   │   │   │   │           └── modules.symbols.bin
-│   │   │   │   └── proc
-│   │   │   │       ├── cmdline
-│   │   │   │       └── modules
-│   │   │   ├── show-depends
-│   │   │   │   ├── correct-psmouse.txt
-│   │   │   │   ├── correct.txt
-│   │   │   │   ├── lib
-│   │   │   │   │   └── modules
-│   │   │   │   │       └── 4.4.4
-│   │   │   │   │           ├── kernel
-│   │   │   │   │           │   ├── drivers
-│   │   │   │   │           │   │   ├── bluetooth
-│   │   │   │   │           │   │   │   └── btusb.ko
-│   │   │   │   │           │   │   └── input
-│   │   │   │   │           │   │       └── mouse
-│   │   │   │   │           │   │           └── psmouse.ko
-│   │   │   │   │           │   └── net
-│   │   │   │   │           │       └── bluetooth
-│   │   │   │   │           │           └── bluetooth.ko
-│   │   │   │   │           ├── modules.alias
-│   │   │   │   │           ├── modules.alias.bin
-│   │   │   │   │           ├── modules.dep
-│   │   │   │   │           ├── modules.dep.bin
-│   │   │   │   │           ├── modules.devname
-│   │   │   │   │           ├── modules.softdep
-│   │   │   │   │           ├── modules.symbols
-│   │   │   │   │           └── modules.symbols.bin
-│   │   │   │   ├── proc
-│   │   │   │   │   └── modules
-│   │   │   │   └── sys
-│   │   │   │       └── module
-│   │   │   │           ├── bluetooth
-│   │   │   │           │   ├── coresize
-│   │   │   │           │   ├── holders
-│   │   │   │           │   │   └── btusb
-│   │   │   │           │   │       ├── coresize
-│   │   │   │           │   │       ├── drivers
-│   │   │   │           │   │       ├── holders
-│   │   │   │           │   │       ├── initsize
-│   │   │   │           │   │       ├── initstate
-│   │   │   │           │   │       ├── notes
-│   │   │   │           │   │       ├── parameters
-│   │   │   │           │   │       │   ├── disable_scofix
-│   │   │   │           │   │       │   ├── force_scofix
-│   │   │   │           │   │       │   ├── ignore_csr
-│   │   │   │           │   │       │   ├── ignore_dga
-│   │   │   │           │   │       │   ├── ignore_sniffer
-│   │   │   │           │   │       │   └── reset
-│   │   │   │           │   │       ├── refcnt
-│   │   │   │           │   │       ├── sections
-│   │   │   │           │   │       │   └── __param
-│   │   │   │           │   │       ├── srcversion
-│   │   │   │           │   │       ├── taint
-│   │   │   │           │   │       └── version
-│   │   │   │           │   ├── initsize
-│   │   │   │           │   ├── initstate
-│   │   │   │           │   ├── notes
-│   │   │   │           │   ├── parameters
-│   │   │   │           │   │   ├── disable_ertm
-│   │   │   │           │   │   ├── disable_esco
-│   │   │   │           │   │   ├── enable_hs
-│   │   │   │           │   │   ├── enable_le
-│   │   │   │           │   │   └── enable_mgmt
-│   │   │   │           │   ├── refcnt
-│   │   │   │           │   ├── sections
-│   │   │   │           │   │   ├── __bug_table
-│   │   │   │           │   │   ├── __jump_table
-│   │   │   │           │   │   ├── __kcrctab
-│   │   │   │           │   │   ├── __kcrctab_gpl
-│   │   │   │           │   │   ├── __ksymtab
-│   │   │   │           │   │   ├── __ksymtab_gpl
-│   │   │   │           │   │   ├── __ksymtab_strings
-│   │   │   │           │   │   └── __param
-│   │   │   │           │   ├── srcversion
-│   │   │   │           │   ├── taint
-│   │   │   │           │   └── version
-│   │   │   │           └── btusb
-│   │   │   │               ├── coresize
-│   │   │   │               ├── drivers
-│   │   │   │               ├── holders
-│   │   │   │               ├── initsize
-│   │   │   │               ├── initstate
-│   │   │   │               ├── notes
-│   │   │   │               ├── parameters
-│   │   │   │               │   ├── disable_scofix
-│   │   │   │               │   ├── force_scofix
-│   │   │   │               │   ├── ignore_csr
-│   │   │   │               │   ├── ignore_dga
-│   │   │   │               │   ├── ignore_sniffer
-│   │   │   │               │   └── reset
-│   │   │   │               ├── refcnt
-│   │   │   │               ├── sections
-│   │   │   │               │   └── __param
-│   │   │   │               ├── srcversion
-│   │   │   │               ├── taint
-│   │   │   │               └── version
-│   │   │   └── softdep-loop
-│   │   │       ├── etc
-│   │   │       │   └── modprobe.d
-│   │   │       │       └── dumb-softdep.conf
-│   │   │       └── lib
-│   │   │           └── modules
-│   │   │               └── 4.4.4
-│   │   │                   ├── kernel
-│   │   │                   │   ├── drivers
-│   │   │                   │   │   ├── bluetooth
-│   │   │                   │   │   │   └── btusb.ko
-│   │   │                   │   │   └── input
-│   │   │                   │   │       └── mouse
-│   │   │                   │   │           └── psmouse.ko
-│   │   │                   │   └── net
-│   │   │                   │       └── bluetooth
-│   │   │                   │           └── bluetooth.ko
-│   │   │                   ├── modules.alias
-│   │   │                   ├── modules.alias.bin
-│   │   │                   ├── modules.dep
-│   │   │                   ├── modules.dep.bin
-│   │   │                   ├── modules.devname
-│   │   │                   ├── modules.softdep
-│   │   │                   ├── modules.symbols
-│   │   │                   └── modules.symbols.bin
-│   │   ├── test-new-module
-│   │   │   ├── from_alias
-│   │   │   │   ├── correct.txt
-│   │   │   │   └── etc
-│   │   │   │       └── modprobe.d
-│   │   │   │           └── modprobe.conf
-│   │   │   └── from_name
-│   │   │       └── correct.txt
-│   │   ├── test-remove
-│   │   │   ├── correct.txt
-│   │   │   ├── ext4-i686.ko
-│   │   │   ├── ext4-ppc64.ko
-│   │   │   ├── ext4-s390x.ko
-│   │   │   └── ext4-x86_64.ko
-│   │   └── test-rootfs
-│   │       ├── lib
-│   │       │   └── modules
-│   │       │       └── a
-│   │       └── testdir
-│   ├── stripped-module.h
-│   ├── test-alias.c
-│   ├── test-blacklist.c
-│   ├── test-dependencies.c
-│   ├── test-depmod.c
-│   ├── test-init.c
-│   ├── test-loaded.c
-│   ├── test-modinfo.c
-│   ├── test-modprobe.c
-│   ├── test-new-module.c
-│   ├── testsuite.c
-│   ├── testsuite.h
-│   ├── test-testsuite.c
-│   └── uname.c
-├── TODO
-└── tools
-    ├── depmod.c
-    ├── insmod.c
-    ├── kmod.c
-    ├── kmod.h
-    ├── log.c
-    ├── log.h
-    ├── lsmod.c
-    ├── modinfo.c
-    ├── modprobe.c
-    ├── rmmod.c
-    └── static-nodes.c
+└── src
+    ├── 8021x.ui
+    ├── ap-menu-item.c
+    ├── ap-menu-item.h
+    ├── applet-agent.c
+    ├── applet-agent.h
+    ├── applet.c
+    ├── applet-device-broadband.c
+    ├── applet-device-broadband.h
+    ├── applet-device-bt.c
+    ├── applet-device-bt.h
+    ├── applet-device-cdma.c
+    ├── applet-device-cdma.h
+    ├── applet-device-ethernet.c
+    ├── applet-device-ethernet.h
+    ├── applet-device-gsm.c
+    ├── applet-device-gsm.h
+    ├── applet-device-wifi.c
+    ├── applet-device-wifi.h
+    ├── applet-device-wimax.c
+    ├── applet-device-wimax.h
+    ├── applet-dialogs.c
+    ├── applet-dialogs.h
+    ├── applet.h
+    ├── applet-vpn-request.c
+    ├── applet-vpn-request.h
+    ├── connection-editor
+    │   ├── ce-ip4-routes.ui
+    │   ├── ce-ip6-routes.ui
+    │   ├── ce-new-connection.ui
+    │   ├── ce-page-bond.ui
+    │   ├── ce-page-bridge-port.ui
+    │   ├── ce-page-bridge.ui
+    │   ├── ce-page.c
+    │   ├── ce-page-dsl.ui
+    │   ├── ce-page-ethernet.ui
+    │   ├── ce-page-general.ui
+    │   ├── ce-page.h
+    │   ├── ce-page-infiniband.ui
+    │   ├── ce-page-ip4.ui
+    │   ├── ce-page-ip6.ui
+    │   ├── ce-page-mobile.ui
+    │   ├── ce-page-ppp.ui
+    │   ├── ce-page-vlan.ui
+    │   ├── ce-page-wifi-security.ui
+    │   ├── ce-page-wifi.ui
+    │   ├── ce-page-wimax.ui
+    │   ├── ce-polkit-button.c
+    │   ├── ce-polkit-button.h
+    │   ├── ce-ppp-auth-methods.ui
+    │   ├── ip4-routes-dialog.c
+    │   ├── ip4-routes-dialog.h
+    │   ├── ip6-routes-dialog.c
+    │   ├── ip6-routes-dialog.h
+    │   ├── main.c
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   ├── new-connection.c
+    │   ├── new-connection.h
+    │   ├── nm-connection-editor.c
+    │   ├── nm-connection-editor.h
+    │   ├── nm-connection-editor-service.xml
+    │   ├── nm-connection-editor.ui
+    │   ├── nm-connection-list.c
+    │   ├── nm-connection-list.h
+    │   ├── page-8021x-security.c
+    │   ├── page-8021x-security.h
+    │   ├── page-bond.c
+    │   ├── page-bond.h
+    │   ├── page-bridge.c
+    │   ├── page-bridge.h
+    │   ├── page-bridge-port.c
+    │   ├── page-bridge-port.h
+    │   ├── page-dsl.c
+    │   ├── page-dsl.h
+    │   ├── page-ethernet.c
+    │   ├── page-ethernet.h
+    │   ├── page-general.c
+    │   ├── page-general.h
+    │   ├── page-infiniband.c
+    │   ├── page-infiniband.h
+    │   ├── page-ip4.c
+    │   ├── page-ip4.h
+    │   ├── page-ip6.c
+    │   ├── page-ip6.h
+    │   ├── page-master.c
+    │   ├── page-master.h
+    │   ├── page-mobile.c
+    │   ├── page-mobile.h
+    │   ├── page-ppp.c
+    │   ├── page-ppp.h
+    │   ├── page-vlan.c
+    │   ├── page-vlan.h
+    │   ├── page-vpn.c
+    │   ├── page-vpn.h
+    │   ├── page-wifi.c
+    │   ├── page-wifi.h
+    │   ├── page-wifi-security.c
+    │   ├── page-wifi-security.h
+    │   ├── page-wimax.c
+    │   ├── page-wimax.h
+    │   ├── ppp-auth-methods-dialog.c
+    │   ├── ppp-auth-methods-dialog.h
+    │   ├── vpn-helpers.c
+    │   └── vpn-helpers.h
+    ├── ethernet-dialog.c
+    ├── ethernet-dialog.h
+    ├── fallback-icon.h
+    ├── gconf-helpers
+    │   ├── gconf-helpers.c
+    │   ├── gconf-helpers.h
+    │   ├── gconf-upgrade.c
+    │   ├── gconf-upgrade.h
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   └── tests
+    │       ├── 08openvpn-not-saved.xml
+    │       ├── 08openvpn-saved.xml
+    │       ├── 08vpnc.xml
+    │       ├── 08wifi.xml
+    │       ├── fake-gconf.c
+    │       ├── fake-gconf.h
+    │       ├── fake-keyring.c
+    │       ├── fake-keyring.h
+    │       ├── Makefile.am
+    │       ├── Makefile.in
+    │       ├── test-import.xml
+    │       └── test-upgrade.c
+    ├── gnome-bluetooth
+    │   ├── bt-widget.c
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   ├── nma-bt-device.c
+    │   └── nma-bt-device.h
+    ├── gsm-unlock.ui
+    ├── info.ui
+    ├── keyring.png
+    ├── libnm-gtk
+    │   ├── examples
+    │   │   ├── Makefile.am
+    │   │   ├── Makefile.in
+    │   │   └── mobile-providers.js
+    │   ├── libnm-gtk.pc.in
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   ├── nm-mobile-providers.c
+    │   ├── nm-mobile-providers.h
+    │   ├── nm-mobile-wizard.c
+    │   ├── nm-mobile-wizard.h
+    │   ├── nm-ui-utils.c
+    │   ├── nm-ui-utils.h
+    │   ├── nm-wifi-dialog.c
+    │   ├── nm-wifi-dialog.h
+    │   ├── nm-wireless-dialog.c
+    │   ├── nm-wireless-dialog.h
+    │   ├── tests
+    │   │   ├── iso3166-test.xml
+    │   │   ├── Makefile.am
+    │   │   ├── Makefile.in
+    │   │   ├── serviceproviders-test.xml
+    │   │   └── test-mobile-providers.c
+    │   └── wifi.ui
+    ├── main.c
+    ├── Makefile.am
+    ├── Makefile.in
+    ├── marshallers
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   ├── nma-marshal.c
+    │   └── nma-marshal.h
+    ├── mb-menu-item.c
+    ├── mb-menu-item.h
+    ├── migration-tool.c
+    ├── mobile-helpers.c
+    ├── mobile-helpers.h
+    ├── nm-applet-introspection.xml
+    ├── shell-watcher.c
+    ├── shell-watcher.h
+    ├── utils
+    │   ├── Makefile.am
+    │   ├── Makefile.in
+    │   ├── tests
+    │   │   ├── Makefile.am
+    │   │   ├── Makefile.in
+    │   │   └── test-utils.c
+    │   ├── utils.c
+    │   └── utils.h
+    └── wireless-security
+        ├── eap-method.c
+        ├── eap-method-fast.c
+        ├── eap-method-fast.h
+        ├── eap-method-fast.ui
+        ├── eap-method.h
+        ├── eap-method-leap.c
+        ├── eap-method-leap.h
+        ├── eap-method-leap.ui
+        ├── eap-method-peap.c
+        ├── eap-method-peap.h
+        ├── eap-method-peap.ui
+        ├── eap-method-simple.c
+        ├── eap-method-simple.h
+        ├── eap-method-simple.ui
+        ├── eap-method-tls.c
+        ├── eap-method-tls.h
+        ├── eap-method-tls.ui
+        ├── eap-method-ttls.c
+        ├── eap-method-ttls.h
+        ├── eap-method-ttls.ui
+        ├── helpers.c
+        ├── helpers.h
+        ├── Makefile.am
+        ├── Makefile.in
+        ├── nag-user-dialog.ui
+        ├── wireless-security.c
+        ├── wireless-security.h
+        ├── ws-dynamic-wep.c
+        ├── ws-dynamic-wep.h
+        ├── ws-dynamic-wep.ui
+        ├── ws-leap.c
+        ├── ws-leap.h
+        ├── ws-leap.ui
+        ├── ws-wep-key.c
+        ├── ws-wep-key.h
+        ├── ws-wep-key.ui
+        ├── ws-wpa-eap.c
+        ├── ws-wpa-eap.h
+        ├── ws-wpa-eap.ui
+        ├── ws-wpa-psk.c
+        ├── ws-wpa-psk.h
+        └── ws-wpa-psk.ui
 
-138 directories, 341 files
+26 directories, 484 files
 </code></pre>
                     
                     </section>
@@ -2342,10 +2583,10 @@ dpkg <span class="hljs-operator">-e</span> kmod_15-<span class="hljs-number">0</
         </div>
 
         
-        <a href="../../../content/package/kmod/index.html" class="navigation navigation-prev " aria-label="Previous page: kmod"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/network-manager-gnome/index.html" class="navigation navigation-prev " aria-label="Previous page: network-manager-gnome"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/kmod/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/network-manager-gnome/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
