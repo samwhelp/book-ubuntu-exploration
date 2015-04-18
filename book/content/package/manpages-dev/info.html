@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/manpages/note.html" />
+    <link rel="next" href="../../../content/package/manpages-dev/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/manpages/index.html" />
+    <link rel="prev" href="../../../content/package/manpages-dev/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1.2.1" data-basepath="../../.." data-revision="1429368392461">
+    <div class="book" data-level="1.3.1" data-basepath="../../.." data-revision="1429368392461">
     
 
 <div class="book-summary">
@@ -170,7 +170,7 @@
                 
     
         
-        <li class="chapter active" data-level="1.2.1" data-path="content/package/manpages/info.html">
+        <li class="chapter " data-level="1.2.1" data-path="content/package/manpages/info.html">
             
                 
                     <a href="../../../content/package/manpages/info.html">
@@ -240,7 +240,7 @@
                 
     
         
-        <li class="chapter " data-level="1.3.1" data-path="content/package/manpages-dev/info.html">
+        <li class="chapter active" data-level="1.3.1" data-path="content/package/manpages-dev/info.html">
             
                 
                     <a href="../../../content/package/manpages-dev/info.html">
@@ -2132,79 +2132,80 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_74">
+                    <section class="normal" id="section-gitbook_84">
                     
-                        <h1 id="manpages-info">manpages info</h1>
+                        <h1 id="manpages-dev-info">manpages-dev info</h1>
 <h2 id="">套件資訊</h2>
 <p>執行</p>
-<pre><code>$ apt-cache show manpages
+<pre><code>$ apt-cache show manpages-dev
 </code></pre><p>顯示</p>
-<pre><code>Package: manpages
-Priority: standard
+<pre><code>Package: manpages-dev
+Priority: optional
 Section: doc
-Installed-Size: 909
+Installed-Size: 1834
 Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
 Original-Maintainer: Martin Schulze &lt;joey@debian.org&gt;
 Architecture: all
+Source: manpages
 Version: 3.54-1ubuntu1
-Replaces: bind, libc-bin (&lt;&lt; 2.17-91), rsh-server (&lt;&lt; 0.10-7)
+Replaces: glibc-doc (&lt;&lt; 2.11.2-3), libaio-dev
+Depends: manpages
 Suggests: man-browser
-Filename: pool/main/m/manpages/manpages_3.54-1ubuntu1_all.deb
-Size: 627456
-MD5sum: 876f55711d7d6425b5c45e8c793c3f00
-SHA1: 206705940b67962001eabc2b07fe1d91f3bf6978
-SHA256: 661b91b55583401aeb64bf930caac8d170b84bc27c1ecc9e364faadfb1135998
-Description-en: Manual pages about using a GNU/Linux system
- This package contains GNU/Linux manual pages for these sections:
-  4 = Devices (e.g. hd, sd).
-  5 = File formats and protocols, syntaxes of several system
-      files (e.g. wtmp, /etc/passwd, nfs).
-  7 = Conventions and standards, macro packages, etc.
-      (e.g. nroff, ascii).
- .
- Sections 1, 6 and 8 are provided by the respective applications. This
- package only includes the intro man page describing the section.
- .
- The man pages describe syntaxes of several system files.
-Description-md5: 3cdba21ee451777db03e5edc1ef4caa3
+Filename: pool/main/m/manpages/manpages-dev_3.54-1ubuntu1_all.deb
+Size: 1819920
+MD5sum: 8b108211126e2798112fbd55292e5690
+SHA1: 27a5b7fdccd9dea3af1a7b89c28c5e3e46e1ca5e
+SHA256: bec2865ffad27b657dccea6dbf65d2950f9149290c77f8fffb86a4af54d935c1
+Description-en: Manual pages about using GNU/Linux for development
+ These man pages describe the Linux programming interface, including
+ these two sections:
+  2 = Linux system calls.
+  3 = Library calls (note that a more comprehensive source of information
+      may be found in the glibc-doc and glibc-doc-reference packages).
+Description-md5: 8a10ff7bcfd700d46fc7906a26abf372
 Homepage: http://www.kernel.org/doc/man-pages/
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
-Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
 </code></pre><p>執行</p>
-<pre><code>$ apt-cache showpkg manpages
+<pre><code>$ apt-cache showpkg manpages-dev
 </code></pre><p>顯示</p>
-<pre><code>Package: manpages
+<pre><code>Package: manpages-dev
 Versions:
 3.54-1ubuntu1 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages) (/var/lib/dpkg/status)
  Description Language:
                  File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
-                  MD5: 3cdba21ee451777db03e5edc1ef4caa3
+                  MD5: 8a10ff7bcfd700d46fc7906a26abf372
  Description Language: en
                  File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
-                  MD5: 3cdba21ee451777db03e5edc1ef4caa3
+                  MD5: 8a10ff7bcfd700d46fc7906a26abf372
 
 
 Reverse Depends:
-  kubuntu-active,manpages
-  fdutils:i386,manpages 1.11-3
-  manpages-posix,manpages
-  manpages-posix,manpages
-  manpages-tr,manpages
-  manpages-de,manpages
-  man2html-base,manpages
-  kubuntu-active,manpages
-  fdutils,manpages 1.11-3
-  ubuntu-standard,manpages
-  manpages-dev,manpages
+  libc6-dev,manpages-dev
+  libc-dev-bin,manpages-dev
+  manpages-posix-dev,manpages-dev
+  manpages-posix-dev,manpages-dev
+  manpages-de-dev,manpages-dev 0.6-2
+  man2html-base,manpages-dev
+  gcc-arm-linux-gnueabi,manpages-dev
+  ckport,manpages-dev
+  libcap-dev,manpages-dev
+  libc6-dev,manpages-dev
+  libc-dev-bin,manpages-dev
+  gcc-powerpc64le-linux-gnu,manpages-dev
+  gcc-powerpc-linux-gnu,manpages-dev
+  gcc-arm-linux-gnueabihf,manpages-dev
+  gcc-aarch64-linux-gnu,manpages-dev
+  gcc,manpages-dev
 Dependencies:
-3.54-1ubuntu1 - man-browser (0 (null)) bind (0 (null)) bind:i386 (0 (null)) libc-bin (3 2.17-91) libc-bin:i386 (3 2.17-91) rsh-server (3 0.10-7) rsh-server:i386 (3 0.10-7)
+3.54-1ubuntu1 - manpages (0 (null)) man-browser (0 (null)) glibc-doc (3 2.11.2-3) glibc-doc:i386 (3 2.11.2-3) libaio-dev (0 (null)) libaio-dev:i386 (0 (null))
 Provides:
 3.54-1ubuntu1 -
 Reverse Provides:
 </code></pre><p>執行</p>
-<pre><code>$ apt-cache showsrc manpages
+<pre><code>$ apt-cache showsrc manpages-dev
 </code></pre><p>顯示</p>
 <pre><code>Package: manpages
 Binary: manpages, manpages-dev
@@ -2238,309 +2239,2001 @@ Checksums-Sha256:
  74dde80f2bb37b781f323e7f5a9b682b632445f05ab35592169b4098682b6765 1171980 manpages_3.54.orig.tar.xz
  9f4bc77ddb7b2cacd5f06d9a06da27710d834ac12a488124178d9e299a339fe3 50017 manpages_3.54-1ubuntu1.debian.tar.gz
 </code></pre><p>執行</p>
-<pre><code>$ dpkg -s manpages
+<pre><code>$ dpkg -s manpages-dev
 </code></pre><p>顯示</p>
-<pre><code>Package: manpages
+<pre><code>Package: manpages-dev
 Status: install ok installed
-Priority: important
+Priority: optional
 Section: doc
-Installed-Size: 909
+Installed-Size: 1834
 Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
 Architecture: all
+Source: manpages
 Version: 3.54-1ubuntu1
-Replaces: bind, libc-bin (&lt;&lt; 2.17-91), rsh-server (&lt;&lt; 0.10-7)
+Replaces: glibc-doc (&lt;&lt; 2.11.2-3), libaio-dev
+Depends: manpages
 Suggests: man-browser
-Description: Manual pages about using a GNU/Linux system
- This package contains GNU/Linux manual pages for these sections:
-  4 = Devices (e.g. hd, sd).
-  5 = File formats and protocols, syntaxes of several system
-      files (e.g. wtmp, /etc/passwd, nfs).
-  7 = Conventions and standards, macro packages, etc.
-      (e.g. nroff, ascii).
- .
- Sections 1, 6 and 8 are provided by the respective applications. This
- package only includes the intro man page describing the section.
- .
- The man pages describe syntaxes of several system files.
+Description: Manual pages about using GNU/Linux for development
+ These man pages describe the Linux programming interface, including
+ these two sections:
+  2 = Linux system calls.
+  3 = Library calls (note that a more comprehensive source of information
+      may be found in the glibc-doc and glibc-doc-reference packages).
 Homepage: http://www.kernel.org/doc/man-pages/
 Original-Maintainer: Martin Schulze &lt;joey@debian.org&gt;
 </code></pre><p>執行</p>
-<pre><code>$ dpkg -l manpages
+<pre><code>$ dpkg -l manpages-dev
 </code></pre><p>顯示</p>
 <pre><code>Desired=Unknown/Install/Remove/Purge/Hold
 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
 |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
 ||/ Name                         Version             Architecture        Description
 +++-============================-===================-===================-==============================================================
-ii  manpages                     3.54-1ubuntu1       all                 Manual pages about using a GNU/Linux system
+ii  manpages-dev                 3.54-1ubuntu1       all                 Manual pages about using GNU/Linux for development
 </code></pre><h2 id="">準備工作環境</h2>
-<pre><code>mkdir  ~/Downloads/manpages -p
-cd ~/Downloads/manpages
+<pre><code>mkdir  ~/Downloads/manpages-dev -p
+cd ~/Downloads/manpages-dev
 mkdir download source
-</code></pre><h2 id="package-manpageshttppackagesubuntucomtrustymanpages">探索「Package: <a href="http://packages.ubuntu.com/trusty/manpages" target="_blank">manpages</a>」</h2>
-<p>切換到「~/Downloads/manpages/download」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/manpages/download
+</code></pre><h2 id="package-manpages-devhttppackagesubuntucomtrustymanpages-dev">探索「Package: <a href="http://packages.ubuntu.com/trusty/manpages-dev" target="_blank">manpages-dev</a>」</h2>
+<p>切換到「~/Downloads/manpages-dev/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/manpages-dev/download
 </code></pre>
-<p>下載「Package: manpages」。</p>
-<pre><code class="lang-sh">$ apt-get download manpages
+<p>下載「Package: manpages-dev」。</p>
+<pre><code class="lang-sh">$ apt-get download manpages-dev
 </code></pre>
-<p>解開「package manpages」</p>
-<pre><code class="lang-sh">dpkg -x manpages_3.<span class="hljs-number">54</span>-<span class="hljs-number">1</span>ubuntu1_all.deb manpages
-dpkg <span class="hljs-operator">-e</span> manpages_3.<span class="hljs-number">54</span>-<span class="hljs-number">1</span>ubuntu1_all.deb
-<span class="hljs-comment"># ar xv manpages_3.54-1ubuntu1_all.deb</span>
+<p>解開「package manpages-dev」</p>
+<pre><code class="lang-sh">dpkg -x manpages-dev_3.<span class="hljs-number">54</span>-<span class="hljs-number">1</span>ubuntu1_all.deb manpages-dev
+dpkg <span class="hljs-operator">-e</span> manpages-dev_3.<span class="hljs-number">54</span>-<span class="hljs-number">1</span>ubuntu1_all.deb
+<span class="hljs-comment"># ar xv manpages-dev_3.54-1ubuntu1_all.deb</span>
 </code></pre>
 <p>檢視套件檔案</p>
-<pre><code class="lang-sh">$ tree manpages
+<pre><code class="lang-sh">$ tree manpages-dev
 </code></pre>
 <p>顯示</p>
-<pre><code>manpages
+<pre><code>manpages-dev
 └── usr
     └── share
         ├── doc
-        │   └── manpages
-        │       ├── changelog.Debian.gz
-        │       ├── copyright
-        │       ├── man-addons.el
-        │       ├── man-pages-3.54.Announce
-        │       ├── POSIX-MANPAGES
-        │       ├── README.Debian
-        │       └── TODO.Debian
+        │   └── manpages-dev -&gt; manpages
         ├── lintian
         │   └── overrides
-        │       └── manpages
+        │       └── manpages-dev
         └── man
-            ├── man1
-            │   ├── getent.1.gz
-            │   ├── intro.1.gz
-            │   └── ldd.1.gz
             ├── man2
-            │   └── intro.2.gz
-            ├── man3
-            │   └── intro.3.gz
-            ├── man4
-            │   ├── cciss.4.gz
-            │   ├── console_codes.4.gz
-            │   ├── console_ioctl.4.gz
-            │   ├── cpuid.4.gz
-            │   ├── dsp56k.4.gz
-            │   ├── full.4.gz
-            │   ├── hd.4.gz
-            │   ├── hpsa.4.gz
-            │   ├── initrd.4.gz
-            │   ├── intro.4.gz
-            │   ├── kmem.4.gz -&gt; mem.4.gz
-            │   ├── lp.4.gz
-            │   ├── mem.4.gz
-            │   ├── mouse.4.gz
-            │   ├── msr.4.gz
-            │   ├── null.4.gz
-            │   ├── port.4.gz -&gt; mem.4.gz
-            │   ├── ptmx.4.gz -&gt; pts.4.gz
-            │   ├── pts.4.gz
-            │   ├── ram.4.gz
-            │   ├── random.4.gz
-            │   ├── rtc.4.gz
-            │   ├── sd.4.gz
-            │   ├── sk98lin.4.gz
-            │   ├── st.4.gz
-            │   ├── tty.4.gz
-            │   ├── tty_ioctl.4.gz
-            │   ├── ttyS.4.gz
-            │   ├── urandom.4.gz -&gt; random.4.gz
-            │   ├── vcs.4.gz
-            │   ├── vcsa.4.gz -&gt; vcs.4.gz
-            │   ├── wavelan.4.gz
-            │   └── zero.4.gz -&gt; null.4.gz
-            ├── man5
-            │   ├── acct.5.gz
-            │   ├── charmap.5.gz
-            │   ├── core.5.gz
-            │   ├── dir_colors.5.gz
-            │   ├── elf.5.gz
-            │   ├── filesystems.5.gz
-            │   ├── fs.5.gz -&gt; filesystems.5.gz
-            │   ├── gai.conf.5.gz
-            │   ├── group.5.gz
-            │   ├── host.conf.5.gz
-            │   ├── hosts.5.gz
-            │   ├── hosts.equiv.5.gz
-            │   ├── intro.5.gz
-            │   ├── ipc.5.gz -&gt; ../man7/svipc.7.gz
-            │   ├── issue.5.gz
-            │   ├── locale.5.gz
-            │   ├── mailname.5.gz
-            │   ├── motd.5.gz
-            │   ├── networks.5.gz
-            │   ├── nologin.5.gz
-            │   ├── nss.5.gz
-            │   ├── nsswitch.conf.5.gz
-            │   ├── numa_maps.5.gz -&gt; ../man7/numa.7.gz
-            │   ├── proc.5.gz
-            │   ├── protocols.5.gz
-            │   ├── resolv.conf.5.gz
-            │   ├── resolver.5.gz -&gt; resolv.conf.5.gz
-            │   ├── rpc.5.gz
-            │   ├── securetty.5.gz
-            │   ├── services.5.gz
-            │   ├── shells.5.gz
-            │   ├── slabinfo.5.gz
-            │   ├── termcap.5.gz
-            │   ├── tzfile.5.gz
-            │   ├── utmp.5.gz
-            │   ├── utmpx.5.gz -&gt; utmp.5.gz
-            │   └── wtmp.5.gz -&gt; utmp.5.gz
-            ├── man6
-            │   └── intro.6.gz
-            ├── man7
-            │   ├── aio.7.gz
-            │   ├── armscii-8.7.gz
-            │   ├── arp.7.gz
-            │   ├── ascii.7.gz
-            │   ├── boot.7.gz
-            │   ├── bootparam.7.gz
-            │   ├── capabilities.7.gz
-            │   ├── charsets.7.gz
-            │   ├── complex.7.gz
-            │   ├── cp1251.7.gz
-            │   ├── cpuset.7.gz
-            │   ├── credentials.7.gz
-            │   ├── ddp.7.gz
-            │   ├── environ.7.gz
-            │   ├── epoll.7.gz
-            │   ├── feature_test_macros.7.gz
-            │   ├── fifo.7.gz
-            │   ├── ftm.7.gz -&gt; feature_test_macros.7.gz
-            │   ├── futex.7.gz
-            │   ├── glibc.7.gz -&gt; libc.7.gz
-            │   ├── glob.7.gz
-            │   ├── hier.7.gz
-            │   ├── hostname.7.gz
-            │   ├── icmp.7.gz
-            │   ├── inotify.7.gz
-            │   ├── intro.7.gz
-            │   ├── ip.7.gz
-            │   ├── ipv6.7.gz
-            │   ├── iso_8859_10.7.gz -&gt; iso_8859-10.7.gz
-            │   ├── iso_8859-10.7.gz
-            │   ├── iso-8859-10.7.gz -&gt; iso_8859-10.7.gz
-            │   ├── iso_8859_11.7.gz -&gt; iso_8859-11.7.gz
-            │   ├── iso_8859-11.7.gz
-            │   ├── iso-8859-11.7.gz -&gt; iso_8859-11.7.gz
-            │   ├── iso_8859_13.7.gz -&gt; iso_8859-13.7.gz
-            │   ├── iso_8859-13.7.gz
-            │   ├── iso-8859-13.7.gz -&gt; iso_8859-13.7.gz
-            │   ├── iso_8859_14.7.gz -&gt; iso_8859-14.7.gz
-            │   ├── iso_8859-14.7.gz
-            │   ├── iso-8859-14.7.gz -&gt; iso_8859-14.7.gz
-            │   ├── iso_8859_15.7.gz -&gt; iso_8859-15.7.gz
-            │   ├── iso_8859-15.7.gz
-            │   ├── iso-8859-15.7.gz -&gt; iso_8859-15.7.gz
-            │   ├── iso_8859_16.7.gz -&gt; iso_8859-16.7.gz
-            │   ├── iso_8859-16.7.gz
-            │   ├── iso-8859-16.7.gz -&gt; iso_8859-16.7.gz
-            │   ├── iso_8859_1.7.gz -&gt; iso_8859-1.7.gz
-            │   ├── iso_8859-1.7.gz
-            │   ├── iso-8859-1.7.gz -&gt; iso_8859-1.7.gz
-            │   ├── iso_8859_2.7.gz -&gt; iso_8859-2.7.gz
-            │   ├── iso_8859-2.7.gz
-            │   ├── iso-8859-2.7.gz -&gt; iso_8859-2.7.gz
-            │   ├── iso_8859_3.7.gz -&gt; iso_8859-3.7.gz
-            │   ├── iso_8859-3.7.gz
-            │   ├── iso-8859-3.7.gz -&gt; iso_8859-3.7.gz
-            │   ├── iso_8859_4.7.gz -&gt; iso_8859-4.7.gz
-            │   ├── iso_8859-4.7.gz
-            │   ├── iso-8859-4.7.gz -&gt; iso_8859-4.7.gz
-            │   ├── iso_8859_5.7.gz -&gt; iso_8859-5.7.gz
-            │   ├── iso_8859-5.7.gz
-            │   ├── iso-8859-5.7.gz -&gt; iso_8859-5.7.gz
-            │   ├── iso_8859_6.7.gz -&gt; iso_8859-6.7.gz
-            │   ├── iso_8859-6.7.gz
-            │   ├── iso-8859-6.7.gz -&gt; iso_8859-6.7.gz
-            │   ├── iso_8859_7.7.gz -&gt; iso_8859-7.7.gz
-            │   ├── iso_8859-7.7.gz
-            │   ├── iso-8859-7.7.gz -&gt; iso_8859-7.7.gz
-            │   ├── iso_8859_8.7.gz -&gt; iso_8859-8.7.gz
-            │   ├── iso_8859-8.7.gz
-            │   ├── iso-8859-8.7.gz -&gt; iso_8859-8.7.gz
-            │   ├── iso_8859_9.7.gz -&gt; iso_8859-9.7.gz
-            │   ├── iso_8859-9.7.gz
-            │   ├── iso-8859-9.7.gz -&gt; iso_8859-9.7.gz
-            │   ├── koi8-r.7.gz
-            │   ├── koi8-u.7.gz
-            │   ├── latin10.7.gz -&gt; iso_8859-16.7.gz
-            │   ├── latin1.7.gz -&gt; iso_8859-1.7.gz
-            │   ├── latin2.7.gz -&gt; iso_8859-2.7.gz
-            │   ├── latin3.7.gz -&gt; iso_8859-3.7.gz
-            │   ├── latin4.7.gz -&gt; iso_8859-4.7.gz
-            │   ├── latin5.7.gz -&gt; iso_8859-9.7.gz
-            │   ├── latin6.7.gz -&gt; iso_8859-10.7.gz
-            │   ├── latin7.7.gz -&gt; iso_8859-13.7.gz
-            │   ├── latin8.7.gz -&gt; iso_8859-14.7.gz
-            │   ├── latin9.7.gz -&gt; iso_8859-15.7.gz
-            │   ├── LDP.7.gz
-            │   ├── libc.7.gz
-            │   ├── locale.7.gz
-            │   ├── mailaddr.7.gz
-            │   ├── man.7.gz
-            │   ├── man-pages.7.gz
-            │   ├── math_error.7.gz
-            │   ├── mdoc.7.gz
-            │   ├── missing.7.gz
-            │   ├── mq_overview.7.gz
-            │   ├── netdevice.7.gz
-            │   ├── netlink.7.gz
-            │   ├── numa.7.gz
-            │   ├── operator.7.gz
-            │   ├── packet.7.gz
-            │   ├── path_resolution.7.gz
-            │   ├── pipe.7.gz
-            │   ├── posixoptions.7.gz
-            │   ├── pthreads.7.gz
-            │   ├── pty.7.gz
-            │   ├── raw.7.gz
-            │   ├── re_format.7.gz -&gt; regex.7.gz
-            │   ├── regex.7.gz
-            │   ├── rtld-audit.7.gz
-            │   ├── rtnetlink.7.gz
-            │   ├── sem_overview.7.gz
-            │   ├── shm_overview.7.gz
-            │   ├── sigevent.7.gz
-            │   ├── signal.7.gz
-            │   ├── socket.7.gz
-            │   ├── spufs.7.gz
-            │   ├── standards.7.gz
-            │   ├── suffixes.7.gz
-            │   ├── svipc.7.gz
-            │   ├── symlink.7.gz
-            │   ├── tcp.7.gz
-            │   ├── termio.7.gz
-            │   ├── time.7.gz
-            │   ├── tis-620.7.gz -&gt; iso_8859-11.7.gz
-            │   ├── udp.7.gz
-            │   ├── udplite.7.gz
-            │   ├── undocumented.7.gz
-            │   ├── unicode.7.gz
-            │   ├── units.7.gz
-            │   ├── unix.7.gz
-            │   ├── uri.7.gz
-            │   ├── url.7.gz -&gt; uri.7.gz
-            │   ├── urn.7.gz -&gt; uri.7.gz
-            │   ├── utf-8.7.gz
-            │   ├── utf8.7.gz -&gt; utf-8.7.gz
-            │   └── x25.7.gz
-            └── man8
-                ├── intro.8.gz
-                ├── ldconfig.8.gz
-                ├── ld-linux.8.gz -&gt; ld.so.8.gz
-                ├── ld-linux.so.8.gz -&gt; ld.so.8.gz
-                ├── ld.so.8.gz
-                ├── sln.8.gz
-                ├── sync.8.gz
-                ├── tzselect.8.gz
-                ├── zdump.8.gz
-                └── zic.8.gz
+            │   ├── accept.2.gz
+            │   ├── accept4.2.gz -&gt; accept.2.gz
+            │   ├── access.2.gz
+            │   ├── acct.2.gz
+            │   ├── add_key.2.gz
+            │   ├── adjtimex.2.gz
+            │   ├── afs_syscall.2.gz -&gt; unimplemented.2.gz
+            │   ├── alarm.2.gz
+            │   ├── alloc_hugepages.2.gz
+            │   ├── arch_prctl.2.gz
+            │   ├── arm_fadvise.2.gz -&gt; posix_fadvise.2.gz
+            │   ├── arm_fadvise64_64.2.gz -&gt; posix_fadvise.2.gz
+            │   ├── arm_sync_file_range.2.gz -&gt; sync_file_range.2.gz
+            │   ├── bdflush.2.gz
+            │   ├── bind.2.gz
+            │   ├── break.2.gz -&gt; unimplemented.2.gz
+            │   ├── brk.2.gz
+            │   ├── cacheflush.2.gz
+            │   ├── capget.2.gz
+            │   ├── capset.2.gz -&gt; capget.2.gz
+            │   ├── chdir.2.gz
+            │   ├── chmod.2.gz
+            │   ├── chown.2.gz
+            │   ├── chown32.2.gz -&gt; chown.2.gz
+            │   ├── chroot.2.gz
+            │   ├── clock_getres.2.gz
+            │   ├── clock_gettime.2.gz -&gt; clock_getres.2.gz
+            │   ├── clock_nanosleep.2.gz
+            │   ├── clock_settime.2.gz -&gt; clock_getres.2.gz
+            │   ├── __clone2.2.gz -&gt; clone.2.gz
+            │   ├── clone2.2.gz -&gt; clone.2.gz
+            │   ├── clone.2.gz
+            │   ├── close.2.gz
+            │   ├── connect.2.gz
+            │   ├── creat.2.gz -&gt; open.2.gz
+            │   ├── create_module.2.gz
+            │   ├── delete_module.2.gz
+            │   ├── dup2.2.gz -&gt; dup.2.gz
+            │   ├── dup.2.gz
+            │   ├── dup3.2.gz -&gt; dup.2.gz
+            │   ├── epoll_create1.2.gz -&gt; epoll_create.2.gz
+            │   ├── epoll_create.2.gz
+            │   ├── epoll_ctl.2.gz
+            │   ├── epoll_pwait.2.gz -&gt; epoll_wait.2.gz
+            │   ├── epoll_wait.2.gz
+            │   ├── eventfd2.2.gz -&gt; eventfd.2.gz
+            │   ├── eventfd.2.gz
+            │   ├── execve.2.gz
+            │   ├── _exit.2.gz
+            │   ├── exit.2.gz -&gt; _exit.2.gz
+            │   ├── _Exit.2.gz -&gt; _exit.2.gz
+            │   ├── exit_group.2.gz
+            │   ├── faccessat.2.gz
+            │   ├── fadvise64.2.gz -&gt; posix_fadvise.2.gz
+            │   ├── fadvise64_64.2.gz -&gt; posix_fadvise.2.gz
+            │   ├── fallocate.2.gz
+            │   ├── fattach.2.gz -&gt; unimplemented.2.gz
+            │   ├── fchdir.2.gz -&gt; chdir.2.gz
+            │   ├── fchmod.2.gz -&gt; chmod.2.gz
+            │   ├── fchmodat.2.gz
+            │   ├── fchown.2.gz -&gt; chown.2.gz
+            │   ├── fchown32.2.gz -&gt; fchown.2.gz
+            │   ├── fchownat.2.gz
+            │   ├── fcntl.2.gz
+            │   ├── fcntl64.2.gz -&gt; fcntl.2.gz
+            │   ├── fdatasync.2.gz -&gt; fsync.2.gz
+            │   ├── fdetach.2.gz -&gt; unimplemented.2.gz
+            │   ├── finit_module.2.gz -&gt; init_module.2.gz
+            │   ├── flock.2.gz
+            │   ├── fork.2.gz
+            │   ├── free_hugepages.2.gz -&gt; alloc_hugepages.2.gz
+            │   ├── fstat.2.gz -&gt; stat.2.gz
+            │   ├── fstat64.2.gz -&gt; fstat.2.gz
+            │   ├── fstatat.2.gz
+            │   ├── fstatat64.2.gz -&gt; fstatat.2.gz
+            │   ├── fstatfs.2.gz -&gt; statfs.2.gz
+            │   ├── fstatfs64.2.gz -&gt; fstatfs.2.gz
+            │   ├── fstatvfs.2.gz -&gt; ../man3/statvfs.3.gz
+            │   ├── fsync.2.gz
+            │   ├── ftruncate.2.gz -&gt; truncate.2.gz
+            │   ├── ftruncate64.2.gz -&gt; ftruncate.2.gz
+            │   ├── futex.2.gz
+            │   ├── futimesat.2.gz
+            │   ├── getcontext.2.gz -&gt; ../man3/getcontext.3.gz
+            │   ├── getcpu.2.gz
+            │   ├── getcwd.2.gz -&gt; ../man3/getcwd.3.gz
+            │   ├── getdents.2.gz
+            │   ├── getdents64.2.gz -&gt; getdents.2.gz
+            │   ├── getdomainname.2.gz
+            │   ├── getdtablesize.2.gz
+            │   ├── getegid.2.gz -&gt; getgid.2.gz
+            │   ├── getegid32.2.gz -&gt; getegid.2.gz
+            │   ├── geteuid.2.gz -&gt; getuid.2.gz
+            │   ├── geteuid32.2.gz -&gt; geteuid.2.gz
+            │   ├── getgid.2.gz
+            │   ├── getgid32.2.gz -&gt; getgid.2.gz
+            │   ├── getgroups.2.gz
+            │   ├── getgroups32.2.gz -&gt; getgroups.2.gz
+            │   ├── gethostid.2.gz -&gt; ../man3/gethostid.3.gz
+            │   ├── gethostname.2.gz
+            │   ├── getitimer.2.gz
+            │   ├── get_kernel_syms.2.gz
+            │   ├── get_mempolicy.2.gz
+            │   ├── getmsg.2.gz -&gt; unimplemented.2.gz
+            │   ├── getpagesize.2.gz
+            │   ├── getpeername.2.gz
+            │   ├── getpgid.2.gz -&gt; setpgid.2.gz
+            │   ├── getpgrp.2.gz -&gt; setpgid.2.gz
+            │   ├── getpid.2.gz
+            │   ├── getpmsg.2.gz -&gt; unimplemented.2.gz
+            │   ├── getppid.2.gz -&gt; getpid.2.gz
+            │   ├── getpriority.2.gz
+            │   ├── getresgid.2.gz -&gt; getresuid.2.gz
+            │   ├── getresgid32.2.gz -&gt; getresgid.2.gz
+            │   ├── getresuid.2.gz
+            │   ├── getresuid32.2.gz -&gt; getresuid.2.gz
+            │   ├── getrlimit.2.gz
+            │   ├── get_robust_list.2.gz
+            │   ├── getrusage.2.gz
+            │   ├── getsid.2.gz
+            │   ├── getsockname.2.gz
+            │   ├── getsockopt.2.gz
+            │   ├── get_thread_area.2.gz
+            │   ├── gettid.2.gz
+            │   ├── gettimeofday.2.gz
+            │   ├── getuid.2.gz
+            │   ├── getuid32.2.gz -&gt; getuid.2.gz
+            │   ├── getunwind.2.gz
+            │   ├── gtty.2.gz -&gt; unimplemented.2.gz
+            │   ├── idle.2.gz
+            │   ├── inb.2.gz -&gt; outb.2.gz
+            │   ├── inb_p.2.gz -&gt; outb.2.gz
+            │   ├── init_module.2.gz
+            │   ├── inl.2.gz -&gt; outb.2.gz
+            │   ├── inl_p.2.gz -&gt; outb.2.gz
+            │   ├── inotify_add_watch.2.gz
+            │   ├── inotify_init1.2.gz -&gt; inotify_init.2.gz
+            │   ├── inotify_init.2.gz
+            │   ├── inotify_rm_watch.2.gz
+            │   ├── insb.2.gz -&gt; outb.2.gz
+            │   ├── insl.2.gz -&gt; outb.2.gz
+            │   ├── insw.2.gz -&gt; outb.2.gz
+            │   ├── inw.2.gz -&gt; outb.2.gz
+            │   ├── inw_p.2.gz -&gt; outb.2.gz
+            │   ├── io_cancel.2.gz
+            │   ├── ioctl.2.gz
+            │   ├── ioctl_list.2.gz
+            │   ├── io_destroy.2.gz
+            │   ├── io_getevents.2.gz
+            │   ├── ioperm.2.gz
+            │   ├── iopl.2.gz
+            │   ├── ioprio_get.2.gz -&gt; ioprio_set.2.gz
+            │   ├── ioprio_set.2.gz
+            │   ├── io_setup.2.gz
+            │   ├── io_submit.2.gz
+            │   ├── ipc.2.gz
+            │   ├── isastream.2.gz -&gt; unimplemented.2.gz
+            │   ├── kcmp.2.gz
+            │   ├── kexec_load.2.gz
+            │   ├── keyctl.2.gz
+            │   ├── kill.2.gz
+            │   ├── killpg.2.gz
+            │   ├── lchown.2.gz -&gt; chown.2.gz
+            │   ├── lchown32.2.gz -&gt; lchown.2.gz
+            │   ├── link.2.gz
+            │   ├── linkat.2.gz
+            │   ├── listen.2.gz
+            │   ├── _llseek.2.gz -&gt; llseek.2.gz
+            │   ├── llseek.2.gz
+            │   ├── lock.2.gz -&gt; unimplemented.2.gz
+            │   ├── lookup_dcookie.2.gz
+            │   ├── lseek.2.gz
+            │   ├── lstat.2.gz -&gt; stat.2.gz
+            │   ├── lstat64.2.gz -&gt; lstat.2.gz
+            │   ├── madvise1.2.gz -&gt; unimplemented.2.gz
+            │   ├── madvise.2.gz
+            │   ├── mbind.2.gz
+            │   ├── migrate_pages.2.gz
+            │   ├── mincore.2.gz
+            │   ├── mkdir.2.gz
+            │   ├── mkdirat.2.gz
+            │   ├── mknod.2.gz
+            │   ├── mknodat.2.gz
+            │   ├── mlock.2.gz
+            │   ├── mlockall.2.gz -&gt; mlock.2.gz
+            │   ├── mmap2.2.gz
+            │   ├── mmap.2.gz
+            │   ├── modify_ldt.2.gz
+            │   ├── mount.2.gz
+            │   ├── move_pages.2.gz
+            │   ├── mprotect.2.gz
+            │   ├── mpx.2.gz -&gt; unimplemented.2.gz
+            │   ├── mq_getsetattr.2.gz
+            │   ├── mq_notify.2.gz -&gt; ../man3/mq_notify.3.gz
+            │   ├── mq_open.2.gz -&gt; ../man3/mq_open.3.gz
+            │   ├── mq_timedreceive.2.gz -&gt; ../man3/mq_receive.3.gz
+            │   ├── mq_timedsend.2.gz -&gt; ../man3/mq_send.3.gz
+            │   ├── mq_unlink.2.gz -&gt; ../man3/mq_unlink.3.gz
+            │   ├── mremap.2.gz
+            │   ├── msgctl.2.gz
+            │   ├── msgget.2.gz
+            │   ├── msgop.2.gz
+            │   ├── msgrcv.2.gz -&gt; msgop.2.gz
+            │   ├── msgsnd.2.gz -&gt; msgop.2.gz
+            │   ├── msync.2.gz
+            │   ├── munlock.2.gz -&gt; mlock.2.gz
+            │   ├── munlockall.2.gz -&gt; mlock.2.gz
+            │   ├── munmap.2.gz -&gt; mmap.2.gz
+            │   ├── nanosleep.2.gz
+            │   ├── _newselect.2.gz -&gt; select.2.gz
+            │   ├── nfsservctl.2.gz
+            │   ├── nice.2.gz
+            │   ├── oldfstat.2.gz -&gt; stat.2.gz
+            │   ├── oldlstat.2.gz -&gt; stat.2.gz
+            │   ├── oldolduname.2.gz -&gt; uname.2.gz
+            │   ├── oldstat.2.gz -&gt; stat.2.gz
+            │   ├── olduname.2.gz -&gt; uname.2.gz
+            │   ├── open.2.gz
+            │   ├── openat.2.gz
+            │   ├── outb.2.gz
+            │   ├── outb_p.2.gz -&gt; outb.2.gz
+            │   ├── outl.2.gz -&gt; outb.2.gz
+            │   ├── outl_p.2.gz -&gt; outb.2.gz
+            │   ├── outsb.2.gz -&gt; outb.2.gz
+            │   ├── outsl.2.gz -&gt; outb.2.gz
+            │   ├── outsw.2.gz -&gt; outb.2.gz
+            │   ├── outw.2.gz -&gt; outb.2.gz
+            │   ├── outw_p.2.gz -&gt; outb.2.gz
+            │   ├── pause.2.gz
+            │   ├── pciconfig_iobase.2.gz -&gt; pciconfig_read.2.gz
+            │   ├── pciconfig_read.2.gz
+            │   ├── pciconfig_write.2.gz -&gt; pciconfig_read.2.gz
+            │   ├── perf_event_open.2.gz
+            │   ├── perfmonctl.2.gz
+            │   ├── personality.2.gz
+            │   ├── phys.2.gz -&gt; unimplemented.2.gz
+            │   ├── pipe2.2.gz -&gt; pipe.2.gz
+            │   ├── pipe.2.gz
+            │   ├── pivot_root.2.gz
+            │   ├── poll.2.gz
+            │   ├── posix_fadvise.2.gz
+            │   ├── ppoll.2.gz -&gt; poll.2.gz
+            │   ├── prctl.2.gz
+            │   ├── pread.2.gz
+            │   ├── pread64.2.gz -&gt; pread.2.gz
+            │   ├── preadv.2.gz -&gt; readv.2.gz
+            │   ├── prlimit.2.gz -&gt; getrlimit.2.gz
+            │   ├── process_vm_readv.2.gz
+            │   ├── process_vm_writev.2.gz -&gt; process_vm_readv.2.gz
+            │   ├── prof.2.gz -&gt; unimplemented.2.gz
+            │   ├── pselect.2.gz -&gt; select.2.gz
+            │   ├── pselect6.2.gz -&gt; select.2.gz
+            │   ├── ptrace.2.gz
+            │   ├── putmsg.2.gz -&gt; unimplemented.2.gz
+            │   ├── putpmsg.2.gz -&gt; unimplemented.2.gz
+            │   ├── pwrite.2.gz -&gt; pread.2.gz
+            │   ├── pwrite64.2.gz -&gt; pwrite.2.gz
+            │   ├── pwritev.2.gz -&gt; readv.2.gz
+            │   ├── quotactl.2.gz
+            │   ├── read.2.gz
+            │   ├── readahead.2.gz
+            │   ├── readdir.2.gz
+            │   ├── readlink.2.gz
+            │   ├── readlinkat.2.gz
+            │   ├── readv.2.gz
+            │   ├── reboot.2.gz
+            │   ├── recv.2.gz
+            │   ├── recvfrom.2.gz -&gt; recv.2.gz
+            │   ├── recvmmsg.2.gz
+            │   ├── recvmsg.2.gz -&gt; recv.2.gz
+            │   ├── remap_file_pages.2.gz
+            │   ├── rename.2.gz
+            │   ├── renameat.2.gz
+            │   ├── request_key.2.gz
+            │   ├── restart_syscall.2.gz
+            │   ├── rmdir.2.gz
+            │   ├── rt_sigaction.2.gz -&gt; sigaction.2.gz
+            │   ├── rt_sigpending.2.gz -&gt; sigpending.2.gz
+            │   ├── rt_sigprocmask.2.gz -&gt; sigprocmask.2.gz
+            │   ├── rt_sigqueueinfo.2.gz
+            │   ├── rt_sigreturn.2.gz -&gt; sigreturn.2.gz
+            │   ├── rt_sigsuspend.2.gz -&gt; sigsuspend.2.gz
+            │   ├── rt_sigtimedwait.2.gz -&gt; sigtimedwait.2.gz
+            │   ├── rt_tgsigqueueinfo.2.gz -&gt; rt_sigqueueinfo.2.gz
+            │   ├── s390_runtime_instr.2.gz
+            │   ├── sbrk.2.gz -&gt; brk.2.gz
+            │   ├── sched_getaffinity.2.gz -&gt; sched_setaffinity.2.gz
+            │   ├── sched_getparam.2.gz -&gt; sched_setparam.2.gz
+            │   ├── sched_get_priority_max.2.gz
+            │   ├── sched_get_priority_min.2.gz -&gt; sched_get_priority_max.2.gz
+            │   ├── sched_getscheduler.2.gz -&gt; sched_setscheduler.2.gz
+            │   ├── sched_rr_get_interval.2.gz
+            │   ├── sched_setaffinity.2.gz
+            │   ├── sched_setparam.2.gz
+            │   ├── sched_setscheduler.2.gz
+            │   ├── sched_yield.2.gz
+            │   ├── security.2.gz -&gt; unimplemented.2.gz
+            │   ├── select.2.gz
+            │   ├── select_tut.2.gz
+            │   ├── semctl.2.gz
+            │   ├── semget.2.gz
+            │   ├── semop.2.gz
+            │   ├── semtimedop.2.gz -&gt; semop.2.gz
+            │   ├── send.2.gz
+            │   ├── sendfile.2.gz
+            │   ├── sendfile64.2.gz -&gt; sendfile.2.gz
+            │   ├── sendmmsg.2.gz
+            │   ├── sendmsg.2.gz -&gt; send.2.gz
+            │   ├── sendto.2.gz -&gt; send.2.gz
+            │   ├── setcontext.2.gz -&gt; ../man3/getcontext.3.gz
+            │   ├── setdomainname.2.gz -&gt; getdomainname.2.gz
+            │   ├── setegid.2.gz -&gt; seteuid.2.gz
+            │   ├── seteuid.2.gz
+            │   ├── setfsgid.2.gz
+            │   ├── setfsgid32.2.gz -&gt; setfsgid.2.gz
+            │   ├── setfsuid.2.gz
+            │   ├── setfsuid32.2.gz -&gt; setfsuid.2.gz
+            │   ├── setgid.2.gz
+            │   ├── setgid32.2.gz -&gt; setgid.2.gz
+            │   ├── setgroups.2.gz -&gt; getgroups.2.gz
+            │   ├── setgroups32.2.gz -&gt; setgroups.2.gz
+            │   ├── sethostid.2.gz -&gt; ../man3/gethostid.3.gz
+            │   ├── sethostname.2.gz -&gt; gethostname.2.gz
+            │   ├── setitimer.2.gz -&gt; getitimer.2.gz
+            │   ├── setns.2.gz
+            │   ├── setpgid.2.gz
+            │   ├── setpgrp.2.gz -&gt; setpgid.2.gz
+            │   ├── setpriority.2.gz -&gt; getpriority.2.gz
+            │   ├── setregid.2.gz -&gt; setreuid.2.gz
+            │   ├── setregid32.2.gz -&gt; setregid.2.gz
+            │   ├── setresgid.2.gz -&gt; setresuid.2.gz
+            │   ├── setresgid32.2.gz -&gt; setresgid.2.gz
+            │   ├── setresuid.2.gz
+            │   ├── setresuid32.2.gz -&gt; setresuid.2.gz
+            │   ├── setreuid.2.gz
+            │   ├── setreuid32.2.gz -&gt; setreuid.2.gz
+            │   ├── setrlimit.2.gz -&gt; getrlimit.2.gz
+            │   ├── set_robust_list.2.gz -&gt; get_robust_list.2.gz
+            │   ├── setsid.2.gz
+            │   ├── setsockopt.2.gz -&gt; getsockopt.2.gz
+            │   ├── set_thread_area.2.gz
+            │   ├── set_tid_address.2.gz
+            │   ├── settimeofday.2.gz -&gt; gettimeofday.2.gz
+            │   ├── setuid.2.gz
+            │   ├── setuid32.2.gz -&gt; setuid.2.gz
+            │   ├── setup.2.gz
+            │   ├── sgetmask.2.gz
+            │   ├── shmat.2.gz -&gt; shmop.2.gz
+            │   ├── shmctl.2.gz
+            │   ├── shmdt.2.gz -&gt; shmop.2.gz
+            │   ├── shmget.2.gz
+            │   ├── shmop.2.gz
+            │   ├── shutdown.2.gz
+            │   ├── sigaction.2.gz
+            │   ├── sigaltstack.2.gz
+            │   ├── signal.2.gz
+            │   ├── signalfd.2.gz
+            │   ├── signalfd4.2.gz -&gt; signalfd.2.gz
+            │   ├── sigpending.2.gz
+            │   ├── sigprocmask.2.gz
+            │   ├── sigqueue.2.gz -&gt; ../man3/sigqueue.3.gz
+            │   ├── sigreturn.2.gz
+            │   ├── sigsuspend.2.gz
+            │   ├── sigtimedwait.2.gz -&gt; sigwaitinfo.2.gz
+            │   ├── sigwaitinfo.2.gz
+            │   ├── socket.2.gz
+            │   ├── socketcall.2.gz
+            │   ├── socketpair.2.gz
+            │   ├── splice.2.gz
+            │   ├── spu_create.2.gz
+            │   ├── spu_run.2.gz
+            │   ├── ssetmask.2.gz -&gt; sgetmask.2.gz
+            │   ├── stat.2.gz
+            │   ├── stat64.2.gz -&gt; stat.2.gz
+            │   ├── statfs.2.gz
+            │   ├── statfs64.2.gz -&gt; statfs.2.gz
+            │   ├── statvfs.2.gz -&gt; ../man3/statvfs.3.gz
+            │   ├── stime.2.gz
+            │   ├── stty.2.gz -&gt; unimplemented.2.gz
+            │   ├── subpage_prot.2.gz
+            │   ├── swapoff.2.gz -&gt; swapon.2.gz
+            │   ├── swapon.2.gz
+            │   ├── symlink.2.gz
+            │   ├── symlinkat.2.gz
+            │   ├── sync.2.gz
+            │   ├── sync_file_range2.2.gz -&gt; sync_file_range.2.gz
+            │   ├── sync_file_range.2.gz
+            │   ├── syncfs.2.gz -&gt; sync.2.gz
+            │   ├── _syscall.2.gz
+            │   ├── syscall.2.gz
+            │   ├── syscalls.2.gz
+            │   ├── _sysctl.2.gz -&gt; sysctl.2.gz
+            │   ├── sysctl.2.gz
+            │   ├── sysfs.2.gz
+            │   ├── sysinfo.2.gz
+            │   ├── syslog.2.gz
+            │   ├── tee.2.gz
+            │   ├── tgkill.2.gz -&gt; tkill.2.gz
+            │   ├── time.2.gz
+            │   ├── timer_create.2.gz
+            │   ├── timer_delete.2.gz
+            │   ├── timerfd_create.2.gz
+            │   ├── timerfd_gettime.2.gz -&gt; timerfd_create.2.gz
+            │   ├── timerfd_settime.2.gz -&gt; timerfd_create.2.gz
+            │   ├── timer_getoverrun.2.gz
+            │   ├── timer_gettime.2.gz -&gt; timer_settime.2.gz
+            │   ├── timer_settime.2.gz
+            │   ├── times.2.gz
+            │   ├── tkill.2.gz
+            │   ├── truncate.2.gz
+            │   ├── truncate64.2.gz -&gt; truncate.2.gz
+            │   ├── tuxcall.2.gz -&gt; unimplemented.2.gz
+            │   ├── ugetrlimit.2.gz -&gt; getrlimit.2.gz
+            │   ├── umask.2.gz
+            │   ├── umount2.2.gz -&gt; umount.2.gz
+            │   ├── umount.2.gz
+            │   ├── uname.2.gz
+            │   ├── unimplemented.2.gz
+            │   ├── unlink.2.gz
+            │   ├── unlinkat.2.gz
+            │   ├── unshare.2.gz
+            │   ├── uselib.2.gz
+            │   ├── ustat.2.gz
+            │   ├── utime.2.gz
+            │   ├── utimensat.2.gz
+            │   ├── utimes.2.gz -&gt; utime.2.gz
+            │   ├── vfork.2.gz
+            │   ├── vhangup.2.gz
+            │   ├── vm86.2.gz
+            │   ├── vm86old.2.gz -&gt; vm86.2.gz
+            │   ├── vmsplice.2.gz
+            │   ├── vserver.2.gz -&gt; unimplemented.2.gz
+            │   ├── wait.2.gz
+            │   ├── wait3.2.gz -&gt; wait4.2.gz
+            │   ├── wait4.2.gz
+            │   ├── waitid.2.gz -&gt; wait.2.gz
+            │   ├── waitpid.2.gz -&gt; wait.2.gz
+            │   ├── write.2.gz
+            │   └── writev.2.gz -&gt; readv.2.gz
+            └── man3
+                ├── a64l.3.gz
+                ├── abort.3.gz
+                ├── abs.3.gz
+                ├── acos.3.gz
+                ├── acosf.3.gz -&gt; acos.3.gz
+                ├── acosh.3.gz
+                ├── acoshf.3.gz -&gt; acosh.3.gz
+                ├── acoshl.3.gz -&gt; acosh.3.gz
+                ├── acosl.3.gz -&gt; acos.3.gz
+                ├── addmntent.3.gz -&gt; getmntent.3.gz
+                ├── addseverity.3.gz
+                ├── adjtime.3.gz
+                ├── __after_morecore_hook.3.gz -&gt; malloc_hook.3.gz
+                ├── aio_cancel.3.gz
+                ├── aio_error.3.gz
+                ├── aio_fsync.3.gz
+                ├── aio_init.3.gz
+                ├── aio_read.3.gz
+                ├── aio_return.3.gz
+                ├── aio_suspend.3.gz
+                ├── aio_write.3.gz
+                ├── aligned_alloc.3.gz -&gt; posix_memalign.3.gz
+                ├── alloca.3.gz
+                ├── alphasort.3.gz -&gt; scandir.3.gz
+                ├── argz.3.gz -&gt; argz_add.3.gz
+                ├── argz_add.3.gz
+                ├── argz_add_sep.3.gz -&gt; argz_add.3.gz
+                ├── argz_append.3.gz -&gt; argz_add.3.gz
+                ├── argz_count.3.gz -&gt; argz_add.3.gz
+                ├── argz_create.3.gz -&gt; argz_add.3.gz
+                ├── argz_create_sep.3.gz -&gt; argz_add.3.gz
+                ├── argz_delete.3.gz -&gt; argz_add.3.gz
+                ├── argz_extract.3.gz -&gt; argz_add.3.gz
+                ├── argz_insert.3.gz -&gt; argz_add.3.gz
+                ├── argz_next.3.gz -&gt; argz_add.3.gz
+                ├── argz_replace.3.gz -&gt; argz_add.3.gz
+                ├── argz_stringify.3.gz -&gt; argz_add.3.gz
+                ├── asctime.3.gz -&gt; ctime.3.gz
+                ├── asctime_r.3.gz -&gt; ctime.3.gz
+                ├── asin.3.gz
+                ├── asinf.3.gz -&gt; asin.3.gz
+                ├── asinh.3.gz
+                ├── asinhf.3.gz -&gt; asinh.3.gz
+                ├── asinhl.3.gz -&gt; asinh.3.gz
+                ├── asinl.3.gz -&gt; asin.3.gz
+                ├── asprintf.3.gz
+                ├── assert.3.gz
+                ├── assert_perror.3.gz
+                ├── atan2.3.gz
+                ├── atan2f.3.gz -&gt; atan2.3.gz
+                ├── atan2l.3.gz -&gt; atan2.3.gz
+                ├── atan.3.gz
+                ├── atanf.3.gz -&gt; atan.3.gz
+                ├── atanh.3.gz
+                ├── atanhf.3.gz -&gt; atanh.3.gz
+                ├── atanhl.3.gz -&gt; atanh.3.gz
+                ├── atanl.3.gz -&gt; atan.3.gz
+                ├── atexit.3.gz
+                ├── atof.3.gz
+                ├── atoi.3.gz
+                ├── atol.3.gz -&gt; atoi.3.gz
+                ├── atoll.3.gz -&gt; atoi.3.gz
+                ├── atoq.3.gz -&gt; atoi.3.gz
+                ├── auth_destroy.3.gz -&gt; rpc.3.gz
+                ├── authnone_create.3.gz -&gt; rpc.3.gz
+                ├── authunix_create.3.gz -&gt; rpc.3.gz
+                ├── authunix_create_default.3.gz -&gt; rpc.3.gz
+                ├── backtrace.3.gz
+                ├── backtrace_symbols.3.gz -&gt; backtrace.3.gz
+                ├── backtrace_symbols_fd.3.gz -&gt; backtrace.3.gz
+                ├── basename.3.gz
+                ├── bcmp.3.gz
+                ├── bcopy.3.gz
+                ├── be16toh.3.gz -&gt; endian.3.gz
+                ├── be32toh.3.gz -&gt; endian.3.gz
+                ├── be64toh.3.gz -&gt; endian.3.gz
+                ├── bindresvport.3.gz
+                ├── bsd_signal.3.gz
+                ├── bsearch.3.gz
+                ├── bstring.3.gz
+                ├── btowc.3.gz
+                ├── btree.3.gz
+                ├── byteorder.3.gz
+                ├── bzero.3.gz
+                ├── cabs.3.gz
+                ├── cabsf.3.gz -&gt; cabs.3.gz
+                ├── cabsl.3.gz -&gt; cabs.3.gz
+                ├── cacos.3.gz
+                ├── cacosf.3.gz -&gt; cacos.3.gz
+                ├── cacosh.3.gz
+                ├── cacoshf.3.gz -&gt; cacosh.3.gz
+                ├── cacoshl.3.gz -&gt; cacosh.3.gz
+                ├── cacosl.3.gz -&gt; cacos.3.gz
+                ├── calloc.3.gz -&gt; malloc.3.gz
+                ├── callrpc.3.gz -&gt; rpc.3.gz
+                ├── canonicalize_file_name.3.gz
+                ├── carg.3.gz
+                ├── cargf.3.gz -&gt; carg.3.gz
+                ├── cargl.3.gz -&gt; carg.3.gz
+                ├── casin.3.gz
+                ├── casinf.3.gz -&gt; casin.3.gz
+                ├── casinh.3.gz
+                ├── casinhf.3.gz -&gt; casinh.3.gz
+                ├── casinhl.3.gz -&gt; casinh.3.gz
+                ├── casinl.3.gz -&gt; casin.3.gz
+                ├── catan.3.gz
+                ├── catanf.3.gz -&gt; catan.3.gz
+                ├── catanh.3.gz
+                ├── catanhf.3.gz -&gt; catanh.3.gz
+                ├── catanhl.3.gz -&gt; catanh.3.gz
+                ├── catanl.3.gz -&gt; catan.3.gz
+                ├── catclose.3.gz -&gt; catopen.3.gz
+                ├── catgets.3.gz
+                ├── catopen.3.gz
+                ├── cbc_crypt.3.gz -&gt; des_crypt.3.gz
+                ├── cbrt.3.gz
+                ├── cbrtf.3.gz -&gt; cbrt.3.gz
+                ├── cbrtl.3.gz -&gt; cbrt.3.gz
+                ├── ccos.3.gz
+                ├── ccosf.3.gz -&gt; ccos.3.gz
+                ├── ccosh.3.gz
+                ├── ccoshf.3.gz -&gt; ccosh.3.gz
+                ├── ccoshl.3.gz -&gt; ccosh.3.gz
+                ├── ccosl.3.gz -&gt; ccos.3.gz
+                ├── ceil.3.gz
+                ├── ceilf.3.gz -&gt; ceil.3.gz
+                ├── ceill.3.gz -&gt; ceil.3.gz
+                ├── cerf.3.gz
+                ├── cerfc.3.gz -&gt; cerf.3.gz
+                ├── cerfcf.3.gz -&gt; cerf.3.gz
+                ├── cerfcl.3.gz -&gt; cerf.3.gz
+                ├── cerff.3.gz -&gt; cerf.3.gz
+                ├── cerfl.3.gz -&gt; cerf.3.gz
+                ├── cexp2.3.gz
+                ├── cexp2f.3.gz -&gt; cexp2.3.gz
+                ├── cexp2l.3.gz -&gt; cexp2.3.gz
+                ├── cexp.3.gz
+                ├── cexpf.3.gz -&gt; cexp.3.gz
+                ├── cexpl.3.gz -&gt; cexp.3.gz
+                ├── cfgetispeed.3.gz -&gt; termios.3.gz
+                ├── cfgetospeed.3.gz -&gt; termios.3.gz
+                ├── cfmakeraw.3.gz -&gt; termios.3.gz
+                ├── cfree.3.gz
+                ├── cfsetispeed.3.gz -&gt; termios.3.gz
+                ├── cfsetospeed.3.gz -&gt; termios.3.gz
+                ├── cfsetspeed.3.gz -&gt; termios.3.gz
+                ├── cimag.3.gz
+                ├── cimagf.3.gz -&gt; cimag.3.gz
+                ├── cimagl.3.gz -&gt; cimag.3.gz
+                ├── CIRCLEQ_ENTRY.3.gz -&gt; queue.3.gz
+                ├── CIRCLEQ_HEAD.3.gz -&gt; queue.3.gz
+                ├── CIRCLEQ_INIT.3.gz -&gt; queue.3.gz
+                ├── CIRCLEQ_INSERT_AFTER.3.gz -&gt; queue.3.gz
+                ├── CIRCLEQ_INSERT_BEFORE.3.gz -&gt; queue.3.gz
+                ├── CIRCLEQ_INSERT_HEAD.3.gz -&gt; queue.3.gz
+                ├── CIRCLEQ_INSERT_TAIL.3.gz -&gt; queue.3.gz
+                ├── CIRCLEQ_REMOVE.3.gz -&gt; queue.3.gz
+                ├── clearenv.3.gz
+                ├── clearerr.3.gz -&gt; ferror.3.gz
+                ├── clearerr_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── clnt_broadcast.3.gz -&gt; rpc.3.gz
+                ├── clnt_call.3.gz -&gt; rpc.3.gz
+                ├── clnt_control.3.gz -&gt; rpc.3.gz
+                ├── clnt_create.3.gz -&gt; rpc.3.gz
+                ├── clnt_destroy.3.gz -&gt; rpc.3.gz
+                ├── clnt_freeres.3.gz -&gt; rpc.3.gz
+                ├── clnt_geterr.3.gz -&gt; rpc.3.gz
+                ├── clnt_pcreateerror.3.gz -&gt; rpc.3.gz
+                ├── clnt_perrno.3.gz -&gt; rpc.3.gz
+                ├── clnt_perror.3.gz -&gt; rpc.3.gz
+                ├── clntraw_create.3.gz -&gt; rpc.3.gz
+                ├── clnt_spcreateerror.3.gz -&gt; rpc.3.gz
+                ├── clnt_sperrno.3.gz -&gt; rpc.3.gz
+                ├── clnt_sperror.3.gz -&gt; rpc.3.gz
+                ├── clnttcp_create.3.gz -&gt; rpc.3.gz
+                ├── clntudp_bufcreate.3.gz -&gt; rpc.3.gz
+                ├── clntudp_create.3.gz -&gt; rpc.3.gz
+                ├── clock.3.gz
+                ├── clock_getcpuclockid.3.gz
+                ├── clock_getres.3.gz -&gt; ../man2/clock_getres.2.gz
+                ├── clock_gettime.3.gz -&gt; ../man2/clock_getres.2.gz
+                ├── clock_settime.3.gz -&gt; ../man2/clock_getres.2.gz
+                ├── clog10.3.gz
+                ├── clog10f.3.gz -&gt; clog10.3.gz
+                ├── clog10l.3.gz -&gt; clog10.3.gz
+                ├── clog2.3.gz
+                ├── clog2f.3.gz -&gt; clog2.3.gz
+                ├── clog2l.3.gz -&gt; clog2.3.gz
+                ├── clog.3.gz
+                ├── clogf.3.gz -&gt; clog.3.gz
+                ├── clogl.3.gz -&gt; clog.3.gz
+                ├── closedir.3.gz
+                ├── closelog.3.gz -&gt; syslog.3.gz
+                ├── cmsg.3.gz
+                ├── CMSG_ALIGN.3.gz -&gt; cmsg.3.gz
+                ├── CMSG_FIRSTHDR.3.gz -&gt; cmsg.3.gz
+                ├── CMSG_NXTHDR.3.gz -&gt; cmsg.3.gz
+                ├── CMSG_SPACE.3.gz -&gt; cmsg.3.gz
+                ├── confstr.3.gz
+                ├── conj.3.gz
+                ├── conjf.3.gz -&gt; conj.3.gz
+                ├── conjl.3.gz -&gt; conj.3.gz
+                ├── copysign.3.gz
+                ├── copysignf.3.gz -&gt; copysign.3.gz
+                ├── copysignl.3.gz -&gt; copysign.3.gz
+                ├── cos.3.gz
+                ├── cosf.3.gz -&gt; cos.3.gz
+                ├── cosh.3.gz
+                ├── coshf.3.gz -&gt; cosh.3.gz
+                ├── coshl.3.gz -&gt; cosh.3.gz
+                ├── cosl.3.gz -&gt; cos.3.gz
+                ├── cpow.3.gz
+                ├── cpowf.3.gz -&gt; cpow.3.gz
+                ├── cpowl.3.gz -&gt; cpow.3.gz
+                ├── cproj.3.gz
+                ├── cprojf.3.gz -&gt; cproj.3.gz
+                ├── cprojl.3.gz -&gt; cproj.3.gz
+                ├── CPU_ALLOC.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_ALLOC_SIZE.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_AND.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_AND_S.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_CLR.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_CLR_S.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_COUNT.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_COUNT_S.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_EQUAL.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_EQUAL_S.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_FREE.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_ISSET.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_ISSET_S.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_OR.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_OR_S.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_SET.3.gz
+                ├── CPU_SET_S.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_XOR.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_XOR_S.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_ZERO.3.gz -&gt; CPU_SET.3.gz
+                ├── CPU_ZERO_S.3.gz -&gt; CPU_SET.3.gz
+                ├── creal.3.gz
+                ├── crealf.3.gz -&gt; creal.3.gz
+                ├── creall.3.gz -&gt; creal.3.gz
+                ├── crypt.3.gz
+                ├── crypt_r.3.gz -&gt; crypt.3.gz
+                ├── csin.3.gz
+                ├── csinf.3.gz -&gt; csin.3.gz
+                ├── csinh.3.gz
+                ├── csinhf.3.gz -&gt; csinh.3.gz
+                ├── csinhl.3.gz -&gt; csinh.3.gz
+                ├── csinl.3.gz -&gt; csin.3.gz
+                ├── csqrt.3.gz
+                ├── csqrtf.3.gz -&gt; csqrt.3.gz
+                ├── csqrtl.3.gz -&gt; csqrt.3.gz
+                ├── ctan.3.gz
+                ├── ctanf.3.gz -&gt; ctan.3.gz
+                ├── ctanh.3.gz
+                ├── ctanhf.3.gz -&gt; ctanh.3.gz
+                ├── ctanhl.3.gz -&gt; ctanh.3.gz
+                ├── ctanl.3.gz -&gt; ctan.3.gz
+                ├── ctermid.3.gz
+                ├── ctime.3.gz
+                ├── ctime_r.3.gz -&gt; ctime.3.gz
+                ├── cuserid.3.gz -&gt; getlogin.3.gz
+                ├── daemon.3.gz
+                ├── daylight.3.gz -&gt; tzset.3.gz
+                ├── db.3.gz -&gt; dbopen.3.gz
+                ├── dbopen.3.gz
+                ├── des_crypt.3.gz
+                ├── DES_FAILED.3.gz -&gt; des_crypt.3.gz
+                ├── des_setparity.3.gz -&gt; des_crypt.3.gz
+                ├── difftime.3.gz
+                ├── dirfd.3.gz
+                ├── dirname.3.gz -&gt; basename.3.gz
+                ├── div.3.gz
+                ├── dladdr.3.gz -&gt; dlopen.3.gz
+                ├── dlclose.3.gz -&gt; dlopen.3.gz
+                ├── dlerror.3.gz -&gt; dlopen.3.gz
+                ├── dl_iterate_phdr.3.gz
+                ├── dlopen.3.gz
+                ├── dlsym.3.gz -&gt; dlopen.3.gz
+                ├── dlvsym.3.gz -&gt; dlopen.3.gz
+                ├── dn_comp.3.gz -&gt; resolver.3.gz
+                ├── dn_expand.3.gz -&gt; resolver.3.gz
+                ├── dprintf.3.gz
+                ├── drand48.3.gz
+                ├── drand48_r.3.gz
+                ├── drem.3.gz -&gt; remainder.3.gz
+                ├── dremf.3.gz -&gt; remainder.3.gz
+                ├── dreml.3.gz -&gt; remainder.3.gz
+                ├── dysize.3.gz
+                ├── eaccess.3.gz -&gt; euidaccess.3.gz
+                ├── ecb_crypt.3.gz -&gt; des_crypt.3.gz
+                ├── ecvt.3.gz
+                ├── ecvt_r.3.gz
+                ├── edata.3.gz -&gt; end.3.gz
+                ├── encrypt.3.gz
+                ├── encrypt_r.3.gz -&gt; encrypt.3.gz
+                ├── end.3.gz
+                ├── endaliasent.3.gz -&gt; setaliasent.3.gz
+                ├── endfsent.3.gz -&gt; getfsent.3.gz
+                ├── endgrent.3.gz -&gt; getgrent.3.gz
+                ├── endhostent.3.gz -&gt; gethostbyname.3.gz
+                ├── endian.3.gz
+                ├── endmntent.3.gz -&gt; getmntent.3.gz
+                ├── endnetent.3.gz -&gt; getnetent.3.gz
+                ├── endnetgrent.3.gz -&gt; setnetgrent.3.gz
+                ├── endprotoent.3.gz -&gt; getprotoent.3.gz
+                ├── endpwent.3.gz -&gt; getpwent.3.gz
+                ├── endrpcent.3.gz -&gt; getrpcent.3.gz
+                ├── endservent.3.gz -&gt; getservent.3.gz
+                ├── endspent.3.gz -&gt; getspnam.3.gz
+                ├── endttyent.3.gz -&gt; getttyent.3.gz
+                ├── endusershell.3.gz -&gt; getusershell.3.gz
+                ├── endutent.3.gz -&gt; getutent.3.gz
+                ├── endutxent.3.gz -&gt; getutent.3.gz
+                ├── envz.3.gz -&gt; envz_add.3.gz
+                ├── envz_add.3.gz
+                ├── envz_entry.3.gz -&gt; envz_add.3.gz
+                ├── envz_get.3.gz -&gt; envz_add.3.gz
+                ├── envz_merge.3.gz -&gt; envz_add.3.gz
+                ├── envz_remove.3.gz -&gt; envz_add.3.gz
+                ├── envz_strip.3.gz -&gt; envz_add.3.gz
+                ├── erand48.3.gz -&gt; drand48.3.gz
+                ├── erand48_r.3.gz -&gt; drand48_r.3.gz
+                ├── erf.3.gz
+                ├── erfc.3.gz
+                ├── erfcf.3.gz -&gt; erfc.3.gz
+                ├── erfcl.3.gz -&gt; erfc.3.gz
+                ├── erff.3.gz -&gt; erf.3.gz
+                ├── erfl.3.gz -&gt; erf.3.gz
+                ├── err.3.gz
+                ├── errno.3.gz
+                ├── error.3.gz
+                ├── error_at_line.3.gz -&gt; error.3.gz
+                ├── error_message_count.3.gz -&gt; error.3.gz
+                ├── error_one_per_line.3.gz -&gt; error.3.gz
+                ├── error_print_progname.3.gz -&gt; error.3.gz
+                ├── errx.3.gz -&gt; err.3.gz
+                ├── etext.3.gz -&gt; end.3.gz
+                ├── ether_aton.3.gz
+                ├── ether_aton_r.3.gz -&gt; ether_aton.3.gz
+                ├── ether_hostton.3.gz -&gt; ether_aton.3.gz
+                ├── ether_line.3.gz -&gt; ether_aton.3.gz
+                ├── ether_ntoa.3.gz -&gt; ether_aton.3.gz
+                ├── ether_ntoa_r.3.gz -&gt; ether_aton.3.gz
+                ├── ether_ntohost.3.gz -&gt; ether_aton.3.gz
+                ├── euidaccess.3.gz
+                ├── eventfd_read.3.gz -&gt; ../man2/eventfd.2.gz
+                ├── eventfd_write.3.gz -&gt; ../man2/eventfd.2.gz
+                ├── exec.3.gz
+                ├── execl.3.gz -&gt; exec.3.gz
+                ├── execle.3.gz -&gt; exec.3.gz
+                ├── execlp.3.gz -&gt; exec.3.gz
+                ├── execv.3.gz -&gt; exec.3.gz
+                ├── execvp.3.gz -&gt; exec.3.gz
+                ├── execvpe.3.gz -&gt; exec.3.gz
+                ├── exit.3.gz
+                ├── exp10.3.gz
+                ├── exp10f.3.gz -&gt; exp10.3.gz
+                ├── exp10l.3.gz -&gt; exp10.3.gz
+                ├── exp2.3.gz
+                ├── exp2f.3.gz -&gt; exp2.3.gz
+                ├── exp2l.3.gz -&gt; exp2.3.gz
+                ├── exp.3.gz
+                ├── expf.3.gz -&gt; exp.3.gz
+                ├── expl.3.gz -&gt; exp.3.gz
+                ├── expm1.3.gz
+                ├── expm1f.3.gz -&gt; expm1.3.gz
+                ├── expm1l.3.gz -&gt; expm1.3.gz
+                ├── fabs.3.gz
+                ├── fabsf.3.gz -&gt; fabs.3.gz
+                ├── fabsl.3.gz -&gt; fabs.3.gz
+                ├── __fbufsize.3.gz -&gt; stdio_ext.3.gz
+                ├── fclose.3.gz
+                ├── fcloseall.3.gz
+                ├── fcvt.3.gz -&gt; ecvt.3.gz
+                ├── fcvt_r.3.gz -&gt; ecvt_r.3.gz
+                ├── FD_CLR.3.gz -&gt; ../man2/select.2.gz
+                ├── fdim.3.gz
+                ├── fdimf.3.gz -&gt; fdim.3.gz
+                ├── fdiml.3.gz -&gt; fdim.3.gz
+                ├── FD_ISSET.3.gz -&gt; ../man2/select.2.gz
+                ├── fdopen.3.gz -&gt; fopen.3.gz
+                ├── fdopendir.3.gz -&gt; opendir.3.gz
+                ├── FD_SET.3.gz -&gt; ../man2/select.2.gz
+                ├── FD_ZERO.3.gz -&gt; ../man2/select.2.gz
+                ├── feclearexcept.3.gz -&gt; fenv.3.gz
+                ├── fedisableexcept.3.gz -&gt; fenv.3.gz
+                ├── feenableexcept.3.gz -&gt; fenv.3.gz
+                ├── fegetenv.3.gz -&gt; fenv.3.gz
+                ├── fegetexcept.3.gz -&gt; fenv.3.gz
+                ├── fegetexceptflag.3.gz -&gt; fenv.3.gz
+                ├── fegetround.3.gz -&gt; fenv.3.gz
+                ├── feholdexcept.3.gz -&gt; fenv.3.gz
+                ├── fenv.3.gz
+                ├── feof.3.gz -&gt; ferror.3.gz
+                ├── feof_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── feraiseexcept.3.gz -&gt; fenv.3.gz
+                ├── ferror.3.gz
+                ├── ferror_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── fesetenv.3.gz -&gt; fenv.3.gz
+                ├── fesetexceptflag.3.gz -&gt; fenv.3.gz
+                ├── fesetround.3.gz -&gt; fenv.3.gz
+                ├── fetestexcept.3.gz -&gt; fenv.3.gz
+                ├── feupdateenv.3.gz -&gt; fenv.3.gz
+                ├── fexecve.3.gz
+                ├── fflush.3.gz
+                ├── fflush_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── ffs.3.gz
+                ├── ffsl.3.gz -&gt; ffs.3.gz
+                ├── ffsll.3.gz -&gt; ffs.3.gz
+                ├── fgetc.3.gz -&gt; gets.3.gz
+                ├── fgetc_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── fgetgrent.3.gz
+                ├── fgetgrent_r.3.gz -&gt; getgrent_r.3.gz
+                ├── fgetpos.3.gz -&gt; fseek.3.gz
+                ├── fgetpwent.3.gz
+                ├── fgetpwent_r.3.gz -&gt; getpwent_r.3.gz
+                ├── fgets.3.gz -&gt; gets.3.gz
+                ├── fgetspent.3.gz -&gt; getspnam.3.gz
+                ├── fgetspent_r.3.gz -&gt; getspnam.3.gz
+                ├── fgets_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── fgetwc.3.gz
+                ├── fgetwc_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── fgetws.3.gz
+                ├── fgetws_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── fileno.3.gz -&gt; ferror.3.gz
+                ├── fileno_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── finite.3.gz
+                ├── finitef.3.gz -&gt; finite.3.gz
+                ├── finitel.3.gz -&gt; finite.3.gz
+                ├── __flbf.3.gz -&gt; stdio_ext.3.gz
+                ├── flockfile.3.gz
+                ├── floor.3.gz
+                ├── floorf.3.gz -&gt; floor.3.gz
+                ├── floorl.3.gz -&gt; floor.3.gz
+                ├── _flushlbf.3.gz -&gt; stdio_ext.3.gz
+                ├── fma.3.gz
+                ├── fmaf.3.gz -&gt; fma.3.gz
+                ├── fmal.3.gz -&gt; fma.3.gz
+                ├── fmax.3.gz
+                ├── fmaxf.3.gz -&gt; fmax.3.gz
+                ├── fmaxl.3.gz -&gt; fmax.3.gz
+                ├── fmemopen.3.gz
+                ├── fmin.3.gz
+                ├── fminf.3.gz -&gt; fmin.3.gz
+                ├── fminl.3.gz -&gt; fmin.3.gz
+                ├── fmod.3.gz
+                ├── fmodf.3.gz -&gt; fmod.3.gz
+                ├── fmodl.3.gz -&gt; fmod.3.gz
+                ├── fmtmsg.3.gz
+                ├── fnmatch.3.gz
+                ├── fopen.3.gz
+                ├── fopencookie.3.gz
+                ├── forkpty.3.gz -&gt; openpty.3.gz
+                ├── fpathconf.3.gz
+                ├── fpclassify.3.gz
+                ├── __fpending.3.gz -&gt; stdio_ext.3.gz
+                ├── fprintf.3.gz -&gt; printf.3.gz
+                ├── __fpurge.3.gz -&gt; fpurge.3.gz
+                ├── fpurge.3.gz
+                ├── fputc.3.gz -&gt; puts.3.gz
+                ├── fputc_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── fputs.3.gz -&gt; puts.3.gz
+                ├── fputs_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── fputwc.3.gz
+                ├── fputwc_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── fputws.3.gz
+                ├── fputws_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── fread.3.gz
+                ├── __freadable.3.gz -&gt; stdio_ext.3.gz
+                ├── __freading.3.gz -&gt; stdio_ext.3.gz
+                ├── fread_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── free.3.gz -&gt; malloc.3.gz
+                ├── freeaddrinfo.3.gz -&gt; getaddrinfo.3.gz
+                ├── __free_hook.3.gz -&gt; malloc_hook.3.gz
+                ├── freehostent.3.gz -&gt; getipnodebyname.3.gz
+                ├── freeifaddrs.3.gz -&gt; getifaddrs.3.gz
+                ├── freopen.3.gz -&gt; fopen.3.gz
+                ├── frexp.3.gz
+                ├── frexpf.3.gz -&gt; frexp.3.gz
+                ├── frexpl.3.gz -&gt; frexp.3.gz
+                ├── fscanf.3.gz -&gt; scanf.3.gz
+                ├── fseek.3.gz
+                ├── fseeko.3.gz
+                ├── __fsetlocking.3.gz -&gt; stdio_ext.3.gz
+                ├── fsetpos.3.gz -&gt; fseek.3.gz
+                ├── fstatvfs.3.gz -&gt; statvfs.3.gz
+                ├── ftell.3.gz -&gt; fseek.3.gz
+                ├── ftello.3.gz -&gt; fseeko.3.gz
+                ├── ftime.3.gz
+                ├── ftok.3.gz
+                ├── ftrylockfile.3.gz -&gt; flockfile.3.gz
+                ├── fts.3.gz
+                ├── fts_children.3.gz -&gt; fts.3.gz
+                ├── fts_close.3.gz -&gt; fts.3.gz
+                ├── fts_open.3.gz -&gt; fts.3.gz
+                ├── fts_read.3.gz -&gt; fts.3.gz
+                ├── fts_set.3.gz -&gt; fts.3.gz
+                ├── ftw.3.gz
+                ├── funlockfile.3.gz -&gt; flockfile.3.gz
+                ├── futimens.3.gz -&gt; ../man2/utimensat.2.gz
+                ├── futimes.3.gz
+                ├── fwide.3.gz
+                ├── fwprintf.3.gz -&gt; wprintf.3.gz
+                ├── __fwritable.3.gz -&gt; stdio_ext.3.gz
+                ├── fwrite.3.gz -&gt; fread.3.gz
+                ├── fwrite_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── __fwriting.3.gz -&gt; stdio_ext.3.gz
+                ├── gai_cancel.3.gz -&gt; getaddrinfo_a.3.gz
+                ├── gai_error.3.gz -&gt; getaddrinfo_a.3.gz
+                ├── gai_strerror.3.gz -&gt; getaddrinfo.3.gz
+                ├── gai_suspend.3.gz -&gt; getaddrinfo_a.3.gz
+                ├── gamma.3.gz
+                ├── gammaf.3.gz -&gt; gamma.3.gz
+                ├── gammal.3.gz -&gt; gamma.3.gz
+                ├── gcvt.3.gz
+                ├── getaddrinfo.3.gz
+                ├── getaddrinfo_a.3.gz
+                ├── getaliasbyname.3.gz -&gt; setaliasent.3.gz
+                ├── getaliasbyname_r.3.gz -&gt; setaliasent.3.gz
+                ├── getaliasent.3.gz -&gt; setaliasent.3.gz
+                ├── getaliasent_r.3.gz -&gt; setaliasent.3.gz
+                ├── getauxval.3.gz
+                ├── getc.3.gz -&gt; gets.3.gz
+                ├── getchar.3.gz -&gt; gets.3.gz
+                ├── getchar_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── getcontext.3.gz
+                ├── getc_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── get_current_dir_name.3.gz -&gt; getcwd.3.gz
+                ├── getcwd.3.gz
+                ├── getdate.3.gz
+                ├── getdate_err.3.gz -&gt; getdate.3.gz
+                ├── getdate_r.3.gz -&gt; getdate.3.gz
+                ├── getdelim.3.gz -&gt; getline.3.gz
+                ├── getdirentries.3.gz
+                ├── getdtablesize.3.gz
+                ├── getenv.3.gz
+                ├── getfsent.3.gz
+                ├── getfsfile.3.gz -&gt; getfsent.3.gz
+                ├── getfsspec.3.gz -&gt; getfsent.3.gz
+                ├── getgrent.3.gz
+                ├── getgrent_r.3.gz
+                ├── getgrgid.3.gz -&gt; getgrnam.3.gz
+                ├── getgrgid_r.3.gz -&gt; getgrnam.3.gz
+                ├── getgrnam.3.gz
+                ├── getgrnam_r.3.gz -&gt; getgrnam.3.gz
+                ├── getgrouplist.3.gz
+                ├── gethostbyaddr.3.gz -&gt; gethostbyname.3.gz
+                ├── gethostbyaddr_r.3.gz -&gt; gethostbyname.3.gz
+                ├── gethostbyname2.3.gz -&gt; gethostbyname.3.gz
+                ├── gethostbyname2_r.3.gz -&gt; gethostbyname.3.gz
+                ├── gethostbyname.3.gz
+                ├── gethostbyname_r.3.gz -&gt; gethostbyname.3.gz
+                ├── gethostent.3.gz -&gt; gethostbyname.3.gz
+                ├── gethostent_r.3.gz -&gt; gethostbyname.3.gz
+                ├── gethostid.3.gz
+                ├── getifaddrs.3.gz
+                ├── getipnodebyaddr.3.gz -&gt; getipnodebyname.3.gz
+                ├── getipnodebyname.3.gz
+                ├── getline.3.gz
+                ├── getloadavg.3.gz
+                ├── getlogin.3.gz
+                ├── getlogin_r.3.gz -&gt; getlogin.3.gz
+                ├── getmntent.3.gz
+                ├── getmntent_r.3.gz -&gt; getmntent.3.gz
+                ├── get_myaddress.3.gz -&gt; rpc.3.gz
+                ├── getnameinfo.3.gz
+                ├── getnetbyaddr.3.gz -&gt; getnetent.3.gz
+                ├── getnetbyaddr_r.3.gz -&gt; getnetent_r.3.gz
+                ├── getnetbyname.3.gz -&gt; getnetent.3.gz
+                ├── getnetbyname_r.3.gz -&gt; getnetent_r.3.gz
+                ├── getnetent.3.gz
+                ├── getnetent_r.3.gz
+                ├── getnetgrent.3.gz -&gt; setnetgrent.3.gz
+                ├── getnetgrent_r.3.gz -&gt; setnetgrent.3.gz
+                ├── get_nprocs.3.gz -&gt; get_nprocs_conf.3.gz
+                ├── get_nprocs_conf.3.gz
+                ├── getopt.3.gz
+                ├── getopt_long.3.gz -&gt; getopt.3.gz
+                ├── getopt_long_only.3.gz -&gt; getopt.3.gz
+                ├── getpass.3.gz
+                ├── getprotobyname.3.gz -&gt; getprotoent.3.gz
+                ├── getprotobyname_r.3.gz -&gt; getprotoent_r.3.gz
+                ├── getprotobynumber.3.gz -&gt; getprotoent.3.gz
+                ├── getprotobynumber_r.3.gz -&gt; getprotoent_r.3.gz
+                ├── getprotoent.3.gz
+                ├── getprotoent_r.3.gz
+                ├── getpt.3.gz
+                ├── getpw.3.gz
+                ├── getpwent.3.gz
+                ├── getpwent_r.3.gz
+                ├── getpwnam.3.gz
+                ├── getpwnam_r.3.gz -&gt; getpwnam.3.gz
+                ├── getpwuid.3.gz -&gt; getpwnam.3.gz
+                ├── getpwuid_r.3.gz -&gt; getpwnam.3.gz
+                ├── getrpcbyname.3.gz -&gt; getrpcent.3.gz
+                ├── getrpcbyname_r.3.gz -&gt; getrpcent_r.3.gz
+                ├── getrpcbynumber.3.gz -&gt; getrpcent.3.gz
+                ├── getrpcbynumber_r.3.gz -&gt; getrpcent_r.3.gz
+                ├── getrpcent.3.gz
+                ├── getrpcent_r.3.gz
+                ├── getrpcport.3.gz
+                ├── gets.3.gz
+                ├── getservbyname.3.gz -&gt; getservent.3.gz
+                ├── getservbyname_r.3.gz -&gt; getservent_r.3.gz
+                ├── getservbyport.3.gz -&gt; getservent.3.gz
+                ├── getservbyport_r.3.gz -&gt; getservent_r.3.gz
+                ├── getservent.3.gz
+                ├── getservent_r.3.gz
+                ├── getspent.3.gz -&gt; getspnam.3.gz
+                ├── getspent_r.3.gz -&gt; getspnam.3.gz
+                ├── getspnam.3.gz
+                ├── getspnam_r.3.gz -&gt; getspnam.3.gz
+                ├── getsubopt.3.gz
+                ├── getttyent.3.gz
+                ├── getttynam.3.gz -&gt; getttyent.3.gz
+                ├── getumask.3.gz
+                ├── getusershell.3.gz
+                ├── getutent.3.gz
+                ├── getutent_r.3.gz -&gt; getutent.3.gz
+                ├── getutid.3.gz -&gt; getutent.3.gz
+                ├── getutid_r.3.gz -&gt; getutent.3.gz
+                ├── getutline.3.gz -&gt; getutent.3.gz
+                ├── getutline_r.3.gz -&gt; getutent.3.gz
+                ├── getutmp.3.gz
+                ├── getutmpx.3.gz -&gt; getutmp.3.gz
+                ├── getutxent.3.gz -&gt; getutent.3.gz
+                ├── getutxid.3.gz -&gt; getutent.3.gz
+                ├── getutxline.3.gz -&gt; getutent.3.gz
+                ├── getw.3.gz
+                ├── getwc.3.gz -&gt; fgetwc.3.gz
+                ├── getwchar.3.gz
+                ├── getwchar_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── getwc_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── getwd.3.gz -&gt; getcwd.3.gz
+                ├── glob.3.gz
+                ├── globfree.3.gz -&gt; glob.3.gz
+                ├── gmtime.3.gz -&gt; ctime.3.gz
+                ├── gmtime_r.3.gz -&gt; ctime.3.gz
+                ├── gnu_dev_major.3.gz -&gt; makedev.3.gz
+                ├── gnu_dev_makedev.3.gz -&gt; makedev.3.gz
+                ├── gnu_dev_minor.3.gz -&gt; makedev.3.gz
+                ├── gnu_get_libc_release.3.gz -&gt; gnu_get_libc_version.3.gz
+                ├── gnu_get_libc_version.3.gz
+                ├── grantpt.3.gz
+                ├── gsignal.3.gz
+                ├── hash.3.gz
+                ├── hasmntopt.3.gz -&gt; getmntent.3.gz
+                ├── hcreate.3.gz -&gt; hsearch.3.gz
+                ├── hcreate_r.3.gz -&gt; hsearch.3.gz
+                ├── hdestroy.3.gz -&gt; hsearch.3.gz
+                ├── hdestroy_r.3.gz -&gt; hsearch.3.gz
+                ├── h_errno.3.gz -&gt; gethostbyname.3.gz
+                ├── herror.3.gz -&gt; gethostbyname.3.gz
+                ├── hsearch.3.gz
+                ├── hsearch_r.3.gz -&gt; hsearch.3.gz
+                ├── hstrerror.3.gz -&gt; gethostbyname.3.gz
+                ├── htobe16.3.gz -&gt; endian.3.gz
+                ├── htobe32.3.gz -&gt; endian.3.gz
+                ├── htobe64.3.gz -&gt; endian.3.gz
+                ├── htole16.3.gz -&gt; endian.3.gz
+                ├── htole32.3.gz -&gt; endian.3.gz
+                ├── htole64.3.gz -&gt; endian.3.gz
+                ├── htonl.3.gz -&gt; byteorder.3.gz
+                ├── htons.3.gz -&gt; byteorder.3.gz
+                ├── HUGE_VAL.3.gz -&gt; INFINITY.3.gz
+                ├── HUGE_VALF.3.gz -&gt; INFINITY.3.gz
+                ├── HUGE_VALL.3.gz -&gt; INFINITY.3.gz
+                ├── hypot.3.gz
+                ├── hypotf.3.gz -&gt; hypot.3.gz
+                ├── hypotl.3.gz -&gt; hypot.3.gz
+                ├── iconv.3.gz
+                ├── iconv_close.3.gz
+                ├── iconv_open.3.gz
+                ├── if_freenameindex.3.gz -&gt; if_nameindex.3.gz
+                ├── if_indextoname.3.gz -&gt; if_nametoindex.3.gz
+                ├── if_nameindex.3.gz
+                ├── if_nametoindex.3.gz
+                ├── ilogb.3.gz
+                ├── ilogbf.3.gz -&gt; ilogb.3.gz
+                ├── ilogbl.3.gz -&gt; ilogb.3.gz
+                ├── imaxabs.3.gz -&gt; abs.3.gz
+                ├── imaxdiv.3.gz -&gt; div.3.gz
+                ├── index.3.gz
+                ├── inet.3.gz
+                ├── inet_addr.3.gz -&gt; inet.3.gz
+                ├── inet_aton.3.gz -&gt; inet.3.gz
+                ├── inet_lnaof.3.gz -&gt; inet.3.gz
+                ├── inet_makeaddr.3.gz -&gt; inet_addr.3.gz
+                ├── inet_netof.3.gz -&gt; inet.3.gz
+                ├── inet_network.3.gz -&gt; inet.3.gz
+                ├── inet_ntoa.3.gz -&gt; inet.3.gz
+                ├── inet_ntop.3.gz
+                ├── inet_pton.3.gz
+                ├── INFINITY.3.gz
+                ├── initgroups.3.gz
+                ├── initstate.3.gz -&gt; random.3.gz
+                ├── initstate_r.3.gz -&gt; random_r.3.gz
+                ├── innetgr.3.gz -&gt; setnetgrent.3.gz
+                ├── insque.3.gz
+                ├── iruserok.3.gz -&gt; rcmd.3.gz
+                ├── iruserok_af.3.gz -&gt; rcmd.3.gz
+                ├── isalnum.3.gz -&gt; isalpha.3.gz
+                ├── isalpha.3.gz
+                ├── isascii.3.gz -&gt; isalpha.3.gz
+                ├── isatty.3.gz
+                ├── isblank.3.gz -&gt; isalpha.3.gz
+                ├── iscntrl.3.gz -&gt; isalpha.3.gz
+                ├── isdigit.3.gz -&gt; isalpha.3.gz
+                ├── isfinite.3.gz -&gt; fpclassify.3.gz
+                ├── isgraph.3.gz -&gt; isalpha.3.gz
+                ├── isgreater.3.gz
+                ├── isgreaterequal.3.gz -&gt; isgreater.3.gz
+                ├── isinf.3.gz -&gt; fpclassify.3.gz
+                ├── isinff.3.gz -&gt; finite.3.gz
+                ├── isinfl.3.gz -&gt; finite.3.gz
+                ├── isless.3.gz -&gt; isgreater.3.gz
+                ├── islessequal.3.gz -&gt; isgreater.3.gz
+                ├── islessgreater.3.gz -&gt; isgreater.3.gz
+                ├── islower.3.gz -&gt; isalpha.3.gz
+                ├── isnan.3.gz -&gt; fpclassify.3.gz
+                ├── isnanf.3.gz -&gt; finite.3.gz
+                ├── isnanl.3.gz -&gt; finite.3.gz
+                ├── isnormal.3.gz -&gt; fpclassify.3.gz
+                ├── isprint.3.gz -&gt; isalpha.3.gz
+                ├── ispunct.3.gz -&gt; isalpha.3.gz
+                ├── isspace.3.gz -&gt; isalpha.3.gz
+                ├── isunordered.3.gz -&gt; isgreater.3.gz
+                ├── isupper.3.gz -&gt; isalpha.3.gz
+                ├── iswalnum.3.gz
+                ├── iswalpha.3.gz
+                ├── iswblank.3.gz
+                ├── iswcntrl.3.gz
+                ├── iswctype.3.gz
+                ├── iswdigit.3.gz
+                ├── iswgraph.3.gz
+                ├── iswlower.3.gz
+                ├── iswprint.3.gz
+                ├── iswpunct.3.gz
+                ├── iswspace.3.gz
+                ├── iswupper.3.gz
+                ├── iswxdigit.3.gz
+                ├── isxdigit.3.gz -&gt; isalpha.3.gz
+                ├── j0.3.gz
+                ├── j0f.3.gz -&gt; j0.3.gz
+                ├── j0l.3.gz -&gt; j0.3.gz
+                ├── j1.3.gz -&gt; j0.3.gz
+                ├── j1f.3.gz -&gt; j0.3.gz
+                ├── j1l.3.gz -&gt; j0.3.gz
+                ├── jn.3.gz -&gt; j0.3.gz
+                ├── jnf.3.gz -&gt; j0.3.gz
+                ├── jnl.3.gz -&gt; j0.3.gz
+                ├── jrand48.3.gz -&gt; drand48.3.gz
+                ├── jrand48_r.3.gz -&gt; drand48_r.3.gz
+                ├── key_decryptsession.3.gz -&gt; key_setsecret.3.gz
+                ├── key_encryptsession.3.gz -&gt; key_setsecret.3.gz
+                ├── key_gendes.3.gz -&gt; key_setsecret.3.gz
+                ├── key_secretkey_is_set.3.gz -&gt; key_setsecret.3.gz
+                ├── key_setsecret.3.gz
+                ├── klogctl.3.gz -&gt; ../man2/syslog.2.gz
+                ├── l64a.3.gz -&gt; a64l.3.gz
+                ├── labs.3.gz -&gt; abs.3.gz
+                ├── lckpwdf.3.gz -&gt; getspnam.3.gz
+                ├── lcong48.3.gz -&gt; drand48.3.gz
+                ├── lcong48_r.3.gz -&gt; drand48_r.3.gz
+                ├── ldexp.3.gz
+                ├── ldexpf.3.gz -&gt; ldexp.3.gz
+                ├── ldexpl.3.gz -&gt; ldexp.3.gz
+                ├── ldiv.3.gz -&gt; div.3.gz
+                ├── le16toh.3.gz -&gt; endian.3.gz
+                ├── le32toh.3.gz -&gt; endian.3.gz
+                ├── le64toh.3.gz -&gt; endian.3.gz
+                ├── lfind.3.gz -&gt; lsearch.3.gz
+                ├── lgamma.3.gz
+                ├── lgammaf.3.gz -&gt; lgamma.3.gz
+                ├── lgammaf_r.3.gz -&gt; lgamma.3.gz
+                ├── lgammal.3.gz -&gt; lgamma.3.gz
+                ├── lgammal_r.3.gz -&gt; lgamma.3.gz
+                ├── lgamma_r.3.gz -&gt; lgamma.3.gz
+                ├── lio_listio.3.gz
+                ├── LIST_ENTRY.3.gz -&gt; queue.3.gz
+                ├── LIST_HEAD.3.gz -&gt; queue.3.gz
+                ├── LIST_INIT.3.gz -&gt; queue.3.gz
+                ├── LIST_INSERT_AFTER.3.gz -&gt; queue.3.gz
+                ├── LIST_INSERT_HEAD.3.gz -&gt; queue.3.gz
+                ├── LIST_REMOVE.3.gz -&gt; queue.3.gz
+                ├── llabs.3.gz -&gt; abs.3.gz
+                ├── lldiv.3.gz -&gt; div.3.gz
+                ├── llrint.3.gz -&gt; lrint.3.gz
+                ├── llrintf.3.gz -&gt; lrint.3.gz
+                ├── llrintl.3.gz -&gt; lrint.3.gz
+                ├── llround.3.gz -&gt; lround.3.gz
+                ├── llroundf.3.gz -&gt; lround.3.gz
+                ├── llroundl.3.gz -&gt; lround.3.gz
+                ├── localeconv.3.gz
+                ├── localtime.3.gz -&gt; ctime.3.gz
+                ├── localtime_r.3.gz -&gt; ctime.3.gz
+                ├── lockf.3.gz
+                ├── log10.3.gz
+                ├── log10f.3.gz -&gt; log10.3.gz
+                ├── log10l.3.gz -&gt; log10.3.gz
+                ├── log1p.3.gz
+                ├── log1pf.3.gz -&gt; log1p.3.gz
+                ├── log1pl.3.gz -&gt; log1p.3.gz
+                ├── log2.3.gz
+                ├── log2f.3.gz -&gt; log2.3.gz
+                ├── log2l.3.gz -&gt; log2.3.gz
+                ├── log.3.gz
+                ├── logb.3.gz
+                ├── logbf.3.gz -&gt; logb.3.gz
+                ├── logbl.3.gz -&gt; logb.3.gz
+                ├── logf.3.gz -&gt; log.3.gz
+                ├── login.3.gz
+                ├── login_tty.3.gz -&gt; openpty.3.gz
+                ├── logl.3.gz -&gt; log.3.gz
+                ├── logout.3.gz -&gt; login.3.gz
+                ├── logwtmp.3.gz -&gt; updwtmp.3.gz
+                ├── longjmp.3.gz
+                ├── lrand48.3.gz -&gt; drand48.3.gz
+                ├── lrand48_r.3.gz -&gt; drand48_r.3.gz
+                ├── lrint.3.gz
+                ├── lrintf.3.gz -&gt; lrint.3.gz
+                ├── lrintl.3.gz -&gt; lrint.3.gz
+                ├── lround.3.gz
+                ├── lroundf.3.gz -&gt; lround.3.gz
+                ├── lroundl.3.gz -&gt; lround.3.gz
+                ├── lsearch.3.gz
+                ├── lseek64.3.gz
+                ├── lutimes.3.gz -&gt; futimes.3.gz
+                ├── major.3.gz -&gt; makedev.3.gz
+                ├── makecontext.3.gz
+                ├── makedev.3.gz
+                ├── mallinfo.3.gz
+                ├── malloc.3.gz
+                ├── malloc_get_state.3.gz
+                ├── __malloc_hook.3.gz -&gt; malloc_hook.3.gz
+                ├── malloc_hook.3.gz
+                ├── malloc_info.3.gz
+                ├── __malloc_initialize_hook.3.gz -&gt; malloc_hook.3.gz
+                ├── malloc_set_state.3.gz -&gt; malloc_get_state.3.gz
+                ├── malloc_stats.3.gz
+                ├── malloc_trim.3.gz
+                ├── malloc_usable_size.3.gz
+                ├── mallopt.3.gz
+                ├── matherr.3.gz
+                ├── MB_CUR_MAX.3.gz
+                ├── mblen.3.gz
+                ├── MB_LEN_MAX.3.gz
+                ├── mbrlen.3.gz
+                ├── mbrtowc.3.gz
+                ├── mbsinit.3.gz
+                ├── mbsnrtowcs.3.gz
+                ├── mbsrtowcs.3.gz
+                ├── mbstowcs.3.gz
+                ├── mbtowc.3.gz
+                ├── mcheck.3.gz
+                ├── mcheck_check_all.3.gz -&gt; mcheck.3.gz
+                ├── mcheck_pedantic.3.gz -&gt; mcheck.3.gz
+                ├── memalign.3.gz -&gt; posix_memalign.3.gz
+                ├── __memalign_hook.3.gz -&gt; malloc_hook.3.gz
+                ├── memccpy.3.gz
+                ├── memchr.3.gz
+                ├── memcmp.3.gz
+                ├── memcpy.3.gz
+                ├── memfrob.3.gz
+                ├── memmem.3.gz
+                ├── memmove.3.gz
+                ├── mempcpy.3.gz
+                ├── memrchr.3.gz -&gt; memchr.3.gz
+                ├── memset.3.gz
+                ├── minor.3.gz -&gt; makedev.3.gz
+                ├── mkdtemp.3.gz
+                ├── mkfifo.3.gz
+                ├── mkfifoat.3.gz
+                ├── mkostemp.3.gz -&gt; mkstemp.3.gz
+                ├── mkostemps.3.gz -&gt; mkstemp.3.gz
+                ├── mkstemp.3.gz
+                ├── mkstemps.3.gz -&gt; mkstemp.3.gz
+                ├── mktemp.3.gz
+                ├── mktime.3.gz -&gt; ctime.3.gz
+                ├── mmap64.3.gz -&gt; ../man2/mmap.2.gz
+                ├── modf.3.gz
+                ├── modff.3.gz -&gt; modf.3.gz
+                ├── modfl.3.gz -&gt; modf.3.gz
+                ├── mpool.3.gz
+                ├── mprobe.3.gz -&gt; mcheck.3.gz
+                ├── mq_close.3.gz
+                ├── mq_getattr.3.gz
+                ├── mq_notify.3.gz
+                ├── mq_open.3.gz
+                ├── mq_receive.3.gz
+                ├── mq_send.3.gz
+                ├── mq_setattr.3.gz -&gt; mq_getattr.3.gz
+                ├── mq_timedreceive.3.gz -&gt; mq_receive.3.gz
+                ├── mq_timedsend.3.gz -&gt; mq_send.3.gz
+                ├── mq_unlink.3.gz
+                ├── mrand48.3.gz -&gt; drand48.3.gz
+                ├── mrand48_r.3.gz -&gt; drand48_r.3.gz
+                ├── mtrace.3.gz
+                ├── muntrace.3.gz -&gt; mtrace.3.gz
+                ├── nan.3.gz
+                ├── NAN.3.gz -&gt; INFINITY.3.gz
+                ├── nanf.3.gz -&gt; nan.3.gz
+                ├── nanl.3.gz -&gt; nan.3.gz
+                ├── nearbyint.3.gz -&gt; rint.3.gz
+                ├── nearbyintf.3.gz -&gt; rint.3.gz
+                ├── nearbyintl.3.gz -&gt; rint.3.gz
+                ├── netlink.3.gz
+                ├── nextafter.3.gz
+                ├── nextafterf.3.gz -&gt; nextafter.3.gz
+                ├── nextafterl.3.gz -&gt; nextafter.3.gz
+                ├── nexttoward.3.gz -&gt; nextafter.3.gz
+                ├── nexttowardf.3.gz -&gt; nextafter.3.gz
+                ├── nexttowardl.3.gz -&gt; nextafter.3.gz
+                ├── nftw.3.gz -&gt; ftw.3.gz
+                ├── nl_langinfo.3.gz
+                ├── nrand48.3.gz -&gt; drand48.3.gz
+                ├── nrand48_r.3.gz -&gt; drand48_r.3.gz
+                ├── ntohl.3.gz -&gt; byteorder.3.gz
+                ├── ntohs.3.gz -&gt; byteorder.3.gz
+                ├── offsetof.3.gz
+                ├── on_exit.3.gz
+                ├── opendir.3.gz
+                ├── openlog.3.gz -&gt; syslog.3.gz
+                ├── open_memstream.3.gz -&gt; fmemopen.3.gz
+                ├── openpty.3.gz
+                ├── open_wmemstream.3.gz -&gt; fmemopen.3.gz
+                ├── optarg.3.gz -&gt; getopt.3.gz
+                ├── opterr.3.gz -&gt; getopt.3.gz
+                ├── optind.3.gz -&gt; getopt.3.gz
+                ├── optopt.3.gz -&gt; getopt.3.gz
+                ├── passwd2des.3.gz -&gt; xcrypt.3.gz
+                ├── pathconf.3.gz -&gt; fpathconf.3.gz
+                ├── pclose.3.gz -&gt; popen.3.gz
+                ├── perror.3.gz
+                ├── pmap_getmaps.3.gz -&gt; rpc.3.gz
+                ├── pmap_getport.3.gz -&gt; rpc.3.gz
+                ├── pmap_rmtcall.3.gz -&gt; rpc.3.gz
+                ├── pmap_set.3.gz -&gt; rpc.3.gz
+                ├── pmap_unset.3.gz -&gt; rpc.3.gz
+                ├── popen.3.gz
+                ├── posix_fallocate.3.gz
+                ├── posix_memalign.3.gz
+                ├── posix_openpt.3.gz
+                ├── pow10.3.gz
+                ├── pow10f.3.gz -&gt; pow10.3.gz
+                ├── pow10l.3.gz -&gt; pow10.3.gz
+                ├── pow.3.gz
+                ├── powf.3.gz -&gt; pow.3.gz
+                ├── powl.3.gz -&gt; pow.3.gz
+                ├── printf.3.gz
+                ├── profil.3.gz
+                ├── program_invocation_name.3.gz
+                ├── program_invocation_short_name.3.gz -&gt; program_invocation_name.3.gz
+                ├── psiginfo.3.gz -&gt; psignal.3.gz
+                ├── psignal.3.gz
+                ├── pthread_attr_destroy.3.gz -&gt; pthread_attr_init.3.gz
+                ├── pthread_attr_getaffinity_np.3.gz -&gt; pthread_attr_setaffinity_np.3.gz
+                ├── pthread_attr_getdetachstate.3.gz -&gt; pthread_attr_setdetachstate.3.gz
+                ├── pthread_attr_getguardsize.3.gz -&gt; pthread_attr_setguardsize.3.gz
+                ├── pthread_attr_getinheritsched.3.gz -&gt; pthread_attr_setinheritsched.3.gz
+                ├── pthread_attr_getschedparam.3.gz -&gt; pthread_attr_setschedparam.3.gz
+                ├── pthread_attr_getschedpolicy.3.gz -&gt; pthread_attr_setschedpolicy.3.gz
+                ├── pthread_attr_getscope.3.gz -&gt; pthread_attr_setscope.3.gz
+                ├── pthread_attr_getstack.3.gz -&gt; pthread_attr_setstack.3.gz
+                ├── pthread_attr_getstackaddr.3.gz -&gt; pthread_attr_setstackaddr.3.gz
+                ├── pthread_attr_getstacksize.3.gz -&gt; pthread_attr_setstacksize.3.gz
+                ├── pthread_attr_init.3.gz
+                ├── pthread_attr_setaffinity_np.3.gz
+                ├── pthread_attr_setdetachstate.3.gz
+                ├── pthread_attr_setguardsize.3.gz
+                ├── pthread_attr_setinheritsched.3.gz
+                ├── pthread_attr_setschedparam.3.gz
+                ├── pthread_attr_setschedpolicy.3.gz
+                ├── pthread_attr_setscope.3.gz
+                ├── pthread_attr_setstack.3.gz
+                ├── pthread_attr_setstackaddr.3.gz
+                ├── pthread_attr_setstacksize.3.gz
+                ├── pthread_cancel.3.gz
+                ├── pthread_cleanup_pop.3.gz -&gt; pthread_cleanup_push.3.gz
+                ├── pthread_cleanup_pop_restore_np.3.gz -&gt; pthread_cleanup_push_defer_np.3.gz
+                ├── pthread_cleanup_push.3.gz
+                ├── pthread_cleanup_push_defer_np.3.gz
+                ├── pthread_create.3.gz
+                ├── pthread_detach.3.gz
+                ├── pthread_equal.3.gz
+                ├── pthread_exit.3.gz
+                ├── pthread_getaffinity_np.3.gz -&gt; pthread_setaffinity_np.3.gz
+                ├── pthread_getattr_np.3.gz
+                ├── pthread_getconcurrency.3.gz -&gt; pthread_setconcurrency.3.gz
+                ├── pthread_getcpuclockid.3.gz
+                ├── pthread_getname_np.3.gz -&gt; pthread_setname_np.3.gz
+                ├── pthread_getschedparam.3.gz -&gt; pthread_setschedparam.3.gz
+                ├── pthread_join.3.gz
+                ├── pthread_kill.3.gz
+                ├── pthread_kill_other_threads_np.3.gz
+                ├── pthread_self.3.gz
+                ├── pthread_setaffinity_np.3.gz
+                ├── pthread_setcancelstate.3.gz
+                ├── pthread_setcanceltype.3.gz -&gt; pthread_setcancelstate.3.gz
+                ├── pthread_setconcurrency.3.gz
+                ├── pthread_setname_np.3.gz
+                ├── pthread_setschedparam.3.gz
+                ├── pthread_setschedprio.3.gz
+                ├── pthread_sigmask.3.gz
+                ├── pthread_sigqueue.3.gz
+                ├── pthread_testcancel.3.gz
+                ├── pthread_timedjoin_np.3.gz -&gt; pthread_tryjoin_np.3.gz
+                ├── pthread_tryjoin_np.3.gz
+                ├── pthread_yield.3.gz
+                ├── ptsname.3.gz
+                ├── ptsname_r.3.gz -&gt; ptsname.3.gz
+                ├── putc.3.gz -&gt; puts.3.gz
+                ├── putchar.3.gz -&gt; puts.3.gz
+                ├── putchar_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── putc_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── putenv.3.gz
+                ├── putgrent.3.gz
+                ├── putpwent.3.gz
+                ├── puts.3.gz
+                ├── putspent.3.gz -&gt; getspnam.3.gz
+                ├── pututline.3.gz -&gt; getutent.3.gz
+                ├── pututxline.3.gz -&gt; getutent.3.gz
+                ├── putw.3.gz -&gt; getw.3.gz
+                ├── putwc.3.gz -&gt; fputwc.3.gz
+                ├── putwchar.3.gz
+                ├── putwchar_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── putwc_unlocked.3.gz -&gt; unlocked_stdio.3.gz
+                ├── pvalloc.3.gz -&gt; posix_memalign.3.gz
+                ├── qecvt.3.gz
+                ├── qecvt_r.3.gz -&gt; ecvt_r.3.gz
+                ├── qfcvt.3.gz -&gt; qecvt.3.gz
+                ├── qfcvt_r.3.gz -&gt; ecvt_r.3.gz
+                ├── qgcvt.3.gz -&gt; qecvt.3.gz
+                ├── qsort.3.gz
+                ├── qsort_r.3.gz -&gt; qsort.3.gz
+                ├── queue.3.gz
+                ├── raise.3.gz
+                ├── rand.3.gz
+                ├── random.3.gz
+                ├── random_r.3.gz
+                ├── rand_r.3.gz -&gt; rand.3.gz
+                ├── rawmemchr.3.gz -&gt; memchr.3.gz
+                ├── rcmd.3.gz
+                ├── rcmd_af.3.gz -&gt; rcmd.3.gz
+                ├── readdir.3.gz
+                ├── readdir_r.3.gz -&gt; readdir.3.gz
+                ├── realloc.3.gz -&gt; malloc.3.gz
+                ├── __realloc_hook.3.gz -&gt; malloc_hook.3.gz
+                ├── realpath.3.gz
+                ├── recno.3.gz
+                ├── re_comp.3.gz
+                ├── re_exec.3.gz -&gt; re_comp.3.gz
+                ├── regcomp.3.gz -&gt; regex.3.gz
+                ├── regerror.3.gz -&gt; regex.3.gz
+                ├── regex.3.gz
+                ├── regexec.3.gz -&gt; regex.3.gz
+                ├── regfree.3.gz -&gt; regex.3.gz
+                ├── registerrpc.3.gz -&gt; rpc.3.gz
+                ├── remainder.3.gz
+                ├── remainderf.3.gz -&gt; remainder.3.gz
+                ├── remainderl.3.gz -&gt; remainder.3.gz
+                ├── remove.3.gz
+                ├── remque.3.gz -&gt; insque.3.gz
+                ├── remquo.3.gz
+                ├── remquof.3.gz -&gt; remquo.3.gz
+                ├── remquol.3.gz -&gt; remquo.3.gz
+                ├── res_init.3.gz -&gt; resolver.3.gz
+                ├── res_mkquery.3.gz -&gt; resolver.3.gz
+                ├── resolver.3.gz
+                ├── res_query.3.gz -&gt; resolver.3.gz
+                ├── res_querydomain.3.gz -&gt; resolver.3.gz
+                ├── res_search.3.gz -&gt; resolver.3.gz
+                ├── res_send.3.gz -&gt; resolver.3.gz
+                ├── rewind.3.gz -&gt; fseek.3.gz
+                ├── rewinddir.3.gz
+                ├── rexec.3.gz
+                ├── rexec_af.3.gz -&gt; rexec.3.gz
+                ├── rindex.3.gz -&gt; index.3.gz
+                ├── rint.3.gz
+                ├── rintf.3.gz -&gt; rint.3.gz
+                ├── rintl.3.gz -&gt; rint.3.gz
+                ├── round.3.gz
+                ├── roundf.3.gz -&gt; round.3.gz
+                ├── roundl.3.gz -&gt; round.3.gz
+                ├── rpc.3.gz
+                ├── rpmatch.3.gz
+                ├── rresvport.3.gz -&gt; rcmd.3.gz
+                ├── rresvport_af.3.gz -&gt; rcmd.3.gz
+                ├── rtime.3.gz
+                ├── rtnetlink.3.gz
+                ├── ruserok.3.gz -&gt; rcmd.3.gz
+                ├── ruserok_af.3.gz -&gt; rcmd.3.gz
+                ├── scalb.3.gz
+                ├── scalbf.3.gz -&gt; scalb.3.gz
+                ├── scalbl.3.gz -&gt; scalb.3.gz
+                ├── scalbln.3.gz
+                ├── scalblnf.3.gz -&gt; scalbln.3.gz
+                ├── scalblnl.3.gz -&gt; scalbln.3.gz
+                ├── scalbn.3.gz -&gt; scalbln.3.gz
+                ├── scalbnf.3.gz -&gt; scalbln.3.gz
+                ├── scalbnl.3.gz -&gt; scalbln.3.gz
+                ├── scandir.3.gz
+                ├── scandirat.3.gz
+                ├── scanf.3.gz
+                ├── sched_getcpu.3.gz
+                ├── secure_getenv.3.gz -&gt; getenv.3.gz
+                ├── seed48.3.gz -&gt; drand48.3.gz
+                ├── seed48_r.3.gz -&gt; drand48_r.3.gz
+                ├── seekdir.3.gz
+                ├── sem_close.3.gz
+                ├── sem_destroy.3.gz
+                ├── sem_getvalue.3.gz
+                ├── sem_init.3.gz
+                ├── sem_open.3.gz
+                ├── sem_post.3.gz
+                ├── sem_timedwait.3.gz -&gt; sem_wait.3.gz
+                ├── sem_trywait.3.gz -&gt; sem_wait.3.gz
+                ├── sem_unlink.3.gz
+                ├── sem_wait.3.gz
+                ├── setaliasent.3.gz
+                ├── setbuf.3.gz
+                ├── setbuffer.3.gz -&gt; setbuf.3.gz
+                ├── setcontext.3.gz -&gt; getcontext.3.gz
+                ├── setenv.3.gz
+                ├── __setfpucw.3.gz
+                ├── setfsent.3.gz -&gt; getfsent.3.gz
+                ├── setgrent.3.gz -&gt; getgrent.3.gz
+                ├── sethostent.3.gz -&gt; gethostbyname.3.gz
+                ├── sethostid.3.gz -&gt; gethostid.3.gz
+                ├── setjmp.3.gz
+                ├── setkey.3.gz -&gt; encrypt.3.gz
+                ├── setkey_r.3.gz -&gt; encrypt.3.gz
+                ├── setlinebuf.3.gz -&gt; setbuf.3.gz
+                ├── setlocale.3.gz
+                ├── setlogmask.3.gz
+                ├── setmntent.3.gz -&gt; getmntent.3.gz
+                ├── setnetent.3.gz -&gt; getnetent.3.gz
+                ├── setnetgrent.3.gz
+                ├── setprotoent.3.gz -&gt; getprotoent.3.gz
+                ├── setpwent.3.gz -&gt; getpwent.3.gz
+                ├── setrpcent.3.gz -&gt; getrpcent.3.gz
+                ├── setservent.3.gz -&gt; getservent.3.gz
+                ├── setspent.3.gz -&gt; getspnam.3.gz
+                ├── setstate.3.gz -&gt; random.3.gz
+                ├── setstate_r.3.gz -&gt; random_r.3.gz
+                ├── setttyent.3.gz -&gt; getttyent.3.gz
+                ├── setusershell.3.gz -&gt; getusershell.3.gz
+                ├── setutent.3.gz -&gt; getutent.3.gz
+                ├── setutxent.3.gz -&gt; getutent.3.gz
+                ├── setvbuf.3.gz -&gt; setbuf.3.gz
+                ├── sgetspent.3.gz -&gt; getspnam.3.gz
+                ├── sgetspent_r.3.gz -&gt; getspnam.3.gz
+                ├── shm_open.3.gz
+                ├── shm_unlink.3.gz -&gt; shm_open.3.gz
+                ├── sigaddset.3.gz -&gt; sigsetops.3.gz
+                ├── sigandset.3.gz -&gt; sigsetops.3.gz
+                ├── sigblock.3.gz -&gt; sigvec.3.gz
+                ├── sigdelset.3.gz -&gt; sigsetops.3.gz
+                ├── sigemptyset.3.gz -&gt; sigsetops.3.gz
+                ├── sigfillset.3.gz -&gt; sigsetops.3.gz
+                ├── siggetmask.3.gz -&gt; sigvec.3.gz
+                ├── sighold.3.gz -&gt; sigset.3.gz
+                ├── sigignore.3.gz -&gt; sigset.3.gz
+                ├── siginterrupt.3.gz
+                ├── sigisemptyset.3.gz -&gt; sigsetops.3.gz
+                ├── sigismember.3.gz -&gt; sigsetops.3.gz
+                ├── siglongjmp.3.gz -&gt; longjmp.3.gz
+                ├── sigmask.3.gz -&gt; sigvec.3.gz
+                ├── signbit.3.gz
+                ├── signgam.3.gz -&gt; lgamma.3.gz
+                ├── significand.3.gz
+                ├── significandf.3.gz -&gt; significand.3.gz
+                ├── significandl.3.gz -&gt; significand.3.gz
+                ├── sigorset.3.gz -&gt; sigsetops.3.gz
+                ├── sigpause.3.gz
+                ├── sigqueue.3.gz
+                ├── sigrelse.3.gz -&gt; sigset.3.gz
+                ├── sigset.3.gz
+                ├── sigsetjmp.3.gz -&gt; setjmp.3.gz
+                ├── sigsetmask.3.gz -&gt; sigvec.3.gz
+                ├── sigsetops.3.gz
+                ├── sigstack.3.gz -&gt; ../man2/sigaltstack.2.gz
+                ├── sigvec.3.gz
+                ├── sigwait.3.gz
+                ├── sin.3.gz
+                ├── sincos.3.gz
+                ├── sincosf.3.gz -&gt; sincos.3.gz
+                ├── sincosl.3.gz -&gt; sincos.3.gz
+                ├── sinf.3.gz -&gt; sin.3.gz
+                ├── sinh.3.gz
+                ├── sinhf.3.gz -&gt; sinh.3.gz
+                ├── sinhl.3.gz -&gt; sinh.3.gz
+                ├── sinl.3.gz -&gt; sin.3.gz
+                ├── sleep.3.gz
+                ├── snprintf.3.gz -&gt; printf.3.gz
+                ├── sockatmark.3.gz
+                ├── sprintf.3.gz -&gt; printf.3.gz
+                ├── sqrt.3.gz
+                ├── sqrtf.3.gz -&gt; sqrt.3.gz
+                ├── sqrtl.3.gz -&gt; sqrt.3.gz
+                ├── srand.3.gz -&gt; rand.3.gz
+                ├── srand48.3.gz -&gt; drand48.3.gz
+                ├── srand48_r.3.gz -&gt; drand48_r.3.gz
+                ├── srandom.3.gz -&gt; random.3.gz
+                ├── srandom_r.3.gz -&gt; random_r.3.gz
+                ├── sscanf.3.gz -&gt; scanf.3.gz
+                ├── ssignal.3.gz -&gt; gsignal.3.gz
+                ├── statvfs.3.gz
+                ├── stdarg.3.gz
+                ├── stderr.3.gz -&gt; stdin.3.gz
+                ├── stdin.3.gz
+                ├── stdio.3.gz
+                ├── stdio_ext.3.gz
+                ├── stdout.3.gz -&gt; stdin.3.gz
+                ├── stpcpy.3.gz
+                ├── stpncpy.3.gz
+                ├── strcasecmp.3.gz
+                ├── strcasestr.3.gz -&gt; strstr.3.gz
+                ├── strcat.3.gz
+                ├── strchr.3.gz
+                ├── strchrnul.3.gz -&gt; strchr.3.gz
+                ├── strcmp.3.gz
+                ├── strcoll.3.gz
+                ├── strcpy.3.gz
+                ├── strcspn.3.gz -&gt; strspn.3.gz
+                ├── strdup.3.gz
+                ├── strdupa.3.gz -&gt; strdup.3.gz
+                ├── strerror.3.gz
+                ├── strerror_r.3.gz -&gt; strerror.3.gz
+                ├── strfmon.3.gz
+                ├── strfry.3.gz
+                ├── strftime.3.gz
+                ├── string.3.gz
+                ├── strlen.3.gz
+                ├── strncasecmp.3.gz -&gt; strcasecmp.3.gz
+                ├── strncat.3.gz -&gt; strcat.3.gz
+                ├── strncmp.3.gz -&gt; strcmp.3.gz
+                ├── strncpy.3.gz -&gt; strcpy.3.gz
+                ├── strndup.3.gz -&gt; strdup.3.gz
+                ├── strndupa.3.gz -&gt; strdup.3.gz
+                ├── strnlen.3.gz
+                ├── strpbrk.3.gz
+                ├── strptime.3.gz
+                ├── strrchr.3.gz -&gt; strchr.3.gz
+                ├── strsep.3.gz
+                ├── strsignal.3.gz
+                ├── strspn.3.gz
+                ├── strstr.3.gz
+                ├── strtod.3.gz
+                ├── strtof.3.gz -&gt; strtod.3.gz
+                ├── strtoimax.3.gz
+                ├── strtok.3.gz
+                ├── strtok_r.3.gz -&gt; strtok.3.gz
+                ├── strtol.3.gz
+                ├── strtold.3.gz -&gt; strtod.3.gz
+                ├── strtoll.3.gz -&gt; strtol.3.gz
+                ├── strtoq.3.gz -&gt; strtol.3.gz
+                ├── strtoul.3.gz
+                ├── strtoull.3.gz -&gt; strtoul.3.gz
+                ├── strtoumax.3.gz -&gt; strtoimax.3.gz
+                ├── strtouq.3.gz -&gt; strtoul.3.gz
+                ├── strverscmp.3.gz
+                ├── strxfrm.3.gz
+                ├── svc_destroy.3.gz -&gt; rpc.3.gz
+                ├── svcerr_auth.3.gz -&gt; rpc.3.gz
+                ├── svcerr_decode.3.gz -&gt; rpc.3.gz
+                ├── svcerr_noproc.3.gz -&gt; rpc.3.gz
+                ├── svcerr_noprog.3.gz -&gt; rpc.3.gz
+                ├── svcerr_progvers.3.gz -&gt; rpc.3.gz
+                ├── svcerr_systemerr.3.gz -&gt; rpc.3.gz
+                ├── svcerr_weakauth.3.gz -&gt; rpc.3.gz
+                ├── svcfd_create.3.gz -&gt; rpc.3.gz
+                ├── svc_freeargs.3.gz -&gt; rpc.3.gz
+                ├── svc_getargs.3.gz -&gt; rpc.3.gz
+                ├── svc_getcaller.3.gz -&gt; rpc.3.gz
+                ├── svc_getreq.3.gz -&gt; rpc.3.gz
+                ├── svc_getreqset.3.gz -&gt; rpc.3.gz
+                ├── svcraw_create.3.gz -&gt; rpc.3.gz
+                ├── svc_register.3.gz -&gt; rpc.3.gz
+                ├── svc_run.3.gz -&gt; rpc.3.gz
+                ├── svc_sendreply.3.gz -&gt; rpc.3.gz
+                ├── svctcp_create.3.gz -&gt; rpc.3.gz
+                ├── svcudp_bufcreate.3.gz -&gt; rpc.3.gz
+                ├── svcudp_create.3.gz -&gt; rpc.3.gz
+                ├── svc_unregister.3.gz -&gt; rpc.3.gz
+                ├── swab.3.gz
+                ├── swapcontext.3.gz -&gt; makecontext.3.gz
+                ├── swprintf.3.gz -&gt; wprintf.3.gz
+                ├── sysconf.3.gz
+                ├── sys_errlist.3.gz -&gt; perror.3.gz
+                ├── syslog.3.gz
+                ├── sys_nerr.3.gz -&gt; perror.3.gz
+                ├── system.3.gz
+                ├── sysv_signal.3.gz
+                ├── TAILQ_ENTRY.3.gz -&gt; queue.3.gz
+                ├── TAILQ_HEAD.3.gz -&gt; queue.3.gz
+                ├── TAILQ_INIT.3.gz -&gt; queue.3.gz
+                ├── TAILQ_INSERT_AFTER.3.gz -&gt; queue.3.gz
+                ├── TAILQ_INSERT_HEAD.3.gz -&gt; queue.3.gz
+                ├── TAILQ_INSERT_TAIL.3.gz -&gt; queue.3.gz
+                ├── TAILQ_REMOVE.3.gz -&gt; queue.3.gz
+                ├── tan.3.gz
+                ├── tanf.3.gz -&gt; tan.3.gz
+                ├── tanh.3.gz
+                ├── tanhf.3.gz -&gt; tanh.3.gz
+                ├── tanhl.3.gz -&gt; tanh.3.gz
+                ├── tanl.3.gz -&gt; tan.3.gz
+                ├── tcdrain.3.gz -&gt; termios.3.gz
+                ├── tcflow.3.gz -&gt; termios.3.gz
+                ├── tcflush.3.gz -&gt; termios.3.gz
+                ├── tcgetattr.3.gz -&gt; termios.3.gz
+                ├── tcgetpgrp.3.gz
+                ├── tcgetsid.3.gz
+                ├── tcsendbreak.3.gz -&gt; termios.3.gz
+                ├── tcsetattr.3.gz -&gt; termios.3.gz
+                ├── tcsetpgrp.3.gz -&gt; tcgetpgrp.3.gz
+                ├── tdelete.3.gz -&gt; tsearch.3.gz
+                ├── tdestroy.3.gz -&gt; tsearch.3.gz
+                ├── telldir.3.gz
+                ├── tempnam.3.gz
+                ├── termios.3.gz
+                ├── tfind.3.gz -&gt; tsearch.3.gz
+                ├── tgamma.3.gz
+                ├── tgammaf.3.gz -&gt; tgamma.3.gz
+                ├── tgammal.3.gz -&gt; tgamma.3.gz
+                ├── timegm.3.gz
+                ├── timelocal.3.gz -&gt; timegm.3.gz
+                ├── timeradd.3.gz
+                ├── timerclear.3.gz -&gt; timeradd.3.gz
+                ├── timercmp.3.gz -&gt; timeradd.3.gz
+                ├── timerisset.3.gz -&gt; timeradd.3.gz
+                ├── timersub.3.gz -&gt; timeradd.3.gz
+                ├── timezone.3.gz -&gt; tzset.3.gz
+                ├── tmpfile.3.gz
+                ├── tmpnam.3.gz
+                ├── tmpnam_r.3.gz -&gt; tmpnam.3.gz
+                ├── toascii.3.gz
+                ├── tolower.3.gz -&gt; toupper.3.gz
+                ├── toupper.3.gz
+                ├── towctrans.3.gz
+                ├── towlower.3.gz
+                ├── towupper.3.gz
+                ├── trunc.3.gz
+                ├── truncf.3.gz -&gt; trunc.3.gz
+                ├── truncl.3.gz -&gt; trunc.3.gz
+                ├── tsearch.3.gz
+                ├── ttyname.3.gz
+                ├── ttyname_r.3.gz -&gt; ttyname.3.gz
+                ├── ttyslot.3.gz
+                ├── twalk.3.gz -&gt; tsearch.3.gz
+                ├── tzname.3.gz -&gt; tzset.3.gz
+                ├── tzset.3.gz
+                ├── ualarm.3.gz
+                ├── ulckpwdf.3.gz -&gt; getspnam.3.gz
+                ├── ulimit.3.gz
+                ├── undocumented.3.gz
+                ├── ungetc.3.gz -&gt; gets.3.gz
+                ├── ungetwc.3.gz
+                ├── unlocked_stdio.3.gz
+                ├── unlockpt.3.gz
+                ├── unsetenv.3.gz -&gt; setenv.3.gz
+                ├── updwtmp.3.gz
+                ├── updwtmpx.3.gz -&gt; updwtmp.3.gz
+                ├── usleep.3.gz
+                ├── utmpname.3.gz -&gt; getutent.3.gz
+                ├── utmpxname.3.gz -&gt; getutent.3.gz
+                ├── va_arg.3.gz -&gt; stdarg.3.gz
+                ├── va_copy.3.gz -&gt; stdarg.3.gz
+                ├── va_end.3.gz -&gt; stdarg.3.gz
+                ├── valloc.3.gz -&gt; posix_memalign.3.gz
+                ├── vasprintf.3.gz -&gt; asprintf.3.gz
+                ├── va_start.3.gz -&gt; stdarg.3.gz
+                ├── vdprintf.3.gz -&gt; dprintf.3.gz
+                ├── verr.3.gz -&gt; err.3.gz
+                ├── verrx.3.gz -&gt; err.3.gz
+                ├── versionsort.3.gz -&gt; scandir.3.gz
+                ├── vfprintf.3.gz -&gt; printf.3.gz
+                ├── vfscanf.3.gz -&gt; scanf.3.gz
+                ├── vfwprintf.3.gz -&gt; wprintf.3.gz
+                ├── vlimit.3.gz -&gt; ../man2/getrlimit.2.gz
+                ├── vprintf.3.gz -&gt; printf.3.gz
+                ├── vscanf.3.gz -&gt; scanf.3.gz
+                ├── vsnprintf.3.gz -&gt; printf.3.gz
+                ├── vsprintf.3.gz -&gt; printf.3.gz
+                ├── vsscanf.3.gz -&gt; scanf.3.gz
+                ├── vswprintf.3.gz -&gt; wprintf.3.gz
+                ├── vsyslog.3.gz -&gt; syslog.3.gz
+                ├── vtimes.3.gz -&gt; ../man2/getrusage.2.gz
+                ├── vwarn.3.gz -&gt; err.3.gz
+                ├── vwarnx.3.gz -&gt; err.3.gz
+                ├── vwprintf.3.gz -&gt; wprintf.3.gz
+                ├── warn.3.gz -&gt; err.3.gz
+                ├── warnx.3.gz -&gt; err.3.gz
+                ├── wcpcpy.3.gz
+                ├── wcpncpy.3.gz
+                ├── wcrtomb.3.gz
+                ├── wcscasecmp.3.gz
+                ├── wcscat.3.gz
+                ├── wcschr.3.gz
+                ├── wcscmp.3.gz
+                ├── wcscpy.3.gz
+                ├── wcscspn.3.gz
+                ├── wcsdup.3.gz
+                ├── wcslen.3.gz
+                ├── wcsncasecmp.3.gz
+                ├── wcsncat.3.gz
+                ├── wcsncmp.3.gz
+                ├── wcsncpy.3.gz
+                ├── wcsnlen.3.gz
+                ├── wcsnrtombs.3.gz
+                ├── wcspbrk.3.gz
+                ├── wcsrchr.3.gz
+                ├── wcsrtombs.3.gz
+                ├── wcsspn.3.gz
+                ├── wcsstr.3.gz
+                ├── wcstoimax.3.gz
+                ├── wcstok.3.gz
+                ├── wcstombs.3.gz
+                ├── wcstoumax.3.gz -&gt; wcstoimax.3.gz
+                ├── wcswidth.3.gz
+                ├── wctob.3.gz
+                ├── wctomb.3.gz
+                ├── wctrans.3.gz
+                ├── wctype.3.gz
+                ├── wcwidth.3.gz
+                ├── wmemchr.3.gz
+                ├── wmemcmp.3.gz
+                ├── wmemcpy.3.gz
+                ├── wmemmove.3.gz
+                ├── wmempcpy.3.gz -&gt; mempcpy.3.gz
+                ├── wmemset.3.gz
+                ├── wordexp.3.gz
+                ├── wordfree.3.gz -&gt; wordexp.3.gz
+                ├── wprintf.3.gz
+                ├── xcrypt.3.gz
+                ├── xdecrypt.3.gz -&gt; xcrypt.3.gz
+                ├── xdr.3.gz
+                ├── xdr_accepted_reply.3.gz -&gt; rpc.3.gz
+                ├── xdr_array.3.gz -&gt; xdr.3.gz
+                ├── xdr_authunix_parms.3.gz -&gt; rpc.3.gz
+                ├── xdr_bool.3.gz -&gt; xdr.3.gz
+                ├── xdr_bytes.3.gz -&gt; xdr.3.gz
+                ├── xdr_callhdr.3.gz -&gt; rpc.3.gz
+                ├── xdr_callmsg.3.gz -&gt; rpc.3.gz
+                ├── xdr_char.3.gz -&gt; xdr.3.gz
+                ├── xdr_destroy.3.gz -&gt; xdr.3.gz
+                ├── xdr_double.3.gz -&gt; xdr.3.gz
+                ├── xdr_enum.3.gz -&gt; xdr.3.gz
+                ├── xdr_float.3.gz -&gt; xdr.3.gz
+                ├── xdr_free.3.gz -&gt; xdr.3.gz
+                ├── xdr_getpos.3.gz -&gt; xdr.3.gz
+                ├── xdr_inline.3.gz -&gt; xdr.3.gz
+                ├── xdr_int.3.gz -&gt; xdr.3.gz
+                ├── xdr_long.3.gz -&gt; xdr.3.gz
+                ├── xdrmem_create.3.gz -&gt; xdr.3.gz
+                ├── xdr_opaque.3.gz -&gt; xdr.3.gz
+                ├── xdr_opaque_auth.3.gz -&gt; rpc.3.gz
+                ├── xdr_pmap.3.gz -&gt; rpc.3.gz
+                ├── xdr_pmaplist.3.gz -&gt; rpc.3.gz
+                ├── xdr_pointer.3.gz -&gt; xdr.3.gz
+                ├── xdrrec_create.3.gz -&gt; xdr.3.gz
+                ├── xdrrec_endofrecord.3.gz -&gt; xdr.3.gz
+                ├── xdrrec_eof.3.gz -&gt; xdr.3.gz
+                ├── xdrrec_skiprecord.3.gz -&gt; xdr.3.gz
+                ├── xdr_reference.3.gz -&gt; xdr.3.gz
+                ├── xdr_rejected_reply.3.gz -&gt; rpc.3.gz
+                ├── xdr_replymsg.3.gz -&gt; rpc.3.gz
+                ├── xdr_setpos.3.gz -&gt; xdr.3.gz
+                ├── xdr_short.3.gz -&gt; xdr.3.gz
+                ├── xdrstdio_create.3.gz -&gt; xdr.3.gz
+                ├── xdr_string.3.gz -&gt; xdr.3.gz
+                ├── xdr_u_char.3.gz -&gt; xdr.3.gz
+                ├── xdr_u_int.3.gz -&gt; xdr.3.gz
+                ├── xdr_u_long.3.gz -&gt; xdr.3.gz
+                ├── xdr_union.3.gz -&gt; xdr.3.gz
+                ├── xdr_u_short.3.gz -&gt; xdr.3.gz
+                ├── xdr_vector.3.gz -&gt; xdr.3.gz
+                ├── xdr_void.3.gz -&gt; xdr.3.gz
+                ├── xdr_wrapstring.3.gz -&gt; xdr.3.gz
+                ├── xencrypt.3.gz -&gt; xcrypt.3.gz
+                ├── xprt_register.3.gz -&gt; rpc.3.gz
+                ├── xprt_unregister.3.gz -&gt; rpc.3.gz
+                ├── y0.3.gz
+                ├── y0f.3.gz -&gt; y0.3.gz
+                ├── y0l.3.gz -&gt; y0.3.gz
+                ├── y1.3.gz -&gt; y0.3.gz
+                ├── y1f.3.gz -&gt; y0.3.gz
+                ├── y1l.3.gz -&gt; y0.3.gz
+                ├── yn.3.gz -&gt; y0.3.gz
+                ├── ynf.3.gz -&gt; y0.3.gz
+                └── ynl.3.gz -&gt; y0.3.gz
 
-15 directories, 230 files
+8 directories, 1933 files
 </code></pre><pre><code>$ tree DEBIAN
 </code></pre><p>顯示</p>
 <pre><code>DEBIAN
@@ -2548,12 +4241,12 @@ dpkg <span class="hljs-operator">-e</span> manpages_3.<span class="hljs-number">
 └── md5sums
 
 0 directories, 2 files
-</code></pre><h2 id="source-package-manpageshttppackagesubuntucomtrustymanpages">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/manpages" target="_blank">manpages</a>」</h2>
-<p>切換到「~/Downloads/manpages/source」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/manpages/<span class="hljs-built_in">source</span>
+</code></pre><h2 id="source-package-manpages-devhttppackagesubuntucomtrustymanpages-dev">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/manpages-dev" target="_blank">manpages-dev</a>」</h2>
+<p>切換到「~/Downloads/manpages-dev/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/manpages-dev/<span class="hljs-built_in">source</span>
 </code></pre>
-<p>下載「Source Package: manpages」。</p>
-<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> manpages
+<p>下載「Source Package: manpages-dev」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> manpages-dev
 </code></pre>
 <p>檢視原始碼套件檔案。</p>
 <pre><code>$ tree manpages-3.54
@@ -4804,10 +6497,10 @@ dpkg <span class="hljs-operator">-e</span> manpages_3.<span class="hljs-number">
         </div>
 
         
-        <a href="../../../content/package/manpages/index.html" class="navigation navigation-prev " aria-label="Previous page: manpages"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/manpages-dev/index.html" class="navigation navigation-prev " aria-label="Previous page: manpages-dev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/manpages/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/manpages-dev/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
