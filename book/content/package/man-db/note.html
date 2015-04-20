@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="4.1.2" data-basepath="../../.." data-revision="1429518362691">
+    <div class="book" data-level="4.1.2" data-basepath="../../.." data-revision="1429523463390">
     
 
 <div class="book-summary">
@@ -2434,9 +2434,13 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_81">
+                    <section class="normal" id="section-gitbook_80">
                     
                         <h1 id="man-db-note">man-db note</h1>
+<h2 id="">鳥哥的私房菜</h2>
+<ul>
+<li>第五章、首次登入與線上求助 man page / <a href="http://linux.vbird.org/linux_basic/0160startlinux.php#manual" target="_blank">3. Linux系統的線上求助man page與info page</a></li>
+</ul>
 <h2 id="">指令範例</h2>
 <pre><code>$ man -a intro
 </code></pre><p>執行</p>
@@ -2455,6 +2459,40 @@ manpages-posix-dev                              install
 ii  manpages-dev                                                3.54-1ubuntu1                              all          Manual pages about using GNU/Linux for development
 ii  manpages-posix                                              2.16-1                                     all          Manual pages about using POSIX system
 ii  manpages-posix-dev                                          2.16-1                                     all          Manual pages about using a POSIX system for development
+</code></pre><p>執行</p>
+<pre><code>$ whatis
+</code></pre><p>顯示</p>
+<pre><code>whatis what?
+</code></pre><p>執行</p>
+<pre><code>$ man -f
+</code></pre><p>顯示</p>
+<pre><code>whatis what?
+</code></pre><p>執行</p>
+<pre><code>$ whatis intro
+</code></pre><p>或是執行</p>
+<pre><code>$ man -f intro
+</code></pre><p>顯示</p>
+<pre><code>intro (4)            - introduction to special files
+intro (2)            - introduction to system calls
+intro (8)            - introduction to administration and privileged commands
+intro (5)            - introduction to file formats
+intro (3)            - introduction to library functions
+intro (6)            - introduction to games
+intro (7)            - introduction to overview, conventions, and miscellany section
+intro (1)            - introduction to user commands
+</code></pre><p>執行</p>
+<pre><code>$ whatis intro | sort
+</code></pre><p>或是執行</p>
+<pre><code>$ man -f intro | sort
+</code></pre><p>顯示</p>
+<pre><code>intro (1)            - introduction to user commands
+intro (2)            - introduction to system calls
+intro (3)            - introduction to library functions
+intro (4)            - introduction to special files
+intro (5)            - introduction to file formats
+intro (6)            - introduction to games
+intro (7)            - introduction to overview, conventions, and miscellany section
+intro (8)            - introduction to administration and privileged commands
 </code></pre>
                     
                     </section>
