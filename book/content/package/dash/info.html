@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>report | Ubuntu Exploration (Ubuntu 探索)</title>
+        <title>info | Ubuntu Exploration (Ubuntu 探索)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/category/package/index.html" />
+    <link rel="next" href="../../../content/package/dash/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/manpages-posix-dev/note.html" />
+    <link rel="prev" href="../../../content/package/dash/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1.5.3" data-basepath="../../.." data-revision="1429516023978">
+    <div class="book" data-level="3.1.1" data-basepath="../../.." data-revision="1429516023978">
     
 
 <div class="book-summary">
@@ -412,7 +412,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.5.3" data-path="content/package/manpages-posix-dev/report.html">
+        <li class="chapter " data-level="1.5.3" data-path="content/package/manpages-posix-dev/report.html">
             
                 
                     <a href="../../../content/package/manpages-posix-dev/report.html">
@@ -704,7 +704,7 @@
                 
     
         
-        <li class="chapter " data-level="3.1.1" data-path="content/package/dash/info.html">
+        <li class="chapter active" data-level="3.1.1" data-path="content/package/dash/info.html">
             
                 
                     <a href="../../../content/package/dash/info.html">
@@ -2364,10 +2364,338 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_94">
+                    <section class="normal" id="section-gitbook_26">
                     
-                        <h1 id="manpages-posix-dev-report">manpages-posix-dev report</h1>
+                        <h1 id="dash-info">dash info</h1>
+<h2 id="">套件資訊</h2>
+<p>執行</p>
+<pre><code>$ apt-cache show dash
+</code></pre><p>顯示</p>
+<pre><code>Package: dash
+Essential: yes
+Priority: required
+Section: shells
+Installed-Size: 228
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Gerrit Pape &lt;pape@smarden.org&gt;
+Architecture: amd64
+Version: 0.5.7-4ubuntu1
+Depends: debianutils (&gt;= 2.15), dpkg (&gt;= 1.15.0)
+Pre-Depends: libc6 (&gt;= 2.14)
+Filename: pool/main/d/dash/dash_0.5.7-4ubuntu1_amd64.deb
+Size: 85072
+MD5sum: bc4e7234842e533d98295faf559e86c2
+SHA1: ce8e8a858783d4a02ba1ca98c2d5cea6525f73c1
+SHA256: 5befdfa1b3adc0c41e43d4fa1b3c960efe54f170d434c85d94012611024c6069
+Description-en: POSIX-compliant shell
+ The Debian Almquist Shell (dash) is a POSIX-compliant shell derived
+ from ash.
+ .
+ Since it executes scripts faster than bash, and has fewer library
+ dependencies (making it more robust against software or hardware
+ failures), it is used as the default system shell on Debian systems.
+Description-md5: 8d4d9c32c6b2b70328f7f774a0cc1248
+Homepage: http://gondor.apana.org.au/~herbert/dash/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showpkg dash
+</code></pre><p>顯示</p>
+<pre><code>Package: dash
+Versions:
+0.5.7-4ubuntu1 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages) (/var/lib/dpkg/status)
+ Description Language:
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
+                  MD5: 8d4d9c32c6b2b70328f7f774a0cc1248
+ Description Language: en
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
+                  MD5: 8d4d9c32c6b2b70328f7f774a0cc1248
 
+
+Reverse Depends:
+  bash,dash 0.5.5.1-2.2
+  dash:i386,dash
+  hibernate,dash
+  dphys-config,dash
+  ash,dash
+  apt-move,dash
+  bash,dash 0.5.5.1-2.2
+Dependencies:
+0.5.7-4ubuntu1 - debianutils (2 2.15) dpkg (2 1.15.0) libc6 (2 2.14) dash:i386 (0 (null))
+Provides:
+0.5.7-4ubuntu1 -
+Reverse Provides:
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showsrc dash
+</code></pre><p>顯示</p>
+<pre><code>Package: dash
+Binary: dash, ash
+Version: 0.5.7-4ubuntu1
+Priority: required
+Section: shells
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Gerrit Pape &lt;pape@smarden.org&gt;
+Build-Depends: po-debconf, dpkg-dev (&gt;= 1.16.1)
+Architecture: any all
+Standards-Version: 3.9.3.0
+Format: 1.0
+Directory: pool/main/d/dash
+Files:
+ 8d7f2abbca64b079d9d8d5cad1c567ef 1835 dash_0.5.7-4ubuntu1.dsc
+ f6cedb10ae7258adb5ab17a10ae80d51 223794 dash_0.5.7.orig.tar.gz
+ 6f1a1e503d510d11b8af7ab8816c8dbf 57631 dash_0.5.7-4ubuntu1.diff.gz
+Homepage: http://gondor.apana.org.au/~herbert/dash/
+Vcs-Git: http://smarden.org/git/dash.git/
+Package-List:
+ ash deb shells optional
+ dash deb shells required
+Checksums-Sha1:
+ 2b92b3c3f4b5affe692efd58ce317b672e226782 1835 dash_0.5.7-4ubuntu1.dsc
+ a3ebc16f2e2c7ae8adf64e5e62ae3dcb631717c6 223794 dash_0.5.7.orig.tar.gz
+ 25f91a524caf304c82b58936704c81a75730df00 57631 dash_0.5.7-4ubuntu1.diff.gz
+Checksums-Sha256:
+ 7143c21541e6a833a99c48ad2bdd47bb5e770c83b1173459aaf85ee8f1dd70d2 1835 dash_0.5.7-4ubuntu1.dsc
+ ae89fa9f1145b7748cf0740e1df04cd52fdf8a285da4911dd0f04983efba4e39 223794 dash_0.5.7.orig.tar.gz
+ e55bbd7eb0336be61e9c396e54b58f94df09ef4b98cef8bed5d394f394163a0f 57631 dash_0.5.7-4ubuntu1.diff.gz
+</code></pre><p>執行</p>
+<pre><code>$ dpkg -s dash
+</code></pre><p>顯示</p>
+<pre><code>Package: dash
+Essential: yes
+Status: install ok installed
+Priority: required
+Section: shells
+Installed-Size: 228
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Architecture: amd64
+Version: 0.5.7-4ubuntu1
+Depends: debianutils (&gt;= 2.15), dpkg (&gt;= 1.15.0)
+Pre-Depends: libc6 (&gt;= 2.14)
+Description: POSIX-compliant shell
+ The Debian Almquist Shell (dash) is a POSIX-compliant shell derived
+ from ash.
+ .
+ Since it executes scripts faster than bash, and has fewer library
+ dependencies (making it more robust against software or hardware
+ failures), it is used as the default system shell on Debian systems.
+Homepage: http://gondor.apana.org.au/~herbert/dash/
+Original-Maintainer: Gerrit Pape &lt;pape@smarden.org&gt;
+</code></pre><p>執行</p>
+<pre><code>$ dpkg -l dash
+</code></pre><p>顯示</p>
+<pre><code>Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                         Version             Architecture        Description
++++-============================-===================-===================-==============================================================
+ii  dash                         0.5.7-4ubuntu1      amd64               POSIX-compliant shell
+</code></pre><h2 id="">準備工作環境</h2>
+<pre><code>mkdir  ~/Downloads/dash -p
+cd ~/Downloads/dash
+mkdir download source
+</code></pre><h2 id="package-dashhttppackagesubuntucomtrustydash">探索「Package: <a href="http://packages.ubuntu.com/trusty/dash" target="_blank">dash</a>」</h2>
+<p>切換到「~/Downloads/dash/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/dash/download
+</code></pre>
+<p>下載「Package: dash」。</p>
+<pre><code class="lang-sh">$ apt-get download dash
+</code></pre>
+<p>解開「package dash」</p>
+<pre><code class="lang-sh">dpkg -x dash_0.<span class="hljs-number">5.7</span>-<span class="hljs-number">4</span>ubuntu1_amd64.deb dash
+dpkg <span class="hljs-operator">-e</span> dash_0.<span class="hljs-number">5.7</span>-<span class="hljs-number">4</span>ubuntu1_amd64.deb
+<span class="hljs-comment"># ar xv dash_0.5.7-4ubuntu1_amd64.deb</span>
+</code></pre>
+<p>檢視套件檔案</p>
+<pre><code class="lang-sh">$ tree dash
+</code></pre>
+<p>顯示</p>
+<pre><code>dash
+├── bin
+│   ├── dash
+│   └── sh -&gt; dash
+└── usr
+    └── share
+        ├── doc
+        │   └── dash
+        │       ├── changelog.Debian.gz
+        │       ├── copyright
+        │       ├── NEWS.Debian.gz
+        │       ├── README.Debian.diet
+        │       └── README.source
+        ├── man
+        │   └── man1
+        │       ├── dash.1.gz
+        │       └── sh.1.gz -&gt; dash.1.gz
+        └── menu
+            └── dash
+
+8 directories, 10 files
+</code></pre><p>執行</p>
+<pre><code>$ tree DEBIAN
+</code></pre><p>顯示</p>
+<pre><code>DEBIAN
+├── config
+├── control
+├── md5sums
+├── postinst
+├── postrm
+├── preinst
+├── prerm
+└── templates
+
+0 directories, 8 files
+</code></pre><h2 id="source-package-dashhttppackagesubuntucomtrustydash">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/dash" target="_blank">dash</a>」</h2>
+<p>切換到「~/Downloads/dash/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/dash/<span class="hljs-built_in">source</span>
+</code></pre>
+<p>下載「Source Package: dash」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> dash
+</code></pre>
+<p>檢視原始碼套件檔案。</p>
+<pre><code>$ tree dash-0.5.7
+</code></pre><p>顯示</p>
+<pre><code>dash-0.5.7
+├── aclocal.m4
+├── ChangeLog
+├── config.h.in
+├── configure
+├── configure.ac
+├── COPYING
+├── debian
+│   ├── ash.postinst
+│   ├── ash.postrm
+│   ├── changelog
+│   ├── control
+│   ├── copyright
+│   ├── dash.config
+│   ├── dash.docs
+│   ├── dash.menu
+│   ├── dash.NEWS.Debian
+│   ├── dash.postinst
+│   ├── dash.postrm
+│   ├── dash.preinst
+│   ├── dash.prerm
+│   ├── dash.README.source
+│   ├── dash.templates.in
+│   ├── diff
+│   │   ├── 0001-SHELL-print-n-upon-EOF-CTRL-D-when-run-interactively.diff
+│   │   ├── 0002-PARSER-Remove-backslash-before-in-double-quotes-in-va.diff
+│   │   ├── 0003-VAR-Disable-LINENO-support.diff
+│   │   ├── 0004-BUILTIN-Fix-test-x-as-root-on-platforms-with-old-fash.diff
+│   │   ├── 0005-SHELL-Disable-sh-c-command-sh-c-exec-command-optimiza.diff
+│   │   ├── 0006-JOBS-address-format-security-build-error.diff
+│   │   └── 0007-Report-I-O-error-on-stdout.diff
+│   ├── implicit
+│   ├── po
+│   │   ├── bg.po
+│   │   ├── cs.po
+│   │   ├── da.po
+│   │   ├── de.po
+│   │   ├── es.po
+│   │   ├── eu.po
+│   │   ├── fi.po
+│   │   ├── fr.po
+│   │   ├── gl.po
+│   │   ├── id.po
+│   │   ├── it.po
+│   │   ├── ja.po
+│   │   ├── ko.po
+│   │   ├── nl.po
+│   │   ├── pl.po
+│   │   ├── POTFILES.in
+│   │   ├── pt_BR.po
+│   │   ├── pt.po
+│   │   ├── ro.po
+│   │   ├── ru.po
+│   │   ├── sk.po
+│   │   ├── sv.po
+│   │   ├── templates.pot
+│   │   ├── tr.po
+│   │   └── vi.po
+│   ├── README.Debian.diet
+│   ├── rules
+│   └── watch
+├── depcomp
+├── INSTALL
+├── install-sh
+├── Makefile.am
+├── Makefile.in
+├── missing
+├── src
+│   ├── alias.c
+│   ├── alias.h
+│   ├── arith_yacc.c
+│   ├── arith_yacc.h
+│   ├── arith_yylex.c
+│   ├── bltin
+│   │   ├── bltin.h
+│   │   ├── printf.c
+│   │   ├── test.c
+│   │   └── times.c
+│   ├── builtins.def.in
+│   ├── cd.c
+│   ├── cd.h
+│   ├── dash.1
+│   ├── error.c
+│   ├── error.h
+│   ├── eval.c
+│   ├── eval.h
+│   ├── exec.c
+│   ├── exec.h
+│   ├── expand.c
+│   ├── expand.h
+│   ├── hetio.h
+│   ├── histedit.c
+│   ├── init.h
+│   ├── input.c
+│   ├── input.h
+│   ├── jobs.c
+│   ├── jobs.h
+│   ├── machdep.h
+│   ├── mail.c
+│   ├── mail.h
+│   ├── main.c
+│   ├── main.h
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── memalloc.c
+│   ├── memalloc.h
+│   ├── miscbltin.c
+│   ├── miscbltin.h
+│   ├── mkbuiltins
+│   ├── mkinit.c
+│   ├── mknodes.c
+│   ├── mksignames.c
+│   ├── mksyntax.c
+│   ├── mktokens
+│   ├── myhistedit.h
+│   ├── mystring.c
+│   ├── mystring.h
+│   ├── nodes.c.pat
+│   ├── nodetypes
+│   ├── options.c
+│   ├── options.h
+│   ├── output.c
+│   ├── output.h
+│   ├── parser.c
+│   ├── parser.h
+│   ├── redir.c
+│   ├── redir.h
+│   ├── shell.h
+│   ├── show.c
+│   ├── show.h
+│   ├── system.c
+│   ├── system.h
+│   ├── trap.c
+│   ├── trap.h
+│   ├── var.c
+│   └── var.h
+└── tests.tar.gz.uue
+
+5 directories, 131 files
+</code></pre>
                     
                     </section>
                 
@@ -2377,10 +2705,10 @@
         </div>
 
         
-        <a href="../../../content/package/manpages-posix-dev/note.html" class="navigation navigation-prev " aria-label="Previous page: note"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/dash/index.html" class="navigation navigation-prev " aria-label="Previous page: dash"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/category/package/index.html" class="navigation navigation-next " aria-label="Next page: 套件管理"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/dash/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
