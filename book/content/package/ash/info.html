@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>report | Ubuntu Exploration (Ubuntu 探索)</title>
+        <title>info | Ubuntu Exploration (Ubuntu 探索)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/manpages-posix-dev/index.html" />
+    <link rel="next" href="../../../content/package/ash/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/manpages-posix/note.html" />
+    <link rel="prev" href="../../../content/package/ash/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1.4.3" data-basepath="../../.." data-revision="1429518362691">
+    <div class="book" data-level="3.2.1" data-basepath="../../.." data-revision="1429518362691">
     
 
 <div class="book-summary">
@@ -342,7 +342,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.4.3" data-path="content/package/manpages-posix/report.html">
+        <li class="chapter " data-level="1.4.3" data-path="content/package/manpages-posix/report.html">
             
                 
                     <a href="../../../content/package/manpages-posix/report.html">
@@ -774,7 +774,7 @@
                 
     
         
-        <li class="chapter " data-level="3.2.1" data-path="content/package/ash/info.html">
+        <li class="chapter active" data-level="3.2.1" data-path="content/package/ash/info.html">
             
                 
                     <a href="../../../content/package/ash/info.html">
@@ -2434,10 +2434,311 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_94">
+                    <section class="normal" id="section-gitbook_64">
                     
-                        <h1 id="manpages-posix-report">manpages-posix report</h1>
+                        <h1 id="ash-info">ash info</h1>
+<h2 id="">套件資訊</h2>
+<p>執行</p>
+<pre><code>$ apt-cache show ash
+</code></pre><p>顯示</p>
+<pre><code>Package: ash
+Priority: optional
+Section: universe/shells
+Installed-Size: 68
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Gerrit Pape &lt;pape@smarden.org&gt;
+Architecture: all
+Source: dash
+Version: 0.5.7-4ubuntu1
+Pre-Depends: dash
+Filename: pool/universe/d/dash/ash_0.5.7-4ubuntu1_all.deb
+Size: 5578
+MD5sum: fdd27dc1b5d6e8cc88844f7eb04ecae4
+SHA1: b2630dc95e0828c29e743debebd144e972654108
+SHA256: aecd5a4027c804a7b2719ed70fea4034c625391784e9dc51fc792ad6a2fb0cdc
+Description-en: compatibility package for dash
+ This package allows upgrading ash to its replacement,
+ dash. It includes the /bin/ash symlink.
+ It can be removed as soon as /bin/ash is no longer used.
+Description-md5: dfaa90778ec9574851d009730b4a705a
+Homepage: http://gondor.apana.org.au/~herbert/dash/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showpkg ash
+</code></pre><p>顯示</p>
+<pre><code>Package: ash
+Versions:
+0.5.7-4ubuntu1 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_universe_binary-amd64_Packages) (/var/lib/dpkg/status)
+ Description Language:
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_universe_binary-amd64_Packages
+                  MD5: dfaa90778ec9574851d009730b4a705a
+ Description Language: en
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_universe_i18n_Translation-en
+                  MD5: dfaa90778ec9574851d009730b4a705a
 
+
+Reverse Depends:
+  drbl,ash
+Dependencies:
+0.5.7-4ubuntu1 - dash (0 (null))
+Provides:
+0.5.7-4ubuntu1 -
+Reverse Provides:
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showsrc ash
+</code></pre><p>顯示</p>
+<pre><code>Package: dash
+Binary: dash, ash
+Version: 0.5.7-4ubuntu1
+Priority: required
+Section: shells
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Gerrit Pape &lt;pape@smarden.org&gt;
+Build-Depends: po-debconf, dpkg-dev (&gt;= 1.16.1)
+Architecture: any all
+Standards-Version: 3.9.3.0
+Format: 1.0
+Directory: pool/main/d/dash
+Files:
+ 8d7f2abbca64b079d9d8d5cad1c567ef 1835 dash_0.5.7-4ubuntu1.dsc
+ f6cedb10ae7258adb5ab17a10ae80d51 223794 dash_0.5.7.orig.tar.gz
+ 6f1a1e503d510d11b8af7ab8816c8dbf 57631 dash_0.5.7-4ubuntu1.diff.gz
+Homepage: http://gondor.apana.org.au/~herbert/dash/
+Vcs-Git: http://smarden.org/git/dash.git/
+Package-List:
+ ash deb shells optional
+ dash deb shells required
+Checksums-Sha1:
+ 2b92b3c3f4b5affe692efd58ce317b672e226782 1835 dash_0.5.7-4ubuntu1.dsc
+ a3ebc16f2e2c7ae8adf64e5e62ae3dcb631717c6 223794 dash_0.5.7.orig.tar.gz
+ 25f91a524caf304c82b58936704c81a75730df00 57631 dash_0.5.7-4ubuntu1.diff.gz
+Checksums-Sha256:
+ 7143c21541e6a833a99c48ad2bdd47bb5e770c83b1173459aaf85ee8f1dd70d2 1835 dash_0.5.7-4ubuntu1.dsc
+ ae89fa9f1145b7748cf0740e1df04cd52fdf8a285da4911dd0f04983efba4e39 223794 dash_0.5.7.orig.tar.gz
+ e55bbd7eb0336be61e9c396e54b58f94df09ef4b98cef8bed5d394f394163a0f 57631 dash_0.5.7-4ubuntu1.diff.gz
+</code></pre><p>執行</p>
+<pre><code>$ dpkg -s ash
+</code></pre><p>顯示</p>
+<pre><code>Package: ash
+Status: install ok installed
+Priority: optional
+Section: shells
+Installed-Size: 68
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Architecture: all
+Source: dash
+Version: 0.5.7-4ubuntu1
+Pre-Depends: dash
+Description: compatibility package for dash
+ This package allows upgrading ash to its replacement,
+ dash. It includes the /bin/ash symlink.
+ It can be removed as soon as /bin/ash is no longer used.
+Homepage: http://gondor.apana.org.au/~herbert/dash/
+Original-Maintainer: Gerrit Pape &lt;pape@smarden.org&gt;
+</code></pre><p>執行</p>
+<pre><code>$ dpkg -l ash
+</code></pre><p>顯示</p>
+<pre><code>Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                         Version             Architecture        Description
++++-============================-===================-===================-==============================================================
+ii  ash                          0.5.7-4ubuntu1      all                 compatibility package for dash
+</code></pre><h2 id="">準備工作環境</h2>
+<pre><code>mkdir  ~/Downloads/ash -p
+cd ~/Downloads/ash
+mkdir download source
+</code></pre><h2 id="package-ashhttppackagesubuntucomtrustyash">探索「Package: <a href="http://packages.ubuntu.com/trusty/ash" target="_blank">ash</a>」</h2>
+<p>切換到「~/Downloads/ash/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/ash/download
+</code></pre>
+<p>下載「Package: ash」。</p>
+<pre><code class="lang-sh">$ apt-get download ash
+</code></pre>
+<p>解開「package ash」</p>
+<pre><code class="lang-sh">dpkg -x ash_0.<span class="hljs-number">5.7</span>-<span class="hljs-number">4</span>ubuntu1_all.deb ash
+dpkg <span class="hljs-operator">-e</span> ash_0.<span class="hljs-number">5.7</span>-<span class="hljs-number">4</span>ubuntu1_all.deb
+<span class="hljs-comment"># ar xv ash_0.5.7-4ubuntu1_all.deb</span>
+</code></pre>
+<p>檢視套件檔案</p>
+<pre><code class="lang-sh">$ tree ash
+</code></pre>
+<p>顯示</p>
+<pre><code>ash
+├── bin
+│   └── ash -&gt; dash
+└── usr
+    └── share
+        ├── doc
+        │   └── ash
+        │       ├── changelog.Debian.gz
+        │       └── copyright
+        └── man
+            └── man1
+                └── ash.1.gz -&gt; dash.1.gz
+
+7 directories, 4 files
+</code></pre><p>執行</p>
+<pre><code>$ tree DEBIAN
+</code></pre><p>顯示</p>
+<pre><code>DEBIAN
+├── control
+├── md5sums
+├── postinst
+└── postrm
+
+0 directories, 4 files
+</code></pre><h2 id="source-package-ashhttppackagesubuntucomtrustyash">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/ash" target="_blank">ash</a>」</h2>
+<p>切換到「~/Downloads/ash/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/ash/<span class="hljs-built_in">source</span>
+</code></pre>
+<p>下載「Source Package: ash」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> ash
+</code></pre>
+<p>檢視原始碼套件檔案。</p>
+<pre><code>$ tree dash-0.5.7
+</code></pre><p>顯示</p>
+<pre><code>dash-0.5.7
+├── aclocal.m4
+├── ChangeLog
+├── config.h.in
+├── configure
+├── configure.ac
+├── COPYING
+├── debian
+│   ├── ash.postinst
+│   ├── ash.postrm
+│   ├── changelog
+│   ├── control
+│   ├── copyright
+│   ├── dash.config
+│   ├── dash.docs
+│   ├── dash.menu
+│   ├── dash.NEWS.Debian
+│   ├── dash.postinst
+│   ├── dash.postrm
+│   ├── dash.preinst
+│   ├── dash.prerm
+│   ├── dash.README.source
+│   ├── dash.templates.in
+│   ├── diff
+│   │   ├── 0001-SHELL-print-n-upon-EOF-CTRL-D-when-run-interactively.diff
+│   │   ├── 0002-PARSER-Remove-backslash-before-in-double-quotes-in-va.diff
+│   │   ├── 0003-VAR-Disable-LINENO-support.diff
+│   │   ├── 0004-BUILTIN-Fix-test-x-as-root-on-platforms-with-old-fash.diff
+│   │   ├── 0005-SHELL-Disable-sh-c-command-sh-c-exec-command-optimiza.diff
+│   │   ├── 0006-JOBS-address-format-security-build-error.diff
+│   │   └── 0007-Report-I-O-error-on-stdout.diff
+│   ├── implicit
+│   ├── po
+│   │   ├── bg.po
+│   │   ├── cs.po
+│   │   ├── da.po
+│   │   ├── de.po
+│   │   ├── es.po
+│   │   ├── eu.po
+│   │   ├── fi.po
+│   │   ├── fr.po
+│   │   ├── gl.po
+│   │   ├── id.po
+│   │   ├── it.po
+│   │   ├── ja.po
+│   │   ├── ko.po
+│   │   ├── nl.po
+│   │   ├── pl.po
+│   │   ├── POTFILES.in
+│   │   ├── pt_BR.po
+│   │   ├── pt.po
+│   │   ├── ro.po
+│   │   ├── ru.po
+│   │   ├── sk.po
+│   │   ├── sv.po
+│   │   ├── templates.pot
+│   │   ├── tr.po
+│   │   └── vi.po
+│   ├── README.Debian.diet
+│   ├── rules
+│   └── watch
+├── depcomp
+├── INSTALL
+├── install-sh
+├── Makefile.am
+├── Makefile.in
+├── missing
+├── src
+│   ├── alias.c
+│   ├── alias.h
+│   ├── arith_yacc.c
+│   ├── arith_yacc.h
+│   ├── arith_yylex.c
+│   ├── bltin
+│   │   ├── bltin.h
+│   │   ├── printf.c
+│   │   ├── test.c
+│   │   └── times.c
+│   ├── builtins.def.in
+│   ├── cd.c
+│   ├── cd.h
+│   ├── dash.1
+│   ├── error.c
+│   ├── error.h
+│   ├── eval.c
+│   ├── eval.h
+│   ├── exec.c
+│   ├── exec.h
+│   ├── expand.c
+│   ├── expand.h
+│   ├── hetio.h
+│   ├── histedit.c
+│   ├── init.h
+│   ├── input.c
+│   ├── input.h
+│   ├── jobs.c
+│   ├── jobs.h
+│   ├── machdep.h
+│   ├── mail.c
+│   ├── mail.h
+│   ├── main.c
+│   ├── main.h
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── memalloc.c
+│   ├── memalloc.h
+│   ├── miscbltin.c
+│   ├── miscbltin.h
+│   ├── mkbuiltins
+│   ├── mkinit.c
+│   ├── mknodes.c
+│   ├── mksignames.c
+│   ├── mksyntax.c
+│   ├── mktokens
+│   ├── myhistedit.h
+│   ├── mystring.c
+│   ├── mystring.h
+│   ├── nodes.c.pat
+│   ├── nodetypes
+│   ├── options.c
+│   ├── options.h
+│   ├── output.c
+│   ├── output.h
+│   ├── parser.c
+│   ├── parser.h
+│   ├── redir.c
+│   ├── redir.h
+│   ├── shell.h
+│   ├── show.c
+│   ├── show.h
+│   ├── system.c
+│   ├── system.h
+│   ├── trap.c
+│   ├── trap.h
+│   ├── var.c
+│   └── var.h
+└── tests.tar.gz.uue
+
+5 directories, 131 files
+</code></pre>
                     
                     </section>
                 
@@ -2447,10 +2748,10 @@
         </div>
 
         
-        <a href="../../../content/package/manpages-posix/note.html" class="navigation navigation-prev " aria-label="Previous page: note"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/ash/index.html" class="navigation navigation-prev " aria-label="Previous page: ash"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/manpages-posix-dev/index.html" class="navigation navigation-next " aria-label="Next page: manpages-posix-dev"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/ash/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
