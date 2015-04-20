@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>iproute2 | Ubuntu Exploration (Ubuntu 探索)</title>
+        <title>info | Ubuntu Exploration (Ubuntu 探索)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/iproute2/info.html" />
+    <link rel="next" href="../../../content/package/manpages-posix/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/ifupdown/report.html" />
+    <link rel="prev" href="../../../content/package/manpages-posix/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="4.4" data-basepath="../../.." data-revision="1429509760541">
+    <div class="book" data-level="1.4.1" data-basepath="../../.." data-revision="1429509760541">
     
 
 <div class="book-summary">
@@ -310,7 +310,7 @@
                 
     
         
-        <li class="chapter " data-level="1.4.1" data-path="content/package/manpages-posix/info.html">
+        <li class="chapter active" data-level="1.4.1" data-path="content/package/manpages-posix/info.html">
             
                 
                     <a href="../../../content/package/manpages-posix/info.html">
@@ -1759,7 +1759,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="4.4" data-path="content/package/iproute2/index.html">
+        <li class="chapter " data-level="4.4" data-path="content/package/iproute2/index.html">
             
                 
                     <a href="../../../content/package/iproute2/index.html">
@@ -2202,20 +2202,1759 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_46">
+                    <section class="normal" id="section-gitbook_84">
                     
-                        <h1 id="iproute2">iproute2</h1>
-<h2 id="exploration">Exploration</h2>
-<ul>
-<li><a href="info.html">info</a></li>
-<li><a href="note.html">note</a></li>
-<li><a href="report.html">report</a></li>
-</ul>
-<h2 id="manual">Manual</h2>
-<ul>
-<li>$ man 3 <a href="http://manpages.ubuntu.com/manpages/trusty/man3/libnetlink.3.html" target="_blank">libnetlink</a></li>
-</ul>
+                        <h1 id="manpages-posix-info">manpages-posix info</h1>
+<h2 id="">套件資訊</h2>
+<p>執行</p>
+<pre><code>$ apt-cache show manpages-posix
+</code></pre><p>顯示</p>
+<pre><code>Package: manpages-posix
+Priority: optional
+Section: multiverse/doc
+Installed-Size: 1196
+Maintainer: Francesco Paolo Lovergine &lt;frankie@debian.org&gt;
+Architecture: all
+Version: 2.16-1
+Recommends: manpages
+Suggests: man-browser
+Filename: pool/multiverse/m/manpages-posix/manpages-posix_2.16-1_all.deb
+Size: 862948
+MD5sum: ba4cd6b7cdaf1379a99e97dcd1144bab
+SHA1: 475ba89080c3544b83c5bdb8153334e53cc5bc70
+SHA256: 45fce034029543265fe9269cdc13a79d1bb0bf15441ea297048847126ba74f09
+Description-en: Manual pages about using POSIX system
+ This package contains manual pages for POSIX utilities
+ and keeps them in section 1 (with 1posix extension) of the
+ on-line manual.
+Description-md5: bebba789d7556a5d3bb41a68c74536d8
+Enhances: manpages
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showpkg manpages-posix
+</code></pre><p>顯示</p>
+<pre><code>Package: manpages-posix
+Versions:
+2.16-1 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_multiverse_binary-amd64_Packages) (/var/lib/dpkg/status)
+ Description Language:
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_multiverse_binary-amd64_Packages
+                  MD5: bebba789d7556a5d3bb41a68c74536d8
+ Description Language: en
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_multiverse_i18n_Translation-en
+                  MD5: bebba789d7556a5d3bb41a68c74536d8
 
+
+Reverse Depends:
+  manpages-posix-dev,manpages-posix
+Dependencies:
+2.16-1 - man-browser (0 (null)) manpages (0 (null)) manpages (0 (null))
+Provides:
+2.16-1 -
+Reverse Provides:
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showsrc manpages-posix
+</code></pre><p>顯示</p>
+<pre><code>Package: manpages-posix
+Binary: manpages-posix, manpages-posix-dev
+Version: 2.16-1
+Priority: optional
+Section: multiverse/doc
+Maintainer: Francesco Paolo Lovergine &lt;frankie@debian.org&gt;
+Build-Depends-Indep: debhelper (&gt;= 4.0.0)
+Architecture: all
+Standards-Version: 3.6.2
+Format: 1.0
+Directory: pool/multiverse/m/manpages-posix
+Files:
+ bc81d5f60f0609943759a1b6eb0e9681 554 manpages-posix_2.16-1.dsc
+ 0425eadcba9c5de6cb0a093167fe2c58 1395167 manpages-posix_2.16-1.tar.gz
+Checksums-Sha1:
+ 21b3d10fe6f0e9e72c518d7602bbbc0808b02448 554 manpages-posix_2.16-1.dsc
+ ccbbf7e362e1d16d8f514053d879662426cd8915 1395167 manpages-posix_2.16-1.tar.gz
+Checksums-Sha256:
+ 3353e43c54cf6943f099e4af45091c18edbdd3fdc46436ac007c84d3aa2609dd 554 manpages-posix_2.16-1.dsc
+ 7f31b11f99d2f37e5e323ac763ef89b526a99a1e01a88c0f6a5777bbafc2acdc 1395167 manpages-posix_2.16-1.tar.gz
+</code></pre><p>執行</p>
+<pre><code>$ dpkg -s manpages-posix
+</code></pre><p>顯示</p>
+<pre><code>Package: manpages-posix
+Status: install ok installed
+Priority: optional
+Section: non-free/doc
+Installed-Size: 1196
+Maintainer: Francesco Paolo Lovergine &lt;frankie@debian.org&gt;
+Architecture: all
+Version: 2.16-1
+Recommends: manpages
+Suggests: man-browser
+Enhances: manpages
+Description: Manual pages about using POSIX system
+ This package contains manual pages for POSIX utilities
+ and keeps them in section 1 (with 1posix extension) of the
+ on-line manual.
+</code></pre><p>執行</p>
+<pre><code>$ dpkg -l manpages-posix
+</code></pre><p>顯示</p>
+<pre><code>Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                         Version             Architecture        Description
++++-============================-===================-===================-==============================================================
+ii  manpages-posix               2.16-1              all                 Manual pages about using POSIX system
+</code></pre><h2 id="">準備工作環境</h2>
+<pre><code>mkdir  ~/Downloads/manpages-posix -p
+cd ~/Downloads/manpages-posix
+mkdir download source
+</code></pre><h2 id="package-manpages-posixhttppackagesubuntucomtrustymanpages-posix">探索「Package: <a href="http://packages.ubuntu.com/trusty/manpages-posix" target="_blank">manpages-posix</a>」</h2>
+<p>切換到「~/Downloads/manpages-posix/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/manpages-posix/download
+</code></pre>
+<p>下載「Package: manpages-posix」。</p>
+<pre><code class="lang-sh">$ apt-get download manpages-posix
+</code></pre>
+<p>解開「package manpages-posix」</p>
+<pre><code class="lang-sh">dpkg -x manpages-posix_2.<span class="hljs-number">16</span>-<span class="hljs-number">1</span>_all.deb manpages-posix
+dpkg <span class="hljs-operator">-e</span> manpages-posix_2.<span class="hljs-number">16</span>-<span class="hljs-number">1</span>_all.deb
+<span class="hljs-comment"># ar xv manpages-posix_2.16-1_all.deb</span>
+</code></pre>
+<p>檢視套件檔案</p>
+<pre><code class="lang-sh">$ tree manpages-posix
+</code></pre>
+<p>顯示</p>
+<pre><code>manpages-posix_2.16-1_all.deb
+sam@sam-game [13:38:23] (~/Downloads/manpages-posix/download)
+ -&gt; % dpkg -x manpages-posix_2.16-1_all.deb manpages-posix
+sam@sam-game [13:38:38] (~/Downloads/manpages-posix/download)
+ -&gt; % dpkg -e manpages-posix_2.16-1_all.deb
+sam@sam-game [13:38:42] (~/Downloads/manpages-posix/download)
+ -&gt; % tree manpages-posix
+manpages-posix
+└── usr
+    └── share
+        ├── doc
+        │   └── manpages-posix
+        │       ├── changelog.Debian.gz
+        │       ├── copyright
+        │       ├── man-pages-2.16.Announce
+        │       └── README.Debian
+        └── man
+            └── man1
+                ├── admin.1posix.gz
+                ├── alias.1posix.gz
+                ├── ar.1posix.gz
+                ├── asa.1posix.gz
+                ├── at.1posix.gz
+                ├── awk.1posix.gz
+                ├── basename.1posix.gz
+                ├── batch.1posix.gz
+                ├── bc.1posix.gz
+                ├── bg.1posix.gz
+                ├── break.1posix.gz
+                ├── c99.1posix.gz
+                ├── cal.1posix.gz
+                ├── cat.1posix.gz
+                ├── cd.1posix.gz
+                ├── cflow.1posix.gz
+                ├── chgrp.1posix.gz
+                ├── chmod.1posix.gz
+                ├── chown.1posix.gz
+                ├── cksum.1posix.gz
+                ├── cmp.1posix.gz
+                ├── colon.1posix.gz
+                ├── comm.1posix.gz
+                ├── command.1posix.gz
+                ├── compress.1posix.gz
+                ├── continue.1posix.gz
+                ├── cp.1posix.gz
+                ├── crontab.1posix.gz
+                ├── csplit.1posix.gz
+                ├── ctags.1posix.gz
+                ├── cut.1posix.gz
+                ├── cxref.1posix.gz
+                ├── date.1posix.gz
+                ├── dd.1posix.gz
+                ├── delta.1posix.gz
+                ├── df.1posix.gz
+                ├── diff.1posix.gz
+                ├── dirname.1posix.gz
+                ├── dot.1posix.gz
+                ├── du.1posix.gz
+                ├── echo.1posix.gz
+                ├── ed.1posix.gz
+                ├── env.1posix.gz
+                ├── eval.1posix.gz
+                ├── ex.1posix.gz
+                ├── exec.1posix.gz
+                ├── exit.1posix.gz
+                ├── expand.1posix.gz
+                ├── export.1posix.gz
+                ├── expr.1posix.gz
+                ├── false.1posix.gz
+                ├── fc.1posix.gz
+                ├── fg.1posix.gz
+                ├── file.1posix.gz
+                ├── find.1posix.gz
+                ├── fold.1posix.gz
+                ├── fort77.1posix.gz
+                ├── fuser.1posix.gz
+                ├── gencat.1posix.gz
+                ├── get.1posix.gz
+                ├── getconf.1posix.gz
+                ├── getopts.1posix.gz
+                ├── grep.1posix.gz
+                ├── hash.1posix.gz
+                ├── head.1posix.gz
+                ├── iconv.1posix.gz
+                ├── id.1posix.gz
+                ├── ipcrm.1posix.gz
+                ├── ipcs.1posix.gz
+                ├── jobs.1posix.gz
+                ├── join.1posix.gz
+                ├── kill.1posix.gz
+                ├── lex.1posix.gz
+                ├── link.1posix.gz
+                ├── ln.1posix.gz
+                ├── locale.1posix.gz
+                ├── localedef.1posix.gz
+                ├── logger.1posix.gz
+                ├── logname.1posix.gz
+                ├── lp.1posix.gz
+                ├── ls.1posix.gz
+                ├── m4.1posix.gz
+                ├── mailx.1posix.gz
+                ├── make.1posix.gz
+                ├── man.1posix.gz
+                ├── mesg.1posix.gz
+                ├── mkdir.1posix.gz
+                ├── mkfifo.1posix.gz
+                ├── more.1posix.gz
+                ├── mv.1posix.gz
+                ├── newgrp.1posix.gz
+                ├── nice.1posix.gz
+                ├── nl.1posix.gz
+                ├── nm.1posix.gz
+                ├── nohup.1posix.gz
+                ├── od.1posix.gz
+                ├── paste.1posix.gz
+                ├── patch.1posix.gz
+                ├── pathchk.1posix.gz
+                ├── pax.1posix.gz
+                ├── pr.1posix.gz
+                ├── printf.1posix.gz
+                ├── prs.1posix.gz
+                ├── ps.1posix.gz
+                ├── pwd.1posix.gz
+                ├── qalter.1posix.gz
+                ├── qdel.1posix.gz
+                ├── qhold.1posix.gz
+                ├── qmove.1posix.gz
+                ├── qmsg.1posix.gz
+                ├── qrerun.1posix.gz
+                ├── qrls.1posix.gz
+                ├── qselect.1posix.gz
+                ├── qsig.1posix.gz
+                ├── qstat.1posix.gz
+                ├── qsub.1posix.gz
+                ├── read.1posix.gz
+                ├── readonly.1posix.gz
+                ├── renice.1posix.gz
+                ├── return.1posix.gz
+                ├── rm.1posix.gz
+                ├── rmdel.1posix.gz
+                ├── rmdir.1posix.gz
+                ├── sact.1posix.gz
+                ├── sccs.1posix.gz
+                ├── sed.1posix.gz
+                ├── set.1posix.gz
+                ├── sh.1posix.gz
+                ├── shift.1posix.gz
+                ├── sleep.1posix.gz
+                ├── sort.1posix.gz
+                ├── split.1posix.gz
+                ├── strings.1posix.gz
+                ├── strip.1posix.gz
+                ├── stty.1posix.gz
+                ├── tabs.1posix.gz
+                ├── tail.1posix.gz
+                ├── talk.1posix.gz
+                ├── tee.1posix.gz
+                ├── test.1posix.gz
+                ├── time.1posix.gz
+                ├── times.1posix.gz
+                ├── touch.1posix.gz
+                ├── tput.1posix.gz
+                ├── tr.1posix.gz
+                ├── trap.1posix.gz
+                ├── true.1posix.gz
+                ├── tsort.1posix.gz
+                ├── tty.1posix.gz
+                ├── type.1posix.gz
+                ├── ulimit.1posix.gz
+                ├── umask.1posix.gz
+                ├── unalias.1posix.gz
+                ├── uname.1posix.gz
+                ├── uncompress.1posix.gz
+                ├── unexpand.1posix.gz
+                ├── unget.1posix.gz
+                ├── uniq.1posix.gz
+                ├── unlink.1posix.gz
+                ├── unset.1posix.gz
+                ├── uucp.1posix.gz
+                ├── uudecode.1posix.gz
+                ├── uuencode.1posix.gz
+                ├── uustat.1posix.gz
+                ├── uux.1posix.gz
+                ├── val.1posix.gz
+                ├── vi.1posix.gz
+                ├── wait.1posix.gz
+                ├── wc.1posix.gz
+                ├── what.1posix.gz
+                ├── who.1posix.gz
+                ├── write.1posix.gz
+                ├── xargs.1posix.gz
+                ├── yacc.1posix.gz
+                └── zcat.1posix.gz
+
+6 directories, 179 files
+</code></pre><p>執行</p>
+<pre><code>$ tree DEBIAN
+</code></pre><p>顯示</p>
+<pre><code>DEBIAN
+├── control
+└── md5sums
+
+0 directories, 2 files
+</code></pre><h2 id="source-package-manpages-posixhttppackagesubuntucomtrustymanpages-posix">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/manpages-posix" target="_blank">manpages-posix</a>」</h2>
+<p>切換到「~/Downloads/manpages-posix/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/manpages-posix/<span class="hljs-built_in">source</span>
+</code></pre>
+<p>下載「Source Package: manpages-posix」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> manpages-posix
+</code></pre>
+<p>檢視原始碼套件檔案。</p>
+<pre><code>$ tree manpages-posix-2.16
+</code></pre><p>顯示</p>
+<pre><code>manpages-posix-2.16
+├── debian
+│   ├── changelog
+│   ├── control
+│   ├── copyright
+│   ├── inst
+│   ├── readme
+│   ├── README.Debian
+│   └── rules
+├── Makefile
+├── man0p
+│   ├── aio.h.0p
+│   ├── assert.h.0p
+│   ├── complex.h.0p
+│   ├── cpio.h.0p
+│   ├── ctype.h.0p
+│   ├── dirent.h.0p
+│   ├── dlfcn.h.0p
+│   ├── errno.h.0p
+│   ├── fcntl.h.0p
+│   ├── fenv.h.0p
+│   ├── float.h.0p
+│   ├── fmtmsg.h.0p
+│   ├── fnmatch.h.0p
+│   ├── ftw.h.0p
+│   ├── glob.h.0p
+│   ├── grp.h.0p
+│   ├── iconv.h.0p
+│   ├── if.h.0p
+│   ├── inet.h.0p
+│   ├── in.h.0p
+│   ├── inttypes.h.0p
+│   ├── ipc.h.0p
+│   ├── iso646.h.0p
+│   ├── langinfo.h.0p
+│   ├── libgen.h.0p
+│   ├── limits.h.0p
+│   ├── locale.h.0p
+│   ├── math.h.0p
+│   ├── mman.h.0p
+│   ├── monetary.h.0p
+│   ├── mqueue.h.0p
+│   ├── msg.h.0p
+│   ├── ndbm.h.0p
+│   ├── netdb.h.0p
+│   ├── nl_types.h.0p
+│   ├── poll.h.0p
+│   ├── pthread.h.0p
+│   ├── pwd.h.0p
+│   ├── regex.h.0p
+│   ├── resource.h.0p
+│   ├── sched.h.0p
+│   ├── search.h.0p
+│   ├── select.h.0p
+│   ├── semaphore.h.0p
+│   ├── sem.h.0p
+│   ├── setjmp.h.0p
+│   ├── shm.h.0p
+│   ├── signal.h.0p
+│   ├── socket.h.0p
+│   ├── spawn.h.0p
+│   ├── stat.h.0p
+│   ├── statvfs.h.0p
+│   ├── stdarg.h.0p
+│   ├── stdbool.h.0p
+│   ├── stddef.h.0p
+│   ├── stdint.h.0p
+│   ├── stdio.h.0p
+│   ├── stdlib.h.0p
+│   ├── string.h.0p
+│   ├── strings.h.0p
+│   ├── stropts.h.0p
+│   ├── sys_ipc.h.0p
+│   ├── syslog.h.0p
+│   ├── sys_mman.h.0p
+│   ├── sys_msg.h.0p
+│   ├── sys_resource.h.0p
+│   ├── sys_select.h.0p
+│   ├── sys_sem.h.0p
+│   ├── sys_shm.h.0p
+│   ├── sys_socket.h.0p
+│   ├── sys_stat.h.0p
+│   ├── sys_statvfs.h.0p
+│   ├── sys_timeb.h.0p
+│   ├── sys_time.h.0p
+│   ├── sys_times.h.0p
+│   ├── sys_types.h.0p
+│   ├── sys_uio.h.0p
+│   ├── sys_un.h.0p
+│   ├── sys_utsname.h.0p
+│   ├── sys_wait.h.0p
+│   ├── tar.h.0p
+│   ├── tcp.h.0p
+│   ├── termios.h.0p
+│   ├── tgmath.h.0p
+│   ├── timeb.h.0p
+│   ├── time.h.0p
+│   ├── times.h.0p
+│   ├── trace.h.0p
+│   ├── types.h.0p
+│   ├── ucontext.h.0p
+│   ├── uio.h.0p
+│   ├── ulimit.h.0p
+│   ├── un.h.0p
+│   ├── unistd.h.0p
+│   ├── utime.h.0p
+│   ├── utmpx.h.0p
+│   ├── utsname.h.0p
+│   ├── wait.h.0p
+│   ├── wchar.h.0p
+│   ├── wctype.h.0p
+│   └── wordexp.h.0p
+├── man1p
+│   ├── admin.1p
+│   ├── alias.1p
+│   ├── ar.1p
+│   ├── asa.1p
+│   ├── at.1p
+│   ├── awk.1p
+│   ├── basename.1p
+│   ├── batch.1p
+│   ├── bc.1p
+│   ├── bg.1p
+│   ├── break.1p
+│   ├── c99.1p
+│   ├── cal.1p
+│   ├── cat.1p
+│   ├── cd.1p
+│   ├── cflow.1p
+│   ├── chgrp.1p
+│   ├── chmod.1p
+│   ├── chown.1p
+│   ├── cksum.1p
+│   ├── cmp.1p
+│   ├── colon.1p
+│   ├── comm.1p
+│   ├── command.1p
+│   ├── compress.1p
+│   ├── continue.1p
+│   ├── cp.1p
+│   ├── crontab.1p
+│   ├── csplit.1p
+│   ├── ctags.1p
+│   ├── cut.1p
+│   ├── cxref.1p
+│   ├── date.1p
+│   ├── dd.1p
+│   ├── delta.1p
+│   ├── df.1p
+│   ├── diff.1p
+│   ├── dirname.1p
+│   ├── dot.1p
+│   ├── du.1p
+│   ├── echo.1p
+│   ├── ed.1p
+│   ├── env.1p
+│   ├── eval.1p
+│   ├── ex.1p
+│   ├── exec.1p
+│   ├── exit.1p
+│   ├── expand.1p
+│   ├── export.1p
+│   ├── expr.1p
+│   ├── false.1p
+│   ├── fc.1p
+│   ├── fg.1p
+│   ├── file.1p
+│   ├── find.1p
+│   ├── fold.1p
+│   ├── fort77.1p
+│   ├── fuser.1p
+│   ├── gencat.1p
+│   ├── get.1p
+│   ├── getconf.1p
+│   ├── getopts.1p
+│   ├── grep.1p
+│   ├── hash.1p
+│   ├── head.1p
+│   ├── iconv.1p
+│   ├── id.1p
+│   ├── ipcrm.1p
+│   ├── ipcs.1p
+│   ├── jobs.1p
+│   ├── join.1p
+│   ├── kill.1p
+│   ├── lex.1p
+│   ├── link.1p
+│   ├── ln.1p
+│   ├── locale.1p
+│   ├── localedef.1p
+│   ├── logger.1p
+│   ├── logname.1p
+│   ├── lp.1p
+│   ├── ls.1p
+│   ├── m4.1p
+│   ├── mailx.1p
+│   ├── make.1p
+│   ├── man.1p
+│   ├── mesg.1p
+│   ├── mkdir.1p
+│   ├── mkfifo.1p
+│   ├── more.1p
+│   ├── mv.1p
+│   ├── newgrp.1p
+│   ├── nice.1p
+│   ├── nl.1p
+│   ├── nm.1p
+│   ├── nohup.1p
+│   ├── od.1p
+│   ├── paste.1p
+│   ├── patch.1p
+│   ├── pathchk.1p
+│   ├── pax.1p
+│   ├── pr.1p
+│   ├── printf.1p
+│   ├── prs.1p
+│   ├── ps.1p
+│   ├── pwd.1p
+│   ├── qalter.1p
+│   ├── qdel.1p
+│   ├── qhold.1p
+│   ├── qmove.1p
+│   ├── qmsg.1p
+│   ├── qrerun.1p
+│   ├── qrls.1p
+│   ├── qselect.1p
+│   ├── qsig.1p
+│   ├── qstat.1p
+│   ├── qsub.1p
+│   ├── read.1p
+│   ├── readonly.1p
+│   ├── renice.1p
+│   ├── return.1p
+│   ├── rm.1p
+│   ├── rmdel.1p
+│   ├── rmdir.1p
+│   ├── sact.1p
+│   ├── sccs.1p
+│   ├── sed.1p
+│   ├── set.1p
+│   ├── sh.1p
+│   ├── shift.1p
+│   ├── sleep.1p
+│   ├── sort.1p
+│   ├── split.1p
+│   ├── strings.1p
+│   ├── strip.1p
+│   ├── stty.1p
+│   ├── tabs.1p
+│   ├── tail.1p
+│   ├── talk.1p
+│   ├── tee.1p
+│   ├── test.1p
+│   ├── time.1p
+│   ├── times.1p
+│   ├── touch.1p
+│   ├── tput.1p
+│   ├── tr.1p
+│   ├── trap.1p
+│   ├── true.1p
+│   ├── tsort.1p
+│   ├── tty.1p
+│   ├── type.1p
+│   ├── ulimit.1p
+│   ├── umask.1p
+│   ├── unalias.1p
+│   ├── uname.1p
+│   ├── uncompress.1p
+│   ├── unexpand.1p
+│   ├── unget.1p
+│   ├── uniq.1p
+│   ├── unlink.1p
+│   ├── unset.1p
+│   ├── uucp.1p
+│   ├── uudecode.1p
+│   ├── uuencode.1p
+│   ├── uustat.1p
+│   ├── uux.1p
+│   ├── val.1p
+│   ├── vi.1p
+│   ├── wait.1p
+│   ├── wc.1p
+│   ├── what.1p
+│   ├── who.1p
+│   ├── write.1p
+│   ├── xargs.1p
+│   ├── yacc.1p
+│   └── zcat.1p
+├── man3p
+│   ├── a64l.3p
+│   ├── abort.3p
+│   ├── abs.3p
+│   ├── accept.3p
+│   ├── access.3p
+│   ├── acos.3p
+│   ├── acosf.3p
+│   ├── acosh.3p
+│   ├── acoshf.3p
+│   ├── acoshl.3p
+│   ├── acosl.3p
+│   ├── aio_cancel.3p
+│   ├── aio_error.3p
+│   ├── aio_fsync.3p
+│   ├── aio_read.3p
+│   ├── aio_return.3p
+│   ├── aio_suspend.3p
+│   ├── aio_write.3p
+│   ├── alarm.3p
+│   ├── asctime.3p
+│   ├── asctime_r.3p
+│   ├── asin.3p
+│   ├── asinf.3p
+│   ├── asinh.3p
+│   ├── asinhf.3p
+│   ├── asinhl.3p
+│   ├── asinl.3p
+│   ├── assert.3p
+│   ├── atan2.3p
+│   ├── atan2f.3p
+│   ├── atan2l.3p
+│   ├── atan.3p
+│   ├── atanf.3p
+│   ├── atanh.3p
+│   ├── atanhf.3p
+│   ├── atanhl.3p
+│   ├── atanl.3p
+│   ├── atexit.3p
+│   ├── atof.3p
+│   ├── atoi.3p
+│   ├── atol.3p
+│   ├── atoll.3p
+│   ├── basename.3p
+│   ├── bcmp.3p
+│   ├── bcopy.3p
+│   ├── bind.3p
+│   ├── bsd_signal.3p
+│   ├── bsearch.3p
+│   ├── btowc.3p
+│   ├── bzero.3p
+│   ├── cabs.3p
+│   ├── cabsf.3p
+│   ├── cabsl.3p
+│   ├── cacos.3p
+│   ├── cacosf.3p
+│   ├── cacosh.3p
+│   ├── cacoshf.3p
+│   ├── cacoshl.3p
+│   ├── cacosl.3p
+│   ├── calloc.3p
+│   ├── carg.3p
+│   ├── cargf.3p
+│   ├── cargl.3p
+│   ├── casin.3p
+│   ├── casinf.3p
+│   ├── casinh.3p
+│   ├── casinhf.3p
+│   ├── casinhl.3p
+│   ├── casinl.3p
+│   ├── catan.3p
+│   ├── catanf.3p
+│   ├── catanh.3p
+│   ├── catanhf.3p
+│   ├── catanhl.3p
+│   ├── catanl.3p
+│   ├── catclose.3p
+│   ├── catgets.3p
+│   ├── catopen.3p
+│   ├── cbrt.3p
+│   ├── cbrtf.3p
+│   ├── cbrtl.3p
+│   ├── ccos.3p
+│   ├── ccosf.3p
+│   ├── ccosh.3p
+│   ├── ccoshf.3p
+│   ├── ccoshl.3p
+│   ├── ccosl.3p
+│   ├── ceil.3p
+│   ├── ceilf.3p
+│   ├── ceill.3p
+│   ├── cexp.3p
+│   ├── cexpf.3p
+│   ├── cexpl.3p
+│   ├── cfgetispeed.3p
+│   ├── cfgetospeed.3p
+│   ├── cfsetispeed.3p
+│   ├── cfsetospeed.3p
+│   ├── chdir.3p
+│   ├── chmod.3p
+│   ├── chown.3p
+│   ├── cimag.3p
+│   ├── cimagf.3p
+│   ├── cimagl.3p
+│   ├── clearerr.3p
+│   ├── clock.3p
+│   ├── clock_getcpuclockid.3p
+│   ├── clock_getres.3p
+│   ├── clock_gettime.3p
+│   ├── clock_nanosleep.3p
+│   ├── clock_settime.3p
+│   ├── clog.3p
+│   ├── clogf.3p
+│   ├── clogl.3p
+│   ├── close.3p
+│   ├── closedir.3p
+│   ├── closelog.3p
+│   ├── confstr.3p
+│   ├── conj.3p
+│   ├── conjf.3p
+│   ├── conjl.3p
+│   ├── connect.3p
+│   ├── copysign.3p
+│   ├── copysignf.3p
+│   ├── copysignl.3p
+│   ├── cos.3p
+│   ├── cosf.3p
+│   ├── cosh.3p
+│   ├── coshf.3p
+│   ├── coshl.3p
+│   ├── cosl.3p
+│   ├── cpow.3p
+│   ├── cpowf.3p
+│   ├── cpowl.3p
+│   ├── cproj.3p
+│   ├── cprojf.3p
+│   ├── cprojl.3p
+│   ├── creal.3p
+│   ├── crealf.3p
+│   ├── creall.3p
+│   ├── creat.3p
+│   ├── crypt.3p
+│   ├── csin.3p
+│   ├── csinf.3p
+│   ├── csinh.3p
+│   ├── csinhf.3p
+│   ├── csinhl.3p
+│   ├── csinl.3p
+│   ├── csqrt.3p
+│   ├── csqrtf.3p
+│   ├── csqrtl.3p
+│   ├── ctan.3p
+│   ├── ctanf.3p
+│   ├── ctanh.3p
+│   ├── ctanhf.3p
+│   ├── ctanhl.3p
+│   ├── ctanl.3p
+│   ├── ctermid.3p
+│   ├── ctime.3p
+│   ├── ctime_r.3p
+│   ├── daylight.3p
+│   ├── dbm_clearerr.3p
+│   ├── dbm_close.3p
+│   ├── dbm_delete.3p
+│   ├── dbm_error.3p
+│   ├── dbm_fetch.3p
+│   ├── dbm_firstkey.3p
+│   ├── dbm_nextkey.3p
+│   ├── dbm_open.3p
+│   ├── dbm_store.3p
+│   ├── difftime.3p
+│   ├── dirname.3p
+│   ├── div.3p
+│   ├── dlclose.3p
+│   ├── dlerror.3p
+│   ├── dlopen.3p
+│   ├── dlsym.3p
+│   ├── drand48.3p
+│   ├── dup2.3p
+│   ├── dup.3p
+│   ├── ecvt.3p
+│   ├── encrypt.3p
+│   ├── endgrent.3p
+│   ├── endhostent.3p
+│   ├── endnetent.3p
+│   ├── endprotoent.3p
+│   ├── endpwent.3p
+│   ├── endservent.3p
+│   ├── endutxent.3p
+│   ├── environ.3p
+│   ├── erand48.3p
+│   ├── erf.3p
+│   ├── erfc.3p
+│   ├── erfcf.3p
+│   ├── erfcl.3p
+│   ├── erff.3p
+│   ├── erfl.3p
+│   ├── errno.3p
+│   ├── exec.3p
+│   ├── execl.3p
+│   ├── execle.3p
+│   ├── execlp.3p
+│   ├── execv.3p
+│   ├── execve.3p
+│   ├── execvp.3p
+│   ├── _exit.3p
+│   ├── exit.3p
+│   ├── _Exit.3p
+│   ├── exp2.3p
+│   ├── exp2f.3p
+│   ├── exp2l.3p
+│   ├── exp.3p
+│   ├── expf.3p
+│   ├── expl.3p
+│   ├── expm1.3p
+│   ├── expm1f.3p
+│   ├── expm1l.3p
+│   ├── fabs.3p
+│   ├── fabsf.3p
+│   ├── fabsl.3p
+│   ├── fattach.3p
+│   ├── fchdir.3p
+│   ├── fchmod.3p
+│   ├── fchown.3p
+│   ├── fclose.3p
+│   ├── fcntl.3p
+│   ├── fcvt.3p
+│   ├── fdatasync.3p
+│   ├── FD_CLR.3p
+│   ├── fdetach.3p
+│   ├── fdim.3p
+│   ├── fdimf.3p
+│   ├── fdiml.3p
+│   ├── FD_ISSET.3p
+│   ├── fdopen.3p
+│   ├── FD_SET.3p
+│   ├── FD_ZERO.3p
+│   ├── feclearexcept.3p
+│   ├── fegetenv.3p
+│   ├── fegetexceptflag.3p
+│   ├── fegetround.3p
+│   ├── feholdexcept.3p
+│   ├── feof.3p
+│   ├── feraiseexcept.3p
+│   ├── ferror.3p
+│   ├── fesetenv.3p
+│   ├── fesetexceptflag.3p
+│   ├── fesetround.3p
+│   ├── fetestexcept.3p
+│   ├── feupdateenv.3p
+│   ├── fflush.3p
+│   ├── ffs.3p
+│   ├── fgetc.3p
+│   ├── fgetpos.3p
+│   ├── fgets.3p
+│   ├── fgetwc.3p
+│   ├── fgetws.3p
+│   ├── fileno.3p
+│   ├── flockfile.3p
+│   ├── floor.3p
+│   ├── floorf.3p
+│   ├── floorl.3p
+│   ├── fma.3p
+│   ├── fmaf.3p
+│   ├── fmal.3p
+│   ├── fmax.3p
+│   ├── fmaxf.3p
+│   ├── fmaxl.3p
+│   ├── fmin.3p
+│   ├── fminf.3p
+│   ├── fminl.3p
+│   ├── fmod.3p
+│   ├── fmodf.3p
+│   ├── fmodl.3p
+│   ├── fmtmsg.3p
+│   ├── fnmatch.3p
+│   ├── fopen.3p
+│   ├── fork.3p
+│   ├── fpathconf.3p
+│   ├── fpclassify.3p
+│   ├── fprintf.3p
+│   ├── fputc.3p
+│   ├── fputs.3p
+│   ├── fputwc.3p
+│   ├── fputws.3p
+│   ├── fread.3p
+│   ├── free.3p
+│   ├── freeaddrinfo.3p
+│   ├── freopen.3p
+│   ├── frexp.3p
+│   ├── frexpf.3p
+│   ├── frexpl.3p
+│   ├── fscanf.3p
+│   ├── fseek.3p
+│   ├── fseeko.3p
+│   ├── fsetpos.3p
+│   ├── fstat.3p
+│   ├── fstatvfs.3p
+│   ├── fsync.3p
+│   ├── ftell.3p
+│   ├── ftello.3p
+│   ├── ftime.3p
+│   ├── ftok.3p
+│   ├── ftruncate.3p
+│   ├── ftrylockfile.3p
+│   ├── ftw.3p
+│   ├── funlockfile.3p
+│   ├── fwide.3p
+│   ├── fwprintf.3p
+│   ├── fwrite.3p
+│   ├── fwscanf.3p
+│   ├── gai_strerror.3p
+│   ├── gcvt.3p
+│   ├── getaddrinfo.3p
+│   ├── getc.3p
+│   ├── getchar.3p
+│   ├── getchar_unlocked.3p
+│   ├── getcontext.3p
+│   ├── getc_unlocked.3p
+│   ├── getcwd.3p
+│   ├── getdate.3p
+│   ├── getdate_err.3p
+│   ├── getegid.3p
+│   ├── getenv.3p
+│   ├── geteuid.3p
+│   ├── getgid.3p
+│   ├── getgrent.3p
+│   ├── getgrgid.3p
+│   ├── getgrgid_r.3p
+│   ├── getgrnam.3p
+│   ├── getgrnam_r.3p
+│   ├── getgroups.3p
+│   ├── gethostbyaddr.3p
+│   ├── gethostbyname.3p
+│   ├── gethostent.3p
+│   ├── gethostid.3p
+│   ├── gethostname.3p
+│   ├── getitimer.3p
+│   ├── getlogin.3p
+│   ├── getlogin_r.3p
+│   ├── getmsg.3p
+│   ├── getnameinfo.3p
+│   ├── getnetbyaddr.3p
+│   ├── getnetbyname.3p
+│   ├── getnetent.3p
+│   ├── getopt.3p
+│   ├── getpeername.3p
+│   ├── getpgid.3p
+│   ├── getpgrp.3p
+│   ├── getpid.3p
+│   ├── getpmsg.3p
+│   ├── getppid.3p
+│   ├── getpriority.3p
+│   ├── getprotobyname.3p
+│   ├── getprotobynumber.3p
+│   ├── getprotoent.3p
+│   ├── getpwent.3p
+│   ├── getpwnam.3p
+│   ├── getpwnam_r.3p
+│   ├── getpwuid.3p
+│   ├── getpwuid_r.3p
+│   ├── getrlimit.3p
+│   ├── getrusage.3p
+│   ├── gets.3p
+│   ├── getservbyname.3p
+│   ├── getservbyport.3p
+│   ├── getservent.3p
+│   ├── getsid.3p
+│   ├── getsockname.3p
+│   ├── getsockopt.3p
+│   ├── getsubopt.3p
+│   ├── gettimeofday.3p
+│   ├── getuid.3p
+│   ├── getutxent.3p
+│   ├── getutxid.3p
+│   ├── getutxline.3p
+│   ├── getwc.3p
+│   ├── getwchar.3p
+│   ├── getwd.3p
+│   ├── glob.3p
+│   ├── globfree.3p
+│   ├── gmtime.3p
+│   ├── gmtime_r.3p
+│   ├── grantpt.3p
+│   ├── hcreate.3p
+│   ├── hdestroy.3p
+│   ├── h_errno.3p
+│   ├── hsearch.3p
+│   ├── htonl.3p
+│   ├── htons.3p
+│   ├── hypot.3p
+│   ├── hypotf.3p
+│   ├── hypotl.3p
+│   ├── iconv.3p
+│   ├── iconv_close.3p
+│   ├── iconv_open.3p
+│   ├── if_freenameindex.3p
+│   ├── if_indextoname.3p
+│   ├── if_nameindex.3p
+│   ├── if_nametoindex.3p
+│   ├── ilogb.3p
+│   ├── ilogbf.3p
+│   ├── ilogbl.3p
+│   ├── imaxabs.3p
+│   ├── imaxdiv.3p
+│   ├── index.3p
+│   ├── inet_addr.3p
+│   ├── inet_ntoa.3p
+│   ├── inet_ntop.3p
+│   ├── inet_pton.3p
+│   ├── initstate.3p
+│   ├── insque.3p
+│   ├── ioctl.3p
+│   ├── isalnum.3p
+│   ├── isalpha.3p
+│   ├── isascii.3p
+│   ├── isastream.3p
+│   ├── isatty.3p
+│   ├── isblank.3p
+│   ├── iscntrl.3p
+│   ├── isdigit.3p
+│   ├── isfinite.3p
+│   ├── isgraph.3p
+│   ├── isgreater.3p
+│   ├── isgreaterequal.3p
+│   ├── isinf.3p
+│   ├── isless.3p
+│   ├── islessequal.3p
+│   ├── islessgreater.3p
+│   ├── islower.3p
+│   ├── isnan.3p
+│   ├── isnormal.3p
+│   ├── isprint.3p
+│   ├── ispunct.3p
+│   ├── isspace.3p
+│   ├── isunordered.3p
+│   ├── isupper.3p
+│   ├── iswalnum.3p
+│   ├── iswalpha.3p
+│   ├── iswblank.3p
+│   ├── iswcntrl.3p
+│   ├── iswctype.3p
+│   ├── iswdigit.3p
+│   ├── iswgraph.3p
+│   ├── iswlower.3p
+│   ├── iswprint.3p
+│   ├── iswpunct.3p
+│   ├── iswspace.3p
+│   ├── iswupper.3p
+│   ├── iswxdigit.3p
+│   ├── isxdigit.3p
+│   ├── j0.3p
+│   ├── j1.3p
+│   ├── jn.3p
+│   ├── jrand48.3p
+│   ├── kill.3p
+│   ├── killpg.3p
+│   ├── l64a.3p
+│   ├── labs.3p
+│   ├── lchown.3p
+│   ├── lcong48.3p
+│   ├── ldexp.3p
+│   ├── ldexpf.3p
+│   ├── ldexpl.3p
+│   ├── ldiv.3p
+│   ├── lfind.3p
+│   ├── lgamma.3p
+│   ├── lgammaf.3p
+│   ├── lgammal.3p
+│   ├── link.3p
+│   ├── lio_listio.3p
+│   ├── listen.3p
+│   ├── llabs.3p
+│   ├── lldiv.3p
+│   ├── llrint.3p
+│   ├── llrintf.3p
+│   ├── llrintl.3p
+│   ├── llround.3p
+│   ├── llroundf.3p
+│   ├── llroundl.3p
+│   ├── localeconv.3p
+│   ├── localtime.3p
+│   ├── localtime_r.3p
+│   ├── lockf.3p
+│   ├── log10.3p
+│   ├── log10f.3p
+│   ├── log10l.3p
+│   ├── log1p.3p
+│   ├── log1pf.3p
+│   ├── log1pl.3p
+│   ├── log2.3p
+│   ├── log2f.3p
+│   ├── log2l.3p
+│   ├── log.3p
+│   ├── logb.3p
+│   ├── logbf.3p
+│   ├── logbl.3p
+│   ├── logf.3p
+│   ├── logl.3p
+│   ├── _longjmp.3p
+│   ├── longjmp.3p
+│   ├── lrand48.3p
+│   ├── lrint.3p
+│   ├── lrintf.3p
+│   ├── lrintl.3p
+│   ├── lround.3p
+│   ├── lroundf.3p
+│   ├── lroundl.3p
+│   ├── lsearch.3p
+│   ├── lseek.3p
+│   ├── lstat.3p
+│   ├── makecontext.3p
+│   ├── malloc.3p
+│   ├── mblen.3p
+│   ├── mbrlen.3p
+│   ├── mbrtowc.3p
+│   ├── mbsinit.3p
+│   ├── mbsrtowcs.3p
+│   ├── mbstowcs.3p
+│   ├── mbtowc.3p
+│   ├── memccpy.3p
+│   ├── memchr.3p
+│   ├── memcmp.3p
+│   ├── memcpy.3p
+│   ├── memmove.3p
+│   ├── memset.3p
+│   ├── mkdir.3p
+│   ├── mkfifo.3p
+│   ├── mknod.3p
+│   ├── mkstemp.3p
+│   ├── mktemp.3p
+│   ├── mktime.3p
+│   ├── mlock.3p
+│   ├── mlockall.3p
+│   ├── mmap.3p
+│   ├── modf.3p
+│   ├── modff.3p
+│   ├── modfl.3p
+│   ├── mprotect.3p
+│   ├── mq_close.3p
+│   ├── mq_getattr.3p
+│   ├── mq_notify.3p
+│   ├── mq_open.3p
+│   ├── mq_receive.3p
+│   ├── mq_send.3p
+│   ├── mq_setattr.3p
+│   ├── mq_timedreceive.3p
+│   ├── mq_timedsend.3p
+│   ├── mq_unlink.3p
+│   ├── mrand48.3p
+│   ├── msgctl.3p
+│   ├── msgget.3p
+│   ├── msgrcv.3p
+│   ├── msgsnd.3p
+│   ├── msync.3p
+│   ├── munlock.3p
+│   ├── munlockall.3p
+│   ├── munmap.3p
+│   ├── nan.3p
+│   ├── nanf.3p
+│   ├── nanl.3p
+│   ├── nanosleep.3p
+│   ├── nearbyint.3p
+│   ├── nearbyintf.3p
+│   ├── nearbyintl.3p
+│   ├── nextafter.3p
+│   ├── nextafterf.3p
+│   ├── nextafterl.3p
+│   ├── nexttoward.3p
+│   ├── nexttowardf.3p
+│   ├── nexttowardl.3p
+│   ├── nftw.3p
+│   ├── nice.3p
+│   ├── nl_langinfo.3p
+│   ├── nrand48.3p
+│   ├── ntohl.3p
+│   ├── ntohs.3p
+│   ├── open.3p
+│   ├── opendir.3p
+│   ├── openlog.3p
+│   ├── optarg.3p
+│   ├── opterr.3p
+│   ├── optind.3p
+│   ├── optopt.3p
+│   ├── pathconf.3p
+│   ├── pause.3p
+│   ├── pclose.3p
+│   ├── perror.3p
+│   ├── pipe.3p
+│   ├── poll.3p
+│   ├── popen.3p
+│   ├── posix_fadvise.3p
+│   ├── posix_fallocate.3p
+│   ├── posix_madvise.3p
+│   ├── posix_memalign.3p
+│   ├── posix_mem_offset.3p
+│   ├── posix_openpt.3p
+│   ├── posix_spawn.3p
+│   ├── posix_spawnattr_destroy.3p
+│   ├── posix_spawnattr_getflags.3p
+│   ├── posix_spawnattr_getpgroup.3p
+│   ├── posix_spawnattr_getschedparam.3p
+│   ├── posix_spawnattr_getschedpolicy.3p
+│   ├── posix_spawnattr_getsigdefault.3p
+│   ├── posix_spawnattr_getsigmask.3p
+│   ├── posix_spawnattr_init.3p
+│   ├── posix_spawnattr_setflags.3p
+│   ├── posix_spawnattr_setpgroup.3p
+│   ├── posix_spawnattr_setschedparam.3p
+│   ├── posix_spawnattr_setschedpolicy.3p
+│   ├── posix_spawnattr_setsigdefault.3p
+│   ├── posix_spawnattr_setsigmask.3p
+│   ├── posix_spawn_file_actions_addclose.3p
+│   ├── posix_spawn_file_actions_adddup2.3p
+│   ├── posix_spawn_file_actions_addopen.3p
+│   ├── posix_spawn_file_actions_destroy.3p
+│   ├── posix_spawn_file_actions_init.3p
+│   ├── posix_spawnp.3p
+│   ├── posix_trace_attr_destroy.3p
+│   ├── posix_trace_attr_getclockres.3p
+│   ├── posix_trace_attr_getcreatetime.3p
+│   ├── posix_trace_attr_getgenversion.3p
+│   ├── posix_trace_attr_getinherited.3p
+│   ├── posix_trace_attr_getlogfullpolicy.3p
+│   ├── posix_trace_attr_getlogsize.3p
+│   ├── posix_trace_attr_getmaxdatasize.3p
+│   ├── posix_trace_attr_getmaxsystemeventsize.3p
+│   ├── posix_trace_attr_getmaxusereventsize.3p
+│   ├── posix_trace_attr_getname.3p
+│   ├── posix_trace_attr_getstreamfullpolicy.3p
+│   ├── posix_trace_attr_getstreamsize.3p
+│   ├── posix_trace_attr_init.3p
+│   ├── posix_trace_attr_setinherited.3p
+│   ├── posix_trace_attr_setlogfullpolicy.3p
+│   ├── posix_trace_attr_setlogsize.3p
+│   ├── posix_trace_attr_setmaxdatasize.3p
+│   ├── posix_trace_attr_setname.3p
+│   ├── posix_trace_attr_setstreamfullpolicy.3p
+│   ├── posix_trace_attr_setstreamsize.3p
+│   ├── posix_trace_clear.3p
+│   ├── posix_trace_close.3p
+│   ├── posix_trace_create.3p
+│   ├── posix_trace_create_withlog.3p
+│   ├── posix_trace_event.3p
+│   ├── posix_trace_eventid_equal.3p
+│   ├── posix_trace_eventid_get_name.3p
+│   ├── posix_trace_eventid_open.3p
+│   ├── posix_trace_eventset_add.3p
+│   ├── posix_trace_eventset_del.3p
+│   ├── posix_trace_eventset_empty.3p
+│   ├── posix_trace_eventset_fill.3p
+│   ├── posix_trace_eventset_ismember.3p
+│   ├── posix_trace_eventtypelist_getnext_id.3p
+│   ├── posix_trace_eventtypelist_rewind.3p
+│   ├── posix_trace_flush.3p
+│   ├── posix_trace_get_attr.3p
+│   ├── posix_trace_get_filter.3p
+│   ├── posix_trace_getnext_event.3p
+│   ├── posix_trace_get_status.3p
+│   ├── posix_trace_open.3p
+│   ├── posix_trace_rewind.3p
+│   ├── posix_trace_set_filter.3p
+│   ├── posix_trace_shutdown.3p
+│   ├── posix_trace_start.3p
+│   ├── posix_trace_stop.3p
+│   ├── posix_trace_timedgetnext_event.3p
+│   ├── posix_trace_trid_eventid_open.3p
+│   ├── posix_trace_trygetnext_event.3p
+│   ├── posix_typed_mem_get_info.3p
+│   ├── posix_typed_mem_open.3p
+│   ├── pow.3p
+│   ├── powf.3p
+│   ├── powl.3p
+│   ├── pread.3p
+│   ├── printf.3p
+│   ├── pselect.3p
+│   ├── pthread_atfork.3p
+│   ├── pthread_attr_destroy.3p
+│   ├── pthread_attr_getdetachstate.3p
+│   ├── pthread_attr_getguardsize.3p
+│   ├── pthread_attr_getinheritsched.3p
+│   ├── pthread_attr_getschedparam.3p
+│   ├── pthread_attr_getschedpolicy.3p
+│   ├── pthread_attr_getscope.3p
+│   ├── pthread_attr_getstack.3p
+│   ├── pthread_attr_getstackaddr.3p
+│   ├── pthread_attr_getstacksize.3p
+│   ├── pthread_attr_init.3p
+│   ├── pthread_attr_setdetachstate.3p
+│   ├── pthread_attr_setguardsize.3p
+│   ├── pthread_attr_setinheritsched.3p
+│   ├── pthread_attr_setschedparam.3p
+│   ├── pthread_attr_setschedpolicy.3p
+│   ├── pthread_attr_setscope.3p
+│   ├── pthread_attr_setstack.3p
+│   ├── pthread_attr_setstackaddr.3p
+│   ├── pthread_attr_setstacksize.3p
+│   ├── pthread_barrierattr_destroy.3p
+│   ├── pthread_barrierattr_getpshared.3p
+│   ├── pthread_barrierattr_init.3p
+│   ├── pthread_barrierattr_setpshared.3p
+│   ├── pthread_barrier_destroy.3p
+│   ├── pthread_barrier_init.3p
+│   ├── pthread_barrier_wait.3p
+│   ├── pthread_cancel.3p
+│   ├── pthread_cleanup_pop.3p
+│   ├── pthread_cleanup_push.3p
+│   ├── pthread_condattr_destroy.3p
+│   ├── pthread_condattr_getclock.3p
+│   ├── pthread_condattr_getpshared.3p
+│   ├── pthread_condattr_init.3p
+│   ├── pthread_condattr_setclock.3p
+│   ├── pthread_condattr_setpshared.3p
+│   ├── pthread_cond_broadcast.3p
+│   ├── pthread_cond_destroy.3p
+│   ├── pthread_cond_init.3p
+│   ├── pthread_cond_signal.3p
+│   ├── pthread_cond_timedwait.3p
+│   ├── pthread_cond_wait.3p
+│   ├── pthread_create.3p
+│   ├── pthread_detach.3p
+│   ├── pthread_equal.3p
+│   ├── pthread_exit.3p
+│   ├── pthread_getconcurrency.3p
+│   ├── pthread_getcpuclockid.3p
+│   ├── pthread_getschedparam.3p
+│   ├── pthread_getspecific.3p
+│   ├── pthread_join.3p
+│   ├── pthread_key_create.3p
+│   ├── pthread_key_delete.3p
+│   ├── pthread_kill.3p
+│   ├── pthread_mutexattr_destroy.3p
+│   ├── pthread_mutexattr_getprioceiling.3p
+│   ├── pthread_mutexattr_getprotocol.3p
+│   ├── pthread_mutexattr_getpshared.3p
+│   ├── pthread_mutexattr_gettype.3p
+│   ├── pthread_mutexattr_init.3p
+│   ├── pthread_mutexattr_setprioceiling.3p
+│   ├── pthread_mutexattr_setprotocol.3p
+│   ├── pthread_mutexattr_setpshared.3p
+│   ├── pthread_mutexattr_settype.3p
+│   ├── pthread_mutex_destroy.3p
+│   ├── pthread_mutex_getprioceiling.3p
+│   ├── pthread_mutex_init.3p
+│   ├── pthread_mutex_lock.3p
+│   ├── pthread_mutex_setprioceiling.3p
+│   ├── pthread_mutex_timedlock.3p
+│   ├── pthread_mutex_trylock.3p
+│   ├── pthread_mutex_unlock.3p
+│   ├── pthread_once.3p
+│   ├── pthread_rwlockattr_destroy.3p
+│   ├── pthread_rwlockattr_getpshared.3p
+│   ├── pthread_rwlockattr_init.3p
+│   ├── pthread_rwlockattr_setpshared.3p
+│   ├── pthread_rwlock_destroy.3p
+│   ├── pthread_rwlock_init.3p
+│   ├── pthread_rwlock_rdlock.3p
+│   ├── pthread_rwlock_timedrdlock.3p
+│   ├── pthread_rwlock_timedwrlock.3p
+│   ├── pthread_rwlock_tryrdlock.3p
+│   ├── pthread_rwlock_trywrlock.3p
+│   ├── pthread_rwlock_unlock.3p
+│   ├── pthread_rwlock_wrlock.3p
+│   ├── pthread_self.3p
+│   ├── pthread_setcancelstate.3p
+│   ├── pthread_setcanceltype.3p
+│   ├── pthread_setconcurrency.3p
+│   ├── pthread_setschedparam.3p
+│   ├── pthread_setschedprio.3p
+│   ├── pthread_setspecific.3p
+│   ├── pthread_sigmask.3p
+│   ├── pthread_spin_destroy.3p
+│   ├── pthread_spin_init.3p
+│   ├── pthread_spin_lock.3p
+│   ├── pthread_spin_trylock.3p
+│   ├── pthread_spin_unlock.3p
+│   ├── pthread_testcancel.3p
+│   ├── ptsname.3p
+│   ├── putc.3p
+│   ├── putchar.3p
+│   ├── putchar_unlocked.3p
+│   ├── putc_unlocked.3p
+│   ├── putenv.3p
+│   ├── putmsg.3p
+│   ├── putpmsg.3p
+│   ├── puts.3p
+│   ├── pututxline.3p
+│   ├── putwc.3p
+│   ├── putwchar.3p
+│   ├── pwrite.3p
+│   ├── qsort.3p
+│   ├── raise.3p
+│   ├── rand.3p
+│   ├── random.3p
+│   ├── rand_r.3p
+│   ├── read.3p
+│   ├── readdir.3p
+│   ├── readdir_r.3p
+│   ├── readlink.3p
+│   ├── readv.3p
+│   ├── realloc.3p
+│   ├── realpath.3p
+│   ├── recv.3p
+│   ├── recvfrom.3p
+│   ├── recvmsg.3p
+│   ├── regcomp.3p
+│   ├── regerror.3p
+│   ├── regexec.3p
+│   ├── regfree.3p
+│   ├── remainder.3p
+│   ├── remainderf.3p
+│   ├── remainderl.3p
+│   ├── remove.3p
+│   ├── remque.3p
+│   ├── remquo.3p
+│   ├── remquof.3p
+│   ├── remquol.3p
+│   ├── rename.3p
+│   ├── rewind.3p
+│   ├── rewinddir.3p
+│   ├── rindex.3p
+│   ├── rint.3p
+│   ├── rintf.3p
+│   ├── rintl.3p
+│   ├── rmdir.3p
+│   ├── round.3p
+│   ├── roundf.3p
+│   ├── roundl.3p
+│   ├── scalb.3p
+│   ├── scalbln.3p
+│   ├── scalblnf.3p
+│   ├── scalblnl.3p
+│   ├── scalbn.3p
+│   ├── scalbnf.3p
+│   ├── scalbnl.3p
+│   ├── scanf.3p
+│   ├── sched_getparam.3p
+│   ├── sched_get_priority_max.3p
+│   ├── sched_get_priority_min.3p
+│   ├── sched_getscheduler.3p
+│   ├── sched_rr_get_interval.3p
+│   ├── sched_setparam.3p
+│   ├── sched_setscheduler.3p
+│   ├── sched_yield.3p
+│   ├── seed48.3p
+│   ├── seekdir.3p
+│   ├── select.3p
+│   ├── sem_close.3p
+│   ├── semctl.3p
+│   ├── sem_destroy.3p
+│   ├── semget.3p
+│   ├── sem_getvalue.3p
+│   ├── sem_init.3p
+│   ├── semop.3p
+│   ├── sem_open.3p
+│   ├── sem_post.3p
+│   ├── sem_timedwait.3p
+│   ├── sem_trywait.3p
+│   ├── sem_unlink.3p
+│   ├── sem_wait.3p
+│   ├── send.3p
+│   ├── sendmsg.3p
+│   ├── sendto.3p
+│   ├── setbuf.3p
+│   ├── setcontext.3p
+│   ├── setegid.3p
+│   ├── setenv.3p
+│   ├── seteuid.3p
+│   ├── setgid.3p
+│   ├── setgrent.3p
+│   ├── sethostent.3p
+│   ├── setitimer.3p
+│   ├── _setjmp.3p
+│   ├── setjmp.3p
+│   ├── setkey.3p
+│   ├── setlocale.3p
+│   ├── setlogmask.3p
+│   ├── setnetent.3p
+│   ├── setpgid.3p
+│   ├── setpgrp.3p
+│   ├── setpriority.3p
+│   ├── setprotoent.3p
+│   ├── setpwent.3p
+│   ├── setregid.3p
+│   ├── setreuid.3p
+│   ├── setrlimit.3p
+│   ├── setservent.3p
+│   ├── setsid.3p
+│   ├── setsockopt.3p
+│   ├── setstate.3p
+│   ├── setuid.3p
+│   ├── setutxent.3p
+│   ├── setvbuf.3p
+│   ├── shmat.3p
+│   ├── shmctl.3p
+│   ├── shmdt.3p
+│   ├── shmget.3p
+│   ├── shm_open.3p
+│   ├── shm_unlink.3p
+│   ├── shutdown.3p
+│   ├── sigaction.3p
+│   ├── sigaddset.3p
+│   ├── sigaltstack.3p
+│   ├── sigdelset.3p
+│   ├── sigemptyset.3p
+│   ├── sigfillset.3p
+│   ├── sighold.3p
+│   ├── sigignore.3p
+│   ├── siginterrupt.3p
+│   ├── sigismember.3p
+│   ├── siglongjmp.3p
+│   ├── signal.3p
+│   ├── signbit.3p
+│   ├── signgam.3p
+│   ├── sigpause.3p
+│   ├── sigpending.3p
+│   ├── sigprocmask.3p
+│   ├── sigqueue.3p
+│   ├── sigrelse.3p
+│   ├── sigset.3p
+│   ├── sigsetjmp.3p
+│   ├── sigsuspend.3p
+│   ├── sigtimedwait.3p
+│   ├── sigwait.3p
+│   ├── sigwaitinfo.3p
+│   ├── sin.3p
+│   ├── sinf.3p
+│   ├── sinh.3p
+│   ├── sinhf.3p
+│   ├── sinhl.3p
+│   ├── sinl.3p
+│   ├── sleep.3p
+│   ├── snprintf.3p
+│   ├── sockatmark.3p
+│   ├── socket.3p
+│   ├── socketpair.3p
+│   ├── sprintf.3p
+│   ├── sqrt.3p
+│   ├── sqrtf.3p
+│   ├── sqrtl.3p
+│   ├── srand.3p
+│   ├── srand48.3p
+│   ├── srandom.3p
+│   ├── sscanf.3p
+│   ├── stat.3p
+│   ├── statvfs.3p
+│   ├── stderr.3p
+│   ├── stdin.3p
+│   ├── stdout.3p
+│   ├── strcasecmp.3p
+│   ├── strcat.3p
+│   ├── strchr.3p
+│   ├── strcmp.3p
+│   ├── strcoll.3p
+│   ├── strcpy.3p
+│   ├── strcspn.3p
+│   ├── strdup.3p
+│   ├── strerror.3p
+│   ├── strerror_r.3p
+│   ├── strfmon.3p
+│   ├── strftime.3p
+│   ├── strlen.3p
+│   ├── strncasecmp.3p
+│   ├── strncat.3p
+│   ├── strncmp.3p
+│   ├── strncpy.3p
+│   ├── strpbrk.3p
+│   ├── strptime.3p
+│   ├── strrchr.3p
+│   ├── strspn.3p
+│   ├── strstr.3p
+│   ├── strtod.3p
+│   ├── strtof.3p
+│   ├── strtoimax.3p
+│   ├── strtok.3p
+│   ├── strtok_r.3p
+│   ├── strtol.3p
+│   ├── strtold.3p
+│   ├── strtoll.3p
+│   ├── strtoul.3p
+│   ├── strtoull.3p
+│   ├── strtoumax.3p
+│   ├── strxfrm.3p
+│   ├── swab.3p
+│   ├── swapcontext.3p
+│   ├── swprintf.3p
+│   ├── swscanf.3p
+│   ├── symlink.3p
+│   ├── sync.3p
+│   ├── sysconf.3p
+│   ├── syslog.3p
+│   ├── system.3p
+│   ├── tan.3p
+│   ├── tanf.3p
+│   ├── tanh.3p
+│   ├── tanhf.3p
+│   ├── tanhl.3p
+│   ├── tanl.3p
+│   ├── tcdrain.3p
+│   ├── tcflow.3p
+│   ├── tcflush.3p
+│   ├── tcgetattr.3p
+│   ├── tcgetpgrp.3p
+│   ├── tcgetsid.3p
+│   ├── tcsendbreak.3p
+│   ├── tcsetattr.3p
+│   ├── tcsetpgrp.3p
+│   ├── tdelete.3p
+│   ├── telldir.3p
+│   ├── tempnam.3p
+│   ├── tfind.3p
+│   ├── tgamma.3p
+│   ├── tgammaf.3p
+│   ├── tgammal.3p
+│   ├── time.3p
+│   ├── timer_create.3p
+│   ├── timer_delete.3p
+│   ├── timer_getoverrun.3p
+│   ├── timer_gettime.3p
+│   ├── timer_settime.3p
+│   ├── times.3p
+│   ├── timezone.3p
+│   ├── tmpfile.3p
+│   ├── tmpnam.3p
+│   ├── toascii.3p
+│   ├── _tolower.3p
+│   ├── tolower.3p
+│   ├── _toupper.3p
+│   ├── toupper.3p
+│   ├── towctrans.3p
+│   ├── towlower.3p
+│   ├── towupper.3p
+│   ├── trunc.3p
+│   ├── truncate.3p
+│   ├── truncf.3p
+│   ├── truncl.3p
+│   ├── tsearch.3p
+│   ├── ttyname.3p
+│   ├── ttyname_r.3p
+│   ├── twalk.3p
+│   ├── tzname.3p
+│   ├── tzset.3p
+│   ├── ualarm.3p
+│   ├── ulimit.3p
+│   ├── umask.3p
+│   ├── uname.3p
+│   ├── ungetc.3p
+│   ├── ungetwc.3p
+│   ├── unlink.3p
+│   ├── unlockpt.3p
+│   ├── unsetenv.3p
+│   ├── usleep.3p
+│   ├── utime.3p
+│   ├── utimes.3p
+│   ├── va_arg.3p
+│   ├── va_copy.3p
+│   ├── va_end.3p
+│   ├── va_start.3p
+│   ├── vfork.3p
+│   ├── vfprintf.3p
+│   ├── vfscanf.3p
+│   ├── vfwprintf.3p
+│   ├── vfwscanf.3p
+│   ├── vprintf.3p
+│   ├── vscanf.3p
+│   ├── vsnprintf.3p
+│   ├── vsprintf.3p
+│   ├── vsscanf.3p
+│   ├── vswprintf.3p
+│   ├── vswscanf.3p
+│   ├── vwprintf.3p
+│   ├── vwscanf.3p
+│   ├── wait.3p
+│   ├── waitid.3p
+│   ├── waitpid.3p
+│   ├── wcrtomb.3p
+│   ├── wcscat.3p
+│   ├── wcschr.3p
+│   ├── wcscmp.3p
+│   ├── wcscoll.3p
+│   ├── wcscpy.3p
+│   ├── wcscspn.3p
+│   ├── wcsftime.3p
+│   ├── wcslen.3p
+│   ├── wcsncat.3p
+│   ├── wcsncmp.3p
+│   ├── wcsncpy.3p
+│   ├── wcspbrk.3p
+│   ├── wcsrchr.3p
+│   ├── wcsrtombs.3p
+│   ├── wcsspn.3p
+│   ├── wcsstr.3p
+│   ├── wcstod.3p
+│   ├── wcstof.3p
+│   ├── wcstoimax.3p
+│   ├── wcstok.3p
+│   ├── wcstol.3p
+│   ├── wcstold.3p
+│   ├── wcstoll.3p
+│   ├── wcstombs.3p
+│   ├── wcstoul.3p
+│   ├── wcstoull.3p
+│   ├── wcstoumax.3p
+│   ├── wcswcs.3p
+│   ├── wcswidth.3p
+│   ├── wcsxfrm.3p
+│   ├── wctob.3p
+│   ├── wctomb.3p
+│   ├── wctrans.3p
+│   ├── wctype.3p
+│   ├── wcwidth.3p
+│   ├── wmemchr.3p
+│   ├── wmemcmp.3p
+│   ├── wmemcpy.3p
+│   ├── wmemmove.3p
+│   ├── wmemset.3p
+│   ├── wordexp.3p
+│   ├── wordfree.3p
+│   ├── wprintf.3p
+│   ├── write.3p
+│   ├── writev.3p
+│   ├── wscanf.3p
+│   ├── y0.3p
+│   ├── y1.3p
+│   └── yn.3p
+├── man-pages-2.16.Announce
+├── man-pages-2.16.lsm
+├── POSIX-COPYRIGHT
+└── README
+
+4 directories, 1412 files
+</code></pre>
                     
                     </section>
                 
@@ -2225,10 +3964,10 @@
         </div>
 
         
-        <a href="../../../content/package/ifupdown/report.html" class="navigation navigation-prev " aria-label="Previous page: report"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/manpages-posix/index.html" class="navigation navigation-prev " aria-label="Previous page: manpages-posix"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/iproute2/info.html" class="navigation navigation-next " aria-label="Next page: info"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/manpages-posix/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
