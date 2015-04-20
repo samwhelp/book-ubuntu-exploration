@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/manpages-posix/note.html" />
+    <link rel="next" href="../../../content/package/manpages-posix-dev/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/manpages-posix/index.html" />
+    <link rel="prev" href="../../../content/package/manpages-posix-dev/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1.4.1" data-basepath="../../.." data-revision="1429512250283">
+    <div class="book" data-level="1.5.1" data-basepath="../../.." data-revision="1429512250283">
     
 
 <div class="book-summary">
@@ -310,7 +310,7 @@
                 
     
         
-        <li class="chapter active" data-level="1.4.1" data-path="content/package/manpages-posix/info.html">
+        <li class="chapter " data-level="1.4.1" data-path="content/package/manpages-posix/info.html">
             
                 
                     <a href="../../../content/package/manpages-posix/info.html">
@@ -380,7 +380,7 @@
                 
     
         
-        <li class="chapter " data-level="1.5.1" data-path="content/package/manpages-posix-dev/info.html">
+        <li class="chapter active" data-level="1.5.1" data-path="content/package/manpages-posix-dev/info.html">
             
                 
                     <a href="../../../content/package/manpages-posix-dev/info.html">
@@ -2272,58 +2272,60 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_82">
+                    <section class="normal" id="section-gitbook_86">
                     
-                        <h1 id="manpages-posix-info">manpages-posix info</h1>
+                        <h1 id="manpages-posix-dev-info">manpages-posix-dev info</h1>
 <h2 id="">套件資訊</h2>
 <p>執行</p>
-<pre><code>$ apt-cache show manpages-posix
+<pre><code>$ apt-cache show manpages-posix-dev
 </code></pre><p>顯示</p>
-<pre><code>Package: manpages-posix
+<pre><code>Package: manpages-posix-dev
 Priority: optional
 Section: multiverse/doc
-Installed-Size: 1196
+Installed-Size: 5112
 Maintainer: Francesco Paolo Lovergine &lt;frankie@debian.org&gt;
 Architecture: all
+Source: manpages-posix
 Version: 2.16-1
-Recommends: manpages
+Depends: manpages-posix
+Recommends: manpages-dev
 Suggests: man-browser
-Filename: pool/multiverse/m/manpages-posix/manpages-posix_2.16-1_all.deb
-Size: 862948
-MD5sum: ba4cd6b7cdaf1379a99e97dcd1144bab
-SHA1: 475ba89080c3544b83c5bdb8153334e53cc5bc70
-SHA256: 45fce034029543265fe9269cdc13a79d1bb0bf15441ea297048847126ba74f09
-Description-en: Manual pages about using POSIX system
- This package contains manual pages for POSIX utilities
- and keeps them in section 1 (with 1posix extension) of the
- on-line manual.
-Description-md5: bebba789d7556a5d3bb41a68c74536d8
-Enhances: manpages
+Filename: pool/multiverse/m/manpages-posix/manpages-posix-dev_2.16-1_all.deb
+Size: 1427612
+MD5sum: fb894de7cbbf751d01fe15c7c2fcae3d
+SHA1: 9c48619ac970eb814fb2677aeb694cbaf86c6411
+SHA256: 4df595466edb5d28eaf783448b94ca5f7af839172be6c614ff12cd2895a0a67f
+Description-en: Manual pages about using a POSIX system for development
+ These man pages describe the POSIX programming interface, including
+ these two sections:
+    7 = POSIX header files (with 7posix extension)
+    3 = POSIX library calls (with 3posix extension)
+Description-md5: 0df35d08fd332d72043312433a0bd2b2
+Enhances: manpages-dev
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 </code></pre><p>執行</p>
-<pre><code>$ apt-cache showpkg manpages-posix
+<pre><code>$ apt-cache showpkg manpages-posix-dev
 </code></pre><p>顯示</p>
-<pre><code>Package: manpages-posix
+<pre><code>Package: manpages-posix-dev
 Versions:
 2.16-1 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_multiverse_binary-amd64_Packages) (/var/lib/dpkg/status)
  Description Language:
                  File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_multiverse_binary-amd64_Packages
-                  MD5: bebba789d7556a5d3bb41a68c74536d8
+                  MD5: 0df35d08fd332d72043312433a0bd2b2
  Description Language: en
                  File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_multiverse_i18n_Translation-en
-                  MD5: bebba789d7556a5d3bb41a68c74536d8
+                  MD5: 0df35d08fd332d72043312433a0bd2b2
 
 
 Reverse Depends:
-  manpages-posix-dev,manpages-posix
 Dependencies:
-2.16-1 - man-browser (0 (null)) manpages (0 (null)) manpages (0 (null))
+2.16-1 - manpages-posix (0 (null)) man-browser (0 (null)) manpages-dev (0 (null)) manpages-dev (0 (null))
 Provides:
 2.16-1 -
 Reverse Provides:
 </code></pre><p>執行</p>
-<pre><code>$ apt-cache showsrc manpages-posix
+<pre><code>$ apt-cache showsrc manpages-posix-dev
 </code></pre><p>顯示</p>
 <pre><code>Package: manpages-posix
 Binary: manpages-posix, manpages-posix-dev
@@ -2346,247 +2348,1290 @@ Checksums-Sha256:
  3353e43c54cf6943f099e4af45091c18edbdd3fdc46436ac007c84d3aa2609dd 554 manpages-posix_2.16-1.dsc
  7f31b11f99d2f37e5e323ac763ef89b526a99a1e01a88c0f6a5777bbafc2acdc 1395167 manpages-posix_2.16-1.tar.gz
 </code></pre><p>執行</p>
-<pre><code>$ dpkg -s manpages-posix
+<pre><code>$ dpkg -s manpages-posix-dev
 </code></pre><p>顯示</p>
-<pre><code>Package: manpages-posix
+<pre><code>Package: manpages-posix-dev
 Status: install ok installed
 Priority: optional
 Section: non-free/doc
-Installed-Size: 1196
+Installed-Size: 5112
 Maintainer: Francesco Paolo Lovergine &lt;frankie@debian.org&gt;
 Architecture: all
+Source: manpages-posix
 Version: 2.16-1
-Recommends: manpages
+Depends: manpages-posix
+Recommends: manpages-dev
 Suggests: man-browser
-Enhances: manpages
-Description: Manual pages about using POSIX system
- This package contains manual pages for POSIX utilities
- and keeps them in section 1 (with 1posix extension) of the
- on-line manual.
+Enhances: manpages-dev
+Description: Manual pages about using a POSIX system for development
+ These man pages describe the POSIX programming interface, including
+ these two sections:
+    7 = POSIX header files (with 7posix extension)
+    3 = POSIX library calls (with 3posix extension)
 </code></pre><p>執行</p>
-<pre><code>$ dpkg -l manpages-posix
+<pre><code>$ dpkg -l manpages-posix-dev
 </code></pre><p>顯示</p>
 <pre><code>Desired=Unknown/Install/Remove/Purge/Hold
 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
 |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
 ||/ Name                         Version             Architecture        Description
 +++-============================-===================-===================-==============================================================
-ii  manpages-posix               2.16-1              all                 Manual pages about using POSIX system
+ii  manpages-posix-dev           2.16-1              all                 Manual pages about using a POSIX system for development
 </code></pre><h2 id="">準備工作環境</h2>
-<pre><code>mkdir  ~/Downloads/manpages-posix -p
-cd ~/Downloads/manpages-posix
+<pre><code>mkdir  ~/Downloads/manpages-posix-dev -p
+cd ~/Downloads/manpages-posix-dev
 mkdir download source
-</code></pre><h2 id="package-manpages-posixhttppackagesubuntucomtrustymanpages-posix">探索「Package: <a href="http://packages.ubuntu.com/trusty/manpages-posix" target="_blank">manpages-posix</a>」</h2>
-<p>切換到「~/Downloads/manpages-posix/download」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/manpages-posix/download
+</code></pre><h2 id="package-manpages-posix-devhttppackagesubuntucomtrustymanpages-posix-dev">探索「Package: <a href="http://packages.ubuntu.com/trusty/manpages-posix-dev" target="_blank">manpages-posix-dev</a>」</h2>
+<p>切換到「~/Downloads/manpages-posix-dev/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/manpages-posix-dev/download
 </code></pre>
-<p>下載「Package: manpages-posix」。</p>
-<pre><code class="lang-sh">$ apt-get download manpages-posix
+<p>下載「Package: manpages-posix-dev」。</p>
+<pre><code class="lang-sh">$ apt-get download manpages-posix-dev
 </code></pre>
-<p>解開「package manpages-posix」</p>
-<pre><code class="lang-sh">dpkg -x manpages-posix_2.<span class="hljs-number">16</span>-<span class="hljs-number">1</span>_all.deb manpages-posix
-dpkg <span class="hljs-operator">-e</span> manpages-posix_2.<span class="hljs-number">16</span>-<span class="hljs-number">1</span>_all.deb
-<span class="hljs-comment"># ar xv manpages-posix_2.16-1_all.deb</span>
+<p>解開「package manpages-posix-dev」</p>
+<pre><code class="lang-sh">dpkg -x manpages-posix-dev_2.<span class="hljs-number">16</span>-<span class="hljs-number">1</span>_all.deb manpages-posix-dev
+dpkg <span class="hljs-operator">-e</span> manpages-posix-dev_2.<span class="hljs-number">16</span>-<span class="hljs-number">1</span>_all.deb
+<span class="hljs-comment"># ar xv manpages-posix-dev_2.16-1_all.deb</span>
 </code></pre>
 <p>檢視套件檔案</p>
-<pre><code class="lang-sh">$ tree manpages-posix
+<pre><code class="lang-sh">$ tree manpages-posix-dev
 </code></pre>
 <p>顯示</p>
-<pre><code>manpages-posix_2.16-1_all.deb
-sam@sam-game [13:38:23] (~/Downloads/manpages-posix/download)
- -&gt; % dpkg -x manpages-posix_2.16-1_all.deb manpages-posix
-sam@sam-game [13:38:38] (~/Downloads/manpages-posix/download)
- -&gt; % dpkg -e manpages-posix_2.16-1_all.deb
-sam@sam-game [13:38:42] (~/Downloads/manpages-posix/download)
- -&gt; % tree manpages-posix
-manpages-posix
+<pre><code>manpages-posix-dev
 └── usr
     └── share
         ├── doc
-        │   └── manpages-posix
-        │       ├── changelog.Debian.gz
-        │       ├── copyright
-        │       ├── man-pages-2.16.Announce
-        │       └── README.Debian
+        │   └── manpages-posix-dev -&gt; manpages-posix
         └── man
-            └── man1
-                ├── admin.1posix.gz
-                ├── alias.1posix.gz
-                ├── ar.1posix.gz
-                ├── asa.1posix.gz
-                ├── at.1posix.gz
-                ├── awk.1posix.gz
-                ├── basename.1posix.gz
-                ├── batch.1posix.gz
-                ├── bc.1posix.gz
-                ├── bg.1posix.gz
-                ├── break.1posix.gz
-                ├── c99.1posix.gz
-                ├── cal.1posix.gz
-                ├── cat.1posix.gz
-                ├── cd.1posix.gz
-                ├── cflow.1posix.gz
-                ├── chgrp.1posix.gz
-                ├── chmod.1posix.gz
-                ├── chown.1posix.gz
-                ├── cksum.1posix.gz
-                ├── cmp.1posix.gz
-                ├── colon.1posix.gz
-                ├── comm.1posix.gz
-                ├── command.1posix.gz
-                ├── compress.1posix.gz
-                ├── continue.1posix.gz
-                ├── cp.1posix.gz
-                ├── crontab.1posix.gz
-                ├── csplit.1posix.gz
-                ├── ctags.1posix.gz
-                ├── cut.1posix.gz
-                ├── cxref.1posix.gz
-                ├── date.1posix.gz
-                ├── dd.1posix.gz
-                ├── delta.1posix.gz
-                ├── df.1posix.gz
-                ├── diff.1posix.gz
-                ├── dirname.1posix.gz
-                ├── dot.1posix.gz
-                ├── du.1posix.gz
-                ├── echo.1posix.gz
-                ├── ed.1posix.gz
-                ├── env.1posix.gz
-                ├── eval.1posix.gz
-                ├── ex.1posix.gz
-                ├── exec.1posix.gz
-                ├── exit.1posix.gz
-                ├── expand.1posix.gz
-                ├── export.1posix.gz
-                ├── expr.1posix.gz
-                ├── false.1posix.gz
-                ├── fc.1posix.gz
-                ├── fg.1posix.gz
-                ├── file.1posix.gz
-                ├── find.1posix.gz
-                ├── fold.1posix.gz
-                ├── fort77.1posix.gz
-                ├── fuser.1posix.gz
-                ├── gencat.1posix.gz
-                ├── get.1posix.gz
-                ├── getconf.1posix.gz
-                ├── getopts.1posix.gz
-                ├── grep.1posix.gz
-                ├── hash.1posix.gz
-                ├── head.1posix.gz
-                ├── iconv.1posix.gz
-                ├── id.1posix.gz
-                ├── ipcrm.1posix.gz
-                ├── ipcs.1posix.gz
-                ├── jobs.1posix.gz
-                ├── join.1posix.gz
-                ├── kill.1posix.gz
-                ├── lex.1posix.gz
-                ├── link.1posix.gz
-                ├── ln.1posix.gz
-                ├── locale.1posix.gz
-                ├── localedef.1posix.gz
-                ├── logger.1posix.gz
-                ├── logname.1posix.gz
-                ├── lp.1posix.gz
-                ├── ls.1posix.gz
-                ├── m4.1posix.gz
-                ├── mailx.1posix.gz
-                ├── make.1posix.gz
-                ├── man.1posix.gz
-                ├── mesg.1posix.gz
-                ├── mkdir.1posix.gz
-                ├── mkfifo.1posix.gz
-                ├── more.1posix.gz
-                ├── mv.1posix.gz
-                ├── newgrp.1posix.gz
-                ├── nice.1posix.gz
-                ├── nl.1posix.gz
-                ├── nm.1posix.gz
-                ├── nohup.1posix.gz
-                ├── od.1posix.gz
-                ├── paste.1posix.gz
-                ├── patch.1posix.gz
-                ├── pathchk.1posix.gz
-                ├── pax.1posix.gz
-                ├── pr.1posix.gz
-                ├── printf.1posix.gz
-                ├── prs.1posix.gz
-                ├── ps.1posix.gz
-                ├── pwd.1posix.gz
-                ├── qalter.1posix.gz
-                ├── qdel.1posix.gz
-                ├── qhold.1posix.gz
-                ├── qmove.1posix.gz
-                ├── qmsg.1posix.gz
-                ├── qrerun.1posix.gz
-                ├── qrls.1posix.gz
-                ├── qselect.1posix.gz
-                ├── qsig.1posix.gz
-                ├── qstat.1posix.gz
-                ├── qsub.1posix.gz
-                ├── read.1posix.gz
-                ├── readonly.1posix.gz
-                ├── renice.1posix.gz
-                ├── return.1posix.gz
-                ├── rm.1posix.gz
-                ├── rmdel.1posix.gz
-                ├── rmdir.1posix.gz
-                ├── sact.1posix.gz
-                ├── sccs.1posix.gz
-                ├── sed.1posix.gz
-                ├── set.1posix.gz
-                ├── sh.1posix.gz
-                ├── shift.1posix.gz
-                ├── sleep.1posix.gz
-                ├── sort.1posix.gz
-                ├── split.1posix.gz
-                ├── strings.1posix.gz
-                ├── strip.1posix.gz
-                ├── stty.1posix.gz
-                ├── tabs.1posix.gz
-                ├── tail.1posix.gz
-                ├── talk.1posix.gz
-                ├── tee.1posix.gz
-                ├── test.1posix.gz
-                ├── time.1posix.gz
-                ├── times.1posix.gz
-                ├── touch.1posix.gz
-                ├── tput.1posix.gz
-                ├── tr.1posix.gz
-                ├── trap.1posix.gz
-                ├── true.1posix.gz
-                ├── tsort.1posix.gz
-                ├── tty.1posix.gz
-                ├── type.1posix.gz
-                ├── ulimit.1posix.gz
-                ├── umask.1posix.gz
-                ├── unalias.1posix.gz
-                ├── uname.1posix.gz
-                ├── uncompress.1posix.gz
-                ├── unexpand.1posix.gz
-                ├── unget.1posix.gz
-                ├── uniq.1posix.gz
-                ├── unlink.1posix.gz
-                ├── unset.1posix.gz
-                ├── uucp.1posix.gz
-                ├── uudecode.1posix.gz
-                ├── uuencode.1posix.gz
-                ├── uustat.1posix.gz
-                ├── uux.1posix.gz
-                ├── val.1posix.gz
-                ├── vi.1posix.gz
-                ├── wait.1posix.gz
-                ├── wc.1posix.gz
-                ├── what.1posix.gz
-                ├── who.1posix.gz
-                ├── write.1posix.gz
-                ├── xargs.1posix.gz
-                ├── yacc.1posix.gz
-                └── zcat.1posix.gz
+            ├── man3
+            │   ├── a64l.3posix.gz
+            │   ├── abort.3posix.gz
+            │   ├── abs.3posix.gz
+            │   ├── accept.3posix.gz
+            │   ├── access.3posix.gz
+            │   ├── acos.3posix.gz
+            │   ├── acosf.3posix.gz
+            │   ├── acosh.3posix.gz
+            │   ├── acoshf.3posix.gz
+            │   ├── acoshl.3posix.gz
+            │   ├── acosl.3posix.gz
+            │   ├── aio_cancel.3posix.gz
+            │   ├── aio_error.3posix.gz
+            │   ├── aio_fsync.3posix.gz
+            │   ├── aio_read.3posix.gz
+            │   ├── aio_return.3posix.gz
+            │   ├── aio_suspend.3posix.gz
+            │   ├── aio_write.3posix.gz
+            │   ├── alarm.3posix.gz
+            │   ├── asctime.3posix.gz
+            │   ├── asctime_r.3posix.gz
+            │   ├── asin.3posix.gz
+            │   ├── asinf.3posix.gz
+            │   ├── asinh.3posix.gz
+            │   ├── asinhf.3posix.gz
+            │   ├── asinhl.3posix.gz
+            │   ├── asinl.3posix.gz
+            │   ├── assert.3posix.gz
+            │   ├── atan2.3posix.gz
+            │   ├── atan2f.3posix.gz
+            │   ├── atan2l.3posix.gz
+            │   ├── atan.3posix.gz
+            │   ├── atanf.3posix.gz
+            │   ├── atanh.3posix.gz
+            │   ├── atanhf.3posix.gz
+            │   ├── atanhl.3posix.gz
+            │   ├── atanl.3posix.gz
+            │   ├── atexit.3posix.gz
+            │   ├── atof.3posix.gz
+            │   ├── atoi.3posix.gz
+            │   ├── atol.3posix.gz
+            │   ├── atoll.3posix.gz
+            │   ├── basename.3posix.gz
+            │   ├── bcmp.3posix.gz
+            │   ├── bcopy.3posix.gz
+            │   ├── bind.3posix.gz
+            │   ├── bsd_signal.3posix.gz
+            │   ├── bsearch.3posix.gz
+            │   ├── btowc.3posix.gz
+            │   ├── bzero.3posix.gz
+            │   ├── cabs.3posix.gz
+            │   ├── cabsf.3posix.gz
+            │   ├── cabsl.3posix.gz
+            │   ├── cacos.3posix.gz
+            │   ├── cacosf.3posix.gz
+            │   ├── cacosh.3posix.gz
+            │   ├── cacoshf.3posix.gz
+            │   ├── cacoshl.3posix.gz
+            │   ├── cacosl.3posix.gz
+            │   ├── calloc.3posix.gz
+            │   ├── carg.3posix.gz
+            │   ├── cargf.3posix.gz
+            │   ├── cargl.3posix.gz
+            │   ├── casin.3posix.gz
+            │   ├── casinf.3posix.gz
+            │   ├── casinh.3posix.gz
+            │   ├── casinhf.3posix.gz
+            │   ├── casinhl.3posix.gz
+            │   ├── casinl.3posix.gz
+            │   ├── catan.3posix.gz
+            │   ├── catanf.3posix.gz
+            │   ├── catanh.3posix.gz
+            │   ├── catanhf.3posix.gz
+            │   ├── catanhl.3posix.gz
+            │   ├── catanl.3posix.gz
+            │   ├── catclose.3posix.gz
+            │   ├── catgets.3posix.gz
+            │   ├── catopen.3posix.gz
+            │   ├── cbrt.3posix.gz
+            │   ├── cbrtf.3posix.gz
+            │   ├── cbrtl.3posix.gz
+            │   ├── ccos.3posix.gz
+            │   ├── ccosf.3posix.gz
+            │   ├── ccosh.3posix.gz
+            │   ├── ccoshf.3posix.gz
+            │   ├── ccoshl.3posix.gz
+            │   ├── ccosl.3posix.gz
+            │   ├── ceil.3posix.gz
+            │   ├── ceilf.3posix.gz
+            │   ├── ceill.3posix.gz
+            │   ├── cexp.3posix.gz
+            │   ├── cexpf.3posix.gz
+            │   ├── cexpl.3posix.gz
+            │   ├── cfgetispeed.3posix.gz
+            │   ├── cfgetospeed.3posix.gz
+            │   ├── cfsetispeed.3posix.gz
+            │   ├── cfsetospeed.3posix.gz
+            │   ├── chdir.3posix.gz
+            │   ├── chmod.3posix.gz
+            │   ├── chown.3posix.gz
+            │   ├── cimag.3posix.gz
+            │   ├── cimagf.3posix.gz
+            │   ├── cimagl.3posix.gz
+            │   ├── clearerr.3posix.gz
+            │   ├── clock.3posix.gz
+            │   ├── clock_getcpuclockid.3posix.gz
+            │   ├── clock_getres.3posix.gz
+            │   ├── clock_gettime.3posix.gz
+            │   ├── clock_nanosleep.3posix.gz
+            │   ├── clock_settime.3posix.gz
+            │   ├── clog.3posix.gz
+            │   ├── clogf.3posix.gz
+            │   ├── clogl.3posix.gz
+            │   ├── close.3posix.gz
+            │   ├── closedir.3posix.gz
+            │   ├── closelog.3posix.gz
+            │   ├── confstr.3posix.gz
+            │   ├── conj.3posix.gz
+            │   ├── conjf.3posix.gz
+            │   ├── conjl.3posix.gz
+            │   ├── connect.3posix.gz
+            │   ├── copysign.3posix.gz
+            │   ├── copysignf.3posix.gz
+            │   ├── copysignl.3posix.gz
+            │   ├── cos.3posix.gz
+            │   ├── cosf.3posix.gz
+            │   ├── cosh.3posix.gz
+            │   ├── coshf.3posix.gz
+            │   ├── coshl.3posix.gz
+            │   ├── cosl.3posix.gz
+            │   ├── cpow.3posix.gz
+            │   ├── cpowf.3posix.gz
+            │   ├── cpowl.3posix.gz
+            │   ├── cproj.3posix.gz
+            │   ├── cprojf.3posix.gz
+            │   ├── cprojl.3posix.gz
+            │   ├── creal.3posix.gz
+            │   ├── crealf.3posix.gz
+            │   ├── creall.3posix.gz
+            │   ├── creat.3posix.gz
+            │   ├── crypt.3posix.gz
+            │   ├── csin.3posix.gz
+            │   ├── csinf.3posix.gz
+            │   ├── csinh.3posix.gz
+            │   ├── csinhf.3posix.gz
+            │   ├── csinhl.3posix.gz
+            │   ├── csinl.3posix.gz
+            │   ├── csqrt.3posix.gz
+            │   ├── csqrtf.3posix.gz
+            │   ├── csqrtl.3posix.gz
+            │   ├── ctan.3posix.gz
+            │   ├── ctanf.3posix.gz
+            │   ├── ctanh.3posix.gz
+            │   ├── ctanhf.3posix.gz
+            │   ├── ctanhl.3posix.gz
+            │   ├── ctanl.3posix.gz
+            │   ├── ctermid.3posix.gz
+            │   ├── ctime.3posix.gz
+            │   ├── ctime_r.3posix.gz
+            │   ├── daylight.3posix.gz
+            │   ├── dbm_clearerr.3posix.gz
+            │   ├── dbm_close.3posix.gz
+            │   ├── dbm_delete.3posix.gz
+            │   ├── dbm_error.3posix.gz
+            │   ├── dbm_fetch.3posix.gz
+            │   ├── dbm_firstkey.3posix.gz
+            │   ├── dbm_nextkey.3posix.gz
+            │   ├── dbm_open.3posix.gz
+            │   ├── dbm_store.3posix.gz
+            │   ├── difftime.3posix.gz
+            │   ├── dirname.3posix.gz
+            │   ├── div.3posix.gz
+            │   ├── dlclose.3posix.gz
+            │   ├── dlerror.3posix.gz
+            │   ├── dlopen.3posix.gz
+            │   ├── dlsym.3posix.gz
+            │   ├── drand48.3posix.gz
+            │   ├── dup2.3posix.gz
+            │   ├── dup.3posix.gz
+            │   ├── ecvt.3posix.gz
+            │   ├── encrypt.3posix.gz
+            │   ├── endgrent.3posix.gz
+            │   ├── endhostent.3posix.gz
+            │   ├── endnetent.3posix.gz
+            │   ├── endprotoent.3posix.gz
+            │   ├── endpwent.3posix.gz
+            │   ├── endservent.3posix.gz
+            │   ├── endutxent.3posix.gz
+            │   ├── environ.3posix.gz
+            │   ├── erand48.3posix.gz
+            │   ├── erf.3posix.gz
+            │   ├── erfc.3posix.gz
+            │   ├── erfcf.3posix.gz
+            │   ├── erfcl.3posix.gz
+            │   ├── erff.3posix.gz
+            │   ├── erfl.3posix.gz
+            │   ├── errno.3posix.gz
+            │   ├── exec.3posix.gz
+            │   ├── execl.3posix.gz
+            │   ├── execle.3posix.gz
+            │   ├── execlp.3posix.gz
+            │   ├── execv.3posix.gz
+            │   ├── execve.3posix.gz
+            │   ├── execvp.3posix.gz
+            │   ├── _exit.3posix.gz
+            │   ├── exit.3posix.gz
+            │   ├── _Exit.3posix.gz
+            │   ├── exp2.3posix.gz
+            │   ├── exp2f.3posix.gz
+            │   ├── exp2l.3posix.gz
+            │   ├── exp.3posix.gz
+            │   ├── expf.3posix.gz
+            │   ├── expl.3posix.gz
+            │   ├── expm1.3posix.gz
+            │   ├── expm1f.3posix.gz
+            │   ├── expm1l.3posix.gz
+            │   ├── fabs.3posix.gz
+            │   ├── fabsf.3posix.gz
+            │   ├── fabsl.3posix.gz
+            │   ├── fattach.3posix.gz
+            │   ├── fchdir.3posix.gz
+            │   ├── fchmod.3posix.gz
+            │   ├── fchown.3posix.gz
+            │   ├── fclose.3posix.gz
+            │   ├── fcntl.3posix.gz
+            │   ├── fcvt.3posix.gz
+            │   ├── fdatasync.3posix.gz
+            │   ├── FD_CLR.3posix.gz
+            │   ├── fdetach.3posix.gz
+            │   ├── fdim.3posix.gz
+            │   ├── fdimf.3posix.gz
+            │   ├── fdiml.3posix.gz
+            │   ├── FD_ISSET.3posix.gz
+            │   ├── fdopen.3posix.gz
+            │   ├── FD_SET.3posix.gz
+            │   ├── FD_ZERO.3posix.gz
+            │   ├── feclearexcept.3posix.gz
+            │   ├── fegetenv.3posix.gz
+            │   ├── fegetexceptflag.3posix.gz
+            │   ├── fegetround.3posix.gz
+            │   ├── feholdexcept.3posix.gz
+            │   ├── feof.3posix.gz
+            │   ├── feraiseexcept.3posix.gz
+            │   ├── ferror.3posix.gz
+            │   ├── fesetenv.3posix.gz
+            │   ├── fesetexceptflag.3posix.gz
+            │   ├── fesetround.3posix.gz
+            │   ├── fetestexcept.3posix.gz
+            │   ├── feupdateenv.3posix.gz
+            │   ├── fflush.3posix.gz
+            │   ├── ffs.3posix.gz
+            │   ├── fgetc.3posix.gz
+            │   ├── fgetpos.3posix.gz
+            │   ├── fgets.3posix.gz
+            │   ├── fgetwc.3posix.gz
+            │   ├── fgetws.3posix.gz
+            │   ├── fileno.3posix.gz
+            │   ├── flockfile.3posix.gz
+            │   ├── floor.3posix.gz
+            │   ├── floorf.3posix.gz
+            │   ├── floorl.3posix.gz
+            │   ├── fma.3posix.gz
+            │   ├── fmaf.3posix.gz
+            │   ├── fmal.3posix.gz
+            │   ├── fmax.3posix.gz
+            │   ├── fmaxf.3posix.gz
+            │   ├── fmaxl.3posix.gz
+            │   ├── fmin.3posix.gz
+            │   ├── fminf.3posix.gz
+            │   ├── fminl.3posix.gz
+            │   ├── fmod.3posix.gz
+            │   ├── fmodf.3posix.gz
+            │   ├── fmodl.3posix.gz
+            │   ├── fmtmsg.3posix.gz
+            │   ├── fnmatch.3posix.gz
+            │   ├── fopen.3posix.gz
+            │   ├── fork.3posix.gz
+            │   ├── fpathconf.3posix.gz
+            │   ├── fpclassify.3posix.gz
+            │   ├── fprintf.3posix.gz
+            │   ├── fputc.3posix.gz
+            │   ├── fputs.3posix.gz
+            │   ├── fputwc.3posix.gz
+            │   ├── fputws.3posix.gz
+            │   ├── fread.3posix.gz
+            │   ├── free.3posix.gz
+            │   ├── freeaddrinfo.3posix.gz
+            │   ├── freopen.3posix.gz
+            │   ├── frexp.3posix.gz
+            │   ├── frexpf.3posix.gz
+            │   ├── frexpl.3posix.gz
+            │   ├── fscanf.3posix.gz
+            │   ├── fseek.3posix.gz
+            │   ├── fseeko.3posix.gz
+            │   ├── fsetpos.3posix.gz
+            │   ├── fstat.3posix.gz
+            │   ├── fstatvfs.3posix.gz
+            │   ├── fsync.3posix.gz
+            │   ├── ftell.3posix.gz
+            │   ├── ftello.3posix.gz
+            │   ├── ftime.3posix.gz
+            │   ├── ftok.3posix.gz
+            │   ├── ftruncate.3posix.gz
+            │   ├── ftrylockfile.3posix.gz
+            │   ├── ftw.3posix.gz
+            │   ├── funlockfile.3posix.gz
+            │   ├── fwide.3posix.gz
+            │   ├── fwprintf.3posix.gz
+            │   ├── fwrite.3posix.gz
+            │   ├── fwscanf.3posix.gz
+            │   ├── gai_strerror.3posix.gz
+            │   ├── gcvt.3posix.gz
+            │   ├── getaddrinfo.3posix.gz
+            │   ├── getc.3posix.gz
+            │   ├── getchar.3posix.gz
+            │   ├── getchar_unlocked.3posix.gz
+            │   ├── getcontext.3posix.gz
+            │   ├── getc_unlocked.3posix.gz
+            │   ├── getcwd.3posix.gz
+            │   ├── getdate.3posix.gz
+            │   ├── getdate_err.3posix.gz
+            │   ├── getegid.3posix.gz
+            │   ├── getenv.3posix.gz
+            │   ├── geteuid.3posix.gz
+            │   ├── getgid.3posix.gz
+            │   ├── getgrent.3posix.gz
+            │   ├── getgrgid.3posix.gz
+            │   ├── getgrgid_r.3posix.gz
+            │   ├── getgrnam.3posix.gz
+            │   ├── getgrnam_r.3posix.gz
+            │   ├── getgroups.3posix.gz
+            │   ├── gethostbyaddr.3posix.gz
+            │   ├── gethostbyname.3posix.gz
+            │   ├── gethostent.3posix.gz
+            │   ├── gethostid.3posix.gz
+            │   ├── gethostname.3posix.gz
+            │   ├── getitimer.3posix.gz
+            │   ├── getlogin.3posix.gz
+            │   ├── getlogin_r.3posix.gz
+            │   ├── getmsg.3posix.gz
+            │   ├── getnameinfo.3posix.gz
+            │   ├── getnetbyaddr.3posix.gz
+            │   ├── getnetbyname.3posix.gz
+            │   ├── getnetent.3posix.gz
+            │   ├── getopt.3posix.gz
+            │   ├── getpeername.3posix.gz
+            │   ├── getpgid.3posix.gz
+            │   ├── getpgrp.3posix.gz
+            │   ├── getpid.3posix.gz
+            │   ├── getpmsg.3posix.gz
+            │   ├── getppid.3posix.gz
+            │   ├── getpriority.3posix.gz
+            │   ├── getprotobyname.3posix.gz
+            │   ├── getprotobynumber.3posix.gz
+            │   ├── getprotoent.3posix.gz
+            │   ├── getpwent.3posix.gz
+            │   ├── getpwnam.3posix.gz
+            │   ├── getpwnam_r.3posix.gz
+            │   ├── getpwuid.3posix.gz
+            │   ├── getpwuid_r.3posix.gz
+            │   ├── getrlimit.3posix.gz
+            │   ├── getrusage.3posix.gz
+            │   ├── gets.3posix.gz
+            │   ├── getservbyname.3posix.gz
+            │   ├── getservbyport.3posix.gz
+            │   ├── getservent.3posix.gz
+            │   ├── getsid.3posix.gz
+            │   ├── getsockname.3posix.gz
+            │   ├── getsockopt.3posix.gz
+            │   ├── getsubopt.3posix.gz
+            │   ├── gettimeofday.3posix.gz
+            │   ├── getuid.3posix.gz
+            │   ├── getutxent.3posix.gz
+            │   ├── getutxid.3posix.gz
+            │   ├── getutxline.3posix.gz
+            │   ├── getwc.3posix.gz
+            │   ├── getwchar.3posix.gz
+            │   ├── getwd.3posix.gz
+            │   ├── glob.3posix.gz
+            │   ├── globfree.3posix.gz
+            │   ├── gmtime.3posix.gz
+            │   ├── gmtime_r.3posix.gz
+            │   ├── grantpt.3posix.gz
+            │   ├── hcreate.3posix.gz
+            │   ├── hdestroy.3posix.gz
+            │   ├── h_errno.3posix.gz
+            │   ├── hsearch.3posix.gz
+            │   ├── htonl.3posix.gz
+            │   ├── htons.3posix.gz
+            │   ├── hypot.3posix.gz
+            │   ├── hypotf.3posix.gz
+            │   ├── hypotl.3posix.gz
+            │   ├── iconv.3posix.gz
+            │   ├── iconv_close.3posix.gz
+            │   ├── iconv_open.3posix.gz
+            │   ├── if_freenameindex.3posix.gz
+            │   ├── if_indextoname.3posix.gz
+            │   ├── if_nameindex.3posix.gz
+            │   ├── if_nametoindex.3posix.gz
+            │   ├── ilogb.3posix.gz
+            │   ├── ilogbf.3posix.gz
+            │   ├── ilogbl.3posix.gz
+            │   ├── imaxabs.3posix.gz
+            │   ├── imaxdiv.3posix.gz
+            │   ├── index.3posix.gz
+            │   ├── inet_addr.3posix.gz
+            │   ├── inet_ntoa.3posix.gz
+            │   ├── inet_ntop.3posix.gz
+            │   ├── inet_pton.3posix.gz
+            │   ├── initstate.3posix.gz
+            │   ├── insque.3posix.gz
+            │   ├── ioctl.3posix.gz
+            │   ├── isalnum.3posix.gz
+            │   ├── isalpha.3posix.gz
+            │   ├── isascii.3posix.gz
+            │   ├── isastream.3posix.gz
+            │   ├── isatty.3posix.gz
+            │   ├── isblank.3posix.gz
+            │   ├── iscntrl.3posix.gz
+            │   ├── isdigit.3posix.gz
+            │   ├── isfinite.3posix.gz
+            │   ├── isgraph.3posix.gz
+            │   ├── isgreater.3posix.gz
+            │   ├── isgreaterequal.3posix.gz
+            │   ├── isinf.3posix.gz
+            │   ├── isless.3posix.gz
+            │   ├── islessequal.3posix.gz
+            │   ├── islessgreater.3posix.gz
+            │   ├── islower.3posix.gz
+            │   ├── isnan.3posix.gz
+            │   ├── isnormal.3posix.gz
+            │   ├── isprint.3posix.gz
+            │   ├── ispunct.3posix.gz
+            │   ├── isspace.3posix.gz
+            │   ├── isunordered.3posix.gz
+            │   ├── isupper.3posix.gz
+            │   ├── iswalnum.3posix.gz
+            │   ├── iswalpha.3posix.gz
+            │   ├── iswblank.3posix.gz
+            │   ├── iswcntrl.3posix.gz
+            │   ├── iswctype.3posix.gz
+            │   ├── iswdigit.3posix.gz
+            │   ├── iswgraph.3posix.gz
+            │   ├── iswlower.3posix.gz
+            │   ├── iswprint.3posix.gz
+            │   ├── iswpunct.3posix.gz
+            │   ├── iswspace.3posix.gz
+            │   ├── iswupper.3posix.gz
+            │   ├── iswxdigit.3posix.gz
+            │   ├── isxdigit.3posix.gz
+            │   ├── j0.3posix.gz
+            │   ├── j1.3posix.gz
+            │   ├── jn.3posix.gz
+            │   ├── jrand48.3posix.gz
+            │   ├── kill.3posix.gz
+            │   ├── killpg.3posix.gz
+            │   ├── l64a.3posix.gz
+            │   ├── labs.3posix.gz
+            │   ├── lchown.3posix.gz
+            │   ├── lcong48.3posix.gz
+            │   ├── ldexp.3posix.gz
+            │   ├── ldexpf.3posix.gz
+            │   ├── ldexpl.3posix.gz
+            │   ├── ldiv.3posix.gz
+            │   ├── lfind.3posix.gz
+            │   ├── lgamma.3posix.gz
+            │   ├── lgammaf.3posix.gz
+            │   ├── lgammal.3posix.gz
+            │   ├── link.3posix.gz
+            │   ├── lio_listio.3posix.gz
+            │   ├── listen.3posix.gz
+            │   ├── llabs.3posix.gz
+            │   ├── lldiv.3posix.gz
+            │   ├── llrint.3posix.gz
+            │   ├── llrintf.3posix.gz
+            │   ├── llrintl.3posix.gz
+            │   ├── llround.3posix.gz
+            │   ├── llroundf.3posix.gz
+            │   ├── llroundl.3posix.gz
+            │   ├── localeconv.3posix.gz
+            │   ├── localtime.3posix.gz
+            │   ├── localtime_r.3posix.gz
+            │   ├── lockf.3posix.gz
+            │   ├── log10.3posix.gz
+            │   ├── log10f.3posix.gz
+            │   ├── log10l.3posix.gz
+            │   ├── log1p.3posix.gz
+            │   ├── log1pf.3posix.gz
+            │   ├── log1pl.3posix.gz
+            │   ├── log2.3posix.gz
+            │   ├── log2f.3posix.gz
+            │   ├── log2l.3posix.gz
+            │   ├── log.3posix.gz
+            │   ├── logb.3posix.gz
+            │   ├── logbf.3posix.gz
+            │   ├── logbl.3posix.gz
+            │   ├── logf.3posix.gz
+            │   ├── logl.3posix.gz
+            │   ├── _longjmp.3posix.gz
+            │   ├── longjmp.3posix.gz
+            │   ├── lrand48.3posix.gz
+            │   ├── lrint.3posix.gz
+            │   ├── lrintf.3posix.gz
+            │   ├── lrintl.3posix.gz
+            │   ├── lround.3posix.gz
+            │   ├── lroundf.3posix.gz
+            │   ├── lroundl.3posix.gz
+            │   ├── lsearch.3posix.gz
+            │   ├── lseek.3posix.gz
+            │   ├── lstat.3posix.gz
+            │   ├── makecontext.3posix.gz
+            │   ├── malloc.3posix.gz
+            │   ├── mblen.3posix.gz
+            │   ├── mbrlen.3posix.gz
+            │   ├── mbrtowc.3posix.gz
+            │   ├── mbsinit.3posix.gz
+            │   ├── mbsrtowcs.3posix.gz
+            │   ├── mbstowcs.3posix.gz
+            │   ├── mbtowc.3posix.gz
+            │   ├── memccpy.3posix.gz
+            │   ├── memchr.3posix.gz
+            │   ├── memcmp.3posix.gz
+            │   ├── memcpy.3posix.gz
+            │   ├── memmove.3posix.gz
+            │   ├── memset.3posix.gz
+            │   ├── mkdir.3posix.gz
+            │   ├── mkfifo.3posix.gz
+            │   ├── mknod.3posix.gz
+            │   ├── mkstemp.3posix.gz
+            │   ├── mktemp.3posix.gz
+            │   ├── mktime.3posix.gz
+            │   ├── mlock.3posix.gz
+            │   ├── mlockall.3posix.gz
+            │   ├── mmap.3posix.gz
+            │   ├── modf.3posix.gz
+            │   ├── modff.3posix.gz
+            │   ├── modfl.3posix.gz
+            │   ├── mprotect.3posix.gz
+            │   ├── mq_close.3posix.gz
+            │   ├── mq_getattr.3posix.gz
+            │   ├── mq_notify.3posix.gz
+            │   ├── mq_open.3posix.gz
+            │   ├── mq_receive.3posix.gz
+            │   ├── mq_send.3posix.gz
+            │   ├── mq_setattr.3posix.gz
+            │   ├── mq_timedreceive.3posix.gz
+            │   ├── mq_timedsend.3posix.gz
+            │   ├── mq_unlink.3posix.gz
+            │   ├── mrand48.3posix.gz
+            │   ├── msgctl.3posix.gz
+            │   ├── msgget.3posix.gz
+            │   ├── msgrcv.3posix.gz
+            │   ├── msgsnd.3posix.gz
+            │   ├── msync.3posix.gz
+            │   ├── munlock.3posix.gz
+            │   ├── munlockall.3posix.gz
+            │   ├── munmap.3posix.gz
+            │   ├── nan.3posix.gz
+            │   ├── nanf.3posix.gz
+            │   ├── nanl.3posix.gz
+            │   ├── nanosleep.3posix.gz
+            │   ├── nearbyint.3posix.gz
+            │   ├── nearbyintf.3posix.gz
+            │   ├── nearbyintl.3posix.gz
+            │   ├── nextafter.3posix.gz
+            │   ├── nextafterf.3posix.gz
+            │   ├── nextafterl.3posix.gz
+            │   ├── nexttoward.3posix.gz
+            │   ├── nexttowardf.3posix.gz
+            │   ├── nexttowardl.3posix.gz
+            │   ├── nftw.3posix.gz
+            │   ├── nice.3posix.gz
+            │   ├── nl_langinfo.3posix.gz
+            │   ├── nrand48.3posix.gz
+            │   ├── ntohl.3posix.gz
+            │   ├── ntohs.3posix.gz
+            │   ├── open.3posix.gz
+            │   ├── opendir.3posix.gz
+            │   ├── openlog.3posix.gz
+            │   ├── optarg.3posix.gz
+            │   ├── opterr.3posix.gz
+            │   ├── optind.3posix.gz
+            │   ├── optopt.3posix.gz
+            │   ├── pathconf.3posix.gz
+            │   ├── pause.3posix.gz
+            │   ├── pclose.3posix.gz
+            │   ├── perror.3posix.gz
+            │   ├── pipe.3posix.gz
+            │   ├── poll.3posix.gz
+            │   ├── popen.3posix.gz
+            │   ├── posix_fadvise.3posix.gz
+            │   ├── posix_fallocate.3posix.gz
+            │   ├── posix_madvise.3posix.gz
+            │   ├── posix_memalign.3posix.gz
+            │   ├── posix_mem_offset.3posix.gz
+            │   ├── posix_openpt.3posix.gz
+            │   ├── posix_spawn.3posix.gz
+            │   ├── posix_spawnattr_destroy.3posix.gz
+            │   ├── posix_spawnattr_getflags.3posix.gz
+            │   ├── posix_spawnattr_getpgroup.3posix.gz
+            │   ├── posix_spawnattr_getschedparam.3posix.gz
+            │   ├── posix_spawnattr_getschedpolicy.3posix.gz
+            │   ├── posix_spawnattr_getsigdefault.3posix.gz
+            │   ├── posix_spawnattr_getsigmask.3posix.gz
+            │   ├── posix_spawnattr_init.3posix.gz
+            │   ├── posix_spawnattr_setflags.3posix.gz
+            │   ├── posix_spawnattr_setpgroup.3posix.gz
+            │   ├── posix_spawnattr_setschedparam.3posix.gz
+            │   ├── posix_spawnattr_setschedpolicy.3posix.gz
+            │   ├── posix_spawnattr_setsigdefault.3posix.gz
+            │   ├── posix_spawnattr_setsigmask.3posix.gz
+            │   ├── posix_spawn_file_actions_addclose.3posix.gz
+            │   ├── posix_spawn_file_actions_adddup2.3posix.gz
+            │   ├── posix_spawn_file_actions_addopen.3posix.gz
+            │   ├── posix_spawn_file_actions_destroy.3posix.gz
+            │   ├── posix_spawn_file_actions_init.3posix.gz
+            │   ├── posix_spawnp.3posix.gz
+            │   ├── posix_trace_attr_destroy.3posix.gz
+            │   ├── posix_trace_attr_getclockres.3posix.gz
+            │   ├── posix_trace_attr_getcreatetime.3posix.gz
+            │   ├── posix_trace_attr_getgenversion.3posix.gz
+            │   ├── posix_trace_attr_getinherited.3posix.gz
+            │   ├── posix_trace_attr_getlogfullpolicy.3posix.gz
+            │   ├── posix_trace_attr_getlogsize.3posix.gz
+            │   ├── posix_trace_attr_getmaxdatasize.3posix.gz
+            │   ├── posix_trace_attr_getmaxsystemeventsize.3posix.gz
+            │   ├── posix_trace_attr_getmaxusereventsize.3posix.gz
+            │   ├── posix_trace_attr_getname.3posix.gz
+            │   ├── posix_trace_attr_getstreamfullpolicy.3posix.gz
+            │   ├── posix_trace_attr_getstreamsize.3posix.gz
+            │   ├── posix_trace_attr_init.3posix.gz
+            │   ├── posix_trace_attr_setinherited.3posix.gz
+            │   ├── posix_trace_attr_setlogfullpolicy.3posix.gz
+            │   ├── posix_trace_attr_setlogsize.3posix.gz
+            │   ├── posix_trace_attr_setmaxdatasize.3posix.gz
+            │   ├── posix_trace_attr_setname.3posix.gz
+            │   ├── posix_trace_attr_setstreamfullpolicy.3posix.gz
+            │   ├── posix_trace_attr_setstreamsize.3posix.gz
+            │   ├── posix_trace_clear.3posix.gz
+            │   ├── posix_trace_close.3posix.gz
+            │   ├── posix_trace_create.3posix.gz
+            │   ├── posix_trace_create_withlog.3posix.gz
+            │   ├── posix_trace_event.3posix.gz
+            │   ├── posix_trace_eventid_equal.3posix.gz
+            │   ├── posix_trace_eventid_get_name.3posix.gz
+            │   ├── posix_trace_eventid_open.3posix.gz
+            │   ├── posix_trace_eventset_add.3posix.gz
+            │   ├── posix_trace_eventset_del.3posix.gz
+            │   ├── posix_trace_eventset_empty.3posix.gz
+            │   ├── posix_trace_eventset_fill.3posix.gz
+            │   ├── posix_trace_eventset_ismember.3posix.gz
+            │   ├── posix_trace_eventtypelist_getnext_id.3posix.gz
+            │   ├── posix_trace_eventtypelist_rewind.3posix.gz
+            │   ├── posix_trace_flush.3posix.gz
+            │   ├── posix_trace_get_attr.3posix.gz
+            │   ├── posix_trace_get_filter.3posix.gz
+            │   ├── posix_trace_getnext_event.3posix.gz
+            │   ├── posix_trace_get_status.3posix.gz
+            │   ├── posix_trace_open.3posix.gz
+            │   ├── posix_trace_rewind.3posix.gz
+            │   ├── posix_trace_set_filter.3posix.gz
+            │   ├── posix_trace_shutdown.3posix.gz
+            │   ├── posix_trace_start.3posix.gz
+            │   ├── posix_trace_stop.3posix.gz
+            │   ├── posix_trace_timedgetnext_event.3posix.gz
+            │   ├── posix_trace_trid_eventid_open.3posix.gz
+            │   ├── posix_trace_trygetnext_event.3posix.gz
+            │   ├── posix_typed_mem_get_info.3posix.gz
+            │   ├── posix_typed_mem_open.3posix.gz
+            │   ├── pow.3posix.gz
+            │   ├── powf.3posix.gz
+            │   ├── powl.3posix.gz
+            │   ├── pread.3posix.gz
+            │   ├── printf.3posix.gz
+            │   ├── pselect.3posix.gz
+            │   ├── pthread_atfork.3posix.gz
+            │   ├── pthread_attr_destroy.3posix.gz
+            │   ├── pthread_attr_getdetachstate.3posix.gz
+            │   ├── pthread_attr_getguardsize.3posix.gz
+            │   ├── pthread_attr_getinheritsched.3posix.gz
+            │   ├── pthread_attr_getschedparam.3posix.gz
+            │   ├── pthread_attr_getschedpolicy.3posix.gz
+            │   ├── pthread_attr_getscope.3posix.gz
+            │   ├── pthread_attr_getstack.3posix.gz
+            │   ├── pthread_attr_getstackaddr.3posix.gz
+            │   ├── pthread_attr_getstacksize.3posix.gz
+            │   ├── pthread_attr_init.3posix.gz
+            │   ├── pthread_attr_setdetachstate.3posix.gz
+            │   ├── pthread_attr_setguardsize.3posix.gz
+            │   ├── pthread_attr_setinheritsched.3posix.gz
+            │   ├── pthread_attr_setschedparam.3posix.gz
+            │   ├── pthread_attr_setschedpolicy.3posix.gz
+            │   ├── pthread_attr_setscope.3posix.gz
+            │   ├── pthread_attr_setstack.3posix.gz
+            │   ├── pthread_attr_setstackaddr.3posix.gz
+            │   ├── pthread_attr_setstacksize.3posix.gz
+            │   ├── pthread_barrierattr_destroy.3posix.gz
+            │   ├── pthread_barrierattr_getpshared.3posix.gz
+            │   ├── pthread_barrierattr_init.3posix.gz
+            │   ├── pthread_barrierattr_setpshared.3posix.gz
+            │   ├── pthread_barrier_destroy.3posix.gz
+            │   ├── pthread_barrier_init.3posix.gz
+            │   ├── pthread_barrier_wait.3posix.gz
+            │   ├── pthread_cancel.3posix.gz
+            │   ├── pthread_cleanup_pop.3posix.gz
+            │   ├── pthread_cleanup_push.3posix.gz
+            │   ├── pthread_condattr_destroy.3posix.gz
+            │   ├── pthread_condattr_getclock.3posix.gz
+            │   ├── pthread_condattr_getpshared.3posix.gz
+            │   ├── pthread_condattr_init.3posix.gz
+            │   ├── pthread_condattr_setclock.3posix.gz
+            │   ├── pthread_condattr_setpshared.3posix.gz
+            │   ├── pthread_cond_broadcast.3posix.gz
+            │   ├── pthread_cond_destroy.3posix.gz
+            │   ├── pthread_cond_init.3posix.gz
+            │   ├── pthread_cond_signal.3posix.gz
+            │   ├── pthread_cond_timedwait.3posix.gz
+            │   ├── pthread_cond_wait.3posix.gz
+            │   ├── pthread_create.3posix.gz
+            │   ├── pthread_detach.3posix.gz
+            │   ├── pthread_equal.3posix.gz
+            │   ├── pthread_exit.3posix.gz
+            │   ├── pthread_getconcurrency.3posix.gz
+            │   ├── pthread_getcpuclockid.3posix.gz
+            │   ├── pthread_getschedparam.3posix.gz
+            │   ├── pthread_getspecific.3posix.gz
+            │   ├── pthread_join.3posix.gz
+            │   ├── pthread_key_create.3posix.gz
+            │   ├── pthread_key_delete.3posix.gz
+            │   ├── pthread_kill.3posix.gz
+            │   ├── pthread_mutexattr_destroy.3posix.gz
+            │   ├── pthread_mutexattr_getprioceiling.3posix.gz
+            │   ├── pthread_mutexattr_getprotocol.3posix.gz
+            │   ├── pthread_mutexattr_getpshared.3posix.gz
+            │   ├── pthread_mutexattr_gettype.3posix.gz
+            │   ├── pthread_mutexattr_init.3posix.gz
+            │   ├── pthread_mutexattr_setprioceiling.3posix.gz
+            │   ├── pthread_mutexattr_setprotocol.3posix.gz
+            │   ├── pthread_mutexattr_setpshared.3posix.gz
+            │   ├── pthread_mutexattr_settype.3posix.gz
+            │   ├── pthread_mutex_destroy.3posix.gz
+            │   ├── pthread_mutex_getprioceiling.3posix.gz
+            │   ├── pthread_mutex_init.3posix.gz
+            │   ├── pthread_mutex_lock.3posix.gz
+            │   ├── pthread_mutex_setprioceiling.3posix.gz
+            │   ├── pthread_mutex_timedlock.3posix.gz
+            │   ├── pthread_mutex_trylock.3posix.gz
+            │   ├── pthread_mutex_unlock.3posix.gz
+            │   ├── pthread_once.3posix.gz
+            │   ├── pthread_rwlockattr_destroy.3posix.gz
+            │   ├── pthread_rwlockattr_getpshared.3posix.gz
+            │   ├── pthread_rwlockattr_init.3posix.gz
+            │   ├── pthread_rwlockattr_setpshared.3posix.gz
+            │   ├── pthread_rwlock_destroy.3posix.gz
+            │   ├── pthread_rwlock_init.3posix.gz
+            │   ├── pthread_rwlock_rdlock.3posix.gz
+            │   ├── pthread_rwlock_timedrdlock.3posix.gz
+            │   ├── pthread_rwlock_timedwrlock.3posix.gz
+            │   ├── pthread_rwlock_tryrdlock.3posix.gz
+            │   ├── pthread_rwlock_trywrlock.3posix.gz
+            │   ├── pthread_rwlock_unlock.3posix.gz
+            │   ├── pthread_rwlock_wrlock.3posix.gz
+            │   ├── pthread_self.3posix.gz
+            │   ├── pthread_setcancelstate.3posix.gz
+            │   ├── pthread_setcanceltype.3posix.gz
+            │   ├── pthread_setconcurrency.3posix.gz
+            │   ├── pthread_setschedparam.3posix.gz
+            │   ├── pthread_setschedprio.3posix.gz
+            │   ├── pthread_setspecific.3posix.gz
+            │   ├── pthread_sigmask.3posix.gz
+            │   ├── pthread_spin_destroy.3posix.gz
+            │   ├── pthread_spin_init.3posix.gz
+            │   ├── pthread_spin_lock.3posix.gz
+            │   ├── pthread_spin_trylock.3posix.gz
+            │   ├── pthread_spin_unlock.3posix.gz
+            │   ├── pthread_testcancel.3posix.gz
+            │   ├── ptsname.3posix.gz
+            │   ├── putc.3posix.gz
+            │   ├── putchar.3posix.gz
+            │   ├── putchar_unlocked.3posix.gz
+            │   ├── putc_unlocked.3posix.gz
+            │   ├── putenv.3posix.gz
+            │   ├── putmsg.3posix.gz
+            │   ├── putpmsg.3posix.gz
+            │   ├── puts.3posix.gz
+            │   ├── pututxline.3posix.gz
+            │   ├── putwc.3posix.gz
+            │   ├── putwchar.3posix.gz
+            │   ├── pwrite.3posix.gz
+            │   ├── qsort.3posix.gz
+            │   ├── raise.3posix.gz
+            │   ├── rand.3posix.gz
+            │   ├── random.3posix.gz
+            │   ├── rand_r.3posix.gz
+            │   ├── read.3posix.gz
+            │   ├── readdir.3posix.gz
+            │   ├── readdir_r.3posix.gz
+            │   ├── readlink.3posix.gz
+            │   ├── readv.3posix.gz
+            │   ├── realloc.3posix.gz
+            │   ├── realpath.3posix.gz
+            │   ├── recv.3posix.gz
+            │   ├── recvfrom.3posix.gz
+            │   ├── recvmsg.3posix.gz
+            │   ├── regcomp.3posix.gz
+            │   ├── regerror.3posix.gz
+            │   ├── regexec.3posix.gz
+            │   ├── regfree.3posix.gz
+            │   ├── remainder.3posix.gz
+            │   ├── remainderf.3posix.gz
+            │   ├── remainderl.3posix.gz
+            │   ├── remove.3posix.gz
+            │   ├── remque.3posix.gz
+            │   ├── remquo.3posix.gz
+            │   ├── remquof.3posix.gz
+            │   ├── remquol.3posix.gz
+            │   ├── rename.3posix.gz
+            │   ├── rewind.3posix.gz
+            │   ├── rewinddir.3posix.gz
+            │   ├── rindex.3posix.gz
+            │   ├── rint.3posix.gz
+            │   ├── rintf.3posix.gz
+            │   ├── rintl.3posix.gz
+            │   ├── rmdir.3posix.gz
+            │   ├── round.3posix.gz
+            │   ├── roundf.3posix.gz
+            │   ├── roundl.3posix.gz
+            │   ├── scalb.3posix.gz
+            │   ├── scalbln.3posix.gz
+            │   ├── scalblnf.3posix.gz
+            │   ├── scalblnl.3posix.gz
+            │   ├── scalbn.3posix.gz
+            │   ├── scalbnf.3posix.gz
+            │   ├── scalbnl.3posix.gz
+            │   ├── scanf.3posix.gz
+            │   ├── sched_getparam.3posix.gz
+            │   ├── sched_get_priority_max.3posix.gz
+            │   ├── sched_get_priority_min.3posix.gz
+            │   ├── sched_getscheduler.3posix.gz
+            │   ├── sched_rr_get_interval.3posix.gz
+            │   ├── sched_setparam.3posix.gz
+            │   ├── sched_setscheduler.3posix.gz
+            │   ├── sched_yield.3posix.gz
+            │   ├── seed48.3posix.gz
+            │   ├── seekdir.3posix.gz
+            │   ├── select.3posix.gz
+            │   ├── sem_close.3posix.gz
+            │   ├── semctl.3posix.gz
+            │   ├── sem_destroy.3posix.gz
+            │   ├── semget.3posix.gz
+            │   ├── sem_getvalue.3posix.gz
+            │   ├── sem_init.3posix.gz
+            │   ├── semop.3posix.gz
+            │   ├── sem_open.3posix.gz
+            │   ├── sem_post.3posix.gz
+            │   ├── sem_timedwait.3posix.gz
+            │   ├── sem_trywait.3posix.gz
+            │   ├── sem_unlink.3posix.gz
+            │   ├── sem_wait.3posix.gz
+            │   ├── send.3posix.gz
+            │   ├── sendmsg.3posix.gz
+            │   ├── sendto.3posix.gz
+            │   ├── setbuf.3posix.gz
+            │   ├── setcontext.3posix.gz
+            │   ├── setegid.3posix.gz
+            │   ├── setenv.3posix.gz
+            │   ├── seteuid.3posix.gz
+            │   ├── setgid.3posix.gz
+            │   ├── setgrent.3posix.gz
+            │   ├── sethostent.3posix.gz
+            │   ├── setitimer.3posix.gz
+            │   ├── _setjmp.3posix.gz
+            │   ├── setjmp.3posix.gz
+            │   ├── setkey.3posix.gz
+            │   ├── setlocale.3posix.gz
+            │   ├── setlogmask.3posix.gz
+            │   ├── setnetent.3posix.gz
+            │   ├── setpgid.3posix.gz
+            │   ├── setpgrp.3posix.gz
+            │   ├── setpriority.3posix.gz
+            │   ├── setprotoent.3posix.gz
+            │   ├── setpwent.3posix.gz
+            │   ├── setregid.3posix.gz
+            │   ├── setreuid.3posix.gz
+            │   ├── setrlimit.3posix.gz
+            │   ├── setservent.3posix.gz
+            │   ├── setsid.3posix.gz
+            │   ├── setsockopt.3posix.gz
+            │   ├── setstate.3posix.gz
+            │   ├── setuid.3posix.gz
+            │   ├── setutxent.3posix.gz
+            │   ├── setvbuf.3posix.gz
+            │   ├── shmat.3posix.gz
+            │   ├── shmctl.3posix.gz
+            │   ├── shmdt.3posix.gz
+            │   ├── shmget.3posix.gz
+            │   ├── shm_open.3posix.gz
+            │   ├── shm_unlink.3posix.gz
+            │   ├── shutdown.3posix.gz
+            │   ├── sigaction.3posix.gz
+            │   ├── sigaddset.3posix.gz
+            │   ├── sigaltstack.3posix.gz
+            │   ├── sigdelset.3posix.gz
+            │   ├── sigemptyset.3posix.gz
+            │   ├── sigfillset.3posix.gz
+            │   ├── sighold.3posix.gz
+            │   ├── sigignore.3posix.gz
+            │   ├── siginterrupt.3posix.gz
+            │   ├── sigismember.3posix.gz
+            │   ├── siglongjmp.3posix.gz
+            │   ├── signal.3posix.gz
+            │   ├── signbit.3posix.gz
+            │   ├── signgam.3posix.gz
+            │   ├── sigpause.3posix.gz
+            │   ├── sigpending.3posix.gz
+            │   ├── sigprocmask.3posix.gz
+            │   ├── sigqueue.3posix.gz
+            │   ├── sigrelse.3posix.gz
+            │   ├── sigset.3posix.gz
+            │   ├── sigsetjmp.3posix.gz
+            │   ├── sigsuspend.3posix.gz
+            │   ├── sigtimedwait.3posix.gz
+            │   ├── sigwait.3posix.gz
+            │   ├── sigwaitinfo.3posix.gz
+            │   ├── sin.3posix.gz
+            │   ├── sinf.3posix.gz
+            │   ├── sinh.3posix.gz
+            │   ├── sinhf.3posix.gz
+            │   ├── sinhl.3posix.gz
+            │   ├── sinl.3posix.gz
+            │   ├── sleep.3posix.gz
+            │   ├── snprintf.3posix.gz
+            │   ├── sockatmark.3posix.gz
+            │   ├── socket.3posix.gz
+            │   ├── socketpair.3posix.gz
+            │   ├── sprintf.3posix.gz
+            │   ├── sqrt.3posix.gz
+            │   ├── sqrtf.3posix.gz
+            │   ├── sqrtl.3posix.gz
+            │   ├── srand.3posix.gz
+            │   ├── srand48.3posix.gz
+            │   ├── srandom.3posix.gz
+            │   ├── sscanf.3posix.gz
+            │   ├── stat.3posix.gz
+            │   ├── statvfs.3posix.gz
+            │   ├── stderr.3posix.gz
+            │   ├── stdin.3posix.gz
+            │   ├── stdout.3posix.gz
+            │   ├── strcasecmp.3posix.gz
+            │   ├── strcat.3posix.gz
+            │   ├── strchr.3posix.gz
+            │   ├── strcmp.3posix.gz
+            │   ├── strcoll.3posix.gz
+            │   ├── strcpy.3posix.gz
+            │   ├── strcspn.3posix.gz
+            │   ├── strdup.3posix.gz
+            │   ├── strerror.3posix.gz
+            │   ├── strerror_r.3posix.gz
+            │   ├── strfmon.3posix.gz
+            │   ├── strftime.3posix.gz
+            │   ├── strlen.3posix.gz
+            │   ├── strncasecmp.3posix.gz
+            │   ├── strncat.3posix.gz
+            │   ├── strncmp.3posix.gz
+            │   ├── strncpy.3posix.gz
+            │   ├── strpbrk.3posix.gz
+            │   ├── strptime.3posix.gz
+            │   ├── strrchr.3posix.gz
+            │   ├── strspn.3posix.gz
+            │   ├── strstr.3posix.gz
+            │   ├── strtod.3posix.gz
+            │   ├── strtof.3posix.gz
+            │   ├── strtoimax.3posix.gz
+            │   ├── strtok.3posix.gz
+            │   ├── strtok_r.3posix.gz
+            │   ├── strtol.3posix.gz
+            │   ├── strtold.3posix.gz
+            │   ├── strtoll.3posix.gz
+            │   ├── strtoul.3posix.gz
+            │   ├── strtoull.3posix.gz
+            │   ├── strtoumax.3posix.gz
+            │   ├── strxfrm.3posix.gz
+            │   ├── swab.3posix.gz
+            │   ├── swapcontext.3posix.gz
+            │   ├── swprintf.3posix.gz
+            │   ├── swscanf.3posix.gz
+            │   ├── symlink.3posix.gz
+            │   ├── sync.3posix.gz
+            │   ├── sysconf.3posix.gz
+            │   ├── syslog.3posix.gz
+            │   ├── system.3posix.gz
+            │   ├── tan.3posix.gz
+            │   ├── tanf.3posix.gz
+            │   ├── tanh.3posix.gz
+            │   ├── tanhf.3posix.gz
+            │   ├── tanhl.3posix.gz
+            │   ├── tanl.3posix.gz
+            │   ├── tcdrain.3posix.gz
+            │   ├── tcflow.3posix.gz
+            │   ├── tcflush.3posix.gz
+            │   ├── tcgetattr.3posix.gz
+            │   ├── tcgetpgrp.3posix.gz
+            │   ├── tcgetsid.3posix.gz
+            │   ├── tcsendbreak.3posix.gz
+            │   ├── tcsetattr.3posix.gz
+            │   ├── tcsetpgrp.3posix.gz
+            │   ├── tdelete.3posix.gz
+            │   ├── telldir.3posix.gz
+            │   ├── tempnam.3posix.gz
+            │   ├── tfind.3posix.gz
+            │   ├── tgamma.3posix.gz
+            │   ├── tgammaf.3posix.gz
+            │   ├── tgammal.3posix.gz
+            │   ├── time.3posix.gz
+            │   ├── timer_create.3posix.gz
+            │   ├── timer_delete.3posix.gz
+            │   ├── timer_getoverrun.3posix.gz
+            │   ├── timer_gettime.3posix.gz
+            │   ├── timer_settime.3posix.gz
+            │   ├── times.3posix.gz
+            │   ├── timezone.3posix.gz
+            │   ├── tmpfile.3posix.gz
+            │   ├── tmpnam.3posix.gz
+            │   ├── toascii.3posix.gz
+            │   ├── _tolower.3posix.gz
+            │   ├── tolower.3posix.gz
+            │   ├── _toupper.3posix.gz
+            │   ├── toupper.3posix.gz
+            │   ├── towctrans.3posix.gz
+            │   ├── towlower.3posix.gz
+            │   ├── towupper.3posix.gz
+            │   ├── trunc.3posix.gz
+            │   ├── truncate.3posix.gz
+            │   ├── truncf.3posix.gz
+            │   ├── truncl.3posix.gz
+            │   ├── tsearch.3posix.gz
+            │   ├── ttyname.3posix.gz
+            │   ├── ttyname_r.3posix.gz
+            │   ├── twalk.3posix.gz
+            │   ├── tzname.3posix.gz
+            │   ├── tzset.3posix.gz
+            │   ├── ualarm.3posix.gz
+            │   ├── ulimit.3posix.gz
+            │   ├── umask.3posix.gz
+            │   ├── uname.3posix.gz
+            │   ├── ungetc.3posix.gz
+            │   ├── ungetwc.3posix.gz
+            │   ├── unlink.3posix.gz
+            │   ├── unlockpt.3posix.gz
+            │   ├── unsetenv.3posix.gz
+            │   ├── usleep.3posix.gz
+            │   ├── utime.3posix.gz
+            │   ├── utimes.3posix.gz
+            │   ├── va_arg.3posix.gz
+            │   ├── va_copy.3posix.gz
+            │   ├── va_end.3posix.gz
+            │   ├── va_start.3posix.gz
+            │   ├── vfork.3posix.gz
+            │   ├── vfprintf.3posix.gz
+            │   ├── vfscanf.3posix.gz
+            │   ├── vfwprintf.3posix.gz
+            │   ├── vfwscanf.3posix.gz
+            │   ├── vprintf.3posix.gz
+            │   ├── vscanf.3posix.gz
+            │   ├── vsnprintf.3posix.gz
+            │   ├── vsprintf.3posix.gz
+            │   ├── vsscanf.3posix.gz
+            │   ├── vswprintf.3posix.gz
+            │   ├── vswscanf.3posix.gz
+            │   ├── vwprintf.3posix.gz
+            │   ├── vwscanf.3posix.gz
+            │   ├── wait.3posix.gz
+            │   ├── waitid.3posix.gz
+            │   ├── waitpid.3posix.gz
+            │   ├── wcrtomb.3posix.gz
+            │   ├── wcscat.3posix.gz
+            │   ├── wcschr.3posix.gz
+            │   ├── wcscmp.3posix.gz
+            │   ├── wcscoll.3posix.gz
+            │   ├── wcscpy.3posix.gz
+            │   ├── wcscspn.3posix.gz
+            │   ├── wcsftime.3posix.gz
+            │   ├── wcslen.3posix.gz
+            │   ├── wcsncat.3posix.gz
+            │   ├── wcsncmp.3posix.gz
+            │   ├── wcsncpy.3posix.gz
+            │   ├── wcspbrk.3posix.gz
+            │   ├── wcsrchr.3posix.gz
+            │   ├── wcsrtombs.3posix.gz
+            │   ├── wcsspn.3posix.gz
+            │   ├── wcsstr.3posix.gz
+            │   ├── wcstod.3posix.gz
+            │   ├── wcstof.3posix.gz
+            │   ├── wcstoimax.3posix.gz
+            │   ├── wcstok.3posix.gz
+            │   ├── wcstol.3posix.gz
+            │   ├── wcstold.3posix.gz
+            │   ├── wcstoll.3posix.gz
+            │   ├── wcstombs.3posix.gz
+            │   ├── wcstoul.3posix.gz
+            │   ├── wcstoull.3posix.gz
+            │   ├── wcstoumax.3posix.gz
+            │   ├── wcswcs.3posix.gz
+            │   ├── wcswidth.3posix.gz
+            │   ├── wcsxfrm.3posix.gz
+            │   ├── wctob.3posix.gz
+            │   ├── wctomb.3posix.gz
+            │   ├── wctrans.3posix.gz
+            │   ├── wctype.3posix.gz
+            │   ├── wcwidth.3posix.gz
+            │   ├── wmemchr.3posix.gz
+            │   ├── wmemcmp.3posix.gz
+            │   ├── wmemcpy.3posix.gz
+            │   ├── wmemmove.3posix.gz
+            │   ├── wmemset.3posix.gz
+            │   ├── wordexp.3posix.gz
+            │   ├── wordfree.3posix.gz
+            │   ├── wprintf.3posix.gz
+            │   ├── write.3posix.gz
+            │   ├── writev.3posix.gz
+            │   ├── wscanf.3posix.gz
+            │   ├── y0.3posix.gz
+            │   ├── y1.3posix.gz
+            │   └── yn.3posix.gz
+            └── man7
+                ├── aio.h.7posix.gz
+                ├── assert.h.7posix.gz
+                ├── complex.h.7posix.gz
+                ├── cpio.h.7posix.gz
+                ├── ctype.h.7posix.gz
+                ├── dirent.h.7posix.gz
+                ├── dlfcn.h.7posix.gz
+                ├── errno.h.7posix.gz
+                ├── fcntl.h.7posix.gz
+                ├── fenv.h.7posix.gz
+                ├── float.h.7posix.gz
+                ├── fmtmsg.h.7posix.gz
+                ├── fnmatch.h.7posix.gz
+                ├── ftw.h.7posix.gz
+                ├── glob.h.7posix.gz
+                ├── grp.h.7posix.gz
+                ├── iconv.h.7posix.gz
+                ├── if.h.7posix.gz
+                ├── inet.h.7posix.gz
+                ├── in.h.7posix.gz
+                ├── inttypes.h.7posix.gz
+                ├── ipc.h.7posix.gz
+                ├── iso646.h.7posix.gz
+                ├── langinfo.h.7posix.gz
+                ├── libgen.h.7posix.gz
+                ├── limits.h.7posix.gz
+                ├── locale.h.7posix.gz
+                ├── math.h.7posix.gz
+                ├── mman.h.7posix.gz
+                ├── monetary.h.7posix.gz
+                ├── mqueue.h.7posix.gz
+                ├── msg.h.7posix.gz
+                ├── ndbm.h.7posix.gz
+                ├── netdb.h.7posix.gz
+                ├── nl_types.h.7posix.gz
+                ├── poll.h.7posix.gz
+                ├── pthread.h.7posix.gz
+                ├── pwd.h.7posix.gz
+                ├── regex.h.7posix.gz
+                ├── resource.h.7posix.gz
+                ├── sched.h.7posix.gz
+                ├── search.h.7posix.gz
+                ├── select.h.7posix.gz
+                ├── semaphore.h.7posix.gz
+                ├── sem.h.7posix.gz
+                ├── setjmp.h.7posix.gz
+                ├── shm.h.7posix.gz
+                ├── signal.h.7posix.gz
+                ├── socket.h.7posix.gz
+                ├── spawn.h.7posix.gz
+                ├── stat.h.7posix.gz
+                ├── statvfs.h.7posix.gz
+                ├── stdarg.h.7posix.gz
+                ├── stdbool.h.7posix.gz
+                ├── stddef.h.7posix.gz
+                ├── stdint.h.7posix.gz
+                ├── stdio.h.7posix.gz
+                ├── stdlib.h.7posix.gz
+                ├── string.h.7posix.gz
+                ├── strings.h.7posix.gz
+                ├── stropts.h.7posix.gz
+                ├── sys_ipc.h.7posix.gz
+                ├── syslog.h.7posix.gz
+                ├── sys_mman.h.7posix.gz
+                ├── sys_msg.h.7posix.gz
+                ├── sys_resource.h.7posix.gz
+                ├── sys_select.h.7posix.gz
+                ├── sys_sem.h.7posix.gz
+                ├── sys_shm.h.7posix.gz
+                ├── sys_socket.h.7posix.gz
+                ├── sys_stat.h.7posix.gz
+                ├── sys_statvfs.h.7posix.gz
+                ├── sys_timeb.h.7posix.gz
+                ├── sys_time.h.7posix.gz
+                ├── sys_times.h.7posix.gz
+                ├── sys_types.h.7posix.gz
+                ├── sys_uio.h.7posix.gz
+                ├── sys_un.h.7posix.gz
+                ├── sys_utsname.h.7posix.gz
+                ├── sys_wait.h.7posix.gz
+                ├── tar.h.7posix.gz
+                ├── tcp.h.7posix.gz
+                ├── termios.h.7posix.gz
+                ├── tgmath.h.7posix.gz
+                ├── timeb.h.7posix.gz
+                ├── time.h.7posix.gz
+                ├── times.h.7posix.gz
+                ├── trace.h.7posix.gz
+                ├── types.h.7posix.gz
+                ├── ucontext.h.7posix.gz
+                ├── uio.h.7posix.gz
+                ├── ulimit.h.7posix.gz
+                ├── un.h.7posix.gz
+                ├── unistd.h.7posix.gz
+                ├── utime.h.7posix.gz
+                ├── utmpx.h.7posix.gz
+                ├── utsname.h.7posix.gz
+                ├── wait.h.7posix.gz
+                ├── wchar.h.7posix.gz
+                ├── wctype.h.7posix.gz
+                └── wordexp.h.7posix.gz
 
-6 directories, 179 files
+6 directories, 1226 files
 </code></pre><p>執行</p>
 <pre><code>$ tree DEBIAN
 </code></pre><p>顯示</p>
@@ -2595,12 +3640,12 @@ manpages-posix
 └── md5sums
 
 0 directories, 2 files
-</code></pre><h2 id="source-package-manpages-posixhttppackagesubuntucomtrustymanpages-posix">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/manpages-posix" target="_blank">manpages-posix</a>」</h2>
-<p>切換到「~/Downloads/manpages-posix/source」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/manpages-posix/<span class="hljs-built_in">source</span>
+</code></pre><h2 id="source-package-manpages-posix-devhttppackagesubuntucomtrustymanpages-posix-dev">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/manpages-posix-dev" target="_blank">manpages-posix-dev</a>」</h2>
+<p>切換到「~/Downloads/manpages-posix-dev/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/manpages-posix-dev/<span class="hljs-built_in">source</span>
 </code></pre>
-<p>下載「Source Package: manpages-posix」。</p>
-<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> manpages-posix
+<p>下載「Source Package: manpages-posix-dev」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> manpages-posix-dev
 </code></pre>
 <p>檢視原始碼套件檔案。</p>
 <pre><code>$ tree manpages-posix-2.16
@@ -4034,10 +5079,10 @@ manpages-posix
         </div>
 
         
-        <a href="../../../content/package/manpages-posix/index.html" class="navigation navigation-prev " aria-label="Previous page: manpages-posix"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/manpages-posix-dev/index.html" class="navigation navigation-prev " aria-label="Previous page: manpages-posix-dev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/manpages-posix/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/manpages-posix-dev/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
