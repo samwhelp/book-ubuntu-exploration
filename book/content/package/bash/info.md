@@ -462,7 +462,7 @@ DEBIAN
 ```
 
 
-## 探索「Source Package: [bash](http://packages.ubuntu.com/trusty/bash)」
+## 探索「Source Package: [bash](http://packages.ubuntu.com/source/trusty/bash)」
 
 切換到「~/Downloads/bash/source」
 
