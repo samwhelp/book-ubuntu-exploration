@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>note | Ubuntu Exploration (Ubuntu 探索)</title>
+        <title>info | Ubuntu Exploration (Ubuntu 探索)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/shtool/report.html" />
+    <link rel="next" href="../../../content/package/hello/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/shtool/info.html" />
+    <link rel="prev" href="../../../content/package/hello/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="4.13.2" data-basepath="../../.." data-revision="1430143824975">
+    <div class="book" data-level="4.1.1" data-basepath="../../.." data-revision="1430143824975">
     
 
 <div class="book-summary">
@@ -866,7 +866,7 @@
                 
     
         
-        <li class="chapter " data-level="4.1.1" data-path="content/package/hello/info.html">
+        <li class="chapter active" data-level="4.1.1" data-path="content/package/hello/info.html">
             
                 
                     <a href="../../../content/package/hello/info.html">
@@ -1722,7 +1722,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="4.13.2" data-path="content/package/shtool/note.html">
+        <li class="chapter " data-level="4.13.2" data-path="content/package/shtool/note.html">
             
                 
                     <a href="../../../content/package/shtool/note.html">
@@ -2504,15 +2504,480 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_117">
+                    <section class="normal" id="section-gitbook_51">
                     
-                        <h1 id="shtool-note">shtool note</h1>
-<h2 id="">探討文章</h2>
-<ul>
-<li><a href="http://bash.freesf.tw/?p=186" target="_blank">具可攜性的 shell 工具 — 關於 GNU shtool 的簡介 </a></li>
-</ul>
-<h2 id="">指令範例</h2>
-<pre><code>$ shtool echo yes
+                        <h1 id="hello-info">hello info</h1>
+<h2 id="">套件資訊</h2>
+<p>執行</p>
+<pre><code>$ apt-cache show hello
+</code></pre><p>顯示</p>
+<pre><code>Package: hello
+Priority: optional
+Section: devel
+Installed-Size: 108
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Santiago Vila &lt;sanvila@debian.org&gt;
+Architecture: amd64
+Version: 2.8-4
+Depends: libc6 (&gt;= 2.14), dpkg (&gt;= 1.15.4) | install-info
+Filename: pool/main/h/hello/hello_2.8-4_amd64.deb
+Size: 28148
+MD5sum: af651f8b526976269affa5b888e63db7
+SHA1: c353f6e99dad0dc628b5604741bfbf97eaf74bcf
+SHA256: 0cd79de61001c8f6ab7611ba724f0f7da7fd0998bf0fd98710fe26d81f0a6b18
+Description-en: The classic greeting, and a good example
+ The GNU hello program produces a familiar, friendly greeting.  It
+ allows non-programmers to use a classic computer science tool which
+ would otherwise be unavailable to them.
+ .
+ Seriously, though: this is an example of how to do a Debian package.
+ It is the Debian version of the GNU Project&#39;s `hello world&#39; program
+ (which is itself an example for the GNU Project).
+Description-md5: b7df6fe7ffb325083a3a60819a7df548
+Homepage: http://www.gnu.org/software/hello/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showpkg hello
+</code></pre><p>顯示</p>
+<pre><code>Package: hello
+Versions:
+2.8-4 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages) (/var/lib/dpkg/status)
+ Description Language:
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
+                  MD5: b7df6fe7ffb325083a3a60819a7df548
+ Description Language: en
+                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
+                  MD5: b7df6fe7ffb325083a3a60819a7df548
+
+
+Reverse Depends:
+  hello-debhelper:i386,hello
+  hello-debhelper:i386,hello
+  hello:i386,hello
+  junior-system,hello
+  hello-debhelper,hello
+  hello-debhelper,hello
+Dependencies:
+2.8-4 - libc6 (2 2.14) dpkg (18 1.15.4) install-info (0 (null)) hello:i386 (0 (null))
+Provides:
+2.8-4 -
+Reverse Provides:
+hello-debhelper 2.8-1
+</code></pre><p>執行</p>
+<pre><code>$ apt-cache showsrc hello
+</code></pre><p>顯示</p>
+<pre><code>Package: hello
+Binary: hello
+Version: 2.8-4
+Priority: optional
+Section: devel
+Maintainer: Santiago Vila &lt;sanvila@debian.org&gt;
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/h/hello
+Files:
+ 1b6c5e82702d5d0c7876cd7aeb63c38b 1290 hello_2.8-4.dsc
+ 6a67cbbbc0420061ef938a9a2736fbd6 697483 hello_2.8.orig.tar.gz
+ 585acd817162ae52f6abf01b8f38880b 12510 hello_2.8-4.debian.tar.gz
+Homepage: http://www.gnu.org/software/hello/
+Package-List:
+ hello deb devel optional
+Checksums-Sha1:
+ 386a648783ea25aa15bf31b3853a9e65f3df5e4d 1290 hello_2.8-4.dsc
+ 5a32898ddce0586bb3f4035fc63324a6a515ce38 697483 hello_2.8.orig.tar.gz
+ daf9add30628b9f238aa2881ed21217470538a4e 12510 hello_2.8-4.debian.tar.gz
+Checksums-Sha256:
+ adfe64d244796fedfd1266c3d8cf0134d8b371d912aaa099eb6d77291e7753e1 1290 hello_2.8-4.dsc
+ e6b77f81f7cf7daefad4a9f5b65de6cae9c3f13b8cfbaea8cb53bb5ea5460d73 697483 hello_2.8.orig.tar.gz
+ a8b98fe10e28707924afcf5ce9ffe243a59ac47e2ff1d75670f2e44e48c2ba27 12510 hello_2.8-4.debian.tar.gz
+</code></pre><p>執行</p>
+<pre><code class="lang-sh">$ dpkg <span class="hljs-operator">-s</span> hello
+</code></pre>
+<p>顯示</p>
+<pre><code>Package: hello
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 108
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Architecture: amd64
+Version: 2.8-4
+Depends: libc6 (&gt;= 2.14), dpkg (&gt;= 1.15.4) | install-info
+Description: The classic greeting, and a good example
+ The GNU hello program produces a familiar, friendly greeting.  It
+ allows non-programmers to use a classic computer science tool which
+ would otherwise be unavailable to them.
+ .
+ Seriously, though: this is an example of how to do a Debian package.
+ It is the Debian version of the GNU Project&#39;s `hello world&#39; program
+ (which is itself an example for the GNU Project).
+Original-Maintainer: Santiago Vila &lt;sanvila@debian.org&gt;
+Homepage: http://www.gnu.org/software/hello/
+</code></pre><p>執行</p>
+<pre><code class="lang-sh">$ dpkg <span class="hljs-operator">-l</span> hello
+</code></pre>
+<p>顯示</p>
+<pre><code>Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                         Version             Architecture        Description
++++-============================-===================-===================-==============================================================
+ii  hello                        2.8-4               amd64               The classic greeting, and a good example
+</code></pre><h2 id="">準備工作環境</h2>
+<pre><code class="lang-sh">mkdir  ~/Downloads/hello -p
+<span class="hljs-built_in">cd</span> ~/Downloads/hello
+mkdir download <span class="hljs-built_in">source</span>
+</code></pre>
+<h2 id="package-hellohttppackagesubuntucomtrustyhello">探索「Package: <a href="http://packages.ubuntu.com/trusty/hello" target="_blank">hello</a>」</h2>
+<p>切換到「~/Downloads/hello/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/hello/download
+</code></pre>
+<p>下載「Package: hello」。</p>
+<pre><code class="lang-sh">$ apt-get download hello
+</code></pre>
+<p>解開「package hello」</p>
+<pre><code class="lang-sh">dpkg -x hello_2.<span class="hljs-number">8</span>-<span class="hljs-number">4</span>_amd64.deb hello
+dpkg <span class="hljs-operator">-e</span> hello_2.<span class="hljs-number">8</span>-<span class="hljs-number">4</span>_amd64.deb
+<span class="hljs-comment"># ar xv hello_2.8-4_amd64.deb</span>
+</code></pre>
+<p>檢視套件檔案</p>
+<pre><code class="lang-sh">$ tree hello
+</code></pre>
+<p>顯示</p>
+<pre><code>hello
+└── usr
+    ├── bin
+    │   └── hello
+    └── share
+        ├── doc
+        │   └── hello
+        │       ├── changelog.Debian.gz
+        │       ├── copyright
+        │       └── NEWS
+        ├── info
+        │   └── hello.info.gz
+        └── man
+            └── man1
+                └── hello.1.gz
+
+8 directories, 6 files
+</code></pre><p>執行</p>
+<pre><code>$ tree DEBIAN
+</code></pre><p>顯示</p>
+<pre><code>DEBIAN
+└── control
+
+0 directories, 1 file
+</code></pre><h2 id="source-package-hellohttppackagesubuntucomsourcetrustyhello">探索「Source Package: <a href="http://packages.ubuntu.com/source/trusty/hello" target="_blank">hello</a>」</h2>
+<p>切換到「~/Downloads/hello/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/hello/<span class="hljs-built_in">source</span>
+</code></pre>
+<p>下載「Source Package: hello」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> hello
+</code></pre>
+<p>檢視原始碼套件檔案。</p>
+<pre><code>$ tree hello-2.8
+</code></pre><p>顯示</p>
+<pre><code>hello-2.8
+├── ABOUT-NLS
+├── aclocal.m4
+├── AUTHORS
+├── build-aux
+│   ├── announce-gen
+│   ├── config.guess
+│   ├── config.rpath
+│   ├── config.sub
+│   ├── depcomp
+│   ├── do-release-commit-and-tag
+│   ├── gendocs.sh
+│   ├── gnupload
+│   ├── install-sh
+│   ├── mdate-sh
+│   ├── missing
+│   ├── snippet
+│   │   ├── arg-nonnull.h
+│   │   ├── c++defs.h
+│   │   ├── _Noreturn.h
+│   │   └── warn-on-use.h
+│   ├── texinfo.tex
+│   ├── useless-if-before-free
+│   └── vc-list-files
+├── ChangeLog
+├── ChangeLog.O
+├── config.in
+├── configure
+├── configure.ac
+├── contrib
+│   ├── ChangeLog
+│   ├── de_franconian_po.txt
+│   ├── evolution.txt
+│   ├── Makefile.am
+│   └── Makefile.in
+├── COPYING
+├── debian
+│   ├── changelog
+│   ├── control
+│   ├── copyright
+│   ├── patches
+│   │   ├── 99-config-guess-config-sub
+│   │   └── series
+│   ├── rules
+│   ├── source
+│   │   └── format
+│   └── watch
+├── doc
+│   ├── ChangeLog
+│   ├── fdl.texi
+│   ├── hello.info
+│   ├── hello.texi
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── stamp-vti
+│   └── version.texi
+├── GNUmakefile
+├── INSTALL
+├── lib
+│   ├── c-ctype.c
+│   ├── c-ctype.h
+│   ├── closeout.c
+│   ├── closeout.h
+│   ├── close-stream.c
+│   ├── close-stream.h
+│   ├── config.charset
+│   ├── c-strcasecmp.c
+│   ├── c-strcaseeq.h
+│   ├── c-strcase.h
+│   ├── c-strncasecmp.c
+│   ├── errno.in.h
+│   ├── error.c
+│   ├── error.h
+│   ├── exitfail.c
+│   ├── exitfail.h
+│   ├── fpending.c
+│   ├── fpending.h
+│   ├── getopt1.c
+│   ├── getopt.c
+│   ├── getopt.in.h
+│   ├── getopt_int.h
+│   ├── gettext.h
+│   ├── intprops.h
+│   ├── localcharset.c
+│   ├── localcharset.h
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   ├── mbrtowc.c
+│   ├── mbsinit.c
+│   ├── msvc-inval.c
+│   ├── msvc-inval.h
+│   ├── msvc-nothrow.c
+│   ├── msvc-nothrow.h
+│   ├── progname.c
+│   ├── progname.h
+│   ├── quotearg.c
+│   ├── quotearg.h
+│   ├── quote.h
+│   ├── ref-add.sin
+│   ├── ref-del.sin
+│   ├── stdbool.in.h
+│   ├── stddef.in.h
+│   ├── stdlib.in.h
+│   ├── streq.h
+│   ├── strerror.c
+│   ├── strerror-override.c
+│   ├── strerror-override.h
+│   ├── string.in.h
+│   ├── unistd.in.h
+│   ├── verify.h
+│   ├── wchar.in.h
+│   ├── wctype.in.h
+│   ├── xalloc-die.c
+│   ├── xalloc.h
+│   ├── xalloc-oversized.h
+│   └── xmalloc.c
+├── m4
+│   ├── 00gnulib.m4
+│   ├── closeout.m4
+│   ├── close-stream.m4
+│   ├── codeset.m4
+│   ├── configmake.m4
+│   ├── errno_h.m4
+│   ├── error.m4
+│   ├── extensions.m4
+│   ├── fcntl-o.m4
+│   ├── fpending.m4
+│   ├── getopt.m4
+│   ├── gettext.m4
+│   ├── glibc21.m4
+│   ├── gnulib-cache.m4
+│   ├── gnulib-common.m4
+│   ├── gnulib-comp.m4
+│   ├── iconv.m4
+│   ├── include_next.m4
+│   ├── inline.m4
+│   ├── intlmacosx.m4
+│   ├── lib-ld.m4
+│   ├── lib-link.m4
+│   ├── lib-prefix.m4
+│   ├── localcharset.m4
+│   ├── locale-fr.m4
+│   ├── locale-ja.m4
+│   ├── locale-zh.m4
+│   ├── mbrtowc.m4
+│   ├── mbsinit.m4
+│   ├── mbstate_t.m4
+│   ├── msvc-inval.m4
+│   ├── msvc-nothrow.m4
+│   ├── nls.m4
+│   ├── nocrash.m4
+│   ├── po.m4
+│   ├── progtest.m4
+│   ├── quotearg.m4
+│   ├── ssize_t.m4
+│   ├── stdbool.m4
+│   ├── stddef_h.m4
+│   ├── stdlib_h.m4
+│   ├── strerror.m4
+│   ├── string_h.m4
+│   ├── sys_socket_h.m4
+│   ├── unistd_h.m4
+│   ├── warn-on-use.m4
+│   ├── wchar_h.m4
+│   ├── wchar_t.m4
+│   ├── wctype_h.m4
+│   ├── wint_t.m4
+│   └── xalloc.m4
+├── maint.mk
+├── Makefile.am
+├── Makefile.in
+├── man
+│   ├── ChangeLog
+│   ├── hello.1
+│   ├── Makefile.am
+│   └── Makefile.in
+├── NEWS
+├── po
+│   ├── bg.gmo
+│   ├── bg.po
+│   ├── boldquot.sed
+│   ├── ca.gmo
+│   ├── ca.po
+│   ├── ChangeLog
+│   ├── da.gmo
+│   ├── da.po
+│   ├── de.gmo
+│   ├── de.po
+│   ├── el.gmo
+│   ├── el.po
+│   ├── en@boldquot.header
+│   ├── en@quot.header
+│   ├── eo.gmo
+│   ├── eo.po
+│   ├── es.gmo
+│   ├── es.po
+│   ├── et.gmo
+│   ├── et.po
+│   ├── eu.gmo
+│   ├── eu.po
+│   ├── fa.gmo
+│   ├── fa.po
+│   ├── fi.gmo
+│   ├── fi.po
+│   ├── fr.gmo
+│   ├── fr.po
+│   ├── ga.gmo
+│   ├── ga.po
+│   ├── gl.gmo
+│   ├── gl.po
+│   ├── he.gmo
+│   ├── hello.pot
+│   ├── he.po
+│   ├── hr.gmo
+│   ├── hr.po
+│   ├── hu.gmo
+│   ├── hu.po
+│   ├── id.gmo
+│   ├── id.po
+│   ├── insert-header.sin
+│   ├── it.gmo
+│   ├── it.po
+│   ├── ja.gmo
+│   ├── ja.po
+│   ├── ka.gmo
+│   ├── ka.po
+│   ├── ko.gmo
+│   ├── ko.po
+│   ├── LINGUAS
+│   ├── lv.gmo
+│   ├── lv.po
+│   ├── Makefile.in.in
+│   ├── Makevars
+│   ├── ms.gmo
+│   ├── ms.po
+│   ├── nb.gmo
+│   ├── nb.po
+│   ├── nl.gmo
+│   ├── nl.po
+│   ├── nn.gmo
+│   ├── nn.po
+│   ├── pl.gmo
+│   ├── pl.po
+│   ├── POTFILES.in
+│   ├── pt_BR.gmo
+│   ├── pt_BR.po
+│   ├── pt.gmo
+│   ├── pt.po
+│   ├── quot.sed
+│   ├── remove-potcdate.sin
+│   ├── ro.gmo
+│   ├── ro.po
+│   ├── ru.gmo
+│   ├── Rules-quot
+│   ├── ru.po
+│   ├── sk.gmo
+│   ├── sk.po
+│   ├── sl.gmo
+│   ├── sl.po
+│   ├── sr.gmo
+│   ├── sr.po
+│   ├── stamp-po
+│   ├── sv.gmo
+│   ├── sv.po
+│   ├── th.gmo
+│   ├── th.po
+│   ├── tr.gmo
+│   ├── tr.po
+│   ├── uk.gmo
+│   ├── uk.po
+│   ├── vi.gmo
+│   ├── vi.po
+│   ├── zh_CN.gmo
+│   ├── zh_CN.po
+│   ├── zh_TW.gmo
+│   └── zh_TW.po
+├── README
+├── README-release
+├── src
+│   ├── ChangeLog
+│   ├── hello.c
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   └── system.h
+├── tests
+│   ├── ChangeLog
+│   ├── greeting-1
+│   ├── greeting-2
+│   ├── hello-1
+│   ├── last-1
+│   ├── Makefile.am
+│   ├── Makefile.in
+│   └── traditional-1
+├── THANKS
+└── TODO
+
+13 directories, 281 files
 </code></pre>
                     
                     </section>
@@ -2523,10 +2988,10 @@
         </div>
 
         
-        <a href="../../../content/package/shtool/info.html" class="navigation navigation-prev " aria-label="Previous page: info"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/hello/index.html" class="navigation navigation-prev " aria-label="Previous page: hello"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/shtool/report.html" class="navigation navigation-next " aria-label="Next page: report"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/hello/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
