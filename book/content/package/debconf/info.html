@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/iputils-ping/note.html" />
+    <link rel="next" href="../../../content/package/debconf/note.html" />
     
     
-    <link rel="prev" href="../../../content/package/iputils-ping/index.html" />
+    <link rel="prev" href="../../../content/package/debconf/index.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="5.5.1" data-basepath="../../.." data-revision="1430460093825">
+    <div class="book" data-level="2.4.1" data-basepath="../../.." data-revision="1430460093825">
     
 
 <div class="book-summary">
@@ -682,7 +682,7 @@
                 
     
         
-        <li class="chapter " data-level="2.4.1" data-path="content/package/debconf/info.html">
+        <li class="chapter active" data-level="2.4.1" data-path="content/package/debconf/info.html">
             
                 
                     <a href="../../../content/package/debconf/info.html">
@@ -2218,7 +2218,7 @@
                 
     
         
-        <li class="chapter active" data-level="5.5.1" data-path="content/package/iputils-ping/info.html">
+        <li class="chapter " data-level="5.5.1" data-path="content/package/iputils-ping/info.html">
             
                 
                     <a href="../../../content/package/iputils-ping/info.html">
@@ -2574,382 +2574,1825 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_7">
+                    <section class="normal" id="section-gitbook_35">
                     
-                        <h1 id="iputils-ping-info">iputils-ping info</h1>
+                        <h1 id="debconf-info">debconf info</h1>
 <h2 id="">套件資訊</h2>
 <p>執行</p>
-<pre><code>$ apt-cache show iputils-ping
+<pre><code>$ apt-cache show debconf
 </code></pre><p>顯示</p>
-<pre><code>Package: iputils-ping
-Priority: important
-Section: net
-Installed-Size: 159
-Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Original-Maintainer: Noah Meyerhans &lt;noahm@debian.org&gt;
-Architecture: amd64
-Source: iputils
-Version: 3:20121221-4ubuntu1.1
-Provides: ping
-Depends: libc6 (&gt;= 2.14), libcap2 (&gt;= 2.10), libgnutls-openssl27
-Recommends: libcap2-bin
-Filename: pool/main/i/iputils/iputils-ping_20121221-4ubuntu1.1_amd64.deb
-Size: 52602
-MD5sum: ddaa356992d3202d23c991f7dc8441c5
-SHA1: 728b34f974676225cbe4a22496a1d54e5d4bb6c8
-SHA256: 7886d5418a7ac87946916121387d271db2ab931fd87be49927b42b4ae08a4f35
-Description-en: Tools to test the reachability of network hosts
- The ping command sends ICMP ECHO_REQUEST packets to a host in order to
- test if the host is reachable via the network.
- .
- This package includes a ping6 utility which supports IPv6 network
- connections.
-Description-md5: d70a0a65fee86f2e5c78f759703e9922
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 5y
-Task: minimal
-
-Package: iputils-ping
-Priority: important
-Section: net
-Installed-Size: 159
-Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Original-Maintainer: Noah Meyerhans &lt;noahm@debian.org&gt;
-Architecture: amd64
-Source: iputils
-Version: 3:20121221-4ubuntu1
-Provides: ping
-Depends: libc6 (&gt;= 2.14), libcap2 (&gt;= 2.10), libgnutls-openssl27
-Recommends: libcap2-bin
-Filename: pool/main/i/iputils/iputils-ping_20121221-4ubuntu1_amd64.deb
-Size: 52570
-MD5sum: c2a181c1999b7a85965542e6e9b633ad
-SHA1: e87e2dca3e897b593e6a8d00e6bf549a6b3af204
-SHA256: 500daf10d08660bd56c83d1e2cf0a047c30a3402fe821c09f810c822c4677e21
-Description-en: Tools to test the reachability of network hosts
- The ping command sends ICMP ECHO_REQUEST packets to a host in order to
- test if the host is reachable via the network.
- .
- This package includes a ping6 utility which supports IPv6 network
- connections.
-Description-md5: d70a0a65fee86f2e5c78f759703e9922
+<pre><code>Package: debconf
+Priority: required
+Section: admin
+Installed-Size: 609
+Maintainer: Colin Watson &lt;cjwatson@ubuntu.com&gt;
+Original-Maintainer: Debconf Developers &lt;debconf-devel@lists.alioth.debian.org&gt;
+Architecture: all
+Version: 1.5.51ubuntu2
+Replaces: debconf-tiny
+Provides: debconf-2.0
+Pre-Depends: perl-base (&gt;= 5.6.1-4)
+Recommends: apt-utils (&gt;= 0.5.1), debconf-i18n
+Suggests: debconf-doc, debconf-utils, whiptail | dialog | gnome-utils, libterm-readline-gnu-perl, libgtk2-perl (&gt;= 1:1.130), libnet-ldap-perl, perl, libqtgui4-perl, libqtcore4-perl
+Conflicts: apt (&lt;&lt; 0.3.12.1), cdebconf (&lt;&lt; 0.96), debconf-tiny, debconf-utils (&lt;&lt; 1.3.22), dialog (&lt;&lt; 0.9b-20020814-1), menu (&lt;= 2.1.3-1), whiptail (&lt;&lt; 0.51.4-11), whiptail-utf8 (&lt;= 0.50.17-13)
+Filename: pool/main/d/debconf/debconf_1.5.51ubuntu2_all.deb
+Size: 136156
+MD5sum: 083b7e0bc23eeeca392d35ab898b1eac
+SHA1: 3769003f2ff0f930fb3fa746b60f6ae2af110dd9
+SHA256: 85670d1a5b314c12c2f7c60e7fb075eb0e47fa1643a5a9a92cb900927a9f99a7
+Description-en: Debian configuration management system
+ Debconf is a configuration management system for debian packages. Packages
+ use Debconf to ask questions when they are installed.
+Description-md5: 85b82bf406dfc9a635114f44ab7fb66d
+Multi-Arch: foreign
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
 Task: minimal
 </code></pre><p>執行</p>
-<pre><code>$ apt-cache showpkg iputils-ping
+<pre><code>$ apt-cache showpkg debconf
 </code></pre><p>顯示</p>
-<pre><code>Package: iputils-ping
+<pre><code>Package: debconf
 Versions:
-3:20121221-4ubuntu1.1 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty-updates_main_binary-amd64_Packages) (/var/lib/dpkg/status)
+1.5.51ubuntu2 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages) (/var/lib/dpkg/status)
  Description Language:
                  File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
-                  MD5: d70a0a65fee86f2e5c78f759703e9922
+                  MD5: 85b82bf406dfc9a635114f44ab7fb66d
  Description Language: en
                  File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
-                  MD5: d70a0a65fee86f2e5c78f759703e9922
-
-3:20121221-4ubuntu1 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages)
- Description Language:
-                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
-                  MD5: d70a0a65fee86f2e5c78f759703e9922
- Description Language: en
-                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
-                  MD5: d70a0a65fee86f2e5c78f759703e9922
+                  MD5: 85b82bf406dfc9a635114f44ab7fb66d
 
 
 Reverse Depends:
-  iputils-ping:i386,iputils-ping
-  arping:i386,iputils-ping 20001110-6
-  iputils-ping:i386,iputils-ping
-  zonecheck,iputils-ping
-  xorp,iputils-ping
-  wicd-daemon,iputils-ping
-  whereami,iputils-ping
-  subnetcalc,iputils-ping
-  netperfmeter,iputils-ping
-  mrtg-ping-probe,iputils-ping
-  libnet-ping-external-perl,iputils-ping
-  ifupdown-extra,iputils-ping
-  ibid,iputils-ping
-  gnome-nettool,iputils-ping
-  cacti,iputils-ping
-  arping,iputils-ping 20001110-6
-  aiccu,iputils-ping
-  ubuntu-minimal,iputils-ping
-  nagios-plugins-basic,iputils-ping
-  heartbeat,iputils-ping
-  backuppc,iputils-ping
+  rsyslog-pgsql,debconf 0.5
+  rsyslog-mysql,debconf 0.5
+  maas-region-controller-min,debconf 0.5
+  maas-region-controller,debconf 0.5
+  maas-cluster-controller,debconf 0.5
+  pdns-server,debconf 0.5
+  pdns-backend-sqlite3,debconf 0.5
+  pdns-backend-pgsql,debconf 0.5
+  pdns-backend-mysql,debconf 0.5
+  icinga-idoutils,debconf 0.5
+  icinga-common,debconf 0.5
+  icinga-cgi,debconf 0.5
+  gitolite3,debconf 0.5
+  squid-deb-proxy,debconf 0.5
+  flex,debconf
+  mythweb,debconf 0.5
+  mythtv-frontend,debconf 0.5
+  mythtv-database,debconf 0.5
+  mythtv-common,debconf 0.5
+  flashplugin-installer,debconf 0.5
+  tango-db,debconf 0.5
+  tango-common,debconf 0.5
+  rsyslog-pgsql,debconf 0.5
+  rsyslog-mysql,debconf 0.5
+  phpldapadmin,debconf 0.5
+  phonon4qt5,debconf 0.5
+  percona-xtradb-cluster-server-5.5,debconf
+  percona-xtradb-cluster-server-5.5,debconf 0.5
+  owncloud,debconf 0.5
+  openafs-fileserver,debconf 0.5
+  openafs-client,debconf 0.5
+  nsd3,debconf
+  nsd,debconf 0.5
+  mythbuntu-live-autostart,debconf 0.5
+  mythbuntu-bare-console,debconf 0.5
+  mysql-server-5.6,debconf
+  mysql-server-5.6,debconf 0.5
+  mumble-server,debconf 0.5
+  mariadb-server-5.5,debconf
+  mariadb-server-5.5,debconf 0.5
+  libssl0.9.8,debconf 0.5
+  krb5-kdc,debconf 0.5
+  krb5-admin-server,debconf 0.5
+  kdm,debconf 0.5
+  italc-client,debconf 0.5
+  isc-dhcp-relay,debconf 0.5
+  icecast2,debconf 0.5
+  heimdal-kdc,debconf 0.5.00
+  grub-coreboot,debconf 0.5
+  gdm,debconf 0.5
+  ejabberd,debconf 0.5
+  drupal7,debconf 0.5
+  ddclient,debconf 0.5
+  clamav-milter,debconf 0.5
+  x11-common,debconf 0.5
+  vsftpd,debconf 0.5
+  util-linux,debconf 0.5
+  update-notifier-common,debconf
+  unattended-upgrades,debconf
+  unattended-upgrades,debconf 0.5
+  ubuntu-drivers-common,debconf 0.5.00
+  ubiquity-frontend-debconf,debconf 1.5.24ubuntu2
+  ubiquity,debconf 1.5.43
+  tzdata,debconf 0.5
+  tomcat7,debconf 0.5
+  sysv-rc,debconf 0.5
+  strongswan-starter,debconf 0.5
+  strongswan-ike,debconf
+  sane-utils,debconf 0.5
+  samba-common,debconf 0.5
+  resolvconf,debconf 0.5
+  postgresql-common,debconf 0.5.00
+  postfix,debconf 0.5
+  phonon4qt5-backend-null,debconf 0.5
+  phonon-backend-null,debconf 0.5
+  phonon,debconf 0.5
+  pbuilder,debconf 0.5
+  openvpn,debconf 0.5
+  openssh-server,debconf 0.5
+  oem-config,debconf 0.5
+  mysql-server-5.5,debconf
+  mysql-server-5.5,debconf 0.5
+  multipath-tools-boot,debconf 0.5
+  mdadm,debconf 1.4.72
+  man-db,debconf 1.2.0
+  mailman,debconf
+  mailman,debconf 0.5
+  maas-region-controller-min,debconf 0.5
+  maas-region-controller,debconf 0.5
+  maas-cluster-controller,debconf 0.5
+  lightdm,debconf 0.5
+  libssl1.0.0,debconf 0.5
+  libc6,debconf
+  landscape-common,debconf 0.5
+  landscape-client,debconf 0.5
+  kexec-tools,debconf
+  kexec-tools,debconf 0.5
+  isc-dhcp-server,debconf 0.5
+  irqbalance,debconf 0.5
+  grub-xen,debconf 0.5
+  grub-pc,debconf 0.5
+  grub-legacy-ec2,debconf 0.5
+  grub-legacy-ec2,debconf 1.5.19
+  grub-ieee1275,debconf 0.5
+  grub-efi-ia32,debconf 0.5
+  grub-efi-amd64,debconf 0.5
+  ghostscript,debconf
+  evolution,debconf 1.4.69
+  dovecot-core,debconf 0.5
+  cups-bsd,debconf 0.5
+  cups,debconf 1.2.9
+  compiz,debconf 0.5
+  cloud-init,debconf 0.5
+  clamav-freshclam,debconf 0.5
+  clamav-base,debconf 0.5
+  chkrootkit,debconf
+  chkrootkit,debconf 0.5
+  ca-certificates,debconf 0.5
+  byobu,debconf 0.5
+  bind9,debconf 0.5
+  apparmor,debconf
+  apparmor,debconf 0.5
+  aide-common,debconf 0.5
+  xtrs,debconf 0.5
+  ttf-root-installer,debconf 1.2.0
+  ttf-mscorefonts-installer,debconf 0.5
+  trn4,debconf 1.2.0
+  trn,debconf 0.5
+  sdic-gene95,debconf 0.5
+  sdic-eijiro,debconf 0.5
+  sdic-edict,debconf 0.5
+  sandboxgamemaker,debconf 0.5
+  rocksndiamonds,debconf 0.5
+  quake3-data,debconf 0.5.00
+  primesense-nite-nonfree,debconf
+  pepperflashplugin-nonfree,debconf
+  mythweb,debconf 0.5
+  mythtv-frontend,debconf 0.5
+  mythtv-database,debconf 0.5
+  mythtv-common,debconf 0.5
+  mplayer-fonts,debconf 0.5
+  matlab-support,debconf 0.5
+  matlab-support,debconf 1.3.22
+  mathematica-fonts,debconf 0.5
+  linux-firmware-nexus7,debconf
+  linux-firmware-nexus7,debconf 0.5
+  linux-firmware-grouper,debconf
+  linux-firmware-grouper,debconf 0.5
+  kinect-audio-setup,debconf
+  kinect-audio-setup,debconf 0.5
+  isight-firmware-tools,debconf 0.5
+  hyperspec,debconf 0.5
+  geoip-database-contrib,debconf 0.5
+  flashplugin-installer,debconf 0.5
+  fheroes2-pkg,debconf 0.5
+  exult,debconf 0.5
+  conserver-server,debconf 0.5
+  conserver-client,debconf 0.5
+  cltl,debconf 0.5
+  ckermit,debconf 0.2.17
+  ckermit,debconf 0.5
+  biomaj-watcher,debconf
+  biomaj-watcher,debconf 0.5
+  bgoffice-dict-downloader,debconf 0.5
+  arb-common,debconf 0.5
+  zope2.13-sandbox,debconf 0.5
+  zope2.13,debconf
+  zope-common,debconf 0.5
+  zephyr-server-krb5,debconf 0.5
+  zephyr-server,debconf 0.5
+  zephyr-clients,debconf 0.5
+  zentyal-network,debconf
+  zentyal-core,debconf 0.5
+  zentyal-core,debconf
+  z88dk,debconf 0.5
+  yubikey-val,debconf 0.5
+  yubikey-ksm,debconf 0.5
+  yorick,debconf
+  xymon-client,debconf 0.5
+  xtell,debconf
+  xringd,debconf 0.5
+  xmail,debconf 0.5
+  xfstt,debconf 0.5
+  xfonts-wqy,debconf 0.5
+  xfonts-traditional,debconf 0.5
+  xdm,debconf 1.2.9
+  xcwcp,debconf
+  xawtv,debconf 0.5
+  wireshark-common,debconf
+  wireshark-common,debconf 0.5
+  wine1.6,debconf 0.5
+  wims-moodle,debconf 0.5
+  wims,debconf 0.5
+  wifi-radar,debconf 0.5
+  wide-dhcpv6-server,debconf 0.5
+  wide-dhcpv6-relay,debconf 0.5
+  wide-dhcpv6-client,debconf 0.5
+  wicd-daemon,debconf 1.5.34
+  wgerman-medical,debconf 0.5
+  wgaelic,debconf 0.5
+  websvn,debconf 0.5
+  websimba,debconf 0.5
+  webissues-server,debconf 0.5
+  webfs,debconf 0.5
+  webalizer,debconf 1.4.58
+  wdm,debconf 1.5.20
+  wcanadian-small,debconf 0.5
+  wcanadian-large,debconf 0.5
+  wcanadian-insane,debconf 0.5
+  wcanadian-huge,debconf 0.5
+  wcanadian,debconf 0.5
+  watchdog,debconf 0.5
+  wajig,debconf
+  w3c-linkchecker,debconf 0.5
+  virtuoso-opensource-6.1,debconf 0.5
+  vidalia,debconf 1.5.11
+  vdr-plugin-remote,debconf 0.5
+  vdr,debconf 0.5
+  util-vserver,debconf
+  util-vserver,debconf 0.5
+  uswsusp,debconf 0.5
+  ushare,debconf 0.5
+  uqwk,debconf 0.5
+  uptimed,debconf 0.5
+  uprecords-cgi,debconf 0.5
+  unclutter,debconf 0.5
+  ukolovnik,debconf 0.5
+  uif,debconf 0.5
+  ubuntustudio-live,debconf 0.5
+  ubuntustudio-installer,debconf
+  typo3-dummy,debconf 0.5
+  typo3-dummy,debconf
+  typo3-database,debconf 0.5
+  typo3-database,debconf
+  tvtime,debconf 0.5
+  tunapie,debconf
+  tunapie,debconf 0.5
+  tt-rss,debconf 0.5
+  tripwire,debconf 0.5
+  tpconfig,debconf 0.5
+  tpb,debconf
+  tpb,debconf 0.5
+  torrentflux,debconf 0.5
+  tomoyo-tools,debconf
+  tomoyo-tools,debconf 0.5
+  tomcat6,debconf 0.5
+  tmpreaper,debconf 0.5.0
+  tin,debconf 0.5
+  tiger,debconf 0.5
+  tgif,debconf 0.5
+  terminatorx,debconf 0.5
+  tango-db,debconf 0.5
+  tango-common,debconf 0.5
+  t-prot,debconf 0.5
+  synce-serial,debconf 0.5
+  sympa,debconf 0.5
+  swish-e,debconf 0.5
+  sugarplum,debconf 0.5
+  suck,debconf 0.5
+  ssmtp,debconf
+  sslh,debconf 0.5
+  sqwebmail,debconf
+  sqwebmail,debconf 0.5
+  squidguard,debconf 0.5
+  spotweb,debconf 0.5
+  splatd,debconf 0.5
+  spip,debconf 0.5
+  spamprobe,debconf 0.5
+  solr-common,debconf 1.5
+  solid-pop3d,debconf 0.5
+  snort-rules-default,debconf 0.2.80
+  snort-common,debconf 0.5
+  snort,debconf 0.5
+  snoopy,debconf 0.5
+  sn,debconf 0.5
+  smstools,debconf 1.4.69
+  smb2www,debconf 0.5
+  slrnpull,debconf 0.5
+  slrn,debconf 0.5
+  slim,debconf 1.2.9
+  slbackup-php,debconf 0.5
+  slbackup,debconf 0.5
+  slay,debconf 0.5
+  slashem-common,debconf
+  slashem-common,debconf 0.5
+  slapos-node-unofficial,debconf 0.5
+  slapos-client,debconf 0.5
+  sitesummary-client,debconf 0.5
+  sitesummary,debconf 0.5
+  sipml5-web-phone,debconf 0.5
+  sinfo,debconf 0.5
+  sinfo,debconf
+  simpleid-ldap,debconf
+  simpleid,debconf
+  simba,debconf 0.5
+  shorewall6,debconf 0.5
+  shorewall6,debconf 1.4.69
+  shorewall,debconf 0.5
+  shorewall,debconf 1.4.69
+  shinken-module-broker-webui,debconf 0.5
+  shinken-common,debconf 0.5
+  shinken,debconf 0.5
+  sheepdog,debconf 0.5
+  sftpcloudfs,debconf 0.5
+  sftpcloudfs,debconf
+  seyon,debconf 1.2.9
+  sendmail-bin,debconf
+  semanticscuttle,debconf 0.5
+  selinux,debconf 0.5
+  scuttle,debconf 0.5
+  science-config,debconf 0.5
+  sbox-dtc,debconf
+  sbox-dtc,debconf 0.5
+  sbnc,debconf 0.5
+  samhain,debconf 1.2.9
+  safe-rm,debconf
+  safe-rm,debconf 0.5
+  sa-exim,debconf 1.2.0
+  rtpg-www,debconf
+  rt4-extension-assettracker,debconf 0.5
+  rt4-db-sqlite,debconf 0.5
+  rt4-db-postgresql,debconf 0.5
+  rt4-db-mysql,debconf 0.5
+  rsyslog-pgsql,debconf 0.5
+  rsyslog-mysql,debconf 0.5
+  rssh,debconf 0.5
+  roundcube-core,debconf 0.5
+  rlinetd,debconf 0.5
+  rkhunter,debconf 0.5
+  rinputd,debconf 0.5
+  rhn-client-tools,debconf
+  request-tracker4,debconf 0.5
+  remembrance-agent,debconf
+  redmine,debconf
+  redmine,debconf 0.5
+  rate4site,debconf 0.5
+  rancid,debconf 0.5
+  radioclk,debconf 0.5
+  racoon,debconf 0.5
+  qpsmtpd,debconf 1.0.0
+  qpidd,debconf 0.5
+  pybit-web,debconf 0.5
+  pybit-client,debconf 0.5
+  pure-ftpd-common,debconf 0.5
+  proftpd-basic,debconf 0.5.00
+  prey,debconf 0.5
+  prewikka,debconf 0.5
+  prelude-manager,debconf 0.5
+  powstatd,debconf
+  powstatd,debconf 0.5
+  postgrey,debconf 0.5
+  postgrey,debconf
+  postfixadmin,debconf 0.5
+  postfix-cluebringer-webui,debconf
+  postfix-cluebringer,debconf
+  post-faq,debconf 0.5
+  posh,debconf
+  portsentry,debconf 1.2.9
+  popfile,debconf 1.2.0
+  popa3d,debconf 1.2.9
+  pnp4nagios-web,debconf 0.5
+  pnopaste,debconf 0.5
+  pluxml,debconf 0.5
+  plptools,debconf 0.5
+  pleiades,debconf 0.5
+  playmidi,debconf 0.5
+  plan,debconf 0.5
+  pioneers-meta-server,debconf 0.5
+  pinto,debconf 0.5
+  pinba-engine-mysql-5.5,debconf 0.5
+  pictor,debconf 0.5
+  phpmyadmin,debconf 0.5
+  phpldapadmin,debconf 0.5
+  phpgacl,debconf 0.5
+  phpbb3,debconf 0.5
+  phonon4qt5,debconf 0.5
+  phamm-ldap,debconf 0.5
+  phamm,debconf 0.5
+  phalanx,debconf 0.5
+  perlindex,debconf 0.5
+  percona-xtradb-cluster-server-5.5,debconf
+  percona-xtradb-cluster-server-5.5,debconf 0.5
+  pdsh,debconf 0.5
+  pdnsd,debconf 0.5
+  pdnsd,debconf
+  pdns-server,debconf 0.5
+  pdns-backend-sqlite3,debconf 0.5
+  pdns-backend-pgsql,debconf 0.5
+  pdns-backend-mysql,debconf 0.5
+  pconsole,debconf 0.5
+  pawserv,debconf 0.5
+  otrs2,debconf 0.5
+  orville-write,debconf 0.5
+  oprofile-gui,debconf
+  oprofile,debconf
+  openvas-server,debconf 0.5
+  openvas-plugins-dfsg,debconf 0.5
+  openvas-plugins-base,debconf 0.5
+  openswan,debconf
+  openswan,debconf 0.5
+  opensmtpd,debconf 0.5
+  openguides,debconf
+  openguides,debconf 0.5
+  openerp6.1-full,debconf
+  openerp6.1-full,debconf 0.5
+  openafs-fileserver,debconf 0.5
+  openafs-client,debconf 0.5
+  openacs,debconf
+  openacs,debconf 0.5
+  oneliner-el,debconf 0.5
+  octopussy,debconf 0.5
+  octopussy,debconf
+  ocsinventory-agent,debconf 0.5
+  nullmailer,debconf 0.5
+  nufw,debconf 1.3.22
+  nuauth,debconf 1.3.22
+  ntop,debconf 0.5
+  ntlmaps,debconf 0.5
+  nslcd,debconf 0.5
+  nsd3,debconf
+  nsd,debconf 0.5
+  nsca,debconf 0.5
+  nodm,debconf 0.5
+  nn,debconf 0.5
+  nis,debconf 0.5.00
+  netmrg,debconf 0.5
+  netmrg,debconf
+  nethack-common,debconf 0.5
+  netenv,debconf 0.5
+  netdiag,debconf 0.5
+  ndoutils-nagios3-mysql,debconf 0.5
+  ndoutils-nagios3-mysql,debconf
+  nas,debconf
+  nap,debconf
+  namazu2,debconf 0.5
+  nagvis,debconf 0.5
+  mythtv-status,debconf 0.5
+  mythimport,debconf
+  mythexport,debconf
+  mythexport,debconf 0.5
+  mythbuntu-log-grabber,debconf
+  mythbuntu-live-autostart,debconf 0.5
+  mythbuntu-diskless-server,debconf 0.5
+  mythbuntu-diskless-client,debconf 0.5
+  mythbuntu-bare-console,debconf 0.5
+  mysqmail,debconf
+  mysqmail,debconf 0.5
+  mysql-server-5.6,debconf
+  mysql-server-5.6,debconf 0.5
+  mxallowd,debconf
+  mxallowd,debconf 0.5
+  muse,debconf 0.5
+  mumble-server,debconf 0.5
+  mumble-django,debconf
+  mumble-django,debconf 0.5
+  mtink,debconf 0.5
+  msmtp,debconf 0.5
+  mrtg,debconf 1.2.0
+  mpdscribble,debconf 0.5
+  mp3info,debconf
+  movixmaker-2,debconf
+  movabletype-opensource,debconf
+  movabletype-opensource,debconf 0.5
+  motion,debconf
+  motion,debconf 0.5
+  mopd,debconf
+  moon-buggy-esd,debconf 0.2.17
+  moon-buggy-esd,debconf 0.5
+  moon-buggy,debconf 0.5
+  moodle,debconf 0.5
+  monotone-server,debconf 0.5
+  mono-xsp4,debconf 0.5
+  mono-xsp2,debconf 0.5
+  mono-apache-server4,debconf 0.5
+  mono-apache-server2,debconf 0.5
+  mlmmj,debconf 0.5
+  mldonkey-server,debconf
+  mldonkey-server,debconf 0.5
+  mixmaster,debconf 1.2.9
+  mirrormagic,debconf 0.5
+  miniupnpd,debconf
+  miniupnpd,debconf 0.5
+  mini-buildd,debconf 0.5
+  mimedefang,debconf 0.5
+  mgetty-fax,debconf 0.5
+  metche,debconf 0.5
+  mercurial-server,debconf 0.5
+  mediawiki,debconf 0.5
+  med-config,debconf 0.5
+  mcollective-common,debconf 0.5
+  mcollective,debconf 0.5
+  mcelog,debconf 0.5
+  mason,debconf 1.2.0
+  mariadb-server-5.5,debconf
+  mariadb-server-5.5,debconf 0.5
+  manpages-es,debconf 0.5
+  man2html,debconf 0.5
+  makejail,debconf
+  mailgraph,debconf 0.5
+  mailfilter,debconf 0.5
+  mailcrypt,debconf 0.2.0
+  mailagent,debconf 1.2.0
+  lyskom-server,debconf 0.5
+  lyskom-elisp-client,debconf 0.5
+  lxdm,debconf 1.2.9
+  lurker,debconf 0.5
+  lsh-server,debconf 0.5
+  lprng,debconf
+  lprng,debconf 0.5
+  logtool,debconf 0.5.00
+  loggedfs,debconf 0.5
+  loganalyzer,debconf 0.5
+  localepurge,debconf 0.5
+  live-debconfig,debconf
+  lire,debconf 1.0.32
+  lirc,debconf 0.5
+  libzorpll3.9-1,debconf 0.5
+  libwiki-toolkit-perl,debconf 0.5
+  libvpb0,debconf 0.5
+  libtowitoko2,debconf 0.5
+  libssl0.9.8,debconf 0.5
+  libphp-adodb,debconf 0.5
+  libphone-utils0,debconf 0.5
+  libpam-yubico,debconf 0.5
+  libpam-mysql,debconf 0.5
+  libnss-ldapd,debconf 0.5
+  libmyodbc,debconf 0.5
+  liblemonldap-ng-portal-perl,debconf
+  liblemonldap-ng-manager-perl,debconf
+  liblemonldap-ng-conf-perl,debconf
+  liblemonldap-ng-conf-perl,debconf 0.5
+  libguestfs-tools,debconf 0.5
+  libglide3,debconf 0.5
+  libgempc410,debconf 0.5
+  libgcr410,debconf 0.5
+  libdspam7-drv-pgsql,debconf 0.5
+  libdspam7-drv-mysql,debconf 0.5
+  libds-admin-serv0,debconf 0.5
+  libcanna1g,debconf 0.5
+  libawl-php,debconf 1.0.32
+  libasedrive-serial,debconf 0.5
+  libapache2-mod-mono,debconf 1.2.0
+  libapache-sessionx-perl,debconf 0.5
+  letodms,debconf 0.5
+  ledgersmb,debconf 0.5
+  leafnode,debconf 0.5
+  ldap-account-manager,debconf 0.5
+  lcl-utils-1.0.10,debconf 0.5
+  kumofs,debconf 0.5
+  kstars-data-extra-tycho2,debconf 0.5
+  krb5-kdc,debconf 0.5
+  krb5-admin-server,debconf 0.5
+  knews,debconf 1.2.0
+  kismet,debconf 0.5
+  kinput2-wnn,debconf 0.5
+  kinput2-canna-wnn,debconf 0.5
+  kdm,debconf 0.5
+  kdesudo,debconf 0.5
+  jwchat,debconf 0.5
+  junior-config,debconf 0.5
+  jspwiki,debconf 0.5
+  jsmath,debconf 0.5
+  jove,debconf 0.5
+  jffnms,debconf
+  jffnms,debconf 0.5
+  jazip,debconf 0.5
+  jackd2,debconf 0.5
+  jackd1,debconf 0.5
+  iukrainian,debconf 0.5
+  italc-client,debconf 0.5
+  itagalog,debconf 0.5
+  iswiss,debconf 0.5
+  iswedish,debconf 0.5
+  ispanish,debconf 0.5
+  isoqlog,debconf 0.5
+  isdnvboxserver,debconf 1.2.9
+  isdnutils-base,debconf 1.2.9
+  isdnlog,debconf 1.2.9
+  isc-dhcp-relay,debconf 0.5
+  irussian,debconf 0.5
+  ircd-hybrid,debconf 0.5
+  iptables-persistent,debconf 0.5
+  ipppd,debconf 1.2.9
+  iportuguese,debconf 0.5
+  ipolish,debconf 0.5
+  iogerman,debconf 0.5.0.0
+  iog,debconf 0.5
+  iog,debconf
+  iodine,debconf 0.5
+  interchange-ui,debconf 0.5
+  interchange-cat-standard,debconf 0.5
+  interchange,debconf 0.5
+  inorwegian,debconf 0.5
+  initz,debconf 0.5
+  init-select,debconf 0.5
+  ingerman,debconf 0.5
+  imapproxy,debconf 0.5
+  imanx,debconf
+  im,debconf 0.5
+  ilohamail,debconf 0.5
+  ilithuanian,debconf 0.5
+  ilisp,debconf 0.5
+  iitalian,debconf 0.5
+  iirish,debconf
+  ihungarian,debconf 0.5
+  ihungarian,debconf
+  igalician-minimos,debconf 0.5
+  igaelic,debconf
+  ifrench-gut,debconf 0.5
+  ifrench,debconf 0.5
+  ifplugd,debconf 0.5
+  ifhp,debconf 0.5
+  ifetch-tools,debconf 0.5
+  ifaroese,debconf 0.5
+  iestonian,debconf 0.5
+  iesperanto,debconf 0.5
+  idutch,debconf 0.5
+  idanish,debconf 0.5
+  iczech,debconf 0.5
+  icinga-web,debconf 0.5
+  icinga-idoutils,debconf 0.5
+  icinga-common,debconf 0.5
+  icinga-cgi,debconf 0.5
+  icecast2,debconf 0.5
+  icatalan,debconf 0.5
+  ibulgarian,debconf 0.5
+  ibritish-small,debconf 0.5
+  ibritish-large,debconf 0.5
+  ibritish-insane,debconf 0.5
+  ibritish-huge,debconf 0.5
+  ibritish,debconf 0.5
+  ibrazilian,debconf 0.5
+  ibam,debconf 1.2.0
+  iamerican-small,debconf 0.5
+  iamerican-large,debconf 0.5
+  iamerican-insane,debconf 0.5
+  iamerican-huge,debconf 0.5
+  hylafax-server,debconf 0.5
+  hybserv,debconf
+  htdig,debconf 1.2.9
+  htcondor,debconf 0.5
+  hoteldruid,debconf 0.5
+  heimdal-kdc,debconf 0.5.00
+  hearse,debconf 1.2.0
+  hddtemp,debconf 0.5
+  havp,debconf
+  havp,debconf 0.5
+  haserl,debconf 0.5
+  harden-servers,debconf 1.2.0
+  harden-clients,debconf 1.2.0
+  harden,debconf 1.2.0
+  gwsetup,debconf 0.5
+  gwhois,debconf 0.5
+  guacamole-tomcat,debconf 0.5
+  guacamole-tomcat,debconf
+  grub-coreboot,debconf 0.5
+  grr,debconf
+  grr,debconf 0.5
+  gridengine-qmon,debconf 0.5
+  gridengine-master,debconf 0.5
+  gridengine-exec,debconf 0.5
+  gridengine-common,debconf 0.5
+  gridengine-client,debconf 0.5
+  greylistd,debconf 0.5
+  graphite-carbon,debconf 0.5
+  gpsd,debconf 0.5
+  gpr,debconf 0.5
+  gpm,debconf 0.5
+  goto-fai-progress,debconf 0.5
+  gosa-desktop,debconf
+  gosa-desktop,debconf 0.5
+  gom,debconf 1.5.11
+  golang-go,debconf 0.5
+  gnunet-server,debconf 0.5
+  gnumeric,debconf
+  gnumeric,debconf 0.5
+  gnumed-server,debconf
+  gnubg,debconf 0.5
+  gnome-speech-swift,debconf 0.5
+  gnats-user,debconf 0.5
+  gnats,debconf
+  gnarwl,debconf 0.5
+  glpi,debconf 0.5
+  gkdebconf,debconf 1.4.58
+  gitolite3,debconf 0.5
+  gitolite,debconf 0.5
+  git-stuff,debconf 0.5
+  geneweb,debconf 0.5
+  gdm,debconf 0.5
+  gcl,debconf 1.2.0
+  ganglia-webfrontend,debconf 0.5
+  fwsnort,debconf 0.5
+  fwlogwatch,debconf 1.2.0
+  fwanalog,debconf 0.5
+  fts,debconf 0.5
+  fs2ram,debconf 0.5
+  frontaccounting,debconf 0.5
+  freevo,debconf
+  freevo,debconf 0.5
+  freepops,debconf 0.5
+  fprobe-ulog,debconf 0.5
+  fprobe,debconf 0.5
+  fp-compiler-2.6.2,debconf 0.5
+  fortunes-fr,debconf 0.5
+  fortunes-de,debconf 0.5
+  foomatic-filters,debconf 0.5
+  flowscan,debconf 0.5
+  flashybrid,debconf 0.5
+  firebird2.5-superclassic,debconf 1.4.69
+  firebird2.5-super,debconf 1.4.69
+  firebird2.5-classic,debconf 1.4.69
+  fiaif,debconf 1.0.32
+  fex,debconf 0.5
+  ferm,debconf 1.2.0
+  fdutils,debconf 0.5
+  ez-ipupdate,debconf 1.2.0
+  extlinux,debconf 0.5
+  exabgp,debconf 1.5.34
+  esmtp,debconf 0.5
+  email-reminder,debconf
+  email-reminder,debconf 0.5
+  emacspeak-ss,debconf 0.5
+  emacspeak,debconf 0.5
+  emacspeak,debconf
+  elilo,debconf 0.5
+  ejabberd,debconf 0.5
+  efingerd,debconf
+  efax,debconf 0.5
+  edubuntu-live,debconf 0.5
+  dwww,debconf 0.5
+  dvi2ps,debconf 0.5
+  durep,debconf 0.5
+  dtc-xen-firewall,debconf
+  dtc-xen-firewall,debconf 0.5
+  dtc-xen,debconf
+  dtc-xen,debconf 0.5
+  drupal7,debconf 0.5
+  drizzle,debconf 0.5
+  dotlrn,debconf
+  dotlrn,debconf 0.5
+  dotclear,debconf 0.5
+  dokuwiki,debconf 0.5
+  dnet-common,debconf 0.5.00
+  dma,debconf 0.5
+  distmp3,debconf 0.5
+  distcc,debconf 0.5
+  dist,debconf 1.2.0
+  discover,debconf 0.5
+  dibbler-server,debconf 0.5
+  dibbler-relay,debconf 0.5
+  dibbler-client,debconf 0.5
+  dhis-client,debconf 0.5.00
+  desktop-profiles,debconf 0.5
+  dell-recovery,debconf 0.5
+  debsecan,debconf 0.5
+  debian-installer-launcher,debconf 0.5
+  debaux-debconf,debconf
+  ddclient,debconf 0.5
+  davical,debconf 1.0.32
+  davfs2,debconf 0.5
+  darkstat,debconf 0.5
+  darcsweb,debconf 0.5
+  dailystrips,debconf 0.5
+  d-push,debconf 0.5
+  cyrus-common,debconf 0.5
+  cxref,debconf 0.5
+  cwcp,debconf
+  cw,debconf
+  cvsd,debconf 0.5
+  crm114,debconf
+  crm114,debconf 0.5
+  cpufrequtils,debconf 0.5
+  cpuburn,debconf 0.5
+  cpu,debconf 0.5
+  couriergraph,debconf 1.1
+  courier-webadmin,debconf
+  courier-webadmin,debconf 0.5
+  courier-ssl,debconf
+  courier-ssl,debconf 0.5
+  courier-pop-ssl,debconf
+  courier-pop,debconf
+  courier-mta-ssl,debconf
+  courier-mta,debconf
+  courier-mta,debconf 0.5
+  courier-ldap,debconf
+  courier-imap-ssl,debconf
+  courier-imap,debconf
+  courier-base,debconf 0.5.00
+  console-setup-mini,debconf 0.5
+  console-data,debconf 0.5
+  console-cyrillic,debconf
+  console-common,debconf
+  console-common,debconf 0.5
+  configure-debian,debconf 0.5
+  common-lisp-controller,debconf 1.0
+  collectd-core,debconf 0.5
+  code-aster-run,debconf 1.5.30
+  code-aster-gui,debconf 1.5.30
+  cobbler,debconf 0.5
+  clamsmtp,debconf 0.5
+  clamav-milter,debconf 0.5
+  citadel-webcit,debconf
+  citadel-webcit,debconf 0.5
+  citadel-server,debconf 0.5
+  circuslinux,debconf 0.5
+  cipux-cat-web,debconf 0.5
+  chemical-structures,debconf
+  chemical-structures,debconf 0.5
+  chef-solr,debconf 0.5
+  chef-server-webui,debconf 0.5
+  chef,debconf 0.5
+  checkbox,debconf 0.5
+  check-mk-server,debconf
+  check-mk-server,debconf 0.5
+  cgiemail,debconf 0.5
+  cfengine2,debconf 0.5
+  cdebconf-gtk,debconf 0.5
+  cardstories,debconf 0.5
+  canna,debconf 0.5
+  calamaris,debconf 0.5
+  cacti-spine,debconf 0.5
+  cacti,debconf 0.5
+  buddycloud-server,debconf 0.5
+  boxbackup-server,debconf 0.5
+  boxbackup-client,debconf 0.5
+  bottlerocket,debconf 0.5
+  bootmail,debconf 0.5
+  boinc-client,debconf 0.5
+  bley,debconf 0.5
+  blends-dev,debconf 0.5
+  blends-common,debconf 0.5
+  bitlbee-common,debconf 0.5
+  biomaj,debconf
+  biomaj,debconf 0.5
+  bindgraph,debconf 0.5
+  bilibop-rules,debconf 0.5
+  bidentd,debconf
+  bidentd,debconf 0.5
+  beep,debconf 0.5
+  bastet,debconf 0.5
+  bandwidthd-pgsql,debconf 0.5
+  bandwidthd,debconf 0.5
+  backup-manager,debconf 0.5
+  ax25-apps,debconf 0.5
+  awl-doc,debconf 1.0.32
+  awffull,debconf 1.4.58
+  avrprog,debconf
+  avelsieve,debconf 0.5
+  auth2db-common,debconf 0.5
+  auth2db,debconf 0.5
+  atftpd,debconf 0.5
+  aspell-no,debconf 0.5
+  arno-iptables-firewall,debconf 0.5
+  arno-iptables-firewall,debconf 1.3.22
+  argus-server,debconf 0.5
+  apticron,debconf 0.5
+  apt-listdifferences,debconf 0.5
+  apt-dater-host,debconf 0.5
+  apt-cacher-ng,debconf 0.5
+  apt-cacher,debconf 0.5
+  apt-build,debconf 0.5
+  approx,debconf 0.5
+  apmd,debconf 1.2.9
+  aolserver4-daemon,debconf 1.2.9
+  aolserver4-core,debconf 1.2.9
+  anon-proxy,debconf 0.5
+  analog,debconf 0.5
+  ampache,debconf 0.5
+  amanda-common,debconf 0.5
+  am-utils,debconf 1.2.0
+  alsa-source,debconf 0.5
+  aiccu,debconf
+  aiccu,debconf 0.5
+  aegis,debconf 0.5
+  adjtimex,debconf 0.5
+  adequate,debconf
+  abook,debconf 0.5
+  389-ds-base,debconf 0.5
+  389-admin,debconf 0.5
+  x11-common,debconf 0.5
+  wvdial,debconf 0.5
+  wvdial,debconf 0.5.00
+  wukrainian,debconf 0.5
+  wswiss,debconf 0.5
+  wswedish,debconf 0.5
+  wspanish,debconf 0.5
+  wportuguese,debconf 0.5
+  wpolish,debconf 0.5
+  wogerman,debconf 0.5.0.0
+  wnorwegian,debconf 0.5
+  wngerman,debconf 0.5
+  wmanx,debconf
+  witalian,debconf 0.5
+  wirish,debconf 0.5
+  wgalician-minimos,debconf 0.5
+  wfrench,debconf
+  wfrench,debconf 0.5
+  wfaroese,debconf 0.5
+  wdutch,debconf 0.5
+  wdanish,debconf 0.5
+  wcatalan,debconf 0.5
+  wbulgarian,debconf 0.5
+  wbritish-small,debconf 0.5
+  wbritish-large,debconf 0.5
+  wbritish-insane,debconf 0.5
+  wbritish-huge,debconf 0.5
+  wbritish,debconf 0.5
+  wbrazilian,debconf 0.5
+  wamerican-small,debconf 0.5
+  wamerican-large,debconf 0.5
+  wamerican-insane,debconf 0.5
+  wamerican-huge,debconf 0.5
+  wamerican,debconf 0.5
+  vsftpd,debconf 0.5
+  util-linux,debconf 0.5
+  user-setup,debconf 0.5
+  update-notifier-common,debconf
+  update-inetd,debconf 0.5
+  unattended-upgrades,debconf
+  unattended-upgrades,debconf 0.5
+  ufw,debconf 0.5
+  ufw,debconf
+  ucf,debconf 1.5.19
+  ubuntu-minimal,debconf
+  ubuntu-drivers-common,debconf 0.5.00
+  ubiquity-frontend-debconf,debconf 1.5.24ubuntu2
+  ubiquity,debconf 1.5.43
+  tzdata,debconf 0.5
+  tomcat7,debconf 0.5
+  tftpd-hpa,debconf 0.5
+  texlive-base,debconf 0.5
+  tex-common,debconf 1.4.69
+  tex-common,debconf 0.5
+  tdsodbc,debconf 0.5
+  tasksel,debconf 1.4.27
+  tasksel,debconf 1.5.34
+  tasksel,debconf 0.5
+  sysv-rc,debconf 0.5
+  sysstat,debconf 0.5
+  strongswan-starter,debconf 0.5
+  strongswan-ike,debconf
+  ssl-cert,debconf 0.5
+  squid-deb-proxy,debconf 0.5
+  snmpd,debconf
+  snmpd,debconf 0.5
+  slapd,debconf 0.5
+  setserial,debconf 0.5
+  sasl2-bin,debconf 1.4.69
+  sasl2-bin,debconf 0.5
+  sane-utils,debconf 0.5
+  samba-common,debconf 0.5
+  resolvconf,debconf 0.5
+  quota,debconf 1.2.9
+  quagga,debconf 0.5
+  printer-driver-pnm2ppa,debconf 0.5
+  powerwaked,debconf 0.5
+  powerwake-common,debconf 0.5
+  powerwake,debconf 0.5
+  powernap-common,debconf 0.5
+  powernap,debconf 0.5
+  postgresql-common,debconf 0.5.00
+  postfix,debconf 0.5
+  popularity-contest,debconf 1.5.34
+  popularity-contest,debconf 0.5
+  phonon4qt5-backend-null,debconf 0.5
+  phonon-backend-null,debconf 0.5
+  phonon,debconf 0.5
+  pbuilder,debconf 0.5
+  openvpn,debconf 0.5
+  openssh-server,debconf 0.5
+  oem-config,debconf 0.5
+  ocfs2-tools,debconf 0.5
+  ntfs-3g,debconf 0.5
+  nbd-server,debconf 1.2.9
+  nbd-client,debconf 0.5
+  nagios3-cgi,debconf 0.5
+  mysql-server-5.5,debconf
+  mysql-server-5.5,debconf 0.5
+  multipath-tools-boot,debconf 0.5
+  miscfiles,debconf
+  memtest86+,debconf 0.5
+  mdadm,debconf 1.4.72
+  man-db,debconf 1.2.0
+  mailman,debconf
+  mailman,debconf 0.5
+  maas-region-controller-min,debconf 0.5
+  maas-region-controller,debconf 0.5
+  maas-cluster-controller,debconf 0.5
+  ltsp-server,debconf 0.5
+  lsb-core,debconf 0.5
+  linux-sound-base,debconf 0.5
+  linux-base,debconf 0.5
+  lilo,debconf 0.5
+  lightdm,debconf 0.5
+  libvirtodbc0,debconf 0.5
+  libssl1.0.0,debconf 0.5
+  libslp1,debconf
+  libpaper1,debconf 0.5
+  libpam0g,debconf 0.5
+  libpam-runtime,debconf 1.5.19
+  libpam-runtime,debconf 0.5
+  libpam-radius-auth,debconf
+  libpam-modules,debconf 0.5
+  libhesiod0,debconf 0.5
+  libfltk1.1-dev,debconf 0.5
+  libc6,debconf
+  ldap-auth-config,debconf 0.5
+  landscape-common,debconf 0.5
+  landscape-client,debconf 0.5
+  krb5-config,debconf 0.5
+  keyboard-configuration,debconf 1.5.34
+  kexec-tools,debconf
+  kexec-tools,debconf 0.5
+  isc-dhcp-server,debconf 0.5
+  irqbalance,debconf 0.5
+  irda-utils,debconf
+  irda-utils,debconf 0.5
+  ipvsadm,debconf 0.5
+  installation-report,debconf
+  iamerican,debconf 0.5
+  grub-xen,debconf 0.5
+  grub-pc,debconf 0.5
+  grub-legacy-ec2,debconf 0.5
+  grub-legacy-ec2,debconf 1.5.19
+  grub-ieee1275,debconf 0.5
+  grub-efi-ia32,debconf 0.5
+  grub-efi-amd64,debconf 0.5
+  grub,debconf 1.5.19
+  ghostscript,debconf
+  fonts-arphic-uming,debconf
+  flex,debconf
+  exim4-daemon-light,debconf 0.5
+  exim4-daemon-heavy,debconf 0.5
+  exim4-config,debconf 0.5
+  exim4-base,debconf 0.5
+  exim4,debconf 1.4.69
+  exim4,debconf 0.5
+  evolution,debconf 1.4.69
+  etckeeper,debconf 0.5
+  dpkg-cross,debconf 0.5
+  dovecot-core,debconf 0.5
+  dictionaries-common,debconf 1.5.5
+  dictd,debconf 0.5
+  debconf-utils,debconf 0.1.0
+  debconf-utils,debconf 0.1.0
+  debconf-utils,debconf 1.3.20
+  debconf-i18n,debconf 1.3.0
+  debconf-i18n,debconf
+  debconf-doc,debconf 0.3.10
+  dbconfig-common,debconf 0.5
+  cups-bsd,debconf 0.5
+  cups,debconf 1.2.9
+  cryptsetup,debconf 0.5
+  console-setup,debconf 1.5.34
+  compiz,debconf 0.5
+  cloud-init,debconf 0.5
+  clamav-freshclam,debconf 0.5
+  clamav-base,debconf 0.5
+  chkrootkit,debconf
+  chkrootkit,debconf 0.5
+  checksecurity,debconf 0.5
+  cdebconf,debconf
+  ca-certificates,debconf 0.5
+  byobu,debconf 0.5
+  bind9,debconf 0.5
+  base-passwd,debconf 0.5
+  bacula-director-sqlite3,debconf 0.5
+  bacula-director-pgsql,debconf 0.5
+  bacula-director-mysql,debconf 0.5
+  bacula-common,debconf 0.5
+  backuppc,debconf 0.5
+  b43-fwcutter,debconf 0.5
+  auctex,debconf 0.5
+  apt-listchanges,debconf 0.5
+  apparmor,debconf
+  apparmor,debconf 0.5
+  anthy,debconf 0.5
+  amavisd-new,debconf 0.5
+  aide-common,debconf 0.5
+  adduser,debconf
 Dependencies:
-3:20121221-4ubuntu1.1 - libc6 (2 2.14) libcap2 (2 2.10) libgnutls-openssl27 (0 (null)) libcap2-bin (0 (null)) iputils-ping:i386 (0 (null))
-3:20121221-4ubuntu1 - libc6 (2 2.14) libcap2 (2 2.10) libgnutls-openssl27 (0 (null)) libcap2-bin (0 (null)) iputils-ping:i386 (0 (null))
+1.5.51ubuntu2 - perl-base (2 5.6.1-4) debconf-doc (0 (null)) debconf-utils (0 (null)) whiptail (16 (null)) dialog (16 (null)) gnome-utils (0 (null)) libterm-readline-gnu-perl (0 (null)) libgtk2-perl (2 1:1.130) libnet-ldap-perl (0 (null)) perl (0 (null)) libqtgui4-perl (0 (null)) libqtcore4-perl (0 (null)) apt-utils (2 0.5.1) debconf-i18n (0 (null)) apt (3 0.3.12.1) apt:i386 (3 0.3.12.1) cdebconf (3 0.96) cdebconf:i386 (3 0.96) debconf-tiny (0 (null)) debconf-tiny:i386 (0 (null)) debconf-utils (3 1.3.22) debconf-utils:i386 (3 1.3.22) dialog (3 0.9b-20020814-1) dialog:i386 (3 0.9b-20020814-1) menu (1 2.1.3-1) menu:i386 (1 2.1.3-1) whiptail (3 0.51.4-11) whiptail:i386 (3 0.51.4-11) whiptail-utf8 (1 0.50.17-13) whiptail-utf8:i386 (1 0.50.17-13) debconf-tiny (0 (null)) debconf-tiny:i386 (0 (null))
 Provides:
-3:20121221-4ubuntu1.1 - ping
-3:20121221-4ubuntu1 - ping
+1.5.51ubuntu2 - debconf:i386 debconf-2.0:i386 debconf-2.0
 Reverse Provides:
 </code></pre><p>執行</p>
-<pre><code>$ apt-cache showsrc iputils-ping
+<pre><code>$ apt-cache showsrc debconf
 </code></pre><p>顯示</p>
-<pre><code>Package: iputils
-Binary: iputils-ping, iputils-tracepath, iputils-arping, iputils-clockdiff
-Version: 3:20121221-4ubuntu1
+<pre><code>Package: debconf
+Binary: debconf, debconf-i18n, debconf-doc, debconf-utils
+Version: 1.5.51ubuntu2
 Priority: important
-Section: net
-Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Original-Maintainer: Noah Meyerhans &lt;noahm@debian.org&gt;
-Build-Depends: debhelper (&gt;= 7), sp, sgmlspl, docbook, libcap-dev, libgnutls-openssl-dev
-Architecture: any
-Standards-Version: 3.9.4.0
-Format: 3.0 (quilt)
-Directory: pool/main/i/iputils
+Section: admin
+Maintainer: Colin Watson &lt;cjwatson@ubuntu.com&gt;
+Original-Maintainer: Debconf Developers &lt;debconf-devel@lists.alioth.debian.org&gt;
+Build-Depends: debhelper (&gt;= 7.2.11~), po-debconf, po4a (&gt;= 0.23)
+Build-Depends-Indep: perl (&gt;= 5.10.0-16), python (&gt;= 2.6.6-3~), python3 (&gt;= 3.1.2-8), gettext (&gt;= 0.13), libintl-perl, libqtgui4-perl
+Architecture: all
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/d/debconf
 Files:
- 2f96146140fc37805647527d9d3c4ae8 2192 iputils_20121221-4ubuntu1.dsc
- 6072aef64205720dd1893b375e184171 155344 iputils_20121221.orig.tar.bz2
- 1376fa77c0c8b2c986e132238870f274 16094 iputils_20121221-4ubuntu1.debian.tar.gz
-Vcs-Browser: http://git.debian.org/?p=collab-maint/iputils.git;a=summary
-Vcs-Git: git://git.debian.org/collab-maint/iputils.git
+ 2506d4c8ee513116ff3d05c94e2801b2 1426 debconf_1.5.51ubuntu2.dsc
+ d29960ef2c27abc7336c11d976f7deae 1007569 debconf_1.5.51ubuntu2.tar.gz
+Uploaders: Joey Hess &lt;joeyh@debian.org&gt;, Colin Watson &lt;cjwatson@debian.org&gt;
+Vcs-Bzr: http://bazaar.launchpad.net/+branch/ubuntu/debconf
 Package-List:
- iputils-arping deb net extra
- iputils-clockdiff deb net extra
- iputils-ping deb net important
- iputils-tracepath deb net optional
+ debconf deb admin important
+ debconf-doc deb doc optional
+ debconf-i18n deb localization important
+ debconf-utils deb devel optional
 Checksums-Sha1:
- 110d102d5002dfaffef20281c1814873c2b2e711 2192 iputils_20121221-4ubuntu1.dsc
- 4d56d8c75d6a5d58f052e4056e975f01ebab9ba9 155344 iputils_20121221.orig.tar.bz2
- be83f82ac334b658c93d2e0d5aa1e9380c24adef 16094 iputils_20121221-4ubuntu1.debian.tar.gz
+ fdc47b4513a2b5d5555f273ff4979b4464d5d8f2 1426 debconf_1.5.51ubuntu2.dsc
+ 09bb7101bec98f6f1331ecc0b77590d207a6c4d2 1007569 debconf_1.5.51ubuntu2.tar.gz
 Checksums-Sha256:
- dd60c3e130968738b46c6b33a30dbd845e3784d00f39789ebadec74c7cab5500 2192 iputils_20121221-4ubuntu1.dsc
- 450f549fc5b620c23c5929aa6d54b7ddfc7ee1cb1e8efdc5e8bb21d8d0c5319f 155344 iputils_20121221.orig.tar.bz2
- 75d30eb296e0cda39c9f2a31b60079433c2e7c654a5fde57456ca5ff13d48983 16094 iputils_20121221-4ubuntu1.debian.tar.gz
-
-Package: iputils
-Binary: iputils-ping, iputils-tracepath, iputils-arping, iputils-clockdiff
-Version: 3:20121221-4ubuntu1.1
-Priority: important
-Section: net
-Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Original-Maintainer: Noah Meyerhans &lt;noahm@debian.org&gt;
-Build-Depends: debhelper (&gt;= 7), sp, sgmlspl, docbook, libcap-dev, libgnutls-openssl-dev
-Architecture: any
-Standards-Version: 3.9.4.0
-Format: 3.0 (quilt)
-Directory: pool/main/i/iputils
-Files:
- e93398c5c781ee1fff15087bf7cbc0d0 2127 iputils_20121221-4ubuntu1.1.dsc
- 6072aef64205720dd1893b375e184171 155344 iputils_20121221.orig.tar.bz2
- 4f53910e7bae050095f3dc238475285a 16143 iputils_20121221-4ubuntu1.1.debian.tar.gz
-Vcs-Browser: http://git.debian.org/?p=collab-maint/iputils.git;a=summary
-Vcs-Git: git://git.debian.org/collab-maint/iputils.git
-Package-List:
- iputils-arping deb net extra
- iputils-clockdiff deb net extra
- iputils-ping deb net important
- iputils-tracepath deb net optional
-Checksums-Sha1:
- 7b0c5ac9c48d1f18524ba138734c08d9ca2c1f1a 2127 iputils_20121221-4ubuntu1.1.dsc
- 4d56d8c75d6a5d58f052e4056e975f01ebab9ba9 155344 iputils_20121221.orig.tar.bz2
- 58fa7e192f8d4c6073f5acca50bf4c91dcdecfe0 16143 iputils_20121221-4ubuntu1.1.debian.tar.gz
-Checksums-Sha256:
- 90d448fa7e9750fb00cd837e8bc37a909b21e706a812afd1d5840fa914be3584 2127 iputils_20121221-4ubuntu1.1.dsc
- 450f549fc5b620c23c5929aa6d54b7ddfc7ee1cb1e8efdc5e8bb21d8d0c5319f 155344 iputils_20121221.orig.tar.bz2
- 4eb3ca79e68dfc5f5e66df7be3113c230168fbca2420da232adadc6475056c6a 16143 iputils_20121221-4ubuntu1.1.debian.tar.gz
+ a2a94f0129c4eedb5df5f52cfe2ec7024aa190bcc991ad41d4c0e672040b8fb1 1426 debconf_1.5.51ubuntu2.dsc
+ 65856bb62c3fc9f1b827c6af51f82166df3b2ff5a9daecbc7e28aa99342af5fc 1007569 debconf_1.5.51ubuntu2.tar.gz
+Debian-Vcs-Browser: http://git.debian.org/?p=debconf/debconf.git;a=summary
+Debian-Vcs-Git: git://git.debian.org/git/debconf/debconf.git
 </code></pre><p>執行</p>
-<pre><code>$ dpkg -s iputils-ping
+<pre><code>$ dpkg -s debconf
 </code></pre><p>顯示</p>
-<pre><code>Package: iputils-ping
+<pre><code>Package: debconf
 Status: install ok installed
-Priority: important
-Section: net
-Installed-Size: 159
-Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Architecture: amd64
-Source: iputils
-Version: 3:20121221-4ubuntu1.1
-Provides: ping
-Depends: libc6 (&gt;= 2.14), libcap2 (&gt;= 2.10), libgnutls-openssl27
-Recommends: libcap2-bin
-Description: Tools to test the reachability of network hosts
- The ping command sends ICMP ECHO_REQUEST packets to a host in order to
- test if the host is reachable via the network.
- .
- This package includes a ping6 utility which supports IPv6 network
- connections.
-Original-Maintainer: Noah Meyerhans &lt;noahm@debian.org&gt;
+Priority: required
+Section: admin
+Installed-Size: 609
+Maintainer: Colin Watson &lt;cjwatson@ubuntu.com&gt;
+Architecture: all
+Multi-Arch: foreign
+Version: 1.5.51ubuntu2
+Replaces: debconf-tiny
+Provides: debconf-2.0
+Pre-Depends: perl-base (&gt;= 5.6.1-4)
+Recommends: apt-utils (&gt;= 0.5.1), debconf-i18n
+Suggests: debconf-doc, debconf-utils, whiptail | dialog | gnome-utils, libterm-readline-gnu-perl, libgtk2-perl (&gt;= 1:1.130), libnet-ldap-perl, perl, libqtgui4-perl, libqtcore4-perl
+Conflicts: apt (&lt;&lt; 0.3.12.1), cdebconf (&lt;&lt; 0.96), debconf-tiny, debconf-utils (&lt;&lt; 1.3.22), dialog (&lt;&lt; 0.9b-20020814-1), menu (&lt;= 2.1.3-1), whiptail (&lt;&lt; 0.51.4-11), whiptail-utf8 (&lt;= 0.50.17-13)
+Conffiles:
+ /etc/bash_completion.d/debconf 8fa1862734fbe54d7178aaaa419f5a11
+ /etc/apt/apt.conf.d/70debconf 7e9d09d5801a42b4926b736b8eeabb73
+ /etc/debconf.conf 8c0619be413824f1fc7698cee0f23811
+Description: Debian configuration management system
+ Debconf is a configuration management system for debian packages. Packages
+ use Debconf to ask questions when they are installed.
+Original-Maintainer: Debconf Developers &lt;debconf-devel@lists.alioth.debian.org&gt;
 </code></pre><p>執行</p>
-<pre><code>$ dpkg -l iputils-ping
+<pre><code>$ dpkg -l debconf
 </code></pre><p>顯示</p>
 <pre><code>Desired=Unknown/Install/Remove/Purge/Hold
 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
 |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
 ||/ Name                         Version             Architecture        Description
 +++-============================-===================-===================-==============================================================
-ii  iputils-ping                 3:20121221-4ubuntu1 amd64               Tools to test the reachability of network hosts
+ii  debconf                      1.5.51ubuntu2       all                 Debian configuration management system
 </code></pre><h2 id="">準備工作環境</h2>
-<pre><code>mkdir  ~/Downloads/iputils-ping -p
-cd ~/Downloads/iputils-ping
+<pre><code>mkdir  ~/Downloads/debconf -p
+cd ~/Downloads/debconf
 mkdir download source
-</code></pre><h2 id="package-iputils-pinghttppackagesubuntucomtrustyiputils-ping">探索「Package: <a href="http://packages.ubuntu.com/trusty/iputils-ping" target="_blank">iputils-ping</a>」</h2>
-<p>切換到「~/Downloads/iputils-ping/download」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/iputils-ping/download
+</code></pre><h2 id="package-debconfhttppackagesubuntucomtrustydebconf">探索「Package: <a href="http://packages.ubuntu.com/trusty/debconf" target="_blank">debconf</a>」</h2>
+<p>切換到「~/Downloads/debconf/download」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/debconf/download
 </code></pre>
-<p>下載「Package: iputils-ping」。</p>
-<pre><code class="lang-sh">$ apt-get download iputils-ping
+<p>下載「Package: debconf」。</p>
+<pre><code class="lang-sh">$ apt-get download debconf
 </code></pre>
-<p>解開「package iputils-ping」</p>
-<pre><code class="lang-sh">dpkg -x iputils-ping_3%<span class="hljs-number">3</span>a20121221-<span class="hljs-number">4</span>ubuntu1.<span class="hljs-number">1</span>_amd64.deb iputils-ping
-dpkg <span class="hljs-operator">-e</span> iputils-ping_3%<span class="hljs-number">3</span>a20121221-<span class="hljs-number">4</span>ubuntu1.<span class="hljs-number">1</span>_amd64.deb
-<span class="hljs-comment"># ar xv iputils-ping_3%3a20121221-4ubuntu1.1_amd64.deb</span>
+<p>解開「package debconf」</p>
+<pre><code class="lang-sh">dpkg -x debconf_1.<span class="hljs-number">5.51</span>ubuntu2_all.deb debconf
+dpkg <span class="hljs-operator">-e</span> debconf_1.<span class="hljs-number">5.51</span>ubuntu2_all.deb
+<span class="hljs-comment"># ar xv debconf_1.5.51ubuntu2_all.deb</span>
 </code></pre>
 <p>檢視套件檔案</p>
-<pre><code class="lang-sh">$ tree iputils-ping
+<pre><code class="lang-sh">$ tree debconf
 </code></pre>
 <p>顯示</p>
-<pre><code>iputils-ping
-├── bin
-│   ├── ping
-│   └── ping6
-└── usr
-    └── share
-        ├── doc
-        │   └── iputils-ping
-        │       ├── changelog.Debian.gz
-        │       ├── copyright
-        │       └── RELNOTES.gz
-        ├── lintian
-        │   └── overrides
-        │       └── iputils-ping
-        └── man
-            └── man8
-                ├── ping6.8.gz -&gt; ping.8.gz
-                └── ping.8.gz
+<pre><code>debconf
+├── etc
+│   ├── apt
+│   │   └── apt.conf.d
+│   │       └── 70debconf
+│   ├── bash_completion.d
+│   │   └── debconf
+│   └── debconf.conf
+├── usr
+│   ├── bin
+│   │   ├── debconf
+│   │   ├── debconf-apt-progress
+│   │   ├── debconf-communicate
+│   │   ├── debconf-copydb
+│   │   ├── debconf-escape
+│   │   ├── debconf-set-selections
+│   │   └── debconf-show
+│   ├── lib
+│   │   ├── python2.7
+│   │   │   └── dist-packages
+│   │   │       └── debconf.py
+│   │   └── python3
+│   │       └── dist-packages
+│   │           └── debconf.py
+│   ├── sbin
+│   │   ├── dpkg-preconfigure
+│   │   └── dpkg-reconfigure
+│   └── share
+│       ├── debconf
+│       │   ├── confmodule
+│       │   ├── confmodule.sh
+│       │   ├── debconf.conf
+│       │   ├── fix_db.pl
+│       │   ├── frontend
+│       │   └── transition_db.pl
+│       ├── doc
+│       │   └── debconf
+│       │       ├── changelog.gz
+│       │       ├── copyright
+│       │       └── README.Debian
+│       ├── lintian
+│       │   └── overrides
+│       │       └── debconf
+│       ├── man
+│       │   ├── man1
+│       │   │   ├── debconf.1.gz
+│       │   │   ├── debconf-apt-progress.1.gz
+│       │   │   ├── debconf-communicate.1.gz
+│       │   │   ├── debconf-copydb.1.gz
+│       │   │   ├── debconf-escape.1.gz
+│       │   │   ├── debconf-set-selections.1.gz
+│       │   │   └── debconf-show.1.gz
+│       │   └── man8
+│       │       ├── dpkg-preconfigure.8.gz
+│       │       └── dpkg-reconfigure.8.gz
+│       ├── perl5
+│       │   ├── Debconf
+│       │   │   ├── AutoSelect.pm
+│       │   │   ├── Base.pm
+│       │   │   ├── Client
+│       │   │   │   └── ConfModule.pm
+│       │   │   ├── Config.pm
+│       │   │   ├── ConfModule.pm
+│       │   │   ├── DbDriver
+│       │   │   │   ├── Backup.pm
+│       │   │   │   ├── Cache.pm
+│       │   │   │   ├── Copy.pm
+│       │   │   │   ├── Debug.pm
+│       │   │   │   ├── Directory.pm
+│       │   │   │   ├── DirTree.pm
+│       │   │   │   ├── File.pm
+│       │   │   │   ├── LDAP.pm
+│       │   │   │   ├── PackageDir.pm
+│       │   │   │   ├── Pipe.pm
+│       │   │   │   └── Stack.pm
+│       │   │   ├── DbDriver.pm
+│       │   │   ├── Db.pm
+│       │   │   ├── Element
+│       │   │   │   ├── Dialog
+│       │   │   │   │   ├── Boolean.pm
+│       │   │   │   │   ├── Error.pm
+│       │   │   │   │   ├── Multiselect.pm
+│       │   │   │   │   ├── Note.pm
+│       │   │   │   │   ├── Password.pm
+│       │   │   │   │   ├── Progress.pm
+│       │   │   │   │   ├── Select.pm
+│       │   │   │   │   ├── String.pm
+│       │   │   │   │   └── Text.pm
+│       │   │   │   ├── Editor
+│       │   │   │   │   ├── Boolean.pm
+│       │   │   │   │   ├── Error.pm
+│       │   │   │   │   ├── Multiselect.pm
+│       │   │   │   │   ├── Note.pm
+│       │   │   │   │   ├── Password.pm
+│       │   │   │   │   ├── Progress.pm
+│       │   │   │   │   ├── Select.pm
+│       │   │   │   │   ├── String.pm
+│       │   │   │   │   └── Text.pm
+│       │   │   │   ├── Gnome
+│       │   │   │   │   ├── Boolean.pm
+│       │   │   │   │   ├── Error.pm
+│       │   │   │   │   ├── Multiselect.pm
+│       │   │   │   │   ├── Note.pm
+│       │   │   │   │   ├── Password.pm
+│       │   │   │   │   ├── Progress.pm
+│       │   │   │   │   ├── Select.pm
+│       │   │   │   │   ├── String.pm
+│       │   │   │   │   └── Text.pm
+│       │   │   │   ├── Gnome.pm
+│       │   │   │   ├── Kde
+│       │   │   │   │   ├── Boolean.pm
+│       │   │   │   │   ├── Error.pm
+│       │   │   │   │   ├── Multiselect.pm
+│       │   │   │   │   ├── Note.pm
+│       │   │   │   │   ├── Password.pm
+│       │   │   │   │   ├── Progress.pm
+│       │   │   │   │   ├── Select.pm
+│       │   │   │   │   ├── String.pm
+│       │   │   │   │   └── Text.pm
+│       │   │   │   ├── Kde.pm
+│       │   │   │   ├── Multiselect.pm
+│       │   │   │   ├── Noninteractive
+│       │   │   │   │   ├── Boolean.pm
+│       │   │   │   │   ├── Error.pm
+│       │   │   │   │   ├── Multiselect.pm
+│       │   │   │   │   ├── Note.pm
+│       │   │   │   │   ├── Password.pm
+│       │   │   │   │   ├── Progress.pm
+│       │   │   │   │   ├── Select.pm
+│       │   │   │   │   ├── String.pm
+│       │   │   │   │   └── Text.pm
+│       │   │   │   ├── Noninteractive.pm
+│       │   │   │   ├── Select.pm
+│       │   │   │   ├── Teletype
+│       │   │   │   │   ├── Boolean.pm
+│       │   │   │   │   ├── Error.pm
+│       │   │   │   │   ├── Multiselect.pm
+│       │   │   │   │   ├── Note.pm
+│       │   │   │   │   ├── Password.pm
+│       │   │   │   │   ├── Progress.pm
+│       │   │   │   │   ├── Select.pm
+│       │   │   │   │   ├── String.pm
+│       │   │   │   │   └── Text.pm
+│       │   │   │   └── Web
+│       │   │   │       ├── Boolean.pm
+│       │   │   │       ├── Error.pm
+│       │   │   │       ├── Multiselect.pm
+│       │   │   │       ├── Note.pm
+│       │   │   │       ├── Password.pm
+│       │   │   │       ├── Progress.pm
+│       │   │   │       ├── Select.pm
+│       │   │   │       ├── String.pm
+│       │   │   │       └── Text.pm
+│       │   │   ├── Element.pm
+│       │   │   ├── Encoding.pm
+│       │   │   ├── Format
+│       │   │   │   └── 822.pm
+│       │   │   ├── Format.pm
+│       │   │   ├── FrontEnd
+│       │   │   │   ├── Dialog.pm
+│       │   │   │   ├── Editor.pm
+│       │   │   │   ├── Gnome.pm
+│       │   │   │   ├── Kde
+│       │   │   │   │   ├── Ui_DebconfWizard.pm
+│       │   │   │   │   └── Wizard.pm
+│       │   │   │   ├── Kde.pm
+│       │   │   │   ├── Noninteractive.pm
+│       │   │   │   ├── Passthrough.pm
+│       │   │   │   ├── Readline.pm
+│       │   │   │   ├── ScreenSize.pm
+│       │   │   │   ├── Teletype.pm
+│       │   │   │   ├── Text.pm
+│       │   │   │   └── Web.pm
+│       │   │   ├── FrontEnd.pm
+│       │   │   ├── Gettext.pm
+│       │   │   ├── Iterator.pm
+│       │   │   ├── Log.pm
+│       │   │   ├── Path.pm
+│       │   │   ├── Priority.pm
+│       │   │   ├── Question.pm
+│       │   │   ├── Template
+│       │   │   │   └── Transient.pm
+│       │   │   ├── Template.pm
+│       │   │   └── TmpFile.pm
+│       │   └── Debian
+│       │       └── DebConf
+│       │           └── Client
+│       │               └── ConfModule.pm
+│       └── pixmaps
+│           └── debian-logo.png
+└── var
+    └── cache
+        └── debconf
 
-9 directories, 8 files
-</code></pre><pre><code>$ tree DEBIAN
+44 directories, 148 files
+</code></pre><p>執行</p>
+<pre><code>$ tree DEBIAN
 </code></pre><p>顯示</p>
 <pre><code>DEBIAN
+├── conffiles
+├── config
 ├── control
 ├── md5sums
-└── postinst
+├── postinst
+├── preinst
+├── prerm
+└── templates
 
-0 directories, 3 files
-</code></pre><h2 id="source-package-iputils-pinghttppackagesubuntucomtrustyiputils-ping">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/iputils-ping" target="_blank">iputils-ping</a>」</h2>
-<p>切換到「~/Downloads/iputils-ping/source」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/iputils-ping/<span class="hljs-built_in">source</span>
+0 directories, 8 files
+</code></pre><h2 id="source-package-debconfhttppackagesubuntucomsourcetrustydebconf">探索「Source Package: <a href="http://packages.ubuntu.com/source/trusty/debconf" target="_blank">debconf</a>」</h2>
+<p>切換到「~/Downloads/debconf/source」</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/debconf/<span class="hljs-built_in">source</span>
 </code></pre>
-<p>下載「Source Package: iputils-ping」。</p>
-<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> iputils-ping
+<p>下載「Source Package: debconf」。</p>
+<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> debconf
 </code></pre>
 <p>檢視原始碼套件檔案。</p>
-<pre><code>$ tree iputils-20121221
+<pre><code>$ tree debconf-1.5.51ubuntu2
 </code></pre><p>顯示</p>
-<pre><code>iputils-20121221
-├── arping.c
-├── clockdiff.c
+<pre><code>
+debconf-1.5.51ubuntu2
+├── bash_completion
+├── check_db.pl
+├── confmodule
+├── confmodule.sh
+├── debconf
+├── Debconf
+│   ├── AutoSelect.pm
+│   ├── Base.pm
+│   ├── Client
+│   │   ├── ConfModule.pm
+│   │   └── ConfModule.stub
+│   ├── Config.pm
+│   ├── ConfModule.pm
+│   ├── DbDriver
+│   │   ├── Backup.pm
+│   │   ├── Cache.pm
+│   │   ├── Copy.pm
+│   │   ├── Debug.pm
+│   │   ├── Directory.pm
+│   │   ├── DirTree.pm
+│   │   ├── File.pm
+│   │   ├── LDAP.pm
+│   │   ├── PackageDir.pm
+│   │   ├── Pipe.pm
+│   │   └── Stack.pm
+│   ├── DbDriver.pm
+│   ├── Db.pm
+│   ├── Element
+│   │   ├── Dialog
+│   │   │   ├── Boolean.pm
+│   │   │   ├── Error.pm
+│   │   │   ├── Multiselect.pm
+│   │   │   ├── Note.pm
+│   │   │   ├── Password.pm
+│   │   │   ├── Progress.pm
+│   │   │   ├── Select.pm
+│   │   │   ├── String.pm
+│   │   │   └── Text.pm
+│   │   ├── Editor
+│   │   │   ├── Boolean.pm
+│   │   │   ├── Error.pm
+│   │   │   ├── Multiselect.pm
+│   │   │   ├── Note.pm
+│   │   │   ├── Password.pm
+│   │   │   ├── Progress.pm
+│   │   │   ├── Select.pm
+│   │   │   ├── String.pm
+│   │   │   └── Text.pm
+│   │   ├── Gnome
+│   │   │   ├── Boolean.pm
+│   │   │   ├── Error.pm
+│   │   │   ├── Multiselect.pm
+│   │   │   ├── Note.pm
+│   │   │   ├── Password.pm
+│   │   │   ├── Progress.pm
+│   │   │   ├── Select.pm
+│   │   │   ├── String.pm
+│   │   │   └── Text.pm
+│   │   ├── Gnome.pm
+│   │   ├── Kde
+│   │   │   ├── Boolean.pm
+│   │   │   ├── Error.pm
+│   │   │   ├── Multiselect.pm
+│   │   │   ├── Note.pm
+│   │   │   ├── Password.pm
+│   │   │   ├── Progress.pm
+│   │   │   ├── Select.pm
+│   │   │   ├── String.pm
+│   │   │   └── Text.pm
+│   │   ├── Kde.pm
+│   │   ├── Multiselect.pm
+│   │   ├── Noninteractive
+│   │   │   ├── Boolean.pm
+│   │   │   ├── Error.pm
+│   │   │   ├── Multiselect.pm
+│   │   │   ├── Note.pm
+│   │   │   ├── Password.pm
+│   │   │   ├── Progress.pm
+│   │   │   ├── Select.pm
+│   │   │   ├── String.pm
+│   │   │   └── Text.pm
+│   │   ├── Noninteractive.pm
+│   │   ├── Select.pm
+│   │   ├── Teletype
+│   │   │   ├── Boolean.pm
+│   │   │   ├── Error.pm
+│   │   │   ├── Multiselect.pm
+│   │   │   ├── Note.pm
+│   │   │   ├── Password.pm
+│   │   │   ├── Progress.pm
+│   │   │   ├── Select.pm
+│   │   │   ├── String.pm
+│   │   │   └── Text.pm
+│   │   └── Web
+│   │       ├── Boolean.pm
+│   │       ├── Error.pm
+│   │       ├── Multiselect.pm
+│   │       ├── Note.pm
+│   │       ├── Password.pm
+│   │       ├── Progress.pm
+│   │       ├── Select.pm
+│   │       ├── String.pm
+│   │       └── Text.pm
+│   ├── Element.pm
+│   ├── Encoding.pm
+│   ├── Format
+│   │   └── 822.pm
+│   ├── Format.pm
+│   ├── FrontEnd
+│   │   ├── Dialog.pm
+│   │   ├── Editor.pm
+│   │   ├── Gnome.pm
+│   │   ├── Kde
+│   │   │   ├── generateui.sh
+│   │   │   ├── Wizard.pm
+│   │   │   └── WizardUi.ui
+│   │   ├── Kde.pm
+│   │   ├── Noninteractive.pm
+│   │   ├── Passthrough.pm
+│   │   ├── Readline.pm
+│   │   ├── ScreenSize.pm
+│   │   ├── Teletype.pm
+│   │   ├── Text.pm
+│   │   └── Web.pm
+│   ├── FrontEnd.pm
+│   ├── Gettext.pm
+│   ├── Iterator.pm
+│   ├── Log.pm
+│   ├── Path.pm
+│   ├── Priority.pm
+│   ├── Question.pm
+│   ├── Template
+│   │   └── Transient.pm
+│   ├── Template.pm
+│   └── TmpFile.pm
+├── debconf-apt-progress
+├── debconf-communicate
+├── debconf.conf
+├── debconf-copydb
+├── debconf-escape
+├── debconf-getlang
+├── debconf-get-selections
+├── debconf-loadtemplate
+├── debconf-mergetemplate
+├── debconf.py
+├── debconf-set-selections
+├── debconf-show
 ├── debian
+│   ├── apt.conf
 │   ├── changelog
+│   ├── clean
 │   ├── compat
+│   ├── config
 │   ├── control
 │   ├── copyright
-│   ├── dirs
-│   ├── dirs.iputils-arping
-│   ├── dirs.iputils-tracepath
-│   ├── docs
-│   ├── files.iputils-arping
-│   ├── files.iputils-tracepath
-│   ├── iputils-arping.docs
-│   ├── iputils-arping.manpages
-│   ├── iputils-arping.postinst
-│   ├── iputils-clockdiff.docs
-│   ├── iputils-clockdiff.manpages
-│   ├── iputils-doc.docs
-│   ├── iputils-doc.files
-│   ├── iputils-ping.docs
-│   ├── iputils-ping.lintian-overrides
-│   ├── iputils-ping.manpages
-│   ├── iputils-ping.postinst
-│   ├── iputils-tracepath.docs
-│   ├── iputils-tracepath.manpages
-│   ├── iputils-tracepath.postinst
-│   ├── iputils-tracepath.prerm
-│   ├── patches
-│   │   ├── bug109709-less-dns.patch
-│   │   ├── bug_601147_audible_flood
-│   │   ├── bug_628893_flush_stdout_on_truncated_packets
-│   │   ├── bug629075-tracepath_hops_back.patch
-│   │   ├── bug686944-quit_when_done.patch
-│   │   ├── bug698287-typo.patch
-│   │   ├── fix-arping-timeouts.diff
-│   │   ├── fix-tracepath-docs.diff
-│   │   ├── recverr_works_bug709052.patch
-│   │   ├── series
-│   │   ├── set_buildflags
-│   │   ├── targets.diff
-│   │   ├── upstream-max-hops.patch
-│   │   ├── upstream-tracepath-printf-cleanup.patch
-│   │   └── use_gethostbyname2.diff
+│   ├── debconf.dirs
+│   ├── debconf-doc.docs
+│   ├── debconf-doc.examples
+│   ├── debconf-doc.manpages
+│   ├── debconf-i18n.links
+│   ├── debconf-i18n.manpages
+│   ├── debconf.lintian-overrides
+│   ├── debconf.manpages
+│   ├── debconf-utils.links
+│   ├── debconf-utils.manpages
+│   ├── debconf-utils.postinst
+│   ├── po
+│   │   ├── ar.po
+│   │   ├── ast.po
+│   │   ├── be.po
+│   │   ├── bg.po
+│   │   ├── bn.po
+│   │   ├── bs.po
+│   │   ├── ca.po
+│   │   ├── cs.po
+│   │   ├── cy.po
+│   │   ├── da.po
+│   │   ├── de.po
+│   │   ├── dz.po
+│   │   ├── el.po
+│   │   ├── eo.po
+│   │   ├── es.po
+│   │   ├── et.po
+│   │   ├── eu.po
+│   │   ├── fa.po
+│   │   ├── fi.po
+│   │   ├── fr.po
+│   │   ├── ga.po
+│   │   ├── gl.po
+│   │   ├── gu.po
+│   │   ├── he.po
+│   │   ├── hi.po
+│   │   ├── hr.po
+│   │   ├── hu.po
+│   │   ├── id.po
+│   │   ├── is.po
+│   │   ├── it.po
+│   │   ├── ja.po
+│   │   ├── kk.po
+│   │   ├── km.po
+│   │   ├── ko.po
+│   │   ├── lt.po
+│   │   ├── lv.po
+│   │   ├── mg.po
+│   │   ├── mk.po
+│   │   ├── ml.po
+│   │   ├── mr.po
+│   │   ├── nb.po
+│   │   ├── ne.po
+│   │   ├── nl.po
+│   │   ├── nn.po
+│   │   ├── pa.po
+│   │   ├── pl.po
+│   │   ├── POTFILES.in
+│   │   ├── pt_BR.po
+│   │   ├── pt.po
+│   │   ├── ro.po
+│   │   ├── ru.po
+│   │   ├── si.po
+│   │   ├── sk.po
+│   │   ├── sl.po
+│   │   ├── sq.po
+│   │   ├── sr@latin.po
+│   │   ├── sr.po
+│   │   ├── sv.po
+│   │   ├── ta.po
+│   │   ├── templates.pot
+│   │   ├── te.po
+│   │   ├── th.po
+│   │   ├── tl.po
+│   │   ├── tr.po
+│   │   ├── ug.po
+│   │   ├── uk.po
+│   │   ├── vi.po
+│   │   ├── wo.po
+│   │   ├── xh.po
+│   │   ├── zh_CN.po
+│   │   └── zh_TW.po
+│   ├── postinst
+│   ├── preinst
+│   ├── prerm
+│   ├── README.Debian
 │   ├── rules
-│   └── source
-│       └── format
+│   └── templates
+├── debian-logo.png
 ├── doc
-│   ├── arping.sgml
-│   ├── clockdiff.sgml
-│   ├── docbook2man-spec.pl
-│   ├── index.db
-│   ├── index.out
-│   ├── iputils.db
+│   ├── CREDITS
+│   ├── debconf.schema
+│   ├── EXAMPLES
+│   ├── graph.pl
+│   ├── html.dsl
 │   ├── Makefile
-│   ├── ninfod.sgml
-│   ├── pg3.sgml
-│   ├── ping.sgml
-│   ├── rarpd.sgml
-│   ├── rdisc.sgml
-│   ├── snapshot.db
-│   ├── tftpd.sgml
-│   ├── tracepath.sgml
-│   └── traceroute6.sgml
-├── in6_flowlabel.h
-├── INSTALL
-├── ipg
-├── iputils.spec
+│   ├── man
+│   │   ├── confmodule.3
+│   │   ├── debconf.7
+│   │   ├── debconf.conf.5
+│   │   ├── debconf-devel.7
+│   │   └── po4a
+│   │       ├── add_da
+│   │       │   ├── addendum.man.da
+│   │       │   └── addendum.pod.da
+│   │       ├── add_de
+│   │       │   ├── addendum.man.de
+│   │       │   └── addendum.pod.de
+│   │       ├── add_es
+│   │       │   ├── addendum.man.es
+│   │       │   └── addendum.pod.es
+│   │       ├── add_fr
+│   │       │   ├── addendum.man.fr
+│   │       │   └── addendum.pod.fr
+│   │       ├── add_pt
+│   │       │   ├── addendum.man.pt
+│   │       │   └── addendum.pod.pt
+│   │       ├── add_pt_BR
+│   │       │   ├── addendum.man.pt_BR
+│   │       │   └── addendum.pod.pt_BR
+│   │       ├── add_ru
+│   │       │   ├── addendum.man.ru
+│   │       │   └── addendum.pod.ru
+│   │       ├── po
+│   │       │   ├── da.po
+│   │       │   ├── debconf.pot
+│   │       │   ├── de.po
+│   │       │   ├── es.po
+│   │       │   ├── fr.po
+│   │       │   ├── pt_BR.po
+│   │       │   ├── pt.po
+│   │       │   └── ru.po
+│   │       └── po4a.cfg
+│   ├── namespace.txt
+│   ├── passthrough.txt
+│   ├── README
+│   ├── README.LDAP
+│   ├── README.translators
+│   └── TODO
+├── dpkg-preconfigure
+├── dpkg-reconfigure
+├── fix_db.pl
+├── frontend
 ├── Makefile
-├── Modules
+├── po
+│   ├── ar.po
+│   ├── ast.po
+│   ├── bg.po
+│   ├── bn.po
+│   ├── bs.po
+│   ├── ca.po
+│   ├── cs.po
+│   ├── da.po
+│   ├── debconf.pot
+│   ├── de.po
+│   ├── dz.po
+│   ├── el.po
+│   ├── eo.po
+│   ├── es.po
+│   ├── eu.po
+│   ├── fi.po
+│   ├── fr.po
+│   ├── gl.po
+│   ├── he.po
+│   ├── hu.po
+│   ├── id.po
+│   ├── it.po
+│   ├── ja.po
+│   ├── km.po
+│   ├── ko.po
+│   ├── ku.po
 │   ├── Makefile
-│   └── pg3.c
-├── ninfod
-│   ├── config.h.in
-│   ├── configure
-│   ├── configure.in
-│   ├── COPYING
-│   ├── icmp6_nodeinfo.h
-│   ├── install-sh
-│   ├── Makefile.in
-│   ├── ni_ifaddrs.c
-│   ├── ni_ifaddrs.h
-│   ├── ninfod_addrs.c
-│   ├── ninfod.c
-│   ├── ninfod_core.c
-│   ├── ninfod.h
-│   ├── ninfod_name.c
-│   └── ninfod.sh.in
-├── ping6.c
-├── ping6_niquery.h
-├── ping.c
-├── ping_common.c
-├── ping_common.h
-├── rarpd.c
-├── rdisc.c
-├── RELNOTES
-├── SNAPSHOT.h
-├── tftpd.c
-├── tftp.h
-├── tftpsubs.c
-├── tracepath6.c
-├── tracepath.c
-└── traceroute6.c
+│   ├── mr.po
+│   ├── nb.po
+│   ├── ne.po
+│   ├── nl.po
+│   ├── nn.po
+│   ├── output
+│   ├── pa.po
+│   ├── pl.po
+│   ├── pt_BR.po
+│   ├── pt.po
+│   ├── ro.po
+│   ├── ru.po
+│   ├── sk.po
+│   ├── sl.po
+│   ├── sv.po
+│   ├── th.po
+│   ├── tl.po
+│   ├── tr.po
+│   ├── uk.po
+│   ├── vi.po
+│   ├── zh_CN.po
+│   └── zh_TW.po
+├── samples
+│   ├── demo
+│   ├── demo.templates
+│   ├── tutorial
+│   ├── tutorial-back
+│   └── tutorial.templates
+├── Test
+│   ├── AllTests.pm
+│   ├── CopyDBTest.pm
+│   └── Debconf
+│       └── DbDriver
+│           ├── CommonTest.pm
+│           ├── DirTreeTest.pm
+│           ├── FileTest.pm
+│           ├── ldap
+│           │   ├── ldap.ldif
+│           │   └── slapd.conf
+│           ├── LDAPTest.pm
+│           ├── PackageDirTest.pm
+│           └── SLAPD.pm
+├── test_debconf.pl
+└── transition_db.pl
 
-6 directories, 97 files
+34 directories, 338 files
 </code></pre>
                     
                     </section>
@@ -2960,10 +4403,10 @@ dpkg <span class="hljs-operator">-e</span> iputils-ping_3%<span class="hljs-numb
         </div>
 
         
-        <a href="../../../content/package/iputils-ping/index.html" class="navigation navigation-prev " aria-label="Previous page: iputils-ping"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/debconf/index.html" class="navigation navigation-prev " aria-label="Previous page: debconf"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/iputils-ping/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/debconf/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

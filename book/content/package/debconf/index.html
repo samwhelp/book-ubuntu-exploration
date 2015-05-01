@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>info | Ubuntu Exploration (Ubuntu 探索)</title>
+        <title>debconf | Ubuntu Exploration (Ubuntu 探索)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../../content/package/iputils-ping/note.html" />
+    <link rel="next" href="../../../content/package/debconf/info.html" />
     
     
-    <link rel="prev" href="../../../content/package/iputils-ping/index.html" />
+    <link rel="prev" href="../../../content/package/apt/report.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="5.5.1" data-basepath="../../.." data-revision="1430460093825">
+    <div class="book" data-level="2.4" data-basepath="../../.." data-revision="1430460093825">
     
 
 <div class="book-summary">
@@ -665,7 +665,7 @@
         </li>
     
         
-        <li class="chapter " data-level="2.4" data-path="content/package/debconf/index.html">
+        <li class="chapter active" data-level="2.4" data-path="content/package/debconf/index.html">
             
                 
                     <a href="../../../content/package/debconf/index.html">
@@ -2218,7 +2218,7 @@
                 
     
         
-        <li class="chapter active" data-level="5.5.1" data-path="content/package/iputils-ping/info.html">
+        <li class="chapter " data-level="5.5.1" data-path="content/package/iputils-ping/info.html">
             
                 
                     <a href="../../../content/package/iputils-ping/info.html">
@@ -2574,383 +2574,28 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_7">
+                    <section class="normal" id="section-gitbook_33">
                     
-                        <h1 id="iputils-ping-info">iputils-ping info</h1>
-<h2 id="">套件資訊</h2>
-<p>執行</p>
-<pre><code>$ apt-cache show iputils-ping
-</code></pre><p>顯示</p>
-<pre><code>Package: iputils-ping
-Priority: important
-Section: net
-Installed-Size: 159
-Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Original-Maintainer: Noah Meyerhans &lt;noahm@debian.org&gt;
-Architecture: amd64
-Source: iputils
-Version: 3:20121221-4ubuntu1.1
-Provides: ping
-Depends: libc6 (&gt;= 2.14), libcap2 (&gt;= 2.10), libgnutls-openssl27
-Recommends: libcap2-bin
-Filename: pool/main/i/iputils/iputils-ping_20121221-4ubuntu1.1_amd64.deb
-Size: 52602
-MD5sum: ddaa356992d3202d23c991f7dc8441c5
-SHA1: 728b34f974676225cbe4a22496a1d54e5d4bb6c8
-SHA256: 7886d5418a7ac87946916121387d271db2ab931fd87be49927b42b4ae08a4f35
-Description-en: Tools to test the reachability of network hosts
- The ping command sends ICMP ECHO_REQUEST packets to a host in order to
- test if the host is reachable via the network.
- .
- This package includes a ping6 utility which supports IPv6 network
- connections.
-Description-md5: d70a0a65fee86f2e5c78f759703e9922
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 5y
-Task: minimal
+                        <h1 id="debconf">debconf</h1>
+<h2 id="exploration">Exploration</h2>
+<ul>
+<li><a href="info.html">info</a></li>
+<li><a href="note.html">note</a></li>
+<li><a href="report.html">report</a></li>
+</ul>
+<h2 id="manual">Manual</h2>
+<ul>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/man1/debconf.1.html" target="_blank">debconf</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/man1/debconf-apt-progress.1.html" target="_blank">debconf-apt-progress</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/man1/debconf-communicate.1.html" target="_blank">debconf-communicate</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/man1/debconf-copydb.1.html" target="_blank">debconf-copydb</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/man1/debconf-escape.1.html" target="_blank">debconf-escape</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/man1/debconf-set-selections.1.html" target="_blank">debconf-set-selections</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/man1/debconf-show.1.html" target="_blank">debconf-show</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/man8/dpkg-preconfigure.8.html" target="_blank">dpkg-preconfigure</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/man8/dpkg-reconfigure.8.html" target="_blank">dpkg-reconfigure</a></li>
+</ul>
 
-Package: iputils-ping
-Priority: important
-Section: net
-Installed-Size: 159
-Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Original-Maintainer: Noah Meyerhans &lt;noahm@debian.org&gt;
-Architecture: amd64
-Source: iputils
-Version: 3:20121221-4ubuntu1
-Provides: ping
-Depends: libc6 (&gt;= 2.14), libcap2 (&gt;= 2.10), libgnutls-openssl27
-Recommends: libcap2-bin
-Filename: pool/main/i/iputils/iputils-ping_20121221-4ubuntu1_amd64.deb
-Size: 52570
-MD5sum: c2a181c1999b7a85965542e6e9b633ad
-SHA1: e87e2dca3e897b593e6a8d00e6bf549a6b3af204
-SHA256: 500daf10d08660bd56c83d1e2cf0a047c30a3402fe821c09f810c822c4677e21
-Description-en: Tools to test the reachability of network hosts
- The ping command sends ICMP ECHO_REQUEST packets to a host in order to
- test if the host is reachable via the network.
- .
- This package includes a ping6 utility which supports IPv6 network
- connections.
-Description-md5: d70a0a65fee86f2e5c78f759703e9922
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 5y
-Task: minimal
-</code></pre><p>執行</p>
-<pre><code>$ apt-cache showpkg iputils-ping
-</code></pre><p>顯示</p>
-<pre><code>Package: iputils-ping
-Versions:
-3:20121221-4ubuntu1.1 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty-updates_main_binary-amd64_Packages) (/var/lib/dpkg/status)
- Description Language:
-                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
-                  MD5: d70a0a65fee86f2e5c78f759703e9922
- Description Language: en
-                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
-                  MD5: d70a0a65fee86f2e5c78f759703e9922
-
-3:20121221-4ubuntu1 (/var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages)
- Description Language:
-                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_binary-amd64_Packages
-                  MD5: d70a0a65fee86f2e5c78f759703e9922
- Description Language: en
-                 File: /var/lib/apt/lists/tw.archive.ubuntu.com_ubuntu_dists_trusty_main_i18n_Translation-en
-                  MD5: d70a0a65fee86f2e5c78f759703e9922
-
-
-Reverse Depends:
-  iputils-ping:i386,iputils-ping
-  arping:i386,iputils-ping 20001110-6
-  iputils-ping:i386,iputils-ping
-  zonecheck,iputils-ping
-  xorp,iputils-ping
-  wicd-daemon,iputils-ping
-  whereami,iputils-ping
-  subnetcalc,iputils-ping
-  netperfmeter,iputils-ping
-  mrtg-ping-probe,iputils-ping
-  libnet-ping-external-perl,iputils-ping
-  ifupdown-extra,iputils-ping
-  ibid,iputils-ping
-  gnome-nettool,iputils-ping
-  cacti,iputils-ping
-  arping,iputils-ping 20001110-6
-  aiccu,iputils-ping
-  ubuntu-minimal,iputils-ping
-  nagios-plugins-basic,iputils-ping
-  heartbeat,iputils-ping
-  backuppc,iputils-ping
-Dependencies:
-3:20121221-4ubuntu1.1 - libc6 (2 2.14) libcap2 (2 2.10) libgnutls-openssl27 (0 (null)) libcap2-bin (0 (null)) iputils-ping:i386 (0 (null))
-3:20121221-4ubuntu1 - libc6 (2 2.14) libcap2 (2 2.10) libgnutls-openssl27 (0 (null)) libcap2-bin (0 (null)) iputils-ping:i386 (0 (null))
-Provides:
-3:20121221-4ubuntu1.1 - ping
-3:20121221-4ubuntu1 - ping
-Reverse Provides:
-</code></pre><p>執行</p>
-<pre><code>$ apt-cache showsrc iputils-ping
-</code></pre><p>顯示</p>
-<pre><code>Package: iputils
-Binary: iputils-ping, iputils-tracepath, iputils-arping, iputils-clockdiff
-Version: 3:20121221-4ubuntu1
-Priority: important
-Section: net
-Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Original-Maintainer: Noah Meyerhans &lt;noahm@debian.org&gt;
-Build-Depends: debhelper (&gt;= 7), sp, sgmlspl, docbook, libcap-dev, libgnutls-openssl-dev
-Architecture: any
-Standards-Version: 3.9.4.0
-Format: 3.0 (quilt)
-Directory: pool/main/i/iputils
-Files:
- 2f96146140fc37805647527d9d3c4ae8 2192 iputils_20121221-4ubuntu1.dsc
- 6072aef64205720dd1893b375e184171 155344 iputils_20121221.orig.tar.bz2
- 1376fa77c0c8b2c986e132238870f274 16094 iputils_20121221-4ubuntu1.debian.tar.gz
-Vcs-Browser: http://git.debian.org/?p=collab-maint/iputils.git;a=summary
-Vcs-Git: git://git.debian.org/collab-maint/iputils.git
-Package-List:
- iputils-arping deb net extra
- iputils-clockdiff deb net extra
- iputils-ping deb net important
- iputils-tracepath deb net optional
-Checksums-Sha1:
- 110d102d5002dfaffef20281c1814873c2b2e711 2192 iputils_20121221-4ubuntu1.dsc
- 4d56d8c75d6a5d58f052e4056e975f01ebab9ba9 155344 iputils_20121221.orig.tar.bz2
- be83f82ac334b658c93d2e0d5aa1e9380c24adef 16094 iputils_20121221-4ubuntu1.debian.tar.gz
-Checksums-Sha256:
- dd60c3e130968738b46c6b33a30dbd845e3784d00f39789ebadec74c7cab5500 2192 iputils_20121221-4ubuntu1.dsc
- 450f549fc5b620c23c5929aa6d54b7ddfc7ee1cb1e8efdc5e8bb21d8d0c5319f 155344 iputils_20121221.orig.tar.bz2
- 75d30eb296e0cda39c9f2a31b60079433c2e7c654a5fde57456ca5ff13d48983 16094 iputils_20121221-4ubuntu1.debian.tar.gz
-
-Package: iputils
-Binary: iputils-ping, iputils-tracepath, iputils-arping, iputils-clockdiff
-Version: 3:20121221-4ubuntu1.1
-Priority: important
-Section: net
-Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Original-Maintainer: Noah Meyerhans &lt;noahm@debian.org&gt;
-Build-Depends: debhelper (&gt;= 7), sp, sgmlspl, docbook, libcap-dev, libgnutls-openssl-dev
-Architecture: any
-Standards-Version: 3.9.4.0
-Format: 3.0 (quilt)
-Directory: pool/main/i/iputils
-Files:
- e93398c5c781ee1fff15087bf7cbc0d0 2127 iputils_20121221-4ubuntu1.1.dsc
- 6072aef64205720dd1893b375e184171 155344 iputils_20121221.orig.tar.bz2
- 4f53910e7bae050095f3dc238475285a 16143 iputils_20121221-4ubuntu1.1.debian.tar.gz
-Vcs-Browser: http://git.debian.org/?p=collab-maint/iputils.git;a=summary
-Vcs-Git: git://git.debian.org/collab-maint/iputils.git
-Package-List:
- iputils-arping deb net extra
- iputils-clockdiff deb net extra
- iputils-ping deb net important
- iputils-tracepath deb net optional
-Checksums-Sha1:
- 7b0c5ac9c48d1f18524ba138734c08d9ca2c1f1a 2127 iputils_20121221-4ubuntu1.1.dsc
- 4d56d8c75d6a5d58f052e4056e975f01ebab9ba9 155344 iputils_20121221.orig.tar.bz2
- 58fa7e192f8d4c6073f5acca50bf4c91dcdecfe0 16143 iputils_20121221-4ubuntu1.1.debian.tar.gz
-Checksums-Sha256:
- 90d448fa7e9750fb00cd837e8bc37a909b21e706a812afd1d5840fa914be3584 2127 iputils_20121221-4ubuntu1.1.dsc
- 450f549fc5b620c23c5929aa6d54b7ddfc7ee1cb1e8efdc5e8bb21d8d0c5319f 155344 iputils_20121221.orig.tar.bz2
- 4eb3ca79e68dfc5f5e66df7be3113c230168fbca2420da232adadc6475056c6a 16143 iputils_20121221-4ubuntu1.1.debian.tar.gz
-</code></pre><p>執行</p>
-<pre><code>$ dpkg -s iputils-ping
-</code></pre><p>顯示</p>
-<pre><code>Package: iputils-ping
-Status: install ok installed
-Priority: important
-Section: net
-Installed-Size: 159
-Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
-Architecture: amd64
-Source: iputils
-Version: 3:20121221-4ubuntu1.1
-Provides: ping
-Depends: libc6 (&gt;= 2.14), libcap2 (&gt;= 2.10), libgnutls-openssl27
-Recommends: libcap2-bin
-Description: Tools to test the reachability of network hosts
- The ping command sends ICMP ECHO_REQUEST packets to a host in order to
- test if the host is reachable via the network.
- .
- This package includes a ping6 utility which supports IPv6 network
- connections.
-Original-Maintainer: Noah Meyerhans &lt;noahm@debian.org&gt;
-</code></pre><p>執行</p>
-<pre><code>$ dpkg -l iputils-ping
-</code></pre><p>顯示</p>
-<pre><code>Desired=Unknown/Install/Remove/Purge/Hold
-| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
-|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
-||/ Name                         Version             Architecture        Description
-+++-============================-===================-===================-==============================================================
-ii  iputils-ping                 3:20121221-4ubuntu1 amd64               Tools to test the reachability of network hosts
-</code></pre><h2 id="">準備工作環境</h2>
-<pre><code>mkdir  ~/Downloads/iputils-ping -p
-cd ~/Downloads/iputils-ping
-mkdir download source
-</code></pre><h2 id="package-iputils-pinghttppackagesubuntucomtrustyiputils-ping">探索「Package: <a href="http://packages.ubuntu.com/trusty/iputils-ping" target="_blank">iputils-ping</a>」</h2>
-<p>切換到「~/Downloads/iputils-ping/download」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/iputils-ping/download
-</code></pre>
-<p>下載「Package: iputils-ping」。</p>
-<pre><code class="lang-sh">$ apt-get download iputils-ping
-</code></pre>
-<p>解開「package iputils-ping」</p>
-<pre><code class="lang-sh">dpkg -x iputils-ping_3%<span class="hljs-number">3</span>a20121221-<span class="hljs-number">4</span>ubuntu1.<span class="hljs-number">1</span>_amd64.deb iputils-ping
-dpkg <span class="hljs-operator">-e</span> iputils-ping_3%<span class="hljs-number">3</span>a20121221-<span class="hljs-number">4</span>ubuntu1.<span class="hljs-number">1</span>_amd64.deb
-<span class="hljs-comment"># ar xv iputils-ping_3%3a20121221-4ubuntu1.1_amd64.deb</span>
-</code></pre>
-<p>檢視套件檔案</p>
-<pre><code class="lang-sh">$ tree iputils-ping
-</code></pre>
-<p>顯示</p>
-<pre><code>iputils-ping
-├── bin
-│   ├── ping
-│   └── ping6
-└── usr
-    └── share
-        ├── doc
-        │   └── iputils-ping
-        │       ├── changelog.Debian.gz
-        │       ├── copyright
-        │       └── RELNOTES.gz
-        ├── lintian
-        │   └── overrides
-        │       └── iputils-ping
-        └── man
-            └── man8
-                ├── ping6.8.gz -&gt; ping.8.gz
-                └── ping.8.gz
-
-9 directories, 8 files
-</code></pre><pre><code>$ tree DEBIAN
-</code></pre><p>顯示</p>
-<pre><code>DEBIAN
-├── control
-├── md5sums
-└── postinst
-
-0 directories, 3 files
-</code></pre><h2 id="source-package-iputils-pinghttppackagesubuntucomtrustyiputils-ping">探索「Source Package: <a href="http://packages.ubuntu.com/trusty/iputils-ping" target="_blank">iputils-ping</a>」</h2>
-<p>切換到「~/Downloads/iputils-ping/source」</p>
-<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Downloads/iputils-ping/<span class="hljs-built_in">source</span>
-</code></pre>
-<p>下載「Source Package: iputils-ping」。</p>
-<pre><code class="lang-sh">$ apt-get <span class="hljs-built_in">source</span> iputils-ping
-</code></pre>
-<p>檢視原始碼套件檔案。</p>
-<pre><code>$ tree iputils-20121221
-</code></pre><p>顯示</p>
-<pre><code>iputils-20121221
-├── arping.c
-├── clockdiff.c
-├── debian
-│   ├── changelog
-│   ├── compat
-│   ├── control
-│   ├── copyright
-│   ├── dirs
-│   ├── dirs.iputils-arping
-│   ├── dirs.iputils-tracepath
-│   ├── docs
-│   ├── files.iputils-arping
-│   ├── files.iputils-tracepath
-│   ├── iputils-arping.docs
-│   ├── iputils-arping.manpages
-│   ├── iputils-arping.postinst
-│   ├── iputils-clockdiff.docs
-│   ├── iputils-clockdiff.manpages
-│   ├── iputils-doc.docs
-│   ├── iputils-doc.files
-│   ├── iputils-ping.docs
-│   ├── iputils-ping.lintian-overrides
-│   ├── iputils-ping.manpages
-│   ├── iputils-ping.postinst
-│   ├── iputils-tracepath.docs
-│   ├── iputils-tracepath.manpages
-│   ├── iputils-tracepath.postinst
-│   ├── iputils-tracepath.prerm
-│   ├── patches
-│   │   ├── bug109709-less-dns.patch
-│   │   ├── bug_601147_audible_flood
-│   │   ├── bug_628893_flush_stdout_on_truncated_packets
-│   │   ├── bug629075-tracepath_hops_back.patch
-│   │   ├── bug686944-quit_when_done.patch
-│   │   ├── bug698287-typo.patch
-│   │   ├── fix-arping-timeouts.diff
-│   │   ├── fix-tracepath-docs.diff
-│   │   ├── recverr_works_bug709052.patch
-│   │   ├── series
-│   │   ├── set_buildflags
-│   │   ├── targets.diff
-│   │   ├── upstream-max-hops.patch
-│   │   ├── upstream-tracepath-printf-cleanup.patch
-│   │   └── use_gethostbyname2.diff
-│   ├── rules
-│   └── source
-│       └── format
-├── doc
-│   ├── arping.sgml
-│   ├── clockdiff.sgml
-│   ├── docbook2man-spec.pl
-│   ├── index.db
-│   ├── index.out
-│   ├── iputils.db
-│   ├── Makefile
-│   ├── ninfod.sgml
-│   ├── pg3.sgml
-│   ├── ping.sgml
-│   ├── rarpd.sgml
-│   ├── rdisc.sgml
-│   ├── snapshot.db
-│   ├── tftpd.sgml
-│   ├── tracepath.sgml
-│   └── traceroute6.sgml
-├── in6_flowlabel.h
-├── INSTALL
-├── ipg
-├── iputils.spec
-├── Makefile
-├── Modules
-│   ├── Makefile
-│   └── pg3.c
-├── ninfod
-│   ├── config.h.in
-│   ├── configure
-│   ├── configure.in
-│   ├── COPYING
-│   ├── icmp6_nodeinfo.h
-│   ├── install-sh
-│   ├── Makefile.in
-│   ├── ni_ifaddrs.c
-│   ├── ni_ifaddrs.h
-│   ├── ninfod_addrs.c
-│   ├── ninfod.c
-│   ├── ninfod_core.c
-│   ├── ninfod.h
-│   ├── ninfod_name.c
-│   └── ninfod.sh.in
-├── ping6.c
-├── ping6_niquery.h
-├── ping.c
-├── ping_common.c
-├── ping_common.h
-├── rarpd.c
-├── rdisc.c
-├── RELNOTES
-├── SNAPSHOT.h
-├── tftpd.c
-├── tftp.h
-├── tftpsubs.c
-├── tracepath6.c
-├── tracepath.c
-└── traceroute6.c
-
-6 directories, 97 files
-</code></pre>
                     
                     </section>
                 
@@ -2960,10 +2605,10 @@ dpkg <span class="hljs-operator">-e</span> iputils-ping_3%<span class="hljs-numb
         </div>
 
         
-        <a href="../../../content/package/iputils-ping/index.html" class="navigation navigation-prev " aria-label="Previous page: iputils-ping"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../content/package/apt/report.html" class="navigation navigation-prev " aria-label="Previous page: report"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../content/package/iputils-ping/note.html" class="navigation navigation-next " aria-label="Next page: note"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../content/package/debconf/info.html" class="navigation navigation-next " aria-label="Next page: info"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
